@@ -1196,3 +1196,8 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: var(--space-4);
 }
+
+.a-link-card .a-badge {
+  justify-self: start;
+  margin-top: var(--space-1);
+}
