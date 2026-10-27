@@ -855,7 +855,7 @@
     const form = event.target;
     if (form.dataset.validateForm === undefined) return;
     event.preventDefault();
-    if (validate(form)) form.dispatchEvent(new CustomEvent("a-valid-submit", { bubbles: true }));
+    if (window.Anoglobe.validate(form)) form.dispatchEvent(new CustomEvent("a-valid-submit", { bubbles: true }));
   });
 
   function init(root = document) {

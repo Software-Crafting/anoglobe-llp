@@ -66,7 +66,7 @@
     if (!form) return;
     event.preventDefault();
     const element = form.querySelector("[data-card-element]");
-    const errors = cardErrors(element);
+    const errors = window.Anoglobe.cardErrors(element);
     showCardErrors(element, errors);
     const fieldsValid = window.Anoglobe?.validate ? window.Anoglobe.validate(form) : true;
     if (Object.keys(errors).length) {

@@ -4,7 +4,7 @@
 // there, exists(path) tells whether a page has been built yet.
 
 export const COMPONENT_CSS = ["foundations", "forms", "overlays", "data", "payment", "admin", "feedback"];
-export const COMPONENT_JS = ["core", "forms", "overlays", "data", "payment", "admin", "feedback"];
+export const COMPONENT_JS = ["core", "forms", "overlays", "data", "payment", "admin", "site", "feedback"];
 
 export const DOCS_NAV = [
   {
@@ -160,7 +160,7 @@ ${SITE_NAV.map(([name, href]) => `          <li><a class="a-site-nav__link" href
       </nav>
       <div class="a-site-header__tools">
         ${themeToggle(root)}
-        <button type="button" class="a-btn a-btn--ghost a-btn--icon a-site-header__menu" aria-controls="site-nav" aria-expanded="false" aria-label="Menu" data-site-menu>
+        <button type="button" class="a-btn a-btn--ghost a-btn--icon a-site-header__menu" aria-controls="site-nav" aria-expanded="false" aria-label="Menu" data-site-menu data-icons="close">
           ${icon(root, "menu")}
         </button>
       </div>
@@ -220,7 +220,7 @@ ${SITE_NAV.map(([name, href]) => `          <li><a class="a-site-nav__link" href
     </a>
     <div class="a-onb-header__tools">
       <span class="a-badge a-badge--success a-onb-header__secure">${icon(root, "lock")}Secure signup</span>
-      <a class="a-btn a-btn--ghost a-btn--sm" href="${root}ui-design/site/contact.html">${icon(root, "help-circle")}Help</a>
+      <a class="a-btn a-btn--ghost a-btn--sm" href="${root}ui-design/site/contact.html">${icon(root, "help-circle")}<span class="a-onb-header__help-text">Help</span></a>
       ${themeToggle(root)}
     </div>
   </header>

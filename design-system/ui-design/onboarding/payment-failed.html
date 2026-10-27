@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payment declined | Anoglobe onboarding</title>
+  <meta name="description" content="Your card was declined. Try another card or finish your Anoglobe signup later.">
+  <!-- shell:head -->
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <script src="../../assets/js/theme.js"></script>
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components/foundations.css">
+  <link rel="stylesheet" href="../../assets/css/components/forms.css">
+  <link rel="stylesheet" href="../../assets/css/components/overlays.css">
+  <link rel="stylesheet" href="../../assets/css/components/data.css">
+  <link rel="stylesheet" href="../../assets/css/components/payment.css">
+  <link rel="stylesheet" href="../../assets/css/components/admin.css">
+  <link rel="stylesheet" href="../../assets/css/components/feedback.css">
+  <link rel="stylesheet" href="../../assets/css/pages.css">
+  <script src="../../assets/js/components/core.js" defer></script>
+  <script src="../../assets/js/components/forms.js" defer></script>
+  <script src="../../assets/js/components/overlays.js" defer></script>
+  <script src="../../assets/js/components/data.js" defer></script>
+  <script src="../../assets/js/components/payment.js" defer></script>
+  <script src="../../assets/js/components/admin.js" defer></script>
+  <script src="../../assets/js/components/site.js" defer></script>
+  <script src="../../assets/js/components/feedback.js" defer></script>
+  <!-- /shell:head -->
+  <script src="../../assets/js/form-wizard.js" defer></script>
+  <script src="../../assets/js/prototype.js" defer></script>
+</head>
+<body>
+  <!-- shell:onboarding-header -->
+  <a class="a-skip-link" href="#main">Skip to content</a>
+  <header class="a-onb-header">
+    <a class="a-onb-header__brand" href="../../ui-design/site/index.html">
+      <img class="a-logo a-logo--light" src="../../assets/img/logo.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+      <img class="a-logo a-logo--dark" src="../../assets/img/logo-reversed.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+    </a>
+    <div class="a-onb-header__tools">
+      <span class="a-badge a-badge--success a-onb-header__secure"><svg class="a-icon" aria-hidden="true"><use href="#lock"></use></svg>Secure signup</span>
+      <a class="a-btn a-btn--ghost a-btn--sm" href="../../ui-design/site/contact.html"><svg class="a-icon" aria-hidden="true"><use href="#help-circle"></use></svg><span class="a-onb-header__help-text">Help</span></a>
+      <button type="button" class="a-btn a-btn--ghost a-btn--icon a-theme-toggle" data-theme-toggle aria-label="Dark theme" data-tooltip="Toggle dark theme">
+      <svg class="a-icon a-theme-toggle__sun" aria-hidden="true"><use href="#sun"></use></svg>
+      <svg class="a-icon a-theme-toggle__moon" aria-hidden="true"><use href="#moon"></use></svg>
+    </button>
+    </div>
+  </header>
+  <div class="a-toast-region" data-icons="check-circle x-circle info alert-triangle close"></div>
+  <!-- /shell:onboarding-header -->
+  <main id="main" class="a-onb a-onb--single">
+    <div class="a-onb__main">
+      <div class="a-onb__card">
+        <div class="a-result"><svg class="a-illus" aria-hidden="true"><use href="#illus-error"></use></svg><h1 class="a-result__title">Your card was declined</h1><p class="a-result__text">Your bank did not approve the $499.00 charge. No money was taken and your details are saved.</p></div>
+        <div class="a-alert a-alert--destructive" role="note"><svg class="a-icon" aria-hidden="true"><use href="#x-circle"></use></svg><p class="a-alert__title">Reason from your bank: insufficient funds</p><p class="a-alert__body">Banks do not always share the reason. Common causes are a low balance, a daily limit, or a fraud check on a new merchant.</p></div>
+        <h2 class="a-h4 a-onb__next">What you can do</h2>
+        <ul class="a-check-list" role="list">
+          <li><svg class="a-icon" aria-hidden="true"><use href="#credit-card"></use></svg><p><strong>Try another card</strong><span>Any Visa, Mastercard, American Express or Discover card.</span></p></li>
+          <li><svg class="a-icon" aria-hidden="true"><use href="#phone"></use></svg><p><strong>Call your bank</strong><span>Ask them to approve a charge from Anoglobe LLP, then try again.</span></p></li>
+          <li><svg class="a-icon" aria-hidden="true"><use href="#clock"></use></svg><p><strong>Finish later</strong><span>We keep your answers. Resume from the link in your email.</span></p></li>
+        </ul>
+        <div class="a-form-actions"><a class="a-btn a-btn--ghost" href="resume.html">Finish later</a><a class="a-btn a-btn--primary" href="step-6-payment.html"><svg class="a-icon" aria-hidden="true"><use href="#credit-card"></use></svg>Try another card</a></div>
+      </div>
+    </div>
+  </main>
+  <!-- shell:onboarding-footer -->
+  <footer class="a-onb-footer">
+    <p class="a-small a-muted">Your information is encrypted in transit. Card details go directly to our payment processor and are never stored by Anoglobe.</p>
+  </footer>
+  <!-- /shell:onboarding-footer -->
+  <!-- icons -->
+  <svg class="a-sprite" aria-hidden="true" focusable="false">
+    <symbol id="alert-triangle" viewBox="0 0 24 24"><path d="M10.3 4.4a2 2 0 0 1 3.4 0l7.6 13.1a2 2 0 0 1-1.7 3H4.4a2 2 0 0 1-1.7-3z" style="stroke-dasharray: calc(57.868 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.767 - var(--icon-gap) / 2)"/><path d="M12 9.5v4"/><path d="M12 16.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="check-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M8.2 12.3l2.6 2.6 5-5.2"/></symbol>
+    <symbol id="clock" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M12 7.5V12l3 2"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></symbol>
+    <symbol id="credit-card" viewBox="0 0 24 24"><path d="M5 5H19a2.5 2.5 0 0 1 2.5 2.5V16.5a2.5 2.5 0 0 1 -2.5 2.5H5a2.5 2.5 0 0 1 -2.5 -2.5V7.5a2.5 2.5 0 0 1 2.5 -2.5z" style="stroke-dasharray: calc(61.71 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.368 - var(--icon-gap) / 2)"/><path d="M2.5 10h19"/><path d="M6 15h3.5"/></symbol>
+    <symbol id="help-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M9.5 9.4a2.6 2.6 0 0 1 5 .9c0 1.8-2.5 2.2-2.5 3.7"/><path d="M12 17.2h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="illus-error" viewBox="0 0 96 96"><g stroke-width="var(--illus-stroke, 2.5)" stroke-linecap="round" stroke-linejoin="round"><path style="fill: var(--illus-surface, currentColor); fill-opacity: var(--illus-surface-opacity, .12); stroke: none" d="M42.6 18a6.2 6.2 0 0 1 10.8 0l26 45a6.2 6.2 0 0 1-5.4 9.3H22a6.2 6.2 0 0 1-5.4-9.3z"/><path style="fill: none; stroke: var(--illus-line, currentColor)" d="M42.6 18a6.2 6.2 0 0 1 10.8 0l26 45a6.2 6.2 0 0 1-5.4 9.3H22a6.2 6.2 0 0 1-5.4-9.3z"/><path style="fill: none; stroke: var(--illus-accent, currentColor)" d="M48 36v14M48 59h.1"/></g></symbol>
+    <symbol id="info" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M12 11v5.5"/><path d="M12 7.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="lock" viewBox="0 0 24 24"><path d="M7 10.5H17a2.5 2.5 0 0 1 2.5 2.5V18.5a2.5 2.5 0 0 1 -2.5 2.5H7a2.5 2.5 0 0 1 -2.5 -2.5V13a2.5 2.5 0 0 1 2.5 -2.5z" style="stroke-dasharray: calc(46.71 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(37.368 - var(--icon-gap) / 2)"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/><path d="M12 14.5v2.5"/></symbol>
+    <symbol id="moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z" style="stroke-dasharray: calc(58.676 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(26.404 - var(--icon-gap) / 2)"/></symbol>
+    <symbol id="phone" viewBox="0 0 24 24"><path d="M5.2 3.5h2.9l1.5 4-2 1.3a10.5 10.5 0 0 0 7.6 7.6l1.3-2 4 1.5v2.9a1.6 1.6 0 0 1-1.7 1.6A16.6 16.6 0 0 1 3.6 5.2a1.6 1.6 0 0 1 1.6-1.7z" style="stroke-dasharray: calc(59.014 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(22.425 - var(--icon-gap) / 2)"/></symbol>
+    <symbol id="sun" viewBox="0 0 24 24"><path d="M12 7.8a4.2 4.2 0 1 1 0 8.4a4.2 4.2 0 1 1 0 -8.4z" style="stroke-dasharray: calc(26.393 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(23.226 - var(--icon-gap) / 2)"/><path d="M12 2.5v2"/><path d="M12 19.5v2"/><path d="M2.5 12h2"/><path d="M19.5 12h2"/><path d="M5.6 5.6l1.2 1.2"/><path d="M17.2 17.2l1.2 1.2"/><path d="M5.6 18.4l1.2-1.2"/><path d="M17.2 6.8l1.2-1.2"/></symbol>
+    <symbol id="x-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M9.2 9.2l5.6 5.6"/><path d="M14.8 9.2l-5.6 5.6"/></symbol>
+  </svg>
+  <!-- /icons -->
+</body>
+</html>

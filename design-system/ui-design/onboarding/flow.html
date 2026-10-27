@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Full flow | Anoglobe onboarding</title>
+  <meta name="description" content="The complete Anoglobe onboarding wizard on one page, with validation, saved progress and mock payment.">
+  <!-- shell:head -->
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <script src="../../assets/js/theme.js"></script>
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components/foundations.css">
+  <link rel="stylesheet" href="../../assets/css/components/forms.css">
+  <link rel="stylesheet" href="../../assets/css/components/overlays.css">
+  <link rel="stylesheet" href="../../assets/css/components/data.css">
+  <link rel="stylesheet" href="../../assets/css/components/payment.css">
+  <link rel="stylesheet" href="../../assets/css/components/admin.css">
+  <link rel="stylesheet" href="../../assets/css/components/feedback.css">
+  <link rel="stylesheet" href="../../assets/css/pages.css">
+  <script src="../../assets/js/components/core.js" defer></script>
+  <script src="../../assets/js/components/forms.js" defer></script>
+  <script src="../../assets/js/components/overlays.js" defer></script>
+  <script src="../../assets/js/components/data.js" defer></script>
+  <script src="../../assets/js/components/payment.js" defer></script>
+  <script src="../../assets/js/components/admin.js" defer></script>
+  <script src="../../assets/js/components/site.js" defer></script>
+  <script src="../../assets/js/components/feedback.js" defer></script>
+  <!-- /shell:head -->
+  <script src="../../assets/js/form-wizard.js" defer></script>
+  <script src="../../assets/js/prototype.js" defer></script>
+</head>
+<body>
+  <!-- shell:onboarding-header -->
+  <a class="a-skip-link" href="#main">Skip to content</a>
+  <header class="a-onb-header">
+    <a class="a-onb-header__brand" href="../../ui-design/site/index.html">
+      <img class="a-logo a-logo--light" src="../../assets/img/logo.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+      <img class="a-logo a-logo--dark" src="../../assets/img/logo-reversed.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+    </a>
+    <div class="a-onb-header__tools">
+      <span class="a-badge a-badge--success a-onb-header__secure"><svg class="a-icon" aria-hidden="true"><use href="#lock"></use></svg>Secure signup</span>
+      <a class="a-btn a-btn--ghost a-btn--sm" href="../../ui-design/site/contact.html"><svg class="a-icon" aria-hidden="true"><use href="#help-circle"></use></svg><span class="a-onb-header__help-text">Help</span></a>
+      <button type="button" class="a-btn a-btn--ghost a-btn--icon a-theme-toggle" data-theme-toggle aria-label="Dark theme" data-tooltip="Toggle dark theme">
+      <svg class="a-icon a-theme-toggle__sun" aria-hidden="true"><use href="#sun"></use></svg>
+      <svg class="a-icon a-theme-toggle__moon" aria-hidden="true"><use href="#moon"></use></svg>
+    </button>
+    </div>
+  </header>
+  <div class="a-toast-region" data-icons="check-circle x-circle info alert-triangle close"></div>
+  <!-- /shell:onboarding-header -->
+  <div class="a-onb">
+    <aside class="a-onb__aside" aria-label="Your order">
+      <div class="a-onb__aside-inner">
+        <button type="button" class="a-onb-summary-toggle" data-summary-toggle aria-expanded="false" aria-controls="summary-panel"><span>Order summary, <span data-summary="due">$499.00</span></span><svg class="a-icon" aria-hidden="true"><use href="#chevron-down"></use></svg></button>
+        <div class="a-onb__aside-inner" id="summary-panel" data-summary-panel hidden>
+          <div class="a-summary" role="group" aria-label="Order summary">
+            <p class="a-summary__title">Order summary</p>
+            <dl class="a-summary__lines">
+              <div class="a-summary__line"><dt>Business</dt><dd data-summary="business">Your business</dd></div>
+              <div class="a-summary__line"><dt>Plan</dt><dd data-summary="plan">Growth</dd></div>
+              <div class="a-summary__line"><dt>Price</dt><dd data-summary="price">$499.00 per month</dd></div>
+              <div class="a-summary__line"><dt>Billing</dt><dd data-summary="billing">Monthly, cancel any time</dd></div>
+            </dl>
+            <dl class="a-summary__total"><dt>Due today</dt><dd data-summary="due">$499.00</dd></dl>
+            <p class="a-summary__note" data-summary="next">Then $499.00 on this date each month.</p>
+          </div>
+          <div class="a-card"><div class="a-card__content a-choice-list">
+            <p class="a-gateway-note"><svg class="a-icon" aria-hidden="true"><use href="#shield-check"></use></svg>Your details are encrypted. Card data goes to Stripe only.</p>
+            <p class="a-gateway-note"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>After signup our assistant calls to confirm your details.</p>
+            <p class="a-small a-muted">Questions? <a href="mailto:hello@anoglobebookkeeping.com">hello@anoglobebookkeeping.com</a></p>
+          </div></div>
+        </div>
+      </div>
+    </aside>
+    <main id="main" class="a-onb__main">
+      <div class="a-onb__progress">
+        <div class="a-onb__progress-label"><span data-wizard-label>Step 1 of 7</span><a href="../../ui-design/onboarding/resume.html" data-save-later>Save and continue later</a></div>
+        <ol class="a-steps" aria-label="Onboarding progress" data-wizard-stepper><li class="a-steps__item" aria-current="step"><span class="a-steps__bar"></span><span class="a-steps__label"><span class="a-steps__text">Account<span class="a-visually-hidden a-steps__done" hidden>, complete</span></span></span></li><li class="a-steps__item"><span class="a-steps__bar"></span><span class="a-steps__label"><span class="a-steps__text">Business<span class="a-visually-hidden a-steps__done" hidden>, complete</span></span></span></li><li class="a-steps__item"><span class="a-steps__bar"></span><span class="a-steps__label"><span class="a-steps__text">Services<span class="a-visually-hidden a-steps__done" hidden>, complete</span></span></span></li><li class="a-steps__item"><span class="a-steps__bar"></span><span class="a-steps__label"><span class="a-steps__text">Documents<span class="a-visually-hidden a-steps__done" hidden>, complete</span></span></span></li><li class="a-steps__item"><span class="a-steps__bar"></span><span class="a-steps__label"><span class="a-steps__text">Plan<span class="a-visually-hidden a-steps__done" hidden>, complete</span></span></span></li><li class="a-steps__item"><span class="a-steps__bar"></span><span class="a-steps__label"><span class="a-steps__text">Review<span class="a-visually-hidden a-steps__done" hidden>, complete</span></span></span></li><li class="a-steps__item"><span class="a-steps__bar"></span><span class="a-steps__label"><span class="a-steps__text">Payment<span class="a-visually-hidden a-steps__done" hidden>, complete</span></span></span></li></ol>
+      </div>
+      <div class="a-onb__card" data-wizard>
+        <section data-wizard-step aria-label="Account"><div class="a-onb__head"><h1 tabindex="-1">Create your account</h1><p>Tell us who you are. This takes about 10 minutes in total.</p></div><form class="a-form-grid" novalidate><div class="a-form-grid a-form-grid--2">
+          <div class="a-field " data-msg-required="Enter your first name">
+  <label class="a-label" for="first-name"><span>First name<span class="a-label__required" aria-hidden="true">*</span></span></label>
+  <input class="a-input" id="first-name" name="first-name" type="text" aria-describedby="first-name-error" required autocomplete="given-name">
+  <p class="a-error" id="first-name-error"></p>
+</div>
+          <div class="a-field " data-msg-required="Enter your last name">
+  <label class="a-label" for="last-name"><span>Last name<span class="a-label__required" aria-hidden="true">*</span></span></label>
+  <input class="a-input" id="last-name" name="last-name" type="text" aria-describedby="last-name-error" required autocomplete="family-name">
+  <p class="a-error" id="last-name-error"></p>
+</div>
+          <div class="a-field a-field--full" data-msg-required="Enter your work email" data-msg-pattern="Enter an email like name@company.com">
+  <label class="a-label" for="email"><span>Work email<span class="a-label__required" aria-hidden="true">*</span></span></label>
+  <input class="a-input" id="email" name="email" type="email" aria-describedby="email-hint email-error" required placeholder="you@company.com" autocomplete="email">
+  <p class="a-hint" id="email-hint">We send your confirmation and receipts here.</p>
+  <p class="a-error" id="email-error"></p>
+</div>
+          <div class="a-field a-field--full" data-msg-required="Enter your phone number" data-msg-pattern="Enter a 10 digit US phone number">
+            <label class="a-label" for="phone"><span>Phone<span class="a-label__required" aria-hidden="true">*</span></span></label>
+            <div class="a-phone">
+              <div class="a-select" data-listbox="select" data-source="phone-countries" data-icons="check">
+                <button type="button" class="a-select__trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="phone-country-list" aria-labelledby="phone-country-label phone-country-value"><span class="a-visually-hidden" id="phone-country-label">Country code</span><span class="a-select__value" id="phone-country-value">US +1</span><svg class="a-icon a-select__chevron" aria-hidden="true"><use href="#chevron-down"></use></svg></button>
+                <input type="hidden" name="phone-country" value="+1|US">
+                <div class="a-listbox-popover" hidden><ul class="a-listbox" data-scroll-area role="listbox" id="phone-country-list" aria-label="Country code" tabindex="-1"></ul></div>
+              </div>
+              <input class="a-input" id="phone" name="phone" type="tel" inputmode="tel" data-mask="phone" autocomplete="tel-national" placeholder="(415) 555-0132" required aria-describedby="phone-hint phone-error">
+            </div>
+            <p class="a-hint" id="phone-hint">Our onboarding assistant calls this number to confirm your details.</p>
+            <p class="a-error" id="phone-error"></p>
+          </div>
+          <div class="a-field a-field--full" data-msg-required="Choose your role">
+  <label class="a-label" id="role-label" for="role"><span>Your role<span class="a-label__required" aria-hidden="true">*</span></span></label>
+  <div class="a-select" data-listbox="select" data-icons="check search">
+    <button type="button" class="a-select__trigger" id="role" aria-haspopup="listbox" aria-expanded="false" aria-controls="role-list" aria-labelledby="role-label role-value" aria-describedby="role-error"><span class="a-select__value is-placeholder" id="role-value">Choose your role</span><svg class="a-icon a-select__chevron" aria-hidden="true"><use href="#chevron-down"></use></svg></button>
+    <input type="hidden" name="role" value="" required>
+    <div class="a-listbox-popover" hidden>
+      <ul class="a-listbox" data-scroll-area role="listbox" id="role-list" aria-labelledby="role-label" tabindex="-1"><li role="option" class="a-option" data-value="owner" aria-selected="false">Owner or partner<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="finance" aria-selected="false">Finance or office manager<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="accountant" aria-selected="false">Outside accountant<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="other" aria-selected="false">Other<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li></ul>
+    </div>
+  </div>
+  <p class="a-error" id="role-error"></p>
+</div>
+        </div>
+        <fieldset class="a-fieldset">
+          <legend>How do you want to sign in?</legend>
+          <div class="a-choice-cards">
+            <label class="a-choice-card"><input class="a-radio__input" type="radio" id="signin-password" name="signin" value="password" checked><span class="a-choice-card__icon"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="#lock-duo"></use></svg></span><span class="a-choice-card__title">Create a password</span><span class="a-choice-card__text">Sign in with your email and a password.</span></label>
+            <label class="a-choice-card"><input class="a-radio__input" type="radio" id="signin-link" name="signin" value="link"><span class="a-choice-card__icon"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="#mail-duo"></use></svg></span><span class="a-choice-card__title">Email me a link</span><span class="a-choice-card__text">No password. We email a one-time sign-in link.</span></label>
+          </div>
+        </fieldset>
+        <div class="a-form-grid a-form-grid--2" data-show-when="signin=password">
+          <div class="a-field" data-password data-msg-required="Create a password" data-msg-minlength="Use at least 10 characters"><label class="a-label" for="password">Password</label><div class="a-input-group"><input class="a-input" id="password" name="password-demo" type="password" autocomplete="new-password" minlength="10" required aria-describedby="password-hint password-error"><button type="button" class="a-input-group__action" data-password-toggle aria-pressed="false" aria-label="Show password"><svg class="a-icon a-password__show" aria-hidden="true"><use href="#eye"></use></svg><svg class="a-icon a-password__hide" aria-hidden="true"><use href="#eye-off"></use></svg></button></div><p class="a-hint" id="password-hint">At least 10 characters.</p><p class="a-error" id="password-error"></p></div>
+          <div class="a-field" data-msg-required="Repeat your password" data-msg-match="The passwords do not match"><label class="a-label" for="password-confirm">Confirm password</label><input class="a-input" id="password-confirm" type="password" autocomplete="new-password" required data-match="password" aria-describedby="password-confirm-error"><p class="a-error" id="password-confirm-error"></p></div>
+        </div>
+        <div class="a-field" data-msg-required="Agree to the call so we can confirm your details"><label class="a-check"><input class="a-check__input" type="checkbox" id="call-consent" name="call-consent" required aria-describedby="call-consent-hint"><span class="a-check__label">Anoglobe's assistant may call me about my signup</span><span class="a-check__hint" id="call-consent-hint">An automated assistant calls once after signup and once after payment. You can opt out any time.</span></label><p class="a-error" id="call-consent-error"></p></div><div class="a-form-actions">
+          <span></span>
+          <div class="a-form-actions__end"><a class="a-btn a-btn--outline" href="../../ui-design/onboarding/resume.html" data-save-later>Save for later</a><button type="submit" class="a-btn a-btn--primary">Continue<svg class="a-icon" aria-hidden="true"><use href="#arrow-right"></use></svg></button></div>
+        </div></form></section><section data-wizard-step aria-label="Business" hidden><div class="a-onb__head"><h2 tabindex="-1">About your business</h2><p>We use this to set up your books and file-ready records.</p></div><form class="a-form-grid" novalidate><div class="a-form-grid a-form-grid--2">
+          <div class="a-field a-field--full" data-msg-required="Enter your legal business name">
+  <label class="a-label" for="legal-name"><span>Legal business name<span class="a-label__required" aria-hidden="true">*</span></span></label>
+  <input class="a-input" id="legal-name" name="legal-name" type="text" aria-describedby="legal-name-hint legal-name-error" required autocomplete="organization">
+  <p class="a-hint" id="legal-name-hint">As registered with the IRS.</p>
+  <p class="a-error" id="legal-name-error"></p>
+</div>
+          <div class="a-field a-field--full">
+  <label class="a-label" for="dba"><span>Doing business as</span><span class="a-label__optional">Optional</span></label>
+  <input class="a-input" id="dba" name="dba" type="text" aria-describedby="dba-error">
+  <p class="a-error" id="dba-error"></p>
+</div>
+          <div class="a-field " data-msg-required="Choose your entity type">
+  <label class="a-label" id="entity-label" for="entity"><span>Entity type<span class="a-label__required" aria-hidden="true">*</span></span></label>
+  <div class="a-select" data-listbox="select" data-icons="check search">
+    <button type="button" class="a-select__trigger" id="entity" aria-haspopup="listbox" aria-expanded="false" aria-controls="entity-list" aria-labelledby="entity-label entity-value" aria-describedby="entity-error"><span class="a-select__value is-placeholder" id="entity-value">Choose entity type</span><svg class="a-icon a-select__chevron" aria-hidden="true"><use href="#chevron-down"></use></svg></button>
+    <input type="hidden" name="entity" value="" required>
+    <div class="a-listbox-popover" hidden>
+      <ul class="a-listbox" data-scroll-area role="listbox" id="entity-list" aria-labelledby="entity-label" tabindex="-1"><li role="presentation"><p class="a-listbox__group-label" id="entity-g0">Corporations</p><ul role="group" class="a-listbox__group" aria-labelledby="entity-g0"><li role="option" class="a-option" data-value="c-corp" aria-selected="false">C corporation<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="s-corp" aria-selected="false">S corporation<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li></ul></li><li role="presentation"><p class="a-listbox__group-label" id="entity-g1">Partnerships</p><ul role="group" class="a-listbox__group" aria-labelledby="entity-g1"><li role="option" class="a-option" data-value="llc-multi" aria-selected="false">Multi-member LLC<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="partnership" aria-selected="false">General partnership<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li></ul></li><li role="presentation"><p class="a-listbox__group-label" id="entity-g2">Single owner</p><ul role="group" class="a-listbox__group" aria-labelledby="entity-g2"><li role="option" class="a-option" data-value="llc-single" aria-selected="false">Single-member LLC<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="sole" aria-selected="false">Sole proprietorship<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li></ul></li><li role="presentation"><p class="a-listbox__group-label" id="entity-g3">Other</p><ul role="group" class="a-listbox__group" aria-labelledby="entity-g3"><li role="option" class="a-option" data-value="nonprofit" aria-selected="false">Nonprofit<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li></ul></li></ul>
+    </div>
+  </div>
+  <p class="a-error" id="entity-error"></p>
+</div>
+          <div class="a-field " data-msg-required="Enter your EIN" data-msg-pattern="Enter a 9 digit EIN, like 12-3456789">
+  <label class="a-label" for="ein"><span>EIN<span class="a-label__required" aria-hidden="true">*</span></span></label>
+  <input class="a-input" id="ein" name="ein" type="text" aria-describedby="ein-hint ein-error" required inputmode="numeric" data-mask="ein" autocomplete="off">
+  <p class="a-hint" id="ein-hint">9 digits, like 12-3456789</p>
+  <p class="a-error" id="ein-error"></p>
+</div>
+          <div class="a-field " data-msg-required="Choose your industry">
+  <label class="a-label" id="industry-label" for="industry"><span>Industry<span class="a-label__required" aria-hidden="true">*</span></span></label>
+  <div class="a-select" data-listbox="select" data-icons="check search">
+    <button type="button" class="a-select__trigger" id="industry" aria-haspopup="listbox" aria-expanded="false" aria-controls="industry-list" aria-labelledby="industry-label industry-value" aria-describedby="industry-error"><span class="a-select__value is-placeholder" id="industry-value">Choose industry</span><svg class="a-icon a-select__chevron" aria-hidden="true"><use href="#chevron-down"></use></svg></button>
+    <input type="hidden" name="industry" value="" required>
+    <div class="a-listbox-popover" hidden>
+    <div class="a-listbox-popover__search"><div class="a-input-group"><svg class="a-icon" aria-hidden="true"><use href="#search"></use></svg><input class="a-input" type="text" data-listbox-search role="combobox" aria-expanded="false" aria-autocomplete="list" aria-controls="industry-list" aria-label="Search industry" autocomplete="off"></div></div>
+      <ul class="a-listbox" data-scroll-area role="listbox" id="industry-list" aria-labelledby="industry-label" tabindex="-1"><li role="option" class="a-option" data-value="dental" aria-selected="false">Dental practice<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="medical" aria-selected="false">Medical practice<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="ecommerce" aria-selected="false">Ecommerce<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="construction" aria-selected="false">Construction<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="restaurant" aria-selected="false">Restaurant and food service<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="realestate" aria-selected="false">Real estate<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="agency" aria-selected="false">Marketing agency<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="saas" aria-selected="false">Software and SaaS<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="legal" aria-selected="false">Law firm<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="retail" aria-selected="false">Retail<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="logistics" aria-selected="false">Logistics<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="fitness" aria-selected="false">Fitness<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="nonprofit" aria-selected="false">Nonprofit<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="other" aria-selected="false">Other<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li></ul>
+    </div>
+  </div>
+  <p class="a-error" id="industry-error"></p>
+</div>
+          <div class="a-field " data-msg-required="Choose the state where you registered">
+  <label class="a-label" id="formation-state-label" for="formation-state"><span>State of formation<span class="a-label__required" aria-hidden="true">*</span></span></label>
+  <div class="a-select" data-listbox="select" data-source="us-states" data-icons="check search">
+    <button type="button" class="a-select__trigger" id="formation-state" aria-haspopup="listbox" aria-expanded="false" aria-controls="formation-state-list" aria-labelledby="formation-state-label formation-state-value" aria-describedby="formation-state-error"><span class="a-select__value is-placeholder" id="formation-state-value">Choose a state</span><svg class="a-icon a-select__chevron" aria-hidden="true"><use href="#chevron-down"></use></svg></button>
+    <input type="hidden" name="formation-state" value="" required>
+    <div class="a-listbox-popover" hidden>
+    <div class="a-listbox-popover__search"><div class="a-input-group"><svg class="a-icon" aria-hidden="true"><use href="#search"></use></svg><input class="a-input" type="text" data-listbox-search role="combobox" aria-expanded="false" aria-autocomplete="list" aria-controls="formation-state-list" aria-label="Search state of formation" autocomplete="off"></div></div>
+      <ul class="a-listbox" data-scroll-area role="listbox" id="formation-state-list" aria-labelledby="formation-state-label" tabindex="-1"></ul>
+    </div>
+  </div>
+  <p class="a-error" id="formation-state-error"></p>
+</div>
+        </div>
+        <fieldset class="a-fieldset">
+          <legend>Business address</legend>
+          <div class="a-form-grid a-form-grid--2">
+            <div class="a-field a-field--full" data-msg-required="Enter the street address">
+  <label class="a-label" for="biz-line1"><span>Street address<span class="a-label__required" aria-hidden="true">*</span></span></label>
+  <input class="a-input" id="biz-line1" name="biz-line1" type="text" aria-describedby="biz-line1-error" required autocomplete="address-line1">
+  <p class="a-error" id="biz-line1-error"></p>
+</div>
+            <div class="a-field a-field--full">
+  <label class="a-label" for="biz-line2"><span>Suite, unit or floor</span><span class="a-label__optional">Optional</span></label>
+  <input class="a-input" id="biz-line2" name="biz-line2" type="text" aria-describedby="biz-line2-error" autocomplete="address-line2">
+  <p class="a-error" id="biz-line2-error"></p>
+</div>
+            <div class="a-field " data-msg-required="Enter the city">
+  <label class="a-label" for="biz-city"><span>City<span class="a-label__required" aria-hidden="true">*</span></span></label>
+  <input class="a-input" id="biz-city" name="biz-city" type="text" aria-describedby="biz-city-error" required autocomplete="address-level2">
+  <p class="a-error" id="biz-city-error"></p>
+</div>
+            <div class="a-field " data-msg-required="Choose the state">
+  <label class="a-label" id="biz-state-label" for="biz-state"><span>State<span class="a-label__required" aria-hidden="true">*</span></span></label>
+  <div class="a-select" data-listbox="select" data-source="us-states" data-icons="check search">
+    <button type="button" class="a-select__trigger" id="biz-state" aria-haspopup="listbox" aria-expanded="false" aria-controls="biz-state-list" aria-labelledby="biz-state-label biz-state-value" aria-describedby="biz-state-error"><span class="a-select__value is-placeholder" id="biz-state-value">Choose a state</span><svg class="a-icon a-select__chevron" aria-hidden="true"><use href="#chevron-down"></use></svg></button>
+    <input type="hidden" name="biz-state" value="" required>
+    <div class="a-listbox-popover" hidden>
+    <div class="a-listbox-popover__search"><div class="a-input-group"><svg class="a-icon" aria-hidden="true"><use href="#search"></use></svg><input class="a-input" type="text" data-listbox-search role="combobox" aria-expanded="false" aria-autocomplete="list" aria-controls="biz-state-list" aria-label="Search state" autocomplete="off"></div></div>
+      <ul class="a-listbox" data-scroll-area role="listbox" id="biz-state-list" aria-labelledby="biz-state-label" tabindex="-1"></ul>
+    </div>
+  </div>
+  <p class="a-error" id="biz-state-error"></p>
+</div>
+            <div class="a-field " data-msg-required="Enter the ZIP code" data-msg-pattern="Enter a 5 digit ZIP code">
+  <label class="a-label" for="biz-zip"><span>ZIP code<span class="a-label__required" aria-hidden="true">*</span></span></label>
+  <input class="a-input" id="biz-zip" name="biz-zip" type="text" aria-describedby="biz-zip-error" required autocomplete="postal-code" inputmode="numeric" data-mask="zip">
+  <p class="a-error" id="biz-zip-error"></p>
+</div>
+            <div class="a-field " data-msg-pattern="Enter a web address like yourcompany.com">
+  <label class="a-label" for="website"><span>Website</span><span class="a-label__optional">Optional</span></label>
+  <input class="a-input" id="website" name="website" type="text" aria-describedby="website-error" placeholder="yourcompany.com" data-validate="url">
+  <p class="a-error" id="website-error"></p>
+</div>
+          </div>
+        </fieldset>
+        <fieldset class="a-fieldset"><legend>Team size</legend>
+          <div class="a-segmented">
+            <label class="a-segmented__option"><input type="radio" name="team" value="1" checked><span>Just me</span></label>
+            <label class="a-segmented__option"><input type="radio" name="team" value="2-10"><span>2 to 10</span></label>
+            <label class="a-segmented__option"><input type="radio" name="team" value="11-50"><span>11 to 50</span></label>
+            <label class="a-segmented__option"><input type="radio" name="team" value="51+"><span>51 or more</span></label>
+          </div>
+        </fieldset><div class="a-form-actions">
+          <button type="button" class="a-btn a-btn--ghost" data-wizard-back><svg class="a-icon" aria-hidden="true"><use href="#arrow-left"></use></svg>Back</button>
+          <div class="a-form-actions__end"><a class="a-btn a-btn--outline" href="../../ui-design/onboarding/resume.html" data-save-later>Save for later</a><button type="submit" class="a-btn a-btn--primary">Continue<svg class="a-icon" aria-hidden="true"><use href="#arrow-right"></use></svg></button></div>
+        </div></form></section><section data-wizard-step aria-label="Services" hidden><div class="a-onb__head"><h2 tabindex="-1">What you need</h2><p>Choose services and tell us about your books today.</p></div><form class="a-form-grid" novalidate><fieldset class="a-fieldset" data-required-group data-msg-required="Choose at least one service">
+          <legend>Which services do you need?</legend>
+          <p class="a-hint">Choose all that apply. You can change this later.</p>
+          <div class="a-choice-cards"><label class="a-choice-card"><input class="a-check__input" type="checkbox" id="svc-monthly" name="services" value="monthly" checked><span class="a-choice-card__icon"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="#ledger-book-duo"></use></svg></span><span class="a-choice-card__title">Monthly bookkeeping</span><span class="a-choice-card__text">Every transaction categorized, every account reconciled, and your month closed by the 10th.</span></label><label class="a-choice-card"><input class="a-check__input" type="checkbox" id="svc-catchup" name="services" value="catchup"><span class="a-choice-card__icon"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="#clock-play-duo"></use></svg></span><span class="a-choice-card__title">Catch-up bookkeeping</span><span class="a-choice-card__text">Behind by a few months or a few years? We bring your books current, month by month.</span></label><label class="a-choice-card"><input class="a-check__input" type="checkbox" id="svc-cleanup" name="services" value="cleanup"><span class="a-choice-card__icon"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="#reconcile-duo"></use></svg></span><span class="a-choice-card__title">Books cleanup</span><span class="a-choice-card__text">Fix miscategorized transactions, duplicates and messy charts of accounts.</span></label><label class="a-choice-card"><input class="a-check__input" type="checkbox" id="svc-payables" name="services" value="payables"><span class="a-choice-card__icon"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="#invoice-duo"></use></svg></span><span class="a-choice-card__title">Payables and receivables</span><span class="a-choice-card__text">Track what you owe and what you are owed, so cash flow never surprises you.</span></label><label class="a-choice-card"><input class="a-check__input" type="checkbox" id="svc-payroll" name="services" value="payroll"><span class="a-choice-card__icon"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="#payroll-duo"></use></svg></span><span class="a-choice-card__title">Payroll support</span><span class="a-choice-card__text">Payroll journal entries and reconciliation, matched to your payroll provider.</span></label><label class="a-choice-card"><input class="a-check__input" type="checkbox" id="svc-reporting" name="services" value="reporting"><span class="a-choice-card__icon"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="#bar-chart-duo"></use></svg></span><span class="a-choice-card__title">Financial reporting</span><span class="a-choice-card__text">Clear monthly reports and a short summary of what changed and why.</span></label></div>
+          <p class="a-error" id="services-error"></p>
+        </fieldset>
+        <div class="a-field" data-show-when="services=catchup">
+          <div class="a-alert a-alert--info" role="note"><svg class="a-icon" aria-hidden="true"><use href="#info"></use></svg><p class="a-alert__title">Catch-up projects</p><p class="a-alert__body">Tell us how far behind your books are so we can quote the project.</p></div>
+        </div>
+        <div class="a-form-grid a-form-grid--2">
+          <div class="a-field " data-msg-required="Choose the software you use, or None yet">
+  <label class="a-label" id="software-label" for="software"><span>Accounting software<span class="a-label__required" aria-hidden="true">*</span></span></label>
+  <div class="a-select" data-listbox="select" data-icons="check search">
+    <button type="button" class="a-select__trigger" id="software" aria-haspopup="listbox" aria-expanded="false" aria-controls="software-list" aria-labelledby="software-label software-value" aria-describedby="software-error"><span class="a-select__value is-placeholder" id="software-value">Choose software</span><svg class="a-icon a-select__chevron" aria-hidden="true"><use href="#chevron-down"></use></svg></button>
+    <input type="hidden" name="software" value="" required>
+    <div class="a-listbox-popover" hidden>
+      <ul class="a-listbox" data-scroll-area role="listbox" id="software-list" aria-labelledby="software-label" tabindex="-1"><li role="option" class="a-option" data-value="qbo" aria-selected="false">QuickBooks Online<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="xero" aria-selected="false">Xero<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="qbd" aria-selected="false">QuickBooks Desktop<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="freshbooks" aria-selected="false">FreshBooks<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="wave" aria-selected="false">Wave<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="excel" aria-selected="false">Spreadsheets<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="none" aria-selected="false">None yet<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li></ul>
+    </div>
+  </div>
+  <p class="a-error" id="software-error"></p>
+</div>
+          <div class="a-field ">
+  <label class="a-label" id="months-behind-label" for="months-behind"><span>Months behind</span></label>
+  <div class="a-select" data-listbox="select" data-icons="check search">
+    <button type="button" class="a-select__trigger" id="months-behind" aria-haspopup="listbox" aria-expanded="false" aria-controls="months-behind-list" aria-labelledby="months-behind-label months-behind-value" aria-describedby="months-behind-error"><span class="a-select__value" id="months-behind-value">Up to date</span><svg class="a-icon a-select__chevron" aria-hidden="true"><use href="#chevron-down"></use></svg></button>
+    <input type="hidden" name="months-behind" value="0">
+    <div class="a-listbox-popover" hidden>
+      <ul class="a-listbox" data-scroll-area role="listbox" id="months-behind-list" aria-labelledby="months-behind-label" tabindex="-1"><li role="option" class="a-option" data-value="0" aria-selected="true">Up to date<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="1-3" aria-selected="false">1 to 3 months<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="4-6" aria-selected="false">4 to 6 months<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="7-12" aria-selected="false">7 to 12 months<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="12+" aria-selected="false">More than 12 months<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li></ul>
+    </div>
+  </div>
+  <p class="a-error" id="months-behind-error"></p>
+</div>
+        </div>
+        <div class="a-slider" data-slider data-format="transactions">
+          <div class="a-slider__head"><label for="volume">Monthly transactions, roughly</label><output class="a-slider__value" for="volume" data-slider-output></output></div>
+          <div class="a-slider__track"><span class="a-slider__rail"></span><input class="a-range" id="volume" name="volume" type="range" min="0" max="1000" step="25" value="250"></div>
+          <div class="a-slider__scale" aria-hidden="true"><span>0</span><span>500</span><span>1,000+</span></div>
+        </div>
+        <div class="a-form-grid a-form-grid--2">
+          <div class="a-field"><label class="a-label" for="accounts">Bank and card accounts</label><div class="a-number" data-number><button type="button" class="a-number__btn" data-step="-1" aria-label="Decrease"><svg class="a-icon" aria-hidden="true"><use href="#minus"></use></svg></button><input class="a-input" id="accounts" name="accounts" type="number" min="1" max="25" value="3" inputmode="numeric"><button type="button" class="a-number__btn" data-step="1" aria-label="Increase"><svg class="a-icon" aria-hidden="true"><use href="#plus"></use></svg></button></div></div>
+          <div class="a-field " data-msg-required="Choose a start date" data-msg-pattern="Enter a date as MM/DD/YYYY">
+  <label class="a-label" for="start-date"><span>Preferred start date<span class="a-label__required" aria-hidden="true">*</span></span></label>
+  <div class="a-datepicker" data-datepicker data-min="today" data-icons="chevron-left chevron-right chevron-down">
+    <div class="a-input-group"><input class="a-input" type="text" inputmode="numeric" data-mask="date" placeholder="MM/DD/YYYY" autocomplete="off" id="start-date" name="start-date" aria-describedby="start-date-hint start-date-error" required><button type="button" class="a-input-group__action" data-datepicker-open aria-haspopup="dialog" aria-expanded="false" aria-label="Choose date"><svg class="a-icon" aria-hidden="true"><use href="#calendar"></use></svg></button></div>
+  </div>
+  <p class="a-hint" id="start-date-hint">We need about 3 business days to set up.</p>
+  <p class="a-error" id="start-date-error"></p>
+</div>
+        </div>
+        <div class="a-field"><label class="a-label" for="notes"><span>Anything we should know?</span><span class="a-label__optional">Optional</span></label><textarea class="a-textarea" id="notes" name="notes" maxlength="1000" placeholder="Prior bookkeeper, deadlines, anything unusual"></textarea></div><div class="a-form-actions">
+          <button type="button" class="a-btn a-btn--ghost" data-wizard-back><svg class="a-icon" aria-hidden="true"><use href="#arrow-left"></use></svg>Back</button>
+          <div class="a-form-actions__end"><a class="a-btn a-btn--outline" href="../../ui-design/onboarding/resume.html" data-save-later>Save for later</a><button type="submit" class="a-btn a-btn--primary">Continue<svg class="a-icon" aria-hidden="true"><use href="#arrow-right"></use></svg></button></div>
+        </div></form></section><section data-wizard-step aria-label="Documents" hidden><div class="a-onb__head"><h2 tabindex="-1">Share documents</h2><p>Statements help us review your books before the welcome call.</p></div><form class="a-form-grid" novalidate><div class="a-alert a-alert--info" role="note"><svg class="a-icon" aria-hidden="true"><use href="#lock"></use></svg><p class="a-alert__title">Uploads are encrypted</p><p class="a-alert__body">Only the bookkeepers working on your account can open these files.</p></div>
+        <div class="a-field">
+          <p class="a-label" id="statements-label">Bank and card statements, last 3 months</p>
+          <div class="a-dropzone" data-dropzone="statements-files" data-max-mb="25" data-icons="file-text check-circle x-circle trash">
+            <span class="a-dropzone__icon"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="#file-upload-duo"></use></svg></span>
+            <p class="a-dropzone__title">Drag files here or <span>browse</span></p>
+            <p class="a-dropzone__hint">PDF or CSV, up to 25 MB each</p>
+            <input class="a-dropzone__input" type="file" multiple accept=".pdf,.csv,.xlsx,.jpg,.png" aria-labelledby="statements-label" aria-describedby="statements-hint">
+          </div>
+          <p class="a-visually-hidden" id="statements-hint">PDF or CSV, up to 25 MB each</p>
+          <ul class="a-file-list" id="statements-files" aria-label="Bank and card statements, last 3 months, uploaded files"></ul>
+        </div>
+        <div class="a-field">
+          <p class="a-label" id="returns-label">Most recent business tax return</p>
+          <div class="a-dropzone" data-dropzone="returns-files" data-max-mb="25" data-icons="file-text check-circle x-circle trash">
+            <span class="a-dropzone__icon"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="#file-upload-duo"></use></svg></span>
+            <p class="a-dropzone__title">Drag files here or <span>browse</span></p>
+            <p class="a-dropzone__hint">PDF, up to 25 MB</p>
+            <input class="a-dropzone__input" type="file" multiple accept=".pdf,.csv,.xlsx,.jpg,.png" aria-labelledby="returns-label" aria-describedby="returns-hint">
+          </div>
+          <p class="a-visually-hidden" id="returns-hint">PDF, up to 25 MB</p>
+          <ul class="a-file-list" id="returns-files" aria-label="Most recent business tax return, uploaded files"></ul>
+        </div>
+        <div class="a-field">
+          <p class="a-label" id="coa-label">Chart of accounts, if you have one</p>
+          <div class="a-dropzone" data-dropzone="coa-files" data-max-mb="25" data-icons="file-text check-circle x-circle trash">
+            <span class="a-dropzone__icon"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="#file-upload-duo"></use></svg></span>
+            <p class="a-dropzone__title">Drag files here or <span>browse</span></p>
+            <p class="a-dropzone__hint">XLSX, CSV or PDF, up to 25 MB</p>
+            <input class="a-dropzone__input" type="file" multiple accept=".pdf,.csv,.xlsx,.jpg,.png" aria-labelledby="coa-label" aria-describedby="coa-hint">
+          </div>
+          <p class="a-visually-hidden" id="coa-hint">XLSX, CSV or PDF, up to 25 MB</p>
+          <ul class="a-file-list" id="coa-files" aria-label="Chart of accounts, if you have one, uploaded files"></ul>
+        </div>
+        <label class="a-check"><input class="a-check__input" type="checkbox" id="upload-later" name="upload-later" aria-describedby="upload-later-hint"><span class="a-check__label">I will upload documents later</span><span class="a-check__hint" id="upload-later-hint">We will email you a secure upload link. Your bookkeeping starts once we have them.</span></label><div class="a-form-actions">
+          <button type="button" class="a-btn a-btn--ghost" data-wizard-back><svg class="a-icon" aria-hidden="true"><use href="#arrow-left"></use></svg>Back</button>
+          <div class="a-form-actions__end"><a class="a-btn a-btn--outline" href="../../ui-design/onboarding/resume.html" data-save-later>Save for later</a><button type="submit" class="a-btn a-btn--primary">Continue<svg class="a-icon" aria-hidden="true"><use href="#arrow-right"></use></svg></button></div>
+        </div></form></section><section data-wizard-step aria-label="Plan" hidden><div class="a-onb__head"><h2 tabindex="-1">Choose a plan</h2><p>Pick a monthly plan or a one-time project. Prices are sample values.</p></div><form class="a-form-grid" novalidate><div class="a-tabs a-tabs--pill" data-tabs>
+          <div role="tablist" class="a-tabs__list" aria-label="Billing type">
+            <button type="button" role="tab" class="a-tabs__tab" id="tab-plan-monthly" aria-controls="panel-plan-monthly" aria-selected="true">Monthly plan</button>
+            <button type="button" role="tab" class="a-tabs__tab" id="tab-plan-project" aria-controls="panel-plan-project" aria-selected="false">One-time project</button>
+          </div>
+          <div role="tabpanel" class="a-tabs__panel" id="panel-plan-monthly" aria-labelledby="tab-plan-monthly">
+            <fieldset class="a-fieldset" data-msg-required="Choose a plan"><legend class="a-visually-hidden">Monthly plans</legend><div class="a-choice-cards"><label class="a-choice-card"><input class="a-radio__input" type="radio" name="plan" value="starter" data-price="299" data-plan-name="Starter" data-recurring="true" required><span class="a-choice-card__title">Starter</span><span class="a-plan-price">$299<span> per month</span></span><ul class="a-plan-features" role="list"><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Up to 100 transactions a month</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>2 bank or card accounts</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Monthly reconciliation and close</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Profit and loss, balance sheet</li></ul></label><label class="a-choice-card"><input class="a-radio__input" type="radio" name="plan" value="growth" data-price="499" data-plan-name="Growth" data-recurring="true" checked required><span class="a-choice-card__title">Growth</span><span class="a-badge a-badge--accent">Most chosen</span><span class="a-plan-price">$499<span> per month</span></span><ul class="a-plan-features" role="list"><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Up to 300 transactions a month</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>5 bank or card accounts</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Everything in Starter</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Accounts payable and receivable tracking</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Quarterly review call</li></ul></label><label class="a-choice-card"><input class="a-radio__input" type="radio" name="plan" value="scale" data-price="899" data-plan-name="Scale" data-recurring="true" required><span class="a-choice-card__title">Scale</span><span class="a-plan-price">$899<span> per month</span></span><ul class="a-plan-features" role="list"><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Up to 750 transactions a month</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Unlimited accounts</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Everything in Growth</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Payroll journal entries</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Dedicated bookkeeper</li></ul></label></div></fieldset>
+          </div>
+          <div role="tabpanel" class="a-tabs__panel" id="panel-plan-project" aria-labelledby="tab-plan-project" hidden>
+            <fieldset class="a-fieldset"><legend class="a-visually-hidden">One-time projects</legend><div class="a-choice-cards"><label class="a-choice-card"><input class="a-radio__input" type="radio" name="plan" value="catchup" data-price="1250" data-plan-name="Catch-up project" data-recurring="false" required><span class="a-choice-card__title">Catch-up project</span><span class="a-plan-price">$1,250<span> one time</span></span><ul class="a-plan-features" role="list"><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Up to 12 months of past books</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Reconciled to bank statements</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Tax-ready reports for your CPA</li></ul></label><label class="a-choice-card"><input class="a-radio__input" type="radio" name="plan" value="cleanup" data-price="950" data-plan-name="Books cleanup" data-recurring="false" required><span class="a-choice-card__title">Books cleanup</span><span class="a-plan-price">$950<span> one time</span></span><ul class="a-plan-features" role="list"><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Fix miscategorized transactions</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Remove duplicates</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Rebuild chart of accounts</li></ul></label></div></fieldset>
+          </div>
+        </div>
+        <p class="a-hint">Prices in US dollars. Monthly plans renew each month until you cancel. Projects are billed once.</p><div class="a-form-actions">
+          <button type="button" class="a-btn a-btn--ghost" data-wizard-back><svg class="a-icon" aria-hidden="true"><use href="#arrow-left"></use></svg>Back</button>
+          <div class="a-form-actions__end"><a class="a-btn a-btn--outline" href="../../ui-design/onboarding/resume.html" data-save-later>Save for later</a><button type="submit" class="a-btn a-btn--primary">Review and pay<svg class="a-icon" aria-hidden="true"><use href="#arrow-right"></use></svg></button></div>
+        </div></form></section><section data-wizard-step aria-label="Review" hidden><div class="a-onb__head"><h2 tabindex="-1">Review your details</h2><p>Check everything before you pay. You can edit any section.</p></div><form class="a-form-grid" novalidate><div class="a-choice-list">
+          <section class="a-card" aria-labelledby="rev-0"><div class="a-card__header"><h2 class="a-card__title" id="rev-0">Account</h2><button type="button" class="a-btn a-btn--link a-btn--sm" data-wizard-go="0">Edit<span class="a-visually-hidden"> account</span></button></div><div class="a-card__content"><dl class="a-dl"><dt>Name</dt><dd data-review="name">Maria Robles</dd><dt>Email</dt><dd data-review="email">m.robles@harborlanedental.com</dd><dt>Phone</dt><dd data-review="phone">(512) 555-0186</dd><dt>Role</dt><dd data-review="role">Owner or partner</dd></dl></div></section>
+          <section class="a-card" aria-labelledby="rev-1"><div class="a-card__header"><h2 class="a-card__title" id="rev-1">Business</h2><button type="button" class="a-btn a-btn--link a-btn--sm" data-wizard-go="1">Edit<span class="a-visually-hidden"> business</span></button></div><div class="a-card__content"><dl class="a-dl"><dt>Legal name</dt><dd data-review="legal-name">Harbor Lane Dental, LLC</dd><dt>Entity</dt><dd data-review="entity">Single-member LLC</dd><dt>EIN</dt><dd data-review="ein">12-3456789</dd><dt>Industry</dt><dd data-review="industry">Dental practice</dd><dt>Address</dt><dd data-review="address">1840 Barton Springs Rd, Austin, Texas 78704</dd></dl></div></section>
+          <section class="a-card" aria-labelledby="rev-2"><div class="a-card__header"><h2 class="a-card__title" id="rev-2">Services</h2><button type="button" class="a-btn a-btn--link a-btn--sm" data-wizard-go="2">Edit<span class="a-visually-hidden"> services</span></button></div><div class="a-card__content"><dl class="a-dl"><dt>Services</dt><dd data-review="services">Monthly bookkeeping</dd><dt>Software</dt><dd data-review="software">QuickBooks Online</dd><dt>Volume</dt><dd data-review="volume">About 250 transactions a month</dd><dt>Start date</dt><dd data-review="start-date">11/02/2026</dd></dl></div></section>
+          <section class="a-card" aria-labelledby="rev-3"><div class="a-card__header"><h2 class="a-card__title" id="rev-3">Documents</h2><button type="button" class="a-btn a-btn--link a-btn--sm" data-wizard-go="3">Edit<span class="a-visually-hidden"> documents</span></button></div><div class="a-card__content"><dl class="a-dl"><dt>Uploads</dt><dd data-review="documents">Bank statements, prior return</dd></dl></div></section>
+          <section class="a-card" aria-labelledby="rev-4"><div class="a-card__header"><h2 class="a-card__title" id="rev-4">Plan</h2><button type="button" class="a-btn a-btn--link a-btn--sm" data-wizard-go="4">Edit<span class="a-visually-hidden"> plan</span></button></div><div class="a-card__content"><dl class="a-dl"><dt>Plan</dt><dd data-review="planName">Growth</dd><dt>Billing</dt><dd data-review="planRecurring">Monthly</dd></dl></div></section>
+        </div>
+        <div class="a-field" data-msg-required="Agree to the terms to continue"><label class="a-check"><input class="a-check__input" type="checkbox" id="terms" name="terms" required><span class="a-check__label">I agree to the <a href="../../ui-design/site/terms.html">terms of service</a> and <a href="../../ui-design/site/privacy.html">privacy policy</a></span></label><p class="a-error" id="terms-error"></p></div><div class="a-form-actions">
+          <button type="button" class="a-btn a-btn--ghost" data-wizard-back><svg class="a-icon" aria-hidden="true"><use href="#arrow-left"></use></svg>Back</button>
+          <div class="a-form-actions__end"><a class="a-btn a-btn--outline" href="../../ui-design/onboarding/resume.html" data-save-later>Save for later</a><button type="submit" class="a-btn a-btn--primary">Continue to payment<svg class="a-icon" aria-hidden="true"><use href="#arrow-right"></use></svg></button></div>
+        </div></form></section><section data-wizard-step aria-label="Payment" hidden><div class="a-onb__head"><h2 tabindex="-1">Payment</h2><p>Pay securely. Your card is charged only when you click Pay.</p></div><div data-pay-flow>
+  <div data-pay-state="form"><form class="a-form-grid" data-payment-form novalidate><div class="a-test-mode" role="note"><strong>Test mode.</strong> Use <code>4242 4242 4242 4242</code> to succeed or <code>4000 0000 0000 0002</code> to see a decline, any future date and any CVC.</div>
+          <div class="a-card-field">
+  <p class="a-label" id="pay-card-label">Card details</p>
+  <div class="a-card-element" data-card-element role="group" aria-labelledby="pay-card-label" data-icons="alert-triangle">
+    <div class="a-card-element__number"><span class="a-card-brand" data-brand=""><svg class="a-icon" aria-hidden="true"><use href="#credit-card"></use></svg><span data-brand-name></span></span><input class="a-input" id="pay-number" type="text" inputmode="numeric" autocomplete="cc-number" data-mask="card" placeholder="1234 1234 1234 1234" aria-label="Card number" aria-describedby="pay-card-error"></div>
+    <input class="a-input" id="pay-expiry" type="text" inputmode="numeric" autocomplete="cc-exp" data-mask="expiry" placeholder="MM / YY" aria-label="Expiry date" aria-describedby="pay-card-error">
+    <input class="a-input" id="pay-cvc" type="text" inputmode="numeric" autocomplete="cc-csc" data-mask="cvc" maxlength="3" placeholder="CVC" aria-label="Security code" aria-describedby="pay-card-error">
+  </div>
+  <p class="a-error" id="pay-card-error" data-card-error></p>
+  <p class="a-gateway-note"><svg class="a-icon" aria-hidden="true"><use href="#lock"></use></svg>Card details go straight to Stripe and are never stored by Anoglobe.</p>
+</div>
+          <fieldset class="a-fieldset">
+  <legend>Billing address</legend>
+  <div class="a-form-grid a-form-grid--2">
+    <div class="a-field a-field--full" data-msg-required="Enter the name shown on the card">
+  <label class="a-label" for="bill-name"><span>Name on card<span class="a-label__required" aria-hidden="true">*</span></span></label>
+  <input class="a-input" id="bill-name" name="bill-name" type="text" aria-describedby="bill-name-error" required autocomplete="cc-name">
+  <p class="a-error" id="bill-name-error"></p>
+</div>
+    <div class="a-field a-field--full" data-msg-required="Enter the billing street address">
+  <label class="a-label" for="bill-line1"><span>Street address<span class="a-label__required" aria-hidden="true">*</span></span></label>
+  <input class="a-input" id="bill-line1" name="bill-line1" type="text" aria-describedby="bill-line1-error" required autocomplete="address-line1">
+  <p class="a-error" id="bill-line1-error"></p>
+</div>
+    <div class="a-field a-field--full">
+  <label class="a-label" for="bill-line2"><span>Suite, unit or floor</span><span class="a-label__optional">Optional</span></label>
+  <input class="a-input" id="bill-line2" name="bill-line2" type="text" aria-describedby="bill-line2-error" autocomplete="address-line2">
+  <p class="a-error" id="bill-line2-error"></p>
+</div>
+    <div class="a-field " data-msg-required="Enter the city">
+  <label class="a-label" for="bill-city"><span>City<span class="a-label__required" aria-hidden="true">*</span></span></label>
+  <input class="a-input" id="bill-city" name="bill-city" type="text" aria-describedby="bill-city-error" required autocomplete="address-level2">
+  <p class="a-error" id="bill-city-error"></p>
+</div>
+    <div class="a-field " data-msg-required="Choose the billing state">
+  <label class="a-label" id="bill-state-label" for="bill-state"><span>State<span class="a-label__required" aria-hidden="true">*</span></span></label>
+  <div class="a-select" data-listbox="select" data-source="us-states" data-icons="check search">
+    <button type="button" class="a-select__trigger" id="bill-state" aria-haspopup="listbox" aria-expanded="false" aria-controls="bill-state-list" aria-labelledby="bill-state-label bill-state-value" aria-describedby="bill-state-error"><span class="a-select__value is-placeholder" id="bill-state-value">Choose a state</span><svg class="a-icon a-select__chevron" aria-hidden="true"><use href="#chevron-down"></use></svg></button>
+    <input type="hidden" name="bill-state" value="" required>
+    <div class="a-listbox-popover" hidden>
+    <div class="a-listbox-popover__search"><div class="a-input-group"><svg class="a-icon" aria-hidden="true"><use href="#search"></use></svg><input class="a-input" type="text" data-listbox-search role="combobox" aria-expanded="false" aria-autocomplete="list" aria-controls="bill-state-list" aria-label="Search state" autocomplete="off"></div></div>
+      <ul class="a-listbox" data-scroll-area role="listbox" id="bill-state-list" aria-labelledby="bill-state-label" tabindex="-1"></ul>
+    </div>
+  </div>
+  <p class="a-error" id="bill-state-error"></p>
+</div>
+    <div class="a-field " data-msg-required="Enter the ZIP code" data-msg-pattern="Enter a 5 digit ZIP code">
+  <label class="a-label" for="bill-zip"><span>ZIP code<span class="a-label__required" aria-hidden="true">*</span></span></label>
+  <input class="a-input" id="bill-zip" name="bill-zip" type="text" aria-describedby="bill-zip-error" required autocomplete="postal-code" inputmode="numeric" data-mask="zip">
+  <p class="a-error" id="bill-zip-error"></p>
+</div>
+  </div>
+</fieldset>
+          <div data-billing="monthly"><div class="a-field" data-msg-required="Check the authorization box to continue">
+  <p class="a-label" id="auth-monthly-title">Billing authorization</p>
+  <div class="a-legal" data-scroll-area tabindex="0" role="region" aria-label="Growth plan billing terms">
+    <span class="a-badge a-badge--warning a-legal__flag">Sample wording, pending legal review</span>
+    <p>By checking the box below, I authorize Anoglobe LLP to charge the card above $499.00 today and $499.00 on the same day of each following month for the Growth plan, until I cancel.</p><p>I can cancel at any time before the next billing date by emailing billing@anoglobebookkeeping.com. Charges already made are not refundable except as stated in the Terms of Service.</p><p>All amounts are in US dollars. Anoglobe LLP will email a receipt after each charge and give at least 30 days notice before any price change.</p>
+  </div>
+  <label class="a-check"><input class="a-check__input" type="checkbox" id="auth-monthly" name="auth-monthly" required><span class="a-check__label">I authorize Anoglobe LLP to charge $499.00 today and $499.00 every month until I cancel.</span></label>
+  <p class="a-error" id="auth-monthly-error"></p>
+</div></div>
+          <div data-billing="onetime" hidden><div class="a-field" data-msg-required="Check the authorization box to continue">
+  <p class="a-label" id="auth-onetime-title">Billing authorization</p>
+  <div class="a-legal" data-scroll-area tabindex="0" role="region" aria-label="Catch-up project billing terms">
+    <span class="a-badge a-badge--warning a-legal__flag">Sample wording, pending legal review</span>
+    <p>By checking the box below, I authorize Anoglobe LLP to charge the card above a one-time amount of $1,250.00 for the Catch-up project.</p><p>This is a single charge. No recurring payments will be made unless I sign up for a monthly plan separately.</p><p>All amounts are in US dollars. Anoglobe LLP will email a receipt after the charge.</p>
+  </div>
+  <label class="a-check"><input class="a-check__input" type="checkbox" id="auth-onetime" name="auth-onetime" required><span class="a-check__label">I authorize Anoglobe LLP to charge $1,250.00 one time for the Catch-up project.</span></label>
+  <p class="a-error" id="auth-onetime-error"></p>
+</div></div><button type="submit" class="a-btn a-btn--primary a-btn--lg a-btn--block"><svg class="a-icon" aria-hidden="true"><use href="#lock"></use></svg>Pay <span data-summary="due">$499.00</span></button><div class="a-form-actions"><button type="button" class="a-btn a-btn--ghost" data-wizard-back><svg class="a-icon" aria-hidden="true"><use href="#arrow-left"></use></svg>Back to review</button></div></form></div>
+  <div data-pay-state="processing" hidden><div class="a-processing" role="status"><span class="a-spinner a-spinner--lg" aria-hidden="true"></span><p class="a-h4" tabindex="-1">Processing your payment</p><p class="a-processing__text">This takes a few seconds. Please keep this page open.</p></div></div>
+  <div data-pay-state="success" hidden><div class="a-result" role="status"><span><svg class="a-anim-check" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" pathLength="1"></circle><path d="M8.2 12.3l2.6 2.6 5-5.2" pathLength="1"></path></svg></span><h2 class="a-result__title" tabindex="-1">Payment successful</h2></div></div>
+  <div data-pay-state="declined" hidden><div class="a-result" role="alert"><svg class="a-illus a-illus--64" aria-hidden="true"><use href="#illus-error"></use></svg><h2 class="a-result__title" tabindex="-1">Your card was declined</h2><p class="a-result__text">No money was taken. Try another card, or contact your bank.</p><button type="button" class="a-btn a-btn--primary" data-pay-retry>Try another card</button></div></div>
+</div></section>
+        <section data-wizard-done hidden><div class="a-result"><span><svg class="a-anim-check" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" pathLength="1"></circle><path d="M8.2 12.3l2.6 2.6 5-5.2" pathLength="1"></path></svg></span><h2 class="a-result__title" tabindex="-1">You are all set</h2><p class="a-result__text">Payment received. A confirmation is on its way to your inbox and our assistant will call you shortly.</p><div class="a-btn-row"><a class="a-btn a-btn--primary" href="success.html">View confirmation</a><button type="button" class="a-btn a-btn--outline" data-wizard-reset>Start the demo again</button></div></div></section>
+      </div>
+    </main>
+  </div>
+  <!-- shell:onboarding-footer -->
+  <footer class="a-onb-footer">
+    <p class="a-small a-muted">Your information is encrypted in transit. Card details go directly to our payment processor and are never stored by Anoglobe.</p>
+  </footer>
+  <!-- /shell:onboarding-footer -->
+  <!-- icons -->
+  <svg class="a-sprite" aria-hidden="true" focusable="false">
+    <symbol id="alert-triangle" viewBox="0 0 24 24"><path d="M10.3 4.4a2 2 0 0 1 3.4 0l7.6 13.1a2 2 0 0 1-1.7 3H4.4a2 2 0 0 1-1.7-3z" style="stroke-dasharray: calc(57.868 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.767 - var(--icon-gap) / 2)"/><path d="M12 9.5v4"/><path d="M12 16.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="arrow-left" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="M11 6l-6 6 6 6"/></symbol>
+    <symbol id="arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></symbol>
+    <symbol id="bar-chart-duo" viewBox="0 0 24 24"><path d="M3.5 20.5h17"/><path d="M6.5 17v-5"/><path d="M11 17V7"/><path d="M15.5 17v-8"/><path d="M19.5 17v-3"/></symbol>
+    <symbol id="calendar" viewBox="0 0 24 24"><path d="M6 5H18a2.5 2.5 0 0 1 2.5 2.5V18a2.5 2.5 0 0 1 -2.5 2.5H6a2.5 2.5 0 0 1 -2.5 -2.5V7.5a2.5 2.5 0 0 1 2.5 -2.5z" style="stroke-dasharray: calc(60.71 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(48.568 - var(--icon-gap) / 2)"/><path d="M3.5 10h17"/><path d="M8 3v4"/><path d="M16 3v4"/><path d="M8 14h.01" style="display: var(--icon-minor-display, inline)"/><path d="M12 14h.01" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="check-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M8.2 12.3l2.6 2.6 5-5.2"/></symbol>
+    <symbol id="chevron-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="chevron-left" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+    <symbol id="chevron-right" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+    <symbol id="clock-play-duo" viewBox="0 0 24 24"><path d="M11 3.5a8 8 0 1 1 0 16a8 8 0 1 1 0 -16z" style="fill: currentColor; fill-opacity: .15; stroke: none"/><path d="M11 3.5a8 8 0 1 1 0 16a8 8 0 1 1 0 -16z" style="stroke-dasharray: calc(50.273 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(44.24 - var(--icon-gap) / 2)"/><path d="M11 7.5v4l2.5 1.5"/><path d="M16.5 16.5v5l4-2.5z"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></symbol>
+    <symbol id="credit-card" viewBox="0 0 24 24"><path d="M5 5H19a2.5 2.5 0 0 1 2.5 2.5V16.5a2.5 2.5 0 0 1 -2.5 2.5H5a2.5 2.5 0 0 1 -2.5 -2.5V7.5a2.5 2.5 0 0 1 2.5 -2.5z" style="stroke-dasharray: calc(61.71 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.368 - var(--icon-gap) / 2)"/><path d="M2.5 10h19"/><path d="M6 15h3.5"/></symbol>
+    <symbol id="eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" style="stroke-dasharray: calc(48.149 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(38.519 - var(--icon-gap) / 2)"/><path d="M12 9.2a2.8 2.8 0 1 1 0 5.6a2.8 2.8 0 1 1 0 -5.6z"/></symbol>
+    <symbol id="eye-off" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" style="stroke-dasharray: calc(48.149 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(38.519 - var(--icon-gap) / 2)"/><path d="M12 9.2a2.8 2.8 0 1 1 0 5.6a2.8 2.8 0 1 1 0 -5.6z"/><path d="M4 4l16 16"/></symbol>
+    <symbol id="file-text" viewBox="0 0 24 24"><path d="M6.5 3H14l4.5 4.5v12A1.5 1.5 0 0 1 17 21H6.5A1.5 1.5 0 0 1 5 19.5v-15A1.5 1.5 0 0 1 6.5 3z" style="stroke-dasharray: calc(58.434 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(51.422 - var(--icon-gap) / 2)"/><path d="M14 3v4.5h4.5"/><path d="M8.5 12h7"/><path d="M8.5 15.5h7"/><path d="M8.5 8.5h2" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="file-upload-duo" viewBox="0 0 24 24"><path d="M6.5 3H14l4.5 4.5v12A1.5 1.5 0 0 1 17 21H6.5A1.5 1.5 0 0 1 5 19.5v-15A1.5 1.5 0 0 1 6.5 3z" style="fill: currentColor; fill-opacity: .15; stroke: none"/><path d="M6.5 3H14l4.5 4.5v12A1.5 1.5 0 0 1 17 21H6.5A1.5 1.5 0 0 1 5 19.5v-15A1.5 1.5 0 0 1 6.5 3z" style="stroke-dasharray: calc(58.434 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(51.422 - var(--icon-gap) / 2)"/><path d="M14 3v4.5h4.5"/><path d="M12 17.5v-6"/><path d="M9.5 14 12 11.5l2.5 2.5"/></symbol>
+    <symbol id="help-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M9.5 9.4a2.6 2.6 0 0 1 5 .9c0 1.8-2.5 2.2-2.5 3.7"/><path d="M12 17.2h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="illus-error" viewBox="0 0 96 96"><g stroke-width="var(--illus-stroke, 2.5)" stroke-linecap="round" stroke-linejoin="round"><path style="fill: var(--illus-surface, currentColor); fill-opacity: var(--illus-surface-opacity, .12); stroke: none" d="M42.6 18a6.2 6.2 0 0 1 10.8 0l26 45a6.2 6.2 0 0 1-5.4 9.3H22a6.2 6.2 0 0 1-5.4-9.3z"/><path style="fill: none; stroke: var(--illus-line, currentColor)" d="M42.6 18a6.2 6.2 0 0 1 10.8 0l26 45a6.2 6.2 0 0 1-5.4 9.3H22a6.2 6.2 0 0 1-5.4-9.3z"/><path style="fill: none; stroke: var(--illus-accent, currentColor)" d="M48 36v14M48 59h.1"/></g></symbol>
+    <symbol id="info" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M12 11v5.5"/><path d="M12 7.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="invoice-duo" viewBox="0 0 24 24"><path d="M6.5 3H14l4.5 4.5v12A1.5 1.5 0 0 1 17 21H6.5A1.5 1.5 0 0 1 5 19.5v-15A1.5 1.5 0 0 1 6.5 3z" style="fill: currentColor; fill-opacity: .15; stroke: none"/><path d="M6.5 3H14l4.5 4.5v12A1.5 1.5 0 0 1 17 21H6.5A1.5 1.5 0 0 1 5 19.5v-15A1.5 1.5 0 0 1 6.5 3z" style="stroke-dasharray: calc(58.434 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(51.422 - var(--icon-gap) / 2)"/><path d="M14 3v4.5h4.5"/><path d="M8.5 12h7"/><path d="M8.5 15.5h4"/><path d="M8.5 8.5h2.5" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="ledger-book-duo" viewBox="0 0 24 24"><path d="M7 3H17a2 2 0 0 1 2 2V19a2 2 0 0 1 -2 2H7a2 2 0 0 1 -2 -2V5a2 2 0 0 1 2 -2z" style="fill: currentColor; fill-opacity: .15; stroke: none"/><path d="M7 3H17a2 2 0 0 1 2 2V19a2 2 0 0 1 -2 2H7a2 2 0 0 1 -2 -2V5a2 2 0 0 1 2 -2z" style="stroke-dasharray: calc(60.568 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(48.455 - var(--icon-gap) / 2)"/><path d="M8.5 3v18"/><path d="M11.5 8h4.5"/><path d="M11.5 12h4.5"/><path d="M11.5 16h2.5" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="lock" viewBox="0 0 24 24"><path d="M7 10.5H17a2.5 2.5 0 0 1 2.5 2.5V18.5a2.5 2.5 0 0 1 -2.5 2.5H7a2.5 2.5 0 0 1 -2.5 -2.5V13a2.5 2.5 0 0 1 2.5 -2.5z" style="stroke-dasharray: calc(46.71 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(37.368 - var(--icon-gap) / 2)"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/><path d="M12 14.5v2.5"/></symbol>
+    <symbol id="lock-duo" viewBox="0 0 24 24"><path d="M7 10.5H17a2.5 2.5 0 0 1 2.5 2.5V18.5a2.5 2.5 0 0 1 -2.5 2.5H7a2.5 2.5 0 0 1 -2.5 -2.5V13a2.5 2.5 0 0 1 2.5 -2.5z" style="fill: currentColor; fill-opacity: .15; stroke: none"/><path d="M7 10.5H17a2.5 2.5 0 0 1 2.5 2.5V18.5a2.5 2.5 0 0 1 -2.5 2.5H7a2.5 2.5 0 0 1 -2.5 -2.5V13a2.5 2.5 0 0 1 2.5 -2.5z" style="stroke-dasharray: calc(46.71 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(37.368 - var(--icon-gap) / 2)"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/><path d="M12 14.5v2.5"/></symbol>
+    <symbol id="mail-duo" viewBox="0 0 24 24"><path d="M5.5 5H18.5a2.5 2.5 0 0 1 2.5 2.5V16.5a2.5 2.5 0 0 1 -2.5 2.5H5.5a2.5 2.5 0 0 1 -2.5 -2.5V7.5a2.5 2.5 0 0 1 2.5 -2.5z" style="fill: currentColor; fill-opacity: .15; stroke: none"/><path d="M5.5 5H18.5a2.5 2.5 0 0 1 2.5 2.5V16.5a2.5 2.5 0 0 1 -2.5 2.5H5.5a2.5 2.5 0 0 1 -2.5 -2.5V7.5a2.5 2.5 0 0 1 2.5 -2.5z" style="stroke-dasharray: calc(59.71 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(47.768 - var(--icon-gap) / 2)"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
+    <symbol id="minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z" style="stroke-dasharray: calc(58.676 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(26.404 - var(--icon-gap) / 2)"/></symbol>
+    <symbol id="payroll-duo" viewBox="0 0 24 24"><path d="M9 4.5a3.5 3.5 0 1 1 0 7a3.5 3.5 0 1 1 0 -7z" style="fill: currentColor; fill-opacity: .15; stroke: none"/><path d="M9 4.5a3.5 3.5 0 1 1 0 7a3.5 3.5 0 1 1 0 -7z" style="stroke-dasharray: calc(21.994 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(19.355 - var(--icon-gap) / 2)"/><path d="M3 19.5c.6-3 3-5 6-5 1.3 0 2.5.4 3.4 1"/><path d="M18 11.5v1.5"/><path d="M18 20v1.5"/><path d="M20.2 14.2c-.3-.7-1.1-1.2-2.2-1.2-1.2 0-2.1.6-2.1 1.5s.9 1.2 2.1 1.5 2.1.6 2.1 1.5-.9 1.5-2.1 1.5c-1 0-1.9-.5-2.2-1.2"/></symbol>
+    <symbol id="phone-call" viewBox="0 0 24 24"><path d="M5.2 3.5h2.9l1.5 4-2 1.3a10.5 10.5 0 0 0 7.6 7.6l1.3-2 4 1.5v2.9a1.6 1.6 0 0 1-1.7 1.6A16.6 16.6 0 0 1 3.6 5.2a1.6 1.6 0 0 1 1.6-1.7z" style="stroke-dasharray: calc(59.014 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(22.425 - var(--icon-gap) / 2)"/><path d="M14.5 3.5a6 6 0 0 1 6 6"/><path d="M14.5 7a2.5 2.5 0 0 1 2.5 2.5"/></symbol>
+    <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="M5 12h14"/></symbol>
+    <symbol id="reconcile-duo" viewBox="0 0 24 24"><path d="M19.5 9A8 8 0 0 0 5.2 7.2"/><path d="M4.5 15a8 8 0 0 0 14.3 1.8"/><path d="M5 3.5v4h4"/><path d="M19 20.5v-4h-4"/><path d="M9.5 12.2l1.8 1.8 3.2-3.4" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="search" viewBox="0 0 24 24"><path d="M10.5 4a6.5 6.5 0 1 1 0 13a6.5 6.5 0 1 1 0 -13z" style="stroke-dasharray: calc(40.846 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(35.945 - var(--icon-gap) / 2)"/><path d="M15.5 15.5 20 20"/></symbol>
+    <symbol id="shield-check" viewBox="0 0 24 24"><path d="M12 3 19.5 6v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6z" style="stroke-dasharray: calc(53.137 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(47.823 - var(--icon-gap) / 2)"/><path d="M8.8 12.2l2.2 2.2 4.2-4.4"/></symbol>
+    <symbol id="sun" viewBox="0 0 24 24"><path d="M12 7.8a4.2 4.2 0 1 1 0 8.4a4.2 4.2 0 1 1 0 -8.4z" style="stroke-dasharray: calc(26.393 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(23.226 - var(--icon-gap) / 2)"/><path d="M12 2.5v2"/><path d="M12 19.5v2"/><path d="M2.5 12h2"/><path d="M19.5 12h2"/><path d="M5.6 5.6l1.2 1.2"/><path d="M17.2 17.2l1.2 1.2"/><path d="M5.6 18.4l1.2-1.2"/><path d="M17.2 6.8l1.2-1.2"/></symbol>
+    <symbol id="trash" viewBox="0 0 24 24"><path d="M6 7h12l-1 12.6a1.5 1.5 0 0 1-1.5 1.4h-7A1.5 1.5 0 0 1 7 19.6z" style="stroke-dasharray: calc(48.799 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(42.943 - var(--icon-gap) / 2)"/><path d="M4 7h16"/><path d="M9.5 7V4.5h5V7"/><path d="M10 11v6" style="display: var(--icon-minor-display, inline)"/><path d="M14 11v6" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="x-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M9.2 9.2l5.6 5.6"/><path d="M14.8 9.2l-5.6 5.6"/></symbol>
+  </svg>
+  <!-- /icons -->
+</body>
+</html>

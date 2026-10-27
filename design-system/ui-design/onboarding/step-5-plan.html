@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plan | Anoglobe onboarding</title>
+  <meta name="description" content="Anoglobe onboarding, step 5 of 7: choose a plan.">
+  <!-- shell:head -->
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <script src="../../assets/js/theme.js"></script>
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components/foundations.css">
+  <link rel="stylesheet" href="../../assets/css/components/forms.css">
+  <link rel="stylesheet" href="../../assets/css/components/overlays.css">
+  <link rel="stylesheet" href="../../assets/css/components/data.css">
+  <link rel="stylesheet" href="../../assets/css/components/payment.css">
+  <link rel="stylesheet" href="../../assets/css/components/admin.css">
+  <link rel="stylesheet" href="../../assets/css/components/feedback.css">
+  <link rel="stylesheet" href="../../assets/css/pages.css">
+  <script src="../../assets/js/components/core.js" defer></script>
+  <script src="../../assets/js/components/forms.js" defer></script>
+  <script src="../../assets/js/components/overlays.js" defer></script>
+  <script src="../../assets/js/components/data.js" defer></script>
+  <script src="../../assets/js/components/payment.js" defer></script>
+  <script src="../../assets/js/components/admin.js" defer></script>
+  <script src="../../assets/js/components/site.js" defer></script>
+  <script src="../../assets/js/components/feedback.js" defer></script>
+  <!-- /shell:head -->
+  <script src="../../assets/js/form-wizard.js" defer></script>
+  <script src="../../assets/js/prototype.js" defer></script>
+</head>
+<body>
+  <!-- shell:onboarding-header -->
+  <a class="a-skip-link" href="#main">Skip to content</a>
+  <header class="a-onb-header">
+    <a class="a-onb-header__brand" href="../../ui-design/site/index.html">
+      <img class="a-logo a-logo--light" src="../../assets/img/logo.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+      <img class="a-logo a-logo--dark" src="../../assets/img/logo-reversed.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+    </a>
+    <div class="a-onb-header__tools">
+      <span class="a-badge a-badge--success a-onb-header__secure"><svg class="a-icon" aria-hidden="true"><use href="#lock"></use></svg>Secure signup</span>
+      <a class="a-btn a-btn--ghost a-btn--sm" href="../../ui-design/site/contact.html"><svg class="a-icon" aria-hidden="true"><use href="#help-circle"></use></svg><span class="a-onb-header__help-text">Help</span></a>
+      <button type="button" class="a-btn a-btn--ghost a-btn--icon a-theme-toggle" data-theme-toggle aria-label="Dark theme" data-tooltip="Toggle dark theme">
+      <svg class="a-icon a-theme-toggle__sun" aria-hidden="true"><use href="#sun"></use></svg>
+      <svg class="a-icon a-theme-toggle__moon" aria-hidden="true"><use href="#moon"></use></svg>
+    </button>
+    </div>
+  </header>
+  <div class="a-toast-region" data-icons="check-circle x-circle info alert-triangle close"></div>
+  <!-- /shell:onboarding-header -->
+  <div class="a-onb">
+    <aside class="a-onb__aside" aria-label="Your order">
+      <div class="a-onb__aside-inner">
+        <button type="button" class="a-onb-summary-toggle" data-summary-toggle aria-expanded="false" aria-controls="summary-panel"><span>Order summary, <span data-summary="due">$499.00</span></span><svg class="a-icon" aria-hidden="true"><use href="#chevron-down"></use></svg></button>
+        <div class="a-onb__aside-inner" id="summary-panel" data-summary-panel hidden>
+          <div class="a-summary" role="group" aria-label="Order summary">
+            <p class="a-summary__title">Order summary</p>
+            <dl class="a-summary__lines">
+              <div class="a-summary__line"><dt>Business</dt><dd data-summary="business">Your business</dd></div>
+              <div class="a-summary__line"><dt>Plan</dt><dd data-summary="plan">Growth</dd></div>
+              <div class="a-summary__line"><dt>Price</dt><dd data-summary="price">$499.00 per month</dd></div>
+              <div class="a-summary__line"><dt>Billing</dt><dd data-summary="billing">Monthly, cancel any time</dd></div>
+            </dl>
+            <dl class="a-summary__total"><dt>Due today</dt><dd data-summary="due">$499.00</dd></dl>
+            <p class="a-summary__note" data-summary="next">Then $499.00 on this date each month.</p>
+          </div>
+          <div class="a-card"><div class="a-card__content a-choice-list">
+            <p class="a-gateway-note"><svg class="a-icon" aria-hidden="true"><use href="#shield-check"></use></svg>Your details are encrypted. Card data goes to Stripe only.</p>
+            <p class="a-gateway-note"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>After signup our assistant calls to confirm your details.</p>
+            <p class="a-small a-muted">Questions? <a href="mailto:hello@anoglobebookkeeping.com">hello@anoglobebookkeeping.com</a></p>
+          </div></div>
+        </div>
+      </div>
+    </aside>
+    <main id="main" class="a-onb__main">
+      <div class="a-onb__progress">
+        <div class="a-onb__progress-label"><span>Step 5 of 7</span><a href="../../ui-design/onboarding/resume.html" data-save-later>Save and continue later</a></div>
+        <ol class="a-steps" aria-label="Onboarding progress"><li class="a-steps__item is-complete"><span class="a-steps__bar"></span><span class="a-steps__label"><span class="a-steps__text">Account<span class="a-visually-hidden a-steps__done">, complete</span></span></span></li><li class="a-steps__item is-complete"><span class="a-steps__bar"></span><span class="a-steps__label"><span class="a-steps__text">Business<span class="a-visually-hidden a-steps__done">, complete</span></span></span></li><li class="a-steps__item is-complete"><span class="a-steps__bar"></span><span class="a-steps__label"><span class="a-steps__text">Services<span class="a-visually-hidden a-steps__done">, complete</span></span></span></li><li class="a-steps__item is-complete"><span class="a-steps__bar"></span><span class="a-steps__label"><span class="a-steps__text">Documents<span class="a-visually-hidden a-steps__done">, complete</span></span></span></li><li class="a-steps__item" aria-current="step"><span class="a-steps__bar"></span><span class="a-steps__label"><span class="a-steps__text">Plan</span></span></li><li class="a-steps__item"><span class="a-steps__bar"></span><span class="a-steps__label"><span class="a-steps__text">Review</span></span></li><li class="a-steps__item"><span class="a-steps__bar"></span><span class="a-steps__label"><span class="a-steps__text">Payment</span></span></li></ol>
+      </div>
+      <div class="a-onb__card">
+        <div class="a-onb__head"><h1 tabindex="-1">Choose a plan</h1><p>Pick a monthly plan or a one-time project. Prices are sample values.</p></div>
+        <form class="a-form-grid" data-step-form data-next="step-7-review.html" novalidate>
+        <div class="a-tabs a-tabs--pill" data-tabs>
+          <div role="tablist" class="a-tabs__list" aria-label="Billing type">
+            <button type="button" role="tab" class="a-tabs__tab" id="tab-plan-monthly" aria-controls="panel-plan-monthly" aria-selected="true">Monthly plan</button>
+            <button type="button" role="tab" class="a-tabs__tab" id="tab-plan-project" aria-controls="panel-plan-project" aria-selected="false">One-time project</button>
+          </div>
+          <div role="tabpanel" class="a-tabs__panel" id="panel-plan-monthly" aria-labelledby="tab-plan-monthly">
+            <fieldset class="a-fieldset" data-msg-required="Choose a plan"><legend class="a-visually-hidden">Monthly plans</legend><div class="a-choice-cards"><label class="a-choice-card"><input class="a-radio__input" type="radio" name="plan" value="starter" data-price="299" data-plan-name="Starter" data-recurring="true" required><span class="a-choice-card__title">Starter</span><span class="a-plan-price">$299<span> per month</span></span><ul class="a-plan-features" role="list"><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Up to 100 transactions a month</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>2 bank or card accounts</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Monthly reconciliation and close</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Profit and loss, balance sheet</li></ul></label><label class="a-choice-card"><input class="a-radio__input" type="radio" name="plan" value="growth" data-price="499" data-plan-name="Growth" data-recurring="true" checked required><span class="a-choice-card__title">Growth</span><span class="a-badge a-badge--accent">Most chosen</span><span class="a-plan-price">$499<span> per month</span></span><ul class="a-plan-features" role="list"><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Up to 300 transactions a month</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>5 bank or card accounts</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Everything in Starter</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Accounts payable and receivable tracking</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Quarterly review call</li></ul></label><label class="a-choice-card"><input class="a-radio__input" type="radio" name="plan" value="scale" data-price="899" data-plan-name="Scale" data-recurring="true" required><span class="a-choice-card__title">Scale</span><span class="a-plan-price">$899<span> per month</span></span><ul class="a-plan-features" role="list"><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Up to 750 transactions a month</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Unlimited accounts</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Everything in Growth</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Payroll journal entries</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Dedicated bookkeeper</li></ul></label></div></fieldset>
+          </div>
+          <div role="tabpanel" class="a-tabs__panel" id="panel-plan-project" aria-labelledby="tab-plan-project" hidden>
+            <fieldset class="a-fieldset"><legend class="a-visually-hidden">One-time projects</legend><div class="a-choice-cards"><label class="a-choice-card"><input class="a-radio__input" type="radio" name="plan" value="catchup" data-price="1250" data-plan-name="Catch-up project" data-recurring="false" required><span class="a-choice-card__title">Catch-up project</span><span class="a-plan-price">$1,250<span> one time</span></span><ul class="a-plan-features" role="list"><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Up to 12 months of past books</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Reconciled to bank statements</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Tax-ready reports for your CPA</li></ul></label><label class="a-choice-card"><input class="a-radio__input" type="radio" name="plan" value="cleanup" data-price="950" data-plan-name="Books cleanup" data-recurring="false" required><span class="a-choice-card__title">Books cleanup</span><span class="a-plan-price">$950<span> one time</span></span><ul class="a-plan-features" role="list"><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Fix miscategorized transactions</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Remove duplicates</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Rebuild chart of accounts</li></ul></label></div></fieldset>
+          </div>
+        </div>
+        <p class="a-hint">Prices in US dollars. Monthly plans renew each month until you cancel. Projects are billed once.</p>
+        <div class="a-form-actions">
+          <a class="a-btn a-btn--ghost" href="step-4-documents.html"><svg class="a-icon" aria-hidden="true"><use href="#arrow-left"></use></svg>Back</a>
+          <div class="a-form-actions__end"><a class="a-btn a-btn--outline" href="../../ui-design/onboarding/resume.html" data-save-later>Save for later</a><button type="submit" class="a-btn a-btn--primary">Review and pay<svg class="a-icon" aria-hidden="true"><use href="#arrow-right"></use></svg></button></div>
+        </div>
+      </form>
+      </div>
+    </main>
+  </div>
+  <!-- shell:onboarding-footer -->
+  <footer class="a-onb-footer">
+    <p class="a-small a-muted">Your information is encrypted in transit. Card details go directly to our payment processor and are never stored by Anoglobe.</p>
+  </footer>
+  <!-- /shell:onboarding-footer -->
+  <!-- icons -->
+  <svg class="a-sprite" aria-hidden="true" focusable="false">
+    <symbol id="alert-triangle" viewBox="0 0 24 24"><path d="M10.3 4.4a2 2 0 0 1 3.4 0l7.6 13.1a2 2 0 0 1-1.7 3H4.4a2 2 0 0 1-1.7-3z" style="stroke-dasharray: calc(57.868 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.767 - var(--icon-gap) / 2)"/><path d="M12 9.5v4"/><path d="M12 16.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="arrow-left" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="M11 6l-6 6 6 6"/></symbol>
+    <symbol id="arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="check-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M8.2 12.3l2.6 2.6 5-5.2"/></symbol>
+    <symbol id="chevron-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></symbol>
+    <symbol id="help-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M9.5 9.4a2.6 2.6 0 0 1 5 .9c0 1.8-2.5 2.2-2.5 3.7"/><path d="M12 17.2h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="info" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M12 11v5.5"/><path d="M12 7.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="lock" viewBox="0 0 24 24"><path d="M7 10.5H17a2.5 2.5 0 0 1 2.5 2.5V18.5a2.5 2.5 0 0 1 -2.5 2.5H7a2.5 2.5 0 0 1 -2.5 -2.5V13a2.5 2.5 0 0 1 2.5 -2.5z" style="stroke-dasharray: calc(46.71 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(37.368 - var(--icon-gap) / 2)"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/><path d="M12 14.5v2.5"/></symbol>
+    <symbol id="moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z" style="stroke-dasharray: calc(58.676 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(26.404 - var(--icon-gap) / 2)"/></symbol>
+    <symbol id="phone-call" viewBox="0 0 24 24"><path d="M5.2 3.5h2.9l1.5 4-2 1.3a10.5 10.5 0 0 0 7.6 7.6l1.3-2 4 1.5v2.9a1.6 1.6 0 0 1-1.7 1.6A16.6 16.6 0 0 1 3.6 5.2a1.6 1.6 0 0 1 1.6-1.7z" style="stroke-dasharray: calc(59.014 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(22.425 - var(--icon-gap) / 2)"/><path d="M14.5 3.5a6 6 0 0 1 6 6"/><path d="M14.5 7a2.5 2.5 0 0 1 2.5 2.5"/></symbol>
+    <symbol id="shield-check" viewBox="0 0 24 24"><path d="M12 3 19.5 6v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6z" style="stroke-dasharray: calc(53.137 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(47.823 - var(--icon-gap) / 2)"/><path d="M8.8 12.2l2.2 2.2 4.2-4.4"/></symbol>
+    <symbol id="sun" viewBox="0 0 24 24"><path d="M12 7.8a4.2 4.2 0 1 1 0 8.4a4.2 4.2 0 1 1 0 -8.4z" style="stroke-dasharray: calc(26.393 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(23.226 - var(--icon-gap) / 2)"/><path d="M12 2.5v2"/><path d="M12 19.5v2"/><path d="M2.5 12h2"/><path d="M19.5 12h2"/><path d="M5.6 5.6l1.2 1.2"/><path d="M17.2 17.2l1.2 1.2"/><path d="M5.6 18.4l1.2-1.2"/><path d="M17.2 6.8l1.2-1.2"/></symbol>
+    <symbol id="x-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M9.2 9.2l5.6 5.6"/><path d="M14.8 9.2l-5.6 5.6"/></symbol>
+  </svg>
+  <!-- /icons -->
+</body>
+</html>

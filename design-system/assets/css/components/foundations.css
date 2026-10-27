@@ -1156,6 +1156,10 @@
 }
 
 @media (max-width: 767px) {
+  .a-steps:not(.a-steps--vertical) .a-steps__item[aria-current="step"] {
+    flex: 3;
+  }
+
   .a-steps:not(.a-steps--vertical) .a-steps__item:not([aria-current="step"]) .a-steps__text {
     position: absolute;
     width: 1px;

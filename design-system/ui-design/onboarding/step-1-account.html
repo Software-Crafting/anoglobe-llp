@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Account | Anoglobe onboarding</title>
+  <meta name="description" content="Anoglobe onboarding, step 1 of 7: create your account.">
+  <!-- shell:head -->
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <script src="../../assets/js/theme.js"></script>
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components/foundations.css">
+  <link rel="stylesheet" href="../../assets/css/components/forms.css">
+  <link rel="stylesheet" href="../../assets/css/components/overlays.css">
+  <link rel="stylesheet" href="../../assets/css/components/data.css">
+  <link rel="stylesheet" href="../../assets/css/components/payment.css">
+  <link rel="stylesheet" href="../../assets/css/components/admin.css">
+  <link rel="stylesheet" href="../../assets/css/components/feedback.css">
+  <link rel="stylesheet" href="../../assets/css/pages.css">
+  <script src="../../assets/js/components/core.js" defer></script>
+  <script src="../../assets/js/components/forms.js" defer></script>
+  <script src="../../assets/js/components/overlays.js" defer></script>
+  <script src="../../assets/js/components/data.js" defer></script>
+  <script src="../../assets/js/components/payment.js" defer></script>
+  <script src="../../assets/js/components/admin.js" defer></script>
+  <script src="../../assets/js/components/site.js" defer></script>
+  <script src="../../assets/js/components/feedback.js" defer></script>
+  <!-- /shell:head -->
+  <script src="../../assets/js/form-wizard.js" defer></script>
+  <script src="../../assets/js/prototype.js" defer></script>
+</head>
+<body>
+  <!-- shell:onboarding-header -->
+  <a class="a-skip-link" href="#main">Skip to content</a>
+  <header class="a-onb-header">
+    <a class="a-onb-header__brand" href="../../ui-design/site/index.html">
+      <img class="a-logo a-logo--light" src="../../assets/img/logo.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+      <img class="a-logo a-logo--dark" src="../../assets/img/logo-reversed.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+    </a>
+    <div class="a-onb-header__tools">
+      <span class="a-badge a-badge--success a-onb-header__secure"><svg class="a-icon" aria-hidden="true"><use href="#lock"></use></svg>Secure signup</span>
+      <a class="a-btn a-btn--ghost a-btn--sm" href="../../ui-design/site/contact.html"><svg class="a-icon" aria-hidden="true"><use href="#help-circle"></use></svg><span class="a-onb-header__help-text">Help</span></a>
+      <button type="button" class="a-btn a-btn--ghost a-btn--icon a-theme-toggle" data-theme-toggle aria-label="Dark theme" data-tooltip="Toggle dark theme">
+      <svg class="a-icon a-theme-toggle__sun" aria-hidden="true"><use href="#sun"></use></svg>
+      <svg class="a-icon a-theme-toggle__moon" aria-hidden="true"><use href="#moon"></use></svg>
+    </button>
+    </div>
+  </header>
+  <div class="a-toast-region" data-icons="check-circle x-circle info alert-triangle close"></div>
+  <!-- /shell:onboarding-header -->
+  <div class="a-onb">
+    <aside class="a-onb__aside" aria-label="Your order">
+      <div class="a-onb__aside-inner">
+        <button type="button" class="a-onb-summary-toggle" data-summary-toggle aria-expanded="false" aria-controls="summary-panel"><span>Order summary, <span data-summary="due">$499.00</span></span><svg class="a-icon" aria-hidden="true"><use href="#chevron-down"></use></svg></button>
+        <div class="a-onb__aside-inner" id="summary-panel" data-summary-panel hidden>
+          <div class="a-summary" role="group" aria-label="Order summary">
+            <p class="a-summary__title">Order summary</p>
+            <dl class="a-summary__lines">
+              <div class="a-summary__line"><dt>Business</dt><dd data-summary="business">Your business</dd></div>
+              <div class="a-summary__line"><dt>Plan</dt><dd data-summary="plan">Growth</dd></div>
+              <div class="a-summary__line"><dt>Price</dt><dd data-summary="price">$499.00 per month</dd></div>
+              <div class="a-summary__line"><dt>Billing</dt><dd data-summary="billing">Monthly, cancel any time</dd></div>
+            </dl>
+            <dl class="a-summary__total"><dt>Due today</dt><dd data-summary="due">$499.00</dd></dl>
+            <p class="a-summary__note" data-summary="next">Then $499.00 on this date each month.</p>
+          </div>
+          <div class="a-card"><div class="a-card__content a-choice-list">
+            <p class="a-gateway-note"><svg class="a-icon" aria-hidden="true"><use href="#shield-check"></use></svg>Your details are encrypted. Card data goes to Stripe only.</p>
+            <p class="a-gateway-note"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>After signup our assistant calls to confirm your details.</p>
+            <p class="a-small a-muted">Questions? <a href="mailto:hello@anoglobebookkeeping.com">hello@anoglobebookkeeping.com</a></p>
+          </div></div>
+        </div>
+      </div>
+    </aside>
+    <main id="main" class="a-onb__main">
+      <div class="a-onb__progress">
+        <div class="a-onb__progress-label"><span>Step 1 of 7</span><a href="../../ui-design/onboarding/resume.html" data-save-later>Save and continue later</a></div>
+        <ol class="a-steps" aria-label="Onboarding progress"><li class="a-steps__item" aria-current="step"><span class="a-steps__bar"></span><span class="a-steps__label"><span class="a-steps__text">Account</span></span></li><li class="a-steps__item"><span class="a-steps__bar"></span><span class="a-steps__label"><span class="a-steps__text">Business</span></span></li><li class="a-steps__item"><span class="a-steps__bar"></span><span class="a-steps__label"><span class="a-steps__text">Services</span></span></li><li class="a-steps__item"><span class="a-steps__bar"></span><span class="a-steps__label"><span class="a-steps__text">Documents</span></span></li><li class="a-steps__item"><span class="a-steps__bar"></span><span class="a-steps__label"><span class="a-steps__text">Plan</span></span></li><li class="a-steps__item"><span class="a-steps__bar"></span><span class="a-steps__label"><span class="a-steps__text">Review</span></span></li><li class="a-steps__item"><span class="a-steps__bar"></span><span class="a-steps__label"><span class="a-steps__text">Payment</span></span></li></ol>
+      </div>
+      <div class="a-onb__card">
+        <div class="a-onb__head"><h1 tabindex="-1">Create your account</h1><p>Tell us who you are. This takes about 10 minutes in total.</p></div>
+        <form class="a-form-grid" data-step-form data-next="step-2-business.html" novalidate>
+        <div class="a-form-grid a-form-grid--2">
+          <div class="a-field " data-msg-required="Enter your first name">
+  <label class="a-label" for="first-name"><span>First name<span class="a-label__required" aria-hidden="true">*</span></span></label>
+  <input class="a-input" id="first-name" name="first-name" type="text" aria-describedby="first-name-error" required autocomplete="given-name">
+  <p class="a-error" id="first-name-error"></p>
+</div>
+          <div class="a-field " data-msg-required="Enter your last name">
+  <label class="a-label" for="last-name"><span>Last name<span class="a-label__required" aria-hidden="true">*</span></span></label>
+  <input class="a-input" id="last-name" name="last-name" type="text" aria-describedby="last-name-error" required autocomplete="family-name">
+  <p class="a-error" id="last-name-error"></p>
+</div>
+          <div class="a-field a-field--full" data-msg-required="Enter your work email" data-msg-pattern="Enter an email like name@company.com">
+  <label class="a-label" for="email"><span>Work email<span class="a-label__required" aria-hidden="true">*</span></span></label>
+  <input class="a-input" id="email" name="email" type="email" aria-describedby="email-hint email-error" required placeholder="you@company.com" autocomplete="email">
+  <p class="a-hint" id="email-hint">We send your confirmation and receipts here.</p>
+  <p class="a-error" id="email-error"></p>
+</div>
+          <div class="a-field a-field--full" data-msg-required="Enter your phone number" data-msg-pattern="Enter a 10 digit US phone number">
+            <label class="a-label" for="phone"><span>Phone<span class="a-label__required" aria-hidden="true">*</span></span></label>
+            <div class="a-phone">
+              <div class="a-select" data-listbox="select" data-source="phone-countries" data-icons="check">
+                <button type="button" class="a-select__trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="phone-country-list" aria-labelledby="phone-country-label phone-country-value"><span class="a-visually-hidden" id="phone-country-label">Country code</span><span class="a-select__value" id="phone-country-value">US +1</span><svg class="a-icon a-select__chevron" aria-hidden="true"><use href="#chevron-down"></use></svg></button>
+                <input type="hidden" name="phone-country" value="+1|US">
+                <div class="a-listbox-popover" hidden><ul class="a-listbox" data-scroll-area role="listbox" id="phone-country-list" aria-label="Country code" tabindex="-1"></ul></div>
+              </div>
+              <input class="a-input" id="phone" name="phone" type="tel" inputmode="tel" data-mask="phone" autocomplete="tel-national" placeholder="(415) 555-0132" required aria-describedby="phone-hint phone-error">
+            </div>
+            <p class="a-hint" id="phone-hint">Our onboarding assistant calls this number to confirm your details.</p>
+            <p class="a-error" id="phone-error"></p>
+          </div>
+          <div class="a-field a-field--full" data-msg-required="Choose your role">
+  <label class="a-label" id="role-label" for="role"><span>Your role<span class="a-label__required" aria-hidden="true">*</span></span></label>
+  <div class="a-select" data-listbox="select" data-icons="check search">
+    <button type="button" class="a-select__trigger" id="role" aria-haspopup="listbox" aria-expanded="false" aria-controls="role-list" aria-labelledby="role-label role-value" aria-describedby="role-error"><span class="a-select__value is-placeholder" id="role-value">Choose your role</span><svg class="a-icon a-select__chevron" aria-hidden="true"><use href="#chevron-down"></use></svg></button>
+    <input type="hidden" name="role" value="" required>
+    <div class="a-listbox-popover" hidden>
+      <ul class="a-listbox" data-scroll-area role="listbox" id="role-list" aria-labelledby="role-label" tabindex="-1"><li role="option" class="a-option" data-value="owner" aria-selected="false">Owner or partner<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="finance" aria-selected="false">Finance or office manager<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="accountant" aria-selected="false">Outside accountant<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="other" aria-selected="false">Other<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li></ul>
+    </div>
+  </div>
+  <p class="a-error" id="role-error"></p>
+</div>
+        </div>
+        <fieldset class="a-fieldset">
+          <legend>How do you want to sign in?</legend>
+          <div class="a-choice-cards">
+            <label class="a-choice-card"><input class="a-radio__input" type="radio" id="signin-password" name="signin" value="password" checked><span class="a-choice-card__icon"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="#lock-duo"></use></svg></span><span class="a-choice-card__title">Create a password</span><span class="a-choice-card__text">Sign in with your email and a password.</span></label>
+            <label class="a-choice-card"><input class="a-radio__input" type="radio" id="signin-link" name="signin" value="link"><span class="a-choice-card__icon"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="#mail-duo"></use></svg></span><span class="a-choice-card__title">Email me a link</span><span class="a-choice-card__text">No password. We email a one-time sign-in link.</span></label>
+          </div>
+        </fieldset>
+        <div class="a-form-grid a-form-grid--2" data-show-when="signin=password">
+          <div class="a-field" data-password data-msg-required="Create a password" data-msg-minlength="Use at least 10 characters"><label class="a-label" for="password">Password</label><div class="a-input-group"><input class="a-input" id="password" name="password-demo" type="password" autocomplete="new-password" minlength="10" required aria-describedby="password-hint password-error"><button type="button" class="a-input-group__action" data-password-toggle aria-pressed="false" aria-label="Show password"><svg class="a-icon a-password__show" aria-hidden="true"><use href="#eye"></use></svg><svg class="a-icon a-password__hide" aria-hidden="true"><use href="#eye-off"></use></svg></button></div><p class="a-hint" id="password-hint">At least 10 characters.</p><p class="a-error" id="password-error"></p></div>
+          <div class="a-field" data-msg-required="Repeat your password" data-msg-match="The passwords do not match"><label class="a-label" for="password-confirm">Confirm password</label><input class="a-input" id="password-confirm" type="password" autocomplete="new-password" required data-match="password" aria-describedby="password-confirm-error"><p class="a-error" id="password-confirm-error"></p></div>
+        </div>
+        <div class="a-field" data-msg-required="Agree to the call so we can confirm your details"><label class="a-check"><input class="a-check__input" type="checkbox" id="call-consent" name="call-consent" required aria-describedby="call-consent-hint"><span class="a-check__label">Anoglobe's assistant may call me about my signup</span><span class="a-check__hint" id="call-consent-hint">An automated assistant calls once after signup and once after payment. You can opt out any time.</span></label><p class="a-error" id="call-consent-error"></p></div>
+        <div class="a-form-actions">
+          <span></span>
+          <div class="a-form-actions__end"><a class="a-btn a-btn--outline" href="../../ui-design/onboarding/resume.html" data-save-later>Save for later</a><button type="submit" class="a-btn a-btn--primary">Continue<svg class="a-icon" aria-hidden="true"><use href="#arrow-right"></use></svg></button></div>
+        </div>
+      </form>
+      </div>
+    </main>
+  </div>
+  <!-- shell:onboarding-footer -->
+  <footer class="a-onb-footer">
+    <p class="a-small a-muted">Your information is encrypted in transit. Card details go directly to our payment processor and are never stored by Anoglobe.</p>
+  </footer>
+  <!-- /shell:onboarding-footer -->
+  <!-- icons -->
+  <svg class="a-sprite" aria-hidden="true" focusable="false">
+    <symbol id="alert-triangle" viewBox="0 0 24 24"><path d="M10.3 4.4a2 2 0 0 1 3.4 0l7.6 13.1a2 2 0 0 1-1.7 3H4.4a2 2 0 0 1-1.7-3z" style="stroke-dasharray: calc(57.868 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.767 - var(--icon-gap) / 2)"/><path d="M12 9.5v4"/><path d="M12 16.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="check-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M8.2 12.3l2.6 2.6 5-5.2"/></symbol>
+    <symbol id="chevron-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></symbol>
+    <symbol id="eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" style="stroke-dasharray: calc(48.149 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(38.519 - var(--icon-gap) / 2)"/><path d="M12 9.2a2.8 2.8 0 1 1 0 5.6a2.8 2.8 0 1 1 0 -5.6z"/></symbol>
+    <symbol id="eye-off" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" style="stroke-dasharray: calc(48.149 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(38.519 - var(--icon-gap) / 2)"/><path d="M12 9.2a2.8 2.8 0 1 1 0 5.6a2.8 2.8 0 1 1 0 -5.6z"/><path d="M4 4l16 16"/></symbol>
+    <symbol id="help-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M9.5 9.4a2.6 2.6 0 0 1 5 .9c0 1.8-2.5 2.2-2.5 3.7"/><path d="M12 17.2h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="info" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M12 11v5.5"/><path d="M12 7.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="lock" viewBox="0 0 24 24"><path d="M7 10.5H17a2.5 2.5 0 0 1 2.5 2.5V18.5a2.5 2.5 0 0 1 -2.5 2.5H7a2.5 2.5 0 0 1 -2.5 -2.5V13a2.5 2.5 0 0 1 2.5 -2.5z" style="stroke-dasharray: calc(46.71 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(37.368 - var(--icon-gap) / 2)"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/><path d="M12 14.5v2.5"/></symbol>
+    <symbol id="lock-duo" viewBox="0 0 24 24"><path d="M7 10.5H17a2.5 2.5 0 0 1 2.5 2.5V18.5a2.5 2.5 0 0 1 -2.5 2.5H7a2.5 2.5 0 0 1 -2.5 -2.5V13a2.5 2.5 0 0 1 2.5 -2.5z" style="fill: currentColor; fill-opacity: .15; stroke: none"/><path d="M7 10.5H17a2.5 2.5 0 0 1 2.5 2.5V18.5a2.5 2.5 0 0 1 -2.5 2.5H7a2.5 2.5 0 0 1 -2.5 -2.5V13a2.5 2.5 0 0 1 2.5 -2.5z" style="stroke-dasharray: calc(46.71 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(37.368 - var(--icon-gap) / 2)"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/><path d="M12 14.5v2.5"/></symbol>
+    <symbol id="mail-duo" viewBox="0 0 24 24"><path d="M5.5 5H18.5a2.5 2.5 0 0 1 2.5 2.5V16.5a2.5 2.5 0 0 1 -2.5 2.5H5.5a2.5 2.5 0 0 1 -2.5 -2.5V7.5a2.5 2.5 0 0 1 2.5 -2.5z" style="fill: currentColor; fill-opacity: .15; stroke: none"/><path d="M5.5 5H18.5a2.5 2.5 0 0 1 2.5 2.5V16.5a2.5 2.5 0 0 1 -2.5 2.5H5.5a2.5 2.5 0 0 1 -2.5 -2.5V7.5a2.5 2.5 0 0 1 2.5 -2.5z" style="stroke-dasharray: calc(59.71 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(47.768 - var(--icon-gap) / 2)"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
+    <symbol id="moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z" style="stroke-dasharray: calc(58.676 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(26.404 - var(--icon-gap) / 2)"/></symbol>
+    <symbol id="phone-call" viewBox="0 0 24 24"><path d="M5.2 3.5h2.9l1.5 4-2 1.3a10.5 10.5 0 0 0 7.6 7.6l1.3-2 4 1.5v2.9a1.6 1.6 0 0 1-1.7 1.6A16.6 16.6 0 0 1 3.6 5.2a1.6 1.6 0 0 1 1.6-1.7z" style="stroke-dasharray: calc(59.014 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(22.425 - var(--icon-gap) / 2)"/><path d="M14.5 3.5a6 6 0 0 1 6 6"/><path d="M14.5 7a2.5 2.5 0 0 1 2.5 2.5"/></symbol>
+    <symbol id="search" viewBox="0 0 24 24"><path d="M10.5 4a6.5 6.5 0 1 1 0 13a6.5 6.5 0 1 1 0 -13z" style="stroke-dasharray: calc(40.846 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(35.945 - var(--icon-gap) / 2)"/><path d="M15.5 15.5 20 20"/></symbol>
+    <symbol id="shield-check" viewBox="0 0 24 24"><path d="M12 3 19.5 6v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6z" style="stroke-dasharray: calc(53.137 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(47.823 - var(--icon-gap) / 2)"/><path d="M8.8 12.2l2.2 2.2 4.2-4.4"/></symbol>
+    <symbol id="sun" viewBox="0 0 24 24"><path d="M12 7.8a4.2 4.2 0 1 1 0 8.4a4.2 4.2 0 1 1 0 -8.4z" style="stroke-dasharray: calc(26.393 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(23.226 - var(--icon-gap) / 2)"/><path d="M12 2.5v2"/><path d="M12 19.5v2"/><path d="M2.5 12h2"/><path d="M19.5 12h2"/><path d="M5.6 5.6l1.2 1.2"/><path d="M17.2 17.2l1.2 1.2"/><path d="M5.6 18.4l1.2-1.2"/><path d="M17.2 6.8l1.2-1.2"/></symbol>
+    <symbol id="x-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M9.2 9.2l5.6 5.6"/><path d="M14.8 9.2l-5.6 5.6"/></symbol>
+  </svg>
+  <!-- /icons -->
+</body>
+</html>
