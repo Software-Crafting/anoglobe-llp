@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feedback | Anoglobe Design System</title>
+  <meta name="description" content="Toasts, loading overlays, optimistic updates, copy to clipboard and animated state icons for the Anoglobe design system.">
+  <!-- shell:head -->
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <script src="../../assets/js/theme.js"></script>
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components/foundations.css">
+  <link rel="stylesheet" href="../../assets/css/components/forms.css">
+  <link rel="stylesheet" href="../../assets/css/components/overlays.css">
+  <link rel="stylesheet" href="../../assets/css/components/feedback.css">
+  <link rel="stylesheet" href="../../assets/css/pages.css">
+  <script src="../../assets/js/components/core.js" defer></script>
+  <script src="../../assets/js/components/forms.js" defer></script>
+  <script src="../../assets/js/components/overlays.js" defer></script>
+  <script src="../../assets/js/components/feedback.js" defer></script>
+  <!-- /shell:head -->
+</head>
+<body>
+  <!-- shell:docs-header -->
+  <a class="a-skip-link" href="#main">Skip to content</a>
+  <header class="a-docs-header">
+    <a class="a-docs-header__brand" href="../../index.html">
+      <img class="a-logo a-logo--light" src="../../assets/img/logo.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+      <img class="a-logo a-logo--dark" src="../../assets/img/logo-reversed.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+      <span class="a-docs-header__label">Design system</span>
+    </a>
+    <button type="button" class="a-btn a-btn--ghost a-btn--icon a-theme-toggle" data-theme-toggle aria-label="Dark theme" data-tooltip="Toggle dark theme">
+      <svg class="a-icon a-theme-toggle__sun" aria-hidden="true"><use href="#sun"></use></svg>
+      <svg class="a-icon a-theme-toggle__moon" aria-hidden="true"><use href="#moon"></use></svg>
+    </button>
+  </header>
+  <div class="a-toast-region" data-icons="check-circle x-circle info alert-triangle close"></div>
+  <!-- /shell:docs-header -->
+  <div class="a-docs">
+    <!-- shell:docs-nav -->
+    <nav class="a-docs-nav" aria-label="Design system" data-scroll-area>
+      <div class="a-docs-nav__group">
+        <p class="a-eyebrow">Foundations</p>
+        <ul class="a-docs-nav__list" role="list">
+          <li><a class="a-docs-nav__link" href="../../ui-design/foundations/colors.html">Colors</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/foundations/icons.html">Icons</a></li>
+        </ul>
+      </div>
+      <div class="a-docs-nav__group">
+        <p class="a-eyebrow">Components</p>
+        <ul class="a-docs-nav__list" role="list">
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/foundations.html">Foundations</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/forms.html">Forms</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/overlays.html">Overlays</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/feedback.html" aria-current="page">Feedback</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- /shell:docs-nav -->
+    <main id="main" class="a-docs-main">
+      <header>
+        <p class="a-eyebrow">Components</p>
+        <h1>Feedback and utility</h1>
+        <p class="a-body-lg a-muted">How the interface confirms what just happened, without getting in the way.</p>
+      </header>
+
+      <section class="a-docs-section" aria-labelledby="toasts">
+        <h2 id="toasts">Toasts</h2>
+        <p>Short confirmations after an action. They stack at the bottom right, pause while you hover or focus them, and offer Undo where it makes sense.</p>
+        <div class="a-example">
+          <h3 class="a-example__title">Variants</h3>
+          <div class="a-example__preview ">
+            <button type="button" class="a-btn a-btn--outline" data-toast-demo="Settings saved" data-variant="success">Success</button>
+            <button type="button" class="a-btn a-btn--outline" data-toast-demo="Card declined. Ask the client to try another card." data-variant="destructive">Error</button>
+            <button type="button" class="a-btn a-btn--outline" data-toast-demo="Gateway is in test mode. No real charges are made." data-variant="warning">Warning</button>
+            <button type="button" class="a-btn a-btn--outline" data-toast-demo="AI call queued for Harbor Lane Dental" data-variant="info">Info</button>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-1">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-1" tabindex="0" data-scroll-area hidden><code>&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot; data-toast-demo=&quot;Settings saved&quot; data-variant=&quot;success&quot;&gt;Success&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot; data-toast-demo=&quot;Card declined. Ask the client to try another card.&quot; data-variant=&quot;destructive&quot;&gt;Error&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot; data-toast-demo=&quot;Gateway is in test mode. No real charges are made.&quot; data-variant=&quot;warning&quot;&gt;Warning&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot; data-toast-demo=&quot;AI call queued for Harbor Lane Dental&quot; data-variant=&quot;info&quot;&gt;Info&lt;/button&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="loading">
+        <h2 id="loading">Loading overlay</h2>
+        <p>Covers one region while it refreshes, so the rest of the page stays usable.</p>
+        <div class="a-example">
+          <h3 class="a-example__title">Refresh a card</h3>
+          <div class="a-example__preview ">
+            <div class="a-demo-grid">
+              <div class="a-stat" id="loading-target"><p class="a-stat__label"><svg class="a-icon" aria-hidden="true"><use href="#recurring-payment"></use></svg>Monthly recurring revenue</p><p class="a-stat__value">$21,940</p><p class="a-stat__meta">Updated 2 minutes ago</p></div>
+              <div><button type="button" class="a-btn a-btn--outline" data-loading-demo="loading-target" data-label="Refreshing"><svg class="a-icon" aria-hidden="true"><use href="#reconcile"></use></svg>Refresh</button></div>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-2">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-2" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-demo-grid&quot;&gt;
+  &lt;div class=&quot;a-stat&quot; id=&quot;loading-target&quot;&gt;&lt;p class=&quot;a-stat__label&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#recurring-payment&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Monthly recurring revenue&lt;/p&gt;&lt;p class=&quot;a-stat__value&quot;&gt;$21,940&lt;/p&gt;&lt;p class=&quot;a-stat__meta&quot;&gt;Updated 2 minutes ago&lt;/p&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot; data-loading-demo=&quot;loading-target&quot; data-label=&quot;Refreshing&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#reconcile&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Refresh&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="optimistic">
+        <h2 id="optimistic">Optimistic updates</h2>
+        <p>The row changes at once, then confirms. If the server refuses, the change rolls back and an error explains why. The third row is set up to fail.</p>
+        <div class="a-example">
+          <h3 class="a-example__title">Review queue</h3>
+          <div class="a-example__preview a-example__preview--stack">
+            <ul class="a-row-list a-demo-grid" role="list">
+              <li class="a-row-list__item" data-row="Harbor Lane Dental, LLC"><span class="a-row-list__name">Harbor Lane Dental, LLC</span><span class="a-status a-status--warning">Pending review</span><button type="button" class="a-btn a-btn--outline a-btn--sm" data-optimistic data-status="Reviewed" data-fail="false">Mark reviewed</button></li>
+              <li class="a-row-list__item" data-row="Northwind Logistics Inc."><span class="a-row-list__name">Northwind Logistics Inc.</span><span class="a-status a-status--warning">Pending review</span><button type="button" class="a-btn a-btn--outline a-btn--sm" data-optimistic data-status="Reviewed" data-fail="false">Mark reviewed</button></li>
+              <li class="a-row-list__item" data-row="Bright Path Tutoring"><span class="a-row-list__name">Bright Path Tutoring</span><span class="a-status a-status--warning">Pending review</span><button type="button" class="a-btn a-btn--outline a-btn--sm" data-optimistic data-status="Reviewed" data-fail="true">Mark reviewed</button></li>
+            </ul>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-3">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-3" tabindex="0" data-scroll-area hidden><code>&lt;ul class=&quot;a-row-list a-demo-grid&quot; role=&quot;list&quot;&gt;
+  &lt;li class=&quot;a-row-list__item&quot; data-row=&quot;Harbor Lane Dental, LLC&quot;&gt;&lt;span class=&quot;a-row-list__name&quot;&gt;Harbor Lane Dental, LLC&lt;/span&gt;&lt;span class=&quot;a-status a-status--warning&quot;&gt;Pending review&lt;/span&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline a-btn--sm&quot; data-optimistic data-status=&quot;Reviewed&quot; data-fail=&quot;false&quot;&gt;Mark reviewed&lt;/button&gt;&lt;/li&gt;
+  &lt;li class=&quot;a-row-list__item&quot; data-row=&quot;Northwind Logistics Inc.&quot;&gt;&lt;span class=&quot;a-row-list__name&quot;&gt;Northwind Logistics Inc.&lt;/span&gt;&lt;span class=&quot;a-status a-status--warning&quot;&gt;Pending review&lt;/span&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline a-btn--sm&quot; data-optimistic data-status=&quot;Reviewed&quot; data-fail=&quot;false&quot;&gt;Mark reviewed&lt;/button&gt;&lt;/li&gt;
+  &lt;li class=&quot;a-row-list__item&quot; data-row=&quot;Bright Path Tutoring&quot;&gt;&lt;span class=&quot;a-row-list__name&quot;&gt;Bright Path Tutoring&lt;/span&gt;&lt;span class=&quot;a-status a-status--warning&quot;&gt;Pending review&lt;/span&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline a-btn--sm&quot; data-optimistic data-status=&quot;Reviewed&quot; data-fail=&quot;true&quot;&gt;Mark reviewed&lt;/button&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="copy">
+        <h2 id="copy">Copy to clipboard</h2>
+        <p>Copies a value and confirms in place.</p>
+        <div class="a-example">
+          <h3 class="a-example__title">Copy a reference</h3>
+          <div class="a-example__preview ">
+            <p class="a-small">Payment ID <code>pi_3Q8x2LKd71Ua0p</code></p>
+            <button type="button" class="a-copy" data-copy="pi_3Q8x2LKd71Ua0p"><span data-copy-label>Copy</span><span class="a-visually-hidden"> payment ID</span></button>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-4">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-4" tabindex="0" data-scroll-area hidden><code>&lt;p class=&quot;a-small&quot;&gt;Payment ID &lt;code&gt;pi_3Q8x2LKd71Ua0p&lt;/code&gt;&lt;/p&gt;
+&lt;button type=&quot;button&quot; class=&quot;a-copy&quot; data-copy=&quot;pi_3Q8x2LKd71Ua0p&quot;&gt;&lt;span data-copy-label&gt;Copy&lt;/span&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt; payment ID&lt;/span&gt;&lt;/button&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="animated">
+        <h2 id="animated">Animated state icons</h2>
+        <p>Small motions that confirm state. All of them stop when the system asks for reduced motion.</p>
+        <div class="a-example">
+          <h3 class="a-example__title">States</h3>
+          <div class="a-example__preview ">
+            <div class="a-demo-tile"><span id="anim-check"><svg class="a-icon a-icon--48 a-anim-check" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" pathLength="1"></circle><path d="M8.2 12.3l2.6 2.6 5-5.2" pathLength="1"></path></svg></span>Check draw<button type="button" class="a-btn a-btn--ghost a-btn--sm" data-replay="anim-check">Replay</button></div>
+            <div class="a-demo-tile"><span class="a-spinner a-spinner--lg" aria-hidden="true"></span>Spinner</div>
+            <div class="a-demo-tile"><svg class="a-icon a-icon--32 a-anim-bell" aria-hidden="true"><use href="#bell"></use></svg>Bell ring</div>
+            <div class="a-demo-tile"><span class="a-calling" aria-hidden="true"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg></span>Call ringing</div>
+            <div class="a-demo-tile"><button type="button" class="a-btn a-btn--outline a-btn--icon" data-swap aria-pressed="false" aria-label="Copy"><span class="a-swap"><svg class="a-icon" aria-hidden="true"><use href="#copy"></use></svg><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg></span></button>Copy to check</div>
+            <div class="a-demo-tile"><button type="button" class="a-btn a-btn--outline a-btn--icon" data-swap aria-pressed="false" aria-label="Show value"><span class="a-swap"><svg class="a-icon" aria-hidden="true"><use href="#eye"></use></svg><svg class="a-icon" aria-hidden="true"><use href="#eye-off"></use></svg></span></button>Eye toggle</div>
+            <div class="a-demo-tile"><button type="button" class="a-btn a-btn--outline a-btn--icon" data-swap aria-pressed="false" aria-label="Expand"><span class="a-swap"><svg class="a-icon" aria-hidden="true"><use href="#chevron-down"></use></svg><svg class="a-icon" aria-hidden="true"><use href="#chevron-up"></use></svg></span></button>Chevron</div>
+            <div class="a-demo-tile"><span class="a-progress-ring-wrap"><svg class="a-progress-ring" viewBox="0 0 48 48" id="ring-demo" role="progressbar" aria-label="Upload progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><circle class="a-progress-ring__track" cx="24" cy="24" r="20" pathLength="100"></circle><circle class="a-progress-ring__bar" cx="24" cy="24" r="20" pathLength="100"></circle></svg><span class="a-progress-ring-wrap__label">0%</span></span>Upload progress<button type="button" class="a-btn a-btn--ghost a-btn--sm" data-progress-demo="ring-demo">Start</button></div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-5">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-5" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-demo-tile&quot;&gt;&lt;span id=&quot;anim-check&quot;&gt;&lt;svg class=&quot;a-icon a-icon--48 a-anim-check&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot;&gt;&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;9&quot; pathLength=&quot;1&quot;&gt;&lt;/circle&gt;&lt;path d=&quot;M8.2 12.3l2.6 2.6 5-5.2&quot; pathLength=&quot;1&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;Check draw&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--sm&quot; data-replay=&quot;anim-check&quot;&gt;Replay&lt;/button&gt;&lt;/div&gt;
+&lt;div class=&quot;a-demo-tile&quot;&gt;&lt;span class=&quot;a-spinner a-spinner--lg&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;Spinner&lt;/div&gt;
+&lt;div class=&quot;a-demo-tile&quot;&gt;&lt;svg class=&quot;a-icon a-icon--32 a-anim-bell&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#bell&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Bell ring&lt;/div&gt;
+&lt;div class=&quot;a-demo-tile&quot;&gt;&lt;span class=&quot;a-calling&quot; aria-hidden=&quot;true&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#phone-call&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;Call ringing&lt;/div&gt;
+&lt;div class=&quot;a-demo-tile&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline a-btn--icon&quot; data-swap aria-pressed=&quot;false&quot; aria-label=&quot;Copy&quot;&gt;&lt;span class=&quot;a-swap&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#copy&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/button&gt;Copy to check&lt;/div&gt;
+&lt;div class=&quot;a-demo-tile&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline a-btn--icon&quot; data-swap aria-pressed=&quot;false&quot; aria-label=&quot;Show value&quot;&gt;&lt;span class=&quot;a-swap&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#eye&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#eye-off&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/button&gt;Eye toggle&lt;/div&gt;
+&lt;div class=&quot;a-demo-tile&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline a-btn--icon&quot; data-swap aria-pressed=&quot;false&quot; aria-label=&quot;Expand&quot;&gt;&lt;span class=&quot;a-swap&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#chevron-down&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#chevron-up&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/button&gt;Chevron&lt;/div&gt;
+&lt;div class=&quot;a-demo-tile&quot;&gt;&lt;span class=&quot;a-progress-ring-wrap&quot;&gt;&lt;svg class=&quot;a-progress-ring&quot; viewBox=&quot;0 0 48 48&quot; id=&quot;ring-demo&quot; role=&quot;progressbar&quot; aria-label=&quot;Upload progress&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; aria-valuenow=&quot;0&quot;&gt;&lt;circle class=&quot;a-progress-ring__track&quot; cx=&quot;24&quot; cy=&quot;24&quot; r=&quot;20&quot; pathLength=&quot;100&quot;&gt;&lt;/circle&gt;&lt;circle class=&quot;a-progress-ring__bar&quot; cx=&quot;24&quot; cy=&quot;24&quot; r=&quot;20&quot; pathLength=&quot;100&quot;&gt;&lt;/circle&gt;&lt;/svg&gt;&lt;span class=&quot;a-progress-ring-wrap__label&quot;&gt;0%&lt;/span&gt;&lt;/span&gt;Upload progress&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--sm&quot; data-progress-demo=&quot;ring-demo&quot;&gt;Start&lt;/button&gt;&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="theme">
+        <h2 id="theme">Theme toggle</h2>
+        <p>Switches between light and dark and remembers the choice. Until a choice is made, the system setting applies.</p>
+        <div class="a-example">
+          <h3 class="a-example__title">Toggle</h3>
+          <div class="a-example__preview ">
+            <button type="button" class="a-btn a-btn--outline a-btn--icon a-theme-toggle" data-theme-toggle aria-label="Dark theme"><svg class="a-icon a-theme-toggle__sun" aria-hidden="true"><use href="#sun"></use></svg><svg class="a-icon a-theme-toggle__moon" aria-hidden="true"><use href="#moon"></use></svg></button>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-6">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-6" tabindex="0" data-scroll-area hidden><code>&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline a-btn--icon a-theme-toggle&quot; data-theme-toggle aria-label=&quot;Dark theme&quot;&gt;&lt;svg class=&quot;a-icon a-theme-toggle__sun&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#sun&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;svg class=&quot;a-icon a-theme-toggle__moon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#moon&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;</code></pre>
+        </div>
+      </section>
+    </main>
+  </div>
+  <!-- icons -->
+  <svg class="a-sprite" aria-hidden="true" focusable="false">
+    <symbol id="alert-triangle" viewBox="0 0 24 24"><path d="M10.3 4.4a2 2 0 0 1 3.4 0l7.6 13.1a2 2 0 0 1-1.7 3H4.4a2 2 0 0 1-1.7-3z" style="stroke-dasharray: calc(57.868 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.767 - var(--icon-gap) / 2)"/><path d="M12 9.5v4"/><path d="M12 16.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="bell" viewBox="0 0 24 24"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15z" style="stroke-dasharray: calc(49.852 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(28.914 - var(--icon-gap) / 2)"/><path d="M10 21.2h4"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="check-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M8.2 12.3l2.6 2.6 5-5.2"/></symbol>
+    <symbol id="chevron-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="chevron-up" viewBox="0 0 24 24"><path d="M6 15l6-6 6 6"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></symbol>
+    <symbol id="copy" viewBox="0 0 24 24"><path d="M10.5 8.5H18.5a2 2 0 0 1 2 2V18.5a2 2 0 0 1 -2 2H10.5a2 2 0 0 1 -2 -2V10.5a2 2 0 0 1 2 -2z" style="stroke-dasharray: calc(44.568 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(36.546 - var(--icon-gap) / 2)"/><path d="M15.5 5.5V5a1.5 1.5 0 0 0-1.5-1.5H5A1.5 1.5 0 0 0 3.5 5v9A1.5 1.5 0 0 0 5 15.5h.5"/></symbol>
+    <symbol id="eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" style="stroke-dasharray: calc(48.149 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(38.519 - var(--icon-gap) / 2)"/><path d="M12 9.2a2.8 2.8 0 1 1 0 5.6a2.8 2.8 0 1 1 0 -5.6z"/></symbol>
+    <symbol id="eye-off" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" style="stroke-dasharray: calc(48.149 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(38.519 - var(--icon-gap) / 2)"/><path d="M12 9.2a2.8 2.8 0 1 1 0 5.6a2.8 2.8 0 1 1 0 -5.6z"/><path d="M4 4l16 16"/></symbol>
+    <symbol id="info" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M12 11v5.5"/><path d="M12 7.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z" style="stroke-dasharray: calc(58.676 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(26.404 - var(--icon-gap) / 2)"/></symbol>
+    <symbol id="phone-call" viewBox="0 0 24 24"><path d="M5.2 3.5h2.9l1.5 4-2 1.3a10.5 10.5 0 0 0 7.6 7.6l1.3-2 4 1.5v2.9a1.6 1.6 0 0 1-1.7 1.6A16.6 16.6 0 0 1 3.6 5.2a1.6 1.6 0 0 1 1.6-1.7z" style="stroke-dasharray: calc(59.014 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(22.425 - var(--icon-gap) / 2)"/><path d="M14.5 3.5a6 6 0 0 1 6 6"/><path d="M14.5 7a2.5 2.5 0 0 1 2.5 2.5"/></symbol>
+    <symbol id="reconcile" viewBox="0 0 24 24"><path d="M19.5 9A8 8 0 0 0 5.2 7.2"/><path d="M4.5 15a8 8 0 0 0 14.3 1.8"/><path d="M5 3.5v4h4"/><path d="M19 20.5v-4h-4"/><path d="M9.5 12.2l1.8 1.8 3.2-3.4" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="recurring-payment" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-14 5.3"/><path d="M4 12a8 8 0 0 1 14-5.3"/><path d="M18.5 3v4h-4"/><path d="M5.5 21v-4h4"/><path d="M12 9v6" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="sun" viewBox="0 0 24 24"><path d="M12 7.8a4.2 4.2 0 1 1 0 8.4a4.2 4.2 0 1 1 0 -8.4z" style="stroke-dasharray: calc(26.393 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(23.226 - var(--icon-gap) / 2)"/><path d="M12 2.5v2"/><path d="M12 19.5v2"/><path d="M2.5 12h2"/><path d="M19.5 12h2"/><path d="M5.6 5.6l1.2 1.2"/><path d="M17.2 17.2l1.2 1.2"/><path d="M5.6 18.4l1.2-1.2"/><path d="M17.2 6.8l1.2-1.2"/></symbol>
+    <symbol id="x-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M9.2 9.2l5.6 5.6"/><path d="M14.8 9.2l-5.6 5.6"/></symbol>
+  </svg>
+  <!-- /icons -->
+</body>
+</html>

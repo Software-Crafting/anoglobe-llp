@@ -14,10 +14,12 @@
   <link rel="stylesheet" href="../../assets/css/components/foundations.css">
   <link rel="stylesheet" href="../../assets/css/components/forms.css">
   <link rel="stylesheet" href="../../assets/css/components/overlays.css">
+  <link rel="stylesheet" href="../../assets/css/components/feedback.css">
   <link rel="stylesheet" href="../../assets/css/pages.css">
   <script src="../../assets/js/components/core.js" defer></script>
   <script src="../../assets/js/components/forms.js" defer></script>
   <script src="../../assets/js/components/overlays.js" defer></script>
+  <script src="../../assets/js/components/feedback.js" defer></script>
   <!-- /shell:head -->
 </head>
 <body>
@@ -34,6 +36,7 @@
       <svg class="a-icon a-theme-toggle__moon" aria-hidden="true"><use href="#moon"></use></svg>
     </button>
   </header>
+  <div class="a-toast-region" data-icons="check-circle x-circle info alert-triangle close"></div>
   <!-- /shell:docs-header -->
   <div class="a-docs">
     <!-- shell:docs-nav -->
@@ -51,6 +54,7 @@
           <li><a class="a-docs-nav__link" href="../../ui-design/components/foundations.html">Foundations</a></li>
           <li><a class="a-docs-nav__link" href="../../ui-design/components/forms.html" aria-current="page">Forms</a></li>
           <li><a class="a-docs-nav__link" href="../../ui-design/components/overlays.html">Overlays</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/feedback.html">Feedback</a></li>
         </ul>
       </div>
     </nav>
@@ -161,7 +165,7 @@
           <h3 class="a-example__title">Textarea with counter and number stepper</h3>
           <div class="a-example__preview a-example__preview--stack">
             <div class="a-form-grid a-form-grid--2 a-demo-grid">
-              <div class="a-field"><label class="a-label" for="demo-notes"><span>Anything we should know?</span><span class="a-label__optional">Optional</span></label><textarea class="a-textarea" id="demo-notes" maxlength="500" data-counter="demo-notes-count" placeholder="Prior bookkeeper, cleanup needs, deadlines"></textarea><p class="a-counter" id="demo-notes-count" aria-live="polite"></p></div>
+              <div class="a-field"><label class="a-label" for="demo-notes"><span>Anything we should know?</span><span class="a-label__optional">Optional</span></label><textarea class="a-textarea" id="demo-notes" maxlength="500" placeholder="Prior bookkeeper, cleanup needs, deadlines"></textarea></div>
               <div class="a-field"><label class="a-label" for="demo-accounts">Bank and card accounts</label><div class="a-number" data-number><button type="button" class="a-number__btn" data-step="-1" aria-label="Decrease"><svg class="a-icon" aria-hidden="true"><use href="#minus"></use></svg></button><input class="a-input" id="demo-accounts" type="number" min="1" max="25" value="3" inputmode="numeric"><button type="button" class="a-number__btn" data-step="1" aria-label="Increase"><svg class="a-icon" aria-hidden="true"><use href="#plus"></use></svg></button></div><p class="a-hint">Checking, savings and credit cards you want reconciled.</p></div>
             </div>
           </div>
@@ -169,7 +173,7 @@
             <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-4">Show code</button>
           </div>
           <pre class="a-code a-example__code" id="code-4" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-form-grid a-form-grid--2 a-demo-grid&quot;&gt;
-  &lt;div class=&quot;a-field&quot;&gt;&lt;label class=&quot;a-label&quot; for=&quot;demo-notes&quot;&gt;&lt;span&gt;Anything we should know?&lt;/span&gt;&lt;span class=&quot;a-label__optional&quot;&gt;Optional&lt;/span&gt;&lt;/label&gt;&lt;textarea class=&quot;a-textarea&quot; id=&quot;demo-notes&quot; maxlength=&quot;500&quot; data-counter=&quot;demo-notes-count&quot; placeholder=&quot;Prior bookkeeper, cleanup needs, deadlines&quot;&gt;&lt;/textarea&gt;&lt;p class=&quot;a-counter&quot; id=&quot;demo-notes-count&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;&lt;/div&gt;
+  &lt;div class=&quot;a-field&quot;&gt;&lt;label class=&quot;a-label&quot; for=&quot;demo-notes&quot;&gt;&lt;span&gt;Anything we should know?&lt;/span&gt;&lt;span class=&quot;a-label__optional&quot;&gt;Optional&lt;/span&gt;&lt;/label&gt;&lt;textarea class=&quot;a-textarea&quot; id=&quot;demo-notes&quot; maxlength=&quot;500&quot; placeholder=&quot;Prior bookkeeper, cleanup needs, deadlines&quot;&gt;&lt;/textarea&gt;&lt;/div&gt;
   &lt;div class=&quot;a-field&quot;&gt;&lt;label class=&quot;a-label&quot; for=&quot;demo-accounts&quot;&gt;Bank and card accounts&lt;/label&gt;&lt;div class=&quot;a-number&quot; data-number&gt;&lt;button type=&quot;button&quot; class=&quot;a-number__btn&quot; data-step=&quot;-1&quot; aria-label=&quot;Decrease&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#minus&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;input class=&quot;a-input&quot; id=&quot;demo-accounts&quot; type=&quot;number&quot; min=&quot;1&quot; max=&quot;25&quot; value=&quot;3&quot; inputmode=&quot;numeric&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-number__btn&quot; data-step=&quot;1&quot; aria-label=&quot;Increase&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#plus&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/div&gt;&lt;p class=&quot;a-hint&quot;&gt;Checking, savings and credit cards you want reconciled.&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
         </div>
@@ -757,6 +761,7 @@
     <symbol id="eye-off" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" style="stroke-dasharray: calc(48.149 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(38.519 - var(--icon-gap) / 2)"/><path d="M12 9.2a2.8 2.8 0 1 1 0 5.6a2.8 2.8 0 1 1 0 -5.6z"/><path d="M4 4l16 16"/></symbol>
     <symbol id="file-text" viewBox="0 0 24 24"><path d="M6.5 3H14l4.5 4.5v12A1.5 1.5 0 0 1 17 21H6.5A1.5 1.5 0 0 1 5 19.5v-15A1.5 1.5 0 0 1 6.5 3z" style="stroke-dasharray: calc(58.434 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(51.422 - var(--icon-gap) / 2)"/><path d="M14 3v4.5h4.5"/><path d="M8.5 12h7"/><path d="M8.5 15.5h7"/><path d="M8.5 8.5h2" style="display: var(--icon-minor-display, inline)"/></symbol>
     <symbol id="file-upload-duo" viewBox="0 0 24 24"><path d="M6.5 3H14l4.5 4.5v12A1.5 1.5 0 0 1 17 21H6.5A1.5 1.5 0 0 1 5 19.5v-15A1.5 1.5 0 0 1 6.5 3z" style="fill: currentColor; fill-opacity: .15; stroke: none"/><path d="M6.5 3H14l4.5 4.5v12A1.5 1.5 0 0 1 17 21H6.5A1.5 1.5 0 0 1 5 19.5v-15A1.5 1.5 0 0 1 6.5 3z" style="stroke-dasharray: calc(58.434 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(51.422 - var(--icon-gap) / 2)"/><path d="M14 3v4.5h4.5"/><path d="M12 17.5v-6"/><path d="M9.5 14 12 11.5l2.5 2.5"/></symbol>
+    <symbol id="info" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M12 11v5.5"/><path d="M12 7.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
     <symbol id="minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
     <symbol id="moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z" style="stroke-dasharray: calc(58.676 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(26.404 - var(--icon-gap) / 2)"/></symbol>
     <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="M5 12h14"/></symbol>

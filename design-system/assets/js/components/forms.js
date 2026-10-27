@@ -96,8 +96,36 @@
   function updateCounter(textarea) {
     const counter = document.getElementById(textarea.dataset.counter);
     const max = Number(textarea.getAttribute("maxlength"));
-    counter.textContent = `${textarea.value.length} / ${max}`;
-    counter.classList.toggle("is-over", textarea.value.length >= max);
+    const remaining = max - textarea.value.length;
+    counter.textContent = `${textarea.value.length.toLocaleString("en-US")} / ${max.toLocaleString("en-US")}`;
+    counter.classList.toggle("is-over", remaining <= Math.max(10, max * 0.05));
+    counter.setAttribute("aria-label", `${remaining} characters left`);
+  }
+
+  // Grow with content; CSS max-height caps it and the custom scroll area takes over.
+  function autoGrow(textarea) {
+    textarea.style.height = "auto";
+    textarea.style.height = `${textarea.scrollHeight + 2}px`;
+    textarea.scrollArea?.update();
+  }
+
+  // Every textarea gets auto-grow and a custom scroll area; a maxlength adds a live counter.
+  function initTextarea(textarea) {
+    if (textarea.dataset.ready) return;
+    textarea.dataset.ready = "true";
+    textarea.dataset.scrollArea = "";
+    window.Anoglobe?.initScrollAreas?.(textarea.parentElement);
+    if (textarea.hasAttribute("maxlength") && !textarea.dataset.counter) {
+      const counter = document.createElement("p");
+      counter.className = "a-counter";
+      counter.id = nextId("counter");
+      counter.setAttribute("aria-live", "polite");
+      textarea.dataset.counter = counter.id;
+      textarea.closest(".a-scroll-area").after(counter);
+      textarea.setAttribute("aria-describedby", `${textarea.getAttribute("aria-describedby") || ""} ${counter.id}`.trim());
+    }
+    if (textarea.dataset.counter) updateCounter(textarea);
+    autoGrow(textarea);
   }
 
   function stepNumber(button) {
@@ -787,6 +815,7 @@
     const target = event.target;
     if (target.dataset.mask) applyMask(target);
     if (target.dataset.counter) updateCounter(target);
+    if (target.classList.contains("a-textarea")) autoGrow(target);
     if (target.closest("[data-number]")) syncNumberButtons(target);
     if (target.classList.contains("a-range")) updateSlider(target.closest("[data-slider]"));
     revalidate(target);
@@ -835,7 +864,7 @@
     for (const element of root.querySelectorAll("[data-otp]")) initOtp(element);
     for (const element of root.querySelectorAll("[data-dropzone]")) initDropzone(element);
     for (const element of root.querySelectorAll("[data-slider]")) updateSlider(element);
-    for (const element of root.querySelectorAll("[data-counter]")) updateCounter(element);
+    for (const element of root.querySelectorAll(".a-textarea")) initTextarea(element);
     for (const element of root.querySelectorAll("[data-number] input")) syncNumberButtons(element);
   }
 

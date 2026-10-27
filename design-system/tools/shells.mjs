@@ -126,6 +126,7 @@ ${COMPONENT_JS.map((name) => `  <script src="${root}assets/js/components/${name}
     </a>
     ${themeToggle(root)}
   </header>
+  <div class="a-toast-region" data-icons="check-circle x-circle info alert-triangle close"></div>
   `,
 
   "docs-nav": ({ root, path, exists }) => `
@@ -165,6 +166,7 @@ ${SITE_NAV.map(([name, href]) => `          <li><a class="a-site-nav__link" href
       </div>
     </div>
   </header>
+  <div class="a-toast-region" data-icons="check-circle x-circle info alert-triangle close"></div>
   `,
 
   "site-footer": ({ root }) => `
@@ -222,6 +224,7 @@ ${SITE_NAV.map(([name, href]) => `          <li><a class="a-site-nav__link" href
       ${themeToggle(root)}
     </div>
   </header>
+  <div class="a-toast-region" data-icons="check-circle x-circle info alert-triangle close"></div>
   `,
 
   "onboarding-footer": () => `
@@ -305,5 +308,6 @@ ${items
         </div>
       </div>
     </header>
+    <div class="a-toast-region" data-icons="check-circle x-circle info alert-triangle close"></div>
     `,
 };

@@ -14,10 +14,12 @@
   <link rel="stylesheet" href="../../assets/css/components/foundations.css">
   <link rel="stylesheet" href="../../assets/css/components/forms.css">
   <link rel="stylesheet" href="../../assets/css/components/overlays.css">
+  <link rel="stylesheet" href="../../assets/css/components/feedback.css">
   <link rel="stylesheet" href="../../assets/css/pages.css">
   <script src="../../assets/js/components/core.js" defer></script>
   <script src="../../assets/js/components/forms.js" defer></script>
   <script src="../../assets/js/components/overlays.js" defer></script>
+  <script src="../../assets/js/components/feedback.js" defer></script>
   <!-- /shell:head -->
 </head>
 <body>
@@ -34,6 +36,7 @@
       <svg class="a-icon a-theme-toggle__moon" aria-hidden="true"><use href="#moon"></use></svg>
     </button>
   </header>
+  <div class="a-toast-region" data-icons="check-circle x-circle info alert-triangle close"></div>
   <!-- /shell:docs-header -->
   <div class="a-docs">
     <!-- shell:docs-nav -->
@@ -51,6 +54,7 @@
           <li><a class="a-docs-nav__link" href="../../ui-design/components/foundations.html">Foundations</a></li>
           <li><a class="a-docs-nav__link" href="../../ui-design/components/forms.html">Forms</a></li>
           <li><a class="a-docs-nav__link" href="../../ui-design/components/overlays.html" aria-current="page">Overlays</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/feedback.html">Feedback</a></li>
         </ul>
       </div>
     </nav>
@@ -235,11 +239,11 @@
             <button type="button" class="a-btn a-btn--outline" data-dialog-open="sheet-bottom">Open bottom sheet</button>
             <dialog class="a-dialog" id="dlg-note" aria-labelledby="dlg-note-title" aria-describedby="dlg-note-desc">
               <div class="a-dialog__header"><div><h2 class="a-dialog__title" id="dlg-note-title">Add internal note</h2><p class="a-dialog__description" id="dlg-note-desc">Visible to the Anoglobe team only.</p></div><button type="button" class="a-btn a-btn--ghost a-btn--icon a-dialog__close" data-dialog-close aria-label="Close"><svg class="a-icon" aria-hidden="true"><use href="#close"></use></svg></button></div>
-              <div class="a-dialog__body"><div class="a-field"><label class="a-label" for="note-text">Note</label><textarea class="a-textarea" id="note-text" placeholder="Client asked to move the welcome call to Thursday afternoon."></textarea></div></div>
+              <div class="a-dialog__body"><div class="a-field"><label class="a-label" for="note-text">Note</label><textarea class="a-textarea" id="note-text" maxlength="1000" placeholder="Client asked to move the welcome call to Thursday afternoon."></textarea></div></div>
               <div class="a-dialog__footer"><button type="button" class="a-btn a-btn--ghost" data-dialog-close>Cancel</button><button type="button" class="a-btn a-btn--primary" data-dialog-close data-toast="Note saved">Save note</button></div>
             </dialog>
             <dialog class="a-dialog" id="dlg-refund" role="alertdialog" aria-labelledby="dlg-refund-title" aria-describedby="dlg-refund-desc" data-dismissable="false">
-              <div class="a-dialog__header"><div><span class="a-alert-dialog__icon"><svg class="a-icon" aria-hidden="true"><use href="#alert-triangle"></use></svg></span><h2 class="a-dialog__title" id="dlg-refund-title">Refund $499.00 to Harbor Lane Dental?</h2><p class="a-dialog__description" id="dlg-refund-desc">The full amount returns to Visa ending 4242 in 5 to 10 business days. This cannot be undone.</p></div></div>
+              <div class="a-dialog__header"><div><h2 class="a-dialog__title" id="dlg-refund-title">Refund $499.00 to Harbor Lane Dental?</h2><p class="a-dialog__description" id="dlg-refund-desc">The full amount returns to Visa ending 4242 in 5 to 10 business days. This cannot be undone.</p></div></div>
               <div class="a-dialog__footer"><button type="button" class="a-btn a-btn--ghost" data-dialog-close autofocus>Keep payment</button><button type="button" class="a-btn a-btn--destructive" data-dialog-close data-toast="Refund of $499.00 issued" data-toast-variant="success">Refund $499.00</button></div>
             </dialog>
             <dialog class="a-dialog a-sheet a-sheet--right" id="sheet-right" aria-labelledby="sheet-right-title">
@@ -261,11 +265,11 @@
 &lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot; data-dialog-open=&quot;sheet-bottom&quot;&gt;Open bottom sheet&lt;/button&gt;
 &lt;dialog class=&quot;a-dialog&quot; id=&quot;dlg-note&quot; aria-labelledby=&quot;dlg-note-title&quot; aria-describedby=&quot;dlg-note-desc&quot;&gt;
   &lt;div class=&quot;a-dialog__header&quot;&gt;&lt;div&gt;&lt;h2 class=&quot;a-dialog__title&quot; id=&quot;dlg-note-title&quot;&gt;Add internal note&lt;/h2&gt;&lt;p class=&quot;a-dialog__description&quot; id=&quot;dlg-note-desc&quot;&gt;Visible to the Anoglobe team only.&lt;/p&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--icon a-dialog__close&quot; data-dialog-close aria-label=&quot;Close&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#close&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/div&gt;
-  &lt;div class=&quot;a-dialog__body&quot;&gt;&lt;div class=&quot;a-field&quot;&gt;&lt;label class=&quot;a-label&quot; for=&quot;note-text&quot;&gt;Note&lt;/label&gt;&lt;textarea class=&quot;a-textarea&quot; id=&quot;note-text&quot; placeholder=&quot;Client asked to move the welcome call to Thursday afternoon.&quot;&gt;&lt;/textarea&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&quot;a-dialog__body&quot;&gt;&lt;div class=&quot;a-field&quot;&gt;&lt;label class=&quot;a-label&quot; for=&quot;note-text&quot;&gt;Note&lt;/label&gt;&lt;textarea class=&quot;a-textarea&quot; id=&quot;note-text&quot; maxlength=&quot;1000&quot; placeholder=&quot;Client asked to move the welcome call to Thursday afternoon.&quot;&gt;&lt;/textarea&gt;&lt;/div&gt;&lt;/div&gt;
   &lt;div class=&quot;a-dialog__footer&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost&quot; data-dialog-close&gt;Cancel&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--primary&quot; data-dialog-close data-toast=&quot;Note saved&quot;&gt;Save note&lt;/button&gt;&lt;/div&gt;
 &lt;/dialog&gt;
 &lt;dialog class=&quot;a-dialog&quot; id=&quot;dlg-refund&quot; role=&quot;alertdialog&quot; aria-labelledby=&quot;dlg-refund-title&quot; aria-describedby=&quot;dlg-refund-desc&quot; data-dismissable=&quot;false&quot;&gt;
-  &lt;div class=&quot;a-dialog__header&quot;&gt;&lt;div&gt;&lt;span class=&quot;a-alert-dialog__icon&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#alert-triangle&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;&lt;h2 class=&quot;a-dialog__title&quot; id=&quot;dlg-refund-title&quot;&gt;Refund $499.00 to Harbor Lane Dental?&lt;/h2&gt;&lt;p class=&quot;a-dialog__description&quot; id=&quot;dlg-refund-desc&quot;&gt;The full amount returns to Visa ending 4242 in 5 to 10 business days. This cannot be undone.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&quot;a-dialog__header&quot;&gt;&lt;div&gt;&lt;h2 class=&quot;a-dialog__title&quot; id=&quot;dlg-refund-title&quot;&gt;Refund $499.00 to Harbor Lane Dental?&lt;/h2&gt;&lt;p class=&quot;a-dialog__description&quot; id=&quot;dlg-refund-desc&quot;&gt;The full amount returns to Visa ending 4242 in 5 to 10 business days. This cannot be undone.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
   &lt;div class=&quot;a-dialog__footer&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost&quot; data-dialog-close autofocus&gt;Keep payment&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--destructive&quot; data-dialog-close data-toast=&quot;Refund of $499.00 issued&quot; data-toast-variant=&quot;success&quot;&gt;Refund $499.00&lt;/button&gt;&lt;/div&gt;
 &lt;/dialog&gt;
 &lt;dialog class=&quot;a-dialog a-sheet a-sheet--right&quot; id=&quot;sheet-right&quot; aria-labelledby=&quot;sheet-right-title&quot;&gt;
@@ -301,6 +305,7 @@
     <symbol id="eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" style="stroke-dasharray: calc(48.149 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(38.519 - var(--icon-gap) / 2)"/><path d="M12 9.2a2.8 2.8 0 1 1 0 5.6a2.8 2.8 0 1 1 0 -5.6z"/></symbol>
     <symbol id="filter" viewBox="0 0 24 24"><path d="M3.5 5h17l-6.5 8v6l-4 2v-8z" style="stroke-dasharray: calc(56.088 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(47.675 - var(--icon-gap) / 2)"/></symbol>
     <symbol id="home" viewBox="0 0 24 24"><path d="M4 10.2 12 3.8l8 6.4v9.3a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19.7z" style="stroke-dasharray: calc(56.816 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(44.316 - var(--icon-gap) / 2)"/><path d="M10 21.2v-5.7h4v5.7"/></symbol>
+    <symbol id="info" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M12 11v5.5"/><path d="M12 7.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
     <symbol id="link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
     <symbol id="mail" viewBox="0 0 24 24"><path d="M5.5 5H18.5a2.5 2.5 0 0 1 2.5 2.5V16.5a2.5 2.5 0 0 1 -2.5 2.5H5.5a2.5 2.5 0 0 1 -2.5 -2.5V7.5a2.5 2.5 0 0 1 2.5 -2.5z" style="stroke-dasharray: calc(59.71 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(47.768 - var(--icon-gap) / 2)"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
     <symbol id="moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z" style="stroke-dasharray: calc(58.676 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(26.404 - var(--icon-gap) / 2)"/></symbol>
@@ -310,6 +315,7 @@
     <symbol id="sun" viewBox="0 0 24 24"><path d="M12 7.8a4.2 4.2 0 1 1 0 8.4a4.2 4.2 0 1 1 0 -8.4z" style="stroke-dasharray: calc(26.393 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(23.226 - var(--icon-gap) / 2)"/><path d="M12 2.5v2"/><path d="M12 19.5v2"/><path d="M2.5 12h2"/><path d="M19.5 12h2"/><path d="M5.6 5.6l1.2 1.2"/><path d="M17.2 17.2l1.2 1.2"/><path d="M5.6 18.4l1.2-1.2"/><path d="M17.2 6.8l1.2-1.2"/></symbol>
     <symbol id="trash" viewBox="0 0 24 24"><path d="M6 7h12l-1 12.6a1.5 1.5 0 0 1-1.5 1.4h-7A1.5 1.5 0 0 1 7 19.6z" style="stroke-dasharray: calc(48.799 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(42.943 - var(--icon-gap) / 2)"/><path d="M4 7h16"/><path d="M9.5 7V4.5h5V7"/><path d="M10 11v6" style="display: var(--icon-minor-display, inline)"/><path d="M14 11v6" style="display: var(--icon-minor-display, inline)"/></symbol>
     <symbol id="users" viewBox="0 0 24 24"><path d="M9 5a3.5 3.5 0 1 1 0 7a3.5 3.5 0 1 1 0 -7z" style="stroke-dasharray: calc(21.994 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(19.355 - var(--icon-gap) / 2)"/><path d="M2.5 19.5c.7-3.3 3.3-5.2 6.5-5.2s5.8 1.9 6.5 5.2"/><path d="M15.5 5.2a3.5 3.5 0 0 1 0 6.6"/><path d="M17.5 14.6c2 .7 3.4 2.4 4 4.9"/></symbol>
+    <symbol id="x-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M9.2 9.2l5.6 5.6"/><path d="M14.8 9.2l-5.6 5.6"/></symbol>
   </svg>
   <!-- /icons -->
 </body>
