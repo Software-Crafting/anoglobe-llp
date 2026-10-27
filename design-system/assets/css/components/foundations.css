@@ -1,4 +1,67 @@
-/* Components. Each block reads semantic tokens only. Groups are added module by module (plan/05). */
+/* Foundation components: icons, logo, copy to clipboard. Semantic tokens only. */
+
+/* Icons: sprite symbols take stroke, notch and detail level from these properties.
+   Values are in 24-grid units, so each size gets its own optical stroke (plan/04). */
+.a-icon {
+  --icon-stroke: 1.75;
+  --icon-notch: 2;
+  --icon-gap: calc(var(--icon-stroke) + var(--icon-notch));
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: var(--icon-stroke);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.a-icon--16 {
+  --icon-stroke: 2.25;
+  --icon-notch: 3;
+  --icon-minor-display: none;
+  width: 16px;
+  height: 16px;
+}
+
+.a-icon--20 {
+  --icon-stroke: 1.8;
+  --icon-notch: 2.4;
+  width: 20px;
+  height: 20px;
+}
+
+.a-icon--32 {
+  --icon-stroke: 1.5;
+  --icon-notch: 1.5;
+  width: 32px;
+  height: 32px;
+}
+
+.a-icon--48 {
+  --icon-stroke: 1.25;
+  --icon-notch: 1;
+  width: 48px;
+  height: 48px;
+}
+
+/* Spot illustrations: Mist tones plus the accent */
+.a-illus {
+  --illus-surface: var(--muted);
+  --illus-surface-opacity: 1;
+  --illus-line: var(--muted-foreground);
+  --illus-accent: var(--accent);
+  --illus-stroke: 2.5;
+  width: 96px;
+  height: 96px;
+  flex-shrink: 0;
+}
+
+.a-illus--64 {
+  --illus-stroke: 3;
+  width: 64px;
+  height: 64px;
+}
 
 /* Logo: light and dark artwork, swapped by theme */
 .a-logo {

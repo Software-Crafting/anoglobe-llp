@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Icons | Anoglobe Design System</title>
+  <meta name="description" content="The Anoglobe icon set: original line, duo and fill icons at 16 to 48 pixels, and spot illustrations.">
+  <!-- shell:head -->
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <script src="../../assets/js/theme.js"></script>
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components/foundations.css">
+  <link rel="stylesheet" href="../../assets/css/pages.css">
+  <script src="../../assets/js/components/core.js" defer></script>
+  <!-- /shell:head -->
+</head>
+<body>
+  <!-- shell:docs-header -->
+  <a class="a-skip-link" href="#main">Skip to content</a>
+  <header class="a-docs-header">
+    <a class="a-docs-header__brand" href="../../index.html">
+      <img class="a-logo a-logo--light" src="../../assets/img/logo.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+      <img class="a-logo a-logo--dark" src="../../assets/img/logo-reversed.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+      <span class="a-docs-header__label">Design system</span>
+    </a>
+    <button type="button" class="a-theme-text-toggle" data-theme-toggle>Dark theme</button>
+  </header>
+  <!-- /shell:docs-header -->
+  <div class="a-docs">
+    <!-- shell:docs-nav -->
+    <nav class="a-docs-nav" aria-label="Design system">
+      <div class="a-docs-nav__group">
+        <p class="a-eyebrow">Foundations</p>
+        <ul class="a-docs-nav__list" role="list">
+          <li><a class="a-docs-nav__link" href="../../ui-design/foundations/colors.html">Colors</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/foundations/icons.html" aria-current="page">Icons</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- /shell:docs-nav -->
+    <main id="main" class="a-docs-main">
+      <header>
+        <p class="a-eyebrow">Foundations</p>
+        <h1>Icons</h1>
+        <p class="a-body-lg a-muted">An original set drawn for Anoglobe on a 24 pixel grid with round caps and joins. Every icon with an outline carries the same signature: a 2 pixel notch cut into its primary shape.</p>
+      </header>
+
+      <section class="a-docs-section" aria-labelledby="usage">
+        <h2 id="usage">Usage</h2>
+        <p>Reference a symbol from the sprite and size it with a class. Stroke weight, notch size and detail level adjust per size, so a 16 pixel icon is drawn heavier and simpler than a 32 pixel one.</p>
+        <pre class="a-code" tabindex="0"><code>&lt;svg class=&quot;a-icon a-icon--20&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;assets/icons/sprite.svg#invoice&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+        <ul class="a-rules">
+          <li>Variants: <code>#name</code> for line, <code>#name-duo</code> for duo, <code>#name-fill</code> for fill.</li>
+          <li>Sizes: <code>a-icon--16</code>, <code>a-icon--20</code>, default 24, <code>a-icon--32</code>, <code>a-icon--48</code>.</li>
+          <li>Icons inherit <code>currentColor</code>. Decorative icons get <code>aria-hidden="true"</code>; icon-only buttons need an <code>aria-label</code>.</li>
+          <li>Standalone files live in <code>assets/icons/svg/</code> as <code>name.variant.size.svg</code>. Rules for adding icons are in <a href="../../assets/icons/ICON-GUIDE.md">ICON-GUIDE.md</a>.</li>
+        </ul>
+      </section>
+
+      <!-- generated:icons -->
+      <section class="a-docs-section" aria-labelledby="navigation-and-ui">
+        <h2 id="navigation-and-ui">Navigation and UI</h2>
+        <p>45 icons, line variant at 24 pixels.</p>
+        <ul class="a-icon-grid" role="list">
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#home"></use></svg>
+            <span class="a-icon-tile__name">home</span>
+            <button type="button" class="a-copy" data-copy="home"><span data-copy-label>Copy</span><span class="a-visually-hidden"> home</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#menu"></use></svg>
+            <span class="a-icon-tile__name">menu</span>
+            <button type="button" class="a-copy" data-copy="menu"><span data-copy-label>Copy</span><span class="a-visually-hidden"> menu</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#close"></use></svg>
+            <span class="a-icon-tile__name">close</span>
+            <button type="button" class="a-copy" data-copy="close"><span data-copy-label>Copy</span><span class="a-visually-hidden"> close</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#search"></use></svg>
+            <span class="a-icon-tile__name">search</span>
+            <button type="button" class="a-copy" data-copy="search"><span data-copy-label>Copy</span><span class="a-visually-hidden"> search</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bell"></use></svg>
+            <span class="a-icon-tile__name">bell</span>
+            <button type="button" class="a-copy" data-copy="bell"><span data-copy-label>Copy</span><span class="a-visually-hidden"> bell</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#settings"></use></svg>
+            <span class="a-icon-tile__name">settings</span>
+            <button type="button" class="a-copy" data-copy="settings"><span data-copy-label>Copy</span><span class="a-visually-hidden"> settings</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#filter"></use></svg>
+            <span class="a-icon-tile__name">filter</span>
+            <button type="button" class="a-copy" data-copy="filter"><span data-copy-label>Copy</span><span class="a-visually-hidden"> filter</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#sort"></use></svg>
+            <span class="a-icon-tile__name">sort</span>
+            <button type="button" class="a-copy" data-copy="sort"><span data-copy-label>Copy</span><span class="a-visually-hidden"> sort</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#more-horizontal"></use></svg>
+            <span class="a-icon-tile__name">more-horizontal</span>
+            <button type="button" class="a-copy" data-copy="more-horizontal"><span data-copy-label>Copy</span><span class="a-visually-hidden"> more-horizontal</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#more-vertical"></use></svg>
+            <span class="a-icon-tile__name">more-vertical</span>
+            <button type="button" class="a-copy" data-copy="more-vertical"><span data-copy-label>Copy</span><span class="a-visually-hidden"> more-vertical</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#chevron-up"></use></svg>
+            <span class="a-icon-tile__name">chevron-up</span>
+            <button type="button" class="a-copy" data-copy="chevron-up"><span data-copy-label>Copy</span><span class="a-visually-hidden"> chevron-up</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#chevron-down"></use></svg>
+            <span class="a-icon-tile__name">chevron-down</span>
+            <button type="button" class="a-copy" data-copy="chevron-down"><span data-copy-label>Copy</span><span class="a-visually-hidden"> chevron-down</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#chevron-left"></use></svg>
+            <span class="a-icon-tile__name">chevron-left</span>
+            <button type="button" class="a-copy" data-copy="chevron-left"><span data-copy-label>Copy</span><span class="a-visually-hidden"> chevron-left</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#chevron-right"></use></svg>
+            <span class="a-icon-tile__name">chevron-right</span>
+            <button type="button" class="a-copy" data-copy="chevron-right"><span data-copy-label>Copy</span><span class="a-visually-hidden"> chevron-right</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#arrow-left"></use></svg>
+            <span class="a-icon-tile__name">arrow-left</span>
+            <button type="button" class="a-copy" data-copy="arrow-left"><span data-copy-label>Copy</span><span class="a-visually-hidden"> arrow-left</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#arrow-right"></use></svg>
+            <span class="a-icon-tile__name">arrow-right</span>
+            <button type="button" class="a-copy" data-copy="arrow-right"><span data-copy-label>Copy</span><span class="a-visually-hidden"> arrow-right</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#arrow-up-right"></use></svg>
+            <span class="a-icon-tile__name">arrow-up-right</span>
+            <button type="button" class="a-copy" data-copy="arrow-up-right"><span data-copy-label>Copy</span><span class="a-visually-hidden"> arrow-up-right</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#external-link"></use></svg>
+            <span class="a-icon-tile__name">external-link</span>
+            <button type="button" class="a-copy" data-copy="external-link"><span data-copy-label>Copy</span><span class="a-visually-hidden"> external-link</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#plus"></use></svg>
+            <span class="a-icon-tile__name">plus</span>
+            <button type="button" class="a-copy" data-copy="plus"><span data-copy-label>Copy</span><span class="a-visually-hidden"> plus</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#minus"></use></svg>
+            <span class="a-icon-tile__name">minus</span>
+            <button type="button" class="a-copy" data-copy="minus"><span data-copy-label>Copy</span><span class="a-visually-hidden"> minus</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#check"></use></svg>
+            <span class="a-icon-tile__name">check</span>
+            <button type="button" class="a-copy" data-copy="check"><span data-copy-label>Copy</span><span class="a-visually-hidden"> check</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#check-circle"></use></svg>
+            <span class="a-icon-tile__name">check-circle</span>
+            <button type="button" class="a-copy" data-copy="check-circle"><span data-copy-label>Copy</span><span class="a-visually-hidden"> check-circle</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#x-circle"></use></svg>
+            <span class="a-icon-tile__name">x-circle</span>
+            <button type="button" class="a-copy" data-copy="x-circle"><span data-copy-label>Copy</span><span class="a-visually-hidden"> x-circle</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#alert-triangle"></use></svg>
+            <span class="a-icon-tile__name">alert-triangle</span>
+            <button type="button" class="a-copy" data-copy="alert-triangle"><span data-copy-label>Copy</span><span class="a-visually-hidden"> alert-triangle</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#info"></use></svg>
+            <span class="a-icon-tile__name">info</span>
+            <button type="button" class="a-copy" data-copy="info"><span data-copy-label>Copy</span><span class="a-visually-hidden"> info</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#help-circle"></use></svg>
+            <span class="a-icon-tile__name">help-circle</span>
+            <button type="button" class="a-copy" data-copy="help-circle"><span data-copy-label>Copy</span><span class="a-visually-hidden"> help-circle</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#eye"></use></svg>
+            <span class="a-icon-tile__name">eye</span>
+            <button type="button" class="a-copy" data-copy="eye"><span data-copy-label>Copy</span><span class="a-visually-hidden"> eye</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#eye-off"></use></svg>
+            <span class="a-icon-tile__name">eye-off</span>
+            <button type="button" class="a-copy" data-copy="eye-off"><span data-copy-label>Copy</span><span class="a-visually-hidden"> eye-off</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#copy"></use></svg>
+            <span class="a-icon-tile__name">copy</span>
+            <button type="button" class="a-copy" data-copy="copy"><span data-copy-label>Copy</span><span class="a-visually-hidden"> copy</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#download"></use></svg>
+            <span class="a-icon-tile__name">download</span>
+            <button type="button" class="a-copy" data-copy="download"><span data-copy-label>Copy</span><span class="a-visually-hidden"> download</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#upload"></use></svg>
+            <span class="a-icon-tile__name">upload</span>
+            <button type="button" class="a-copy" data-copy="upload"><span data-copy-label>Copy</span><span class="a-visually-hidden"> upload</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#trash"></use></svg>
+            <span class="a-icon-tile__name">trash</span>
+            <button type="button" class="a-copy" data-copy="trash"><span data-copy-label>Copy</span><span class="a-visually-hidden"> trash</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#edit"></use></svg>
+            <span class="a-icon-tile__name">edit</span>
+            <button type="button" class="a-copy" data-copy="edit"><span data-copy-label>Copy</span><span class="a-visually-hidden"> edit</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#link"></use></svg>
+            <span class="a-icon-tile__name">link</span>
+            <button type="button" class="a-copy" data-copy="link"><span data-copy-label>Copy</span><span class="a-visually-hidden"> link</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#calendar"></use></svg>
+            <span class="a-icon-tile__name">calendar</span>
+            <button type="button" class="a-copy" data-copy="calendar"><span data-copy-label>Copy</span><span class="a-visually-hidden"> calendar</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#clock"></use></svg>
+            <span class="a-icon-tile__name">clock</span>
+            <button type="button" class="a-copy" data-copy="clock"><span data-copy-label>Copy</span><span class="a-visually-hidden"> clock</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#globe"></use></svg>
+            <span class="a-icon-tile__name">globe</span>
+            <button type="button" class="a-copy" data-copy="globe"><span data-copy-label>Copy</span><span class="a-visually-hidden"> globe</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#sun"></use></svg>
+            <span class="a-icon-tile__name">sun</span>
+            <button type="button" class="a-copy" data-copy="sun"><span data-copy-label>Copy</span><span class="a-visually-hidden"> sun</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#moon"></use></svg>
+            <span class="a-icon-tile__name">moon</span>
+            <button type="button" class="a-copy" data-copy="moon"><span data-copy-label>Copy</span><span class="a-visually-hidden"> moon</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#logout"></use></svg>
+            <span class="a-icon-tile__name">logout</span>
+            <button type="button" class="a-copy" data-copy="logout"><span data-copy-label>Copy</span><span class="a-visually-hidden"> logout</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#user"></use></svg>
+            <span class="a-icon-tile__name">user</span>
+            <button type="button" class="a-copy" data-copy="user"><span data-copy-label>Copy</span><span class="a-visually-hidden"> user</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#users"></use></svg>
+            <span class="a-icon-tile__name">users</span>
+            <button type="button" class="a-copy" data-copy="users"><span data-copy-label>Copy</span><span class="a-visually-hidden"> users</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#lock"></use></svg>
+            <span class="a-icon-tile__name">lock</span>
+            <button type="button" class="a-copy" data-copy="lock"><span data-copy-label>Copy</span><span class="a-visually-hidden"> lock</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#shield-check"></use></svg>
+            <span class="a-icon-tile__name">shield-check</span>
+            <button type="button" class="a-copy" data-copy="shield-check"><span data-copy-label>Copy</span><span class="a-visually-hidden"> shield-check</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#key"></use></svg>
+            <span class="a-icon-tile__name">key</span>
+            <button type="button" class="a-copy" data-copy="key"><span data-copy-label>Copy</span><span class="a-visually-hidden"> key</span></button>
+          </li>
+        </ul>
+      </section>
+
+      <section class="a-docs-section" aria-labelledby="finance">
+        <h2 id="finance">Finance</h2>
+        <p>25 icons, line variant at 24 pixels.</p>
+        <ul class="a-icon-grid" role="list">
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#ledger-book"></use></svg>
+            <span class="a-icon-tile__name">ledger-book</span>
+            <button type="button" class="a-copy" data-copy="ledger-book"><span data-copy-label>Copy</span><span class="a-visually-hidden"> ledger-book</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#receipt"></use></svg>
+            <span class="a-icon-tile__name">receipt</span>
+            <button type="button" class="a-copy" data-copy="receipt"><span data-copy-label>Copy</span><span class="a-visually-hidden"> receipt</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#invoice"></use></svg>
+            <span class="a-icon-tile__name">invoice</span>
+            <button type="button" class="a-copy" data-copy="invoice"><span data-copy-label>Copy</span><span class="a-visually-hidden"> invoice</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#calculator"></use></svg>
+            <span class="a-icon-tile__name">calculator</span>
+            <button type="button" class="a-copy" data-copy="calculator"><span data-copy-label>Copy</span><span class="a-visually-hidden"> calculator</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bank"></use></svg>
+            <span class="a-icon-tile__name">bank</span>
+            <button type="button" class="a-copy" data-copy="bank"><span data-copy-label>Copy</span><span class="a-visually-hidden"> bank</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#credit-card"></use></svg>
+            <span class="a-icon-tile__name">credit-card</span>
+            <button type="button" class="a-copy" data-copy="credit-card"><span data-copy-label>Copy</span><span class="a-visually-hidden"> credit-card</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#wallet"></use></svg>
+            <span class="a-icon-tile__name">wallet</span>
+            <button type="button" class="a-copy" data-copy="wallet"><span data-copy-label>Copy</span><span class="a-visually-hidden"> wallet</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#coins"></use></svg>
+            <span class="a-icon-tile__name">coins</span>
+            <button type="button" class="a-copy" data-copy="coins"><span data-copy-label>Copy</span><span class="a-visually-hidden"> coins</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#dollar-circle"></use></svg>
+            <span class="a-icon-tile__name">dollar-circle</span>
+            <button type="button" class="a-copy" data-copy="dollar-circle"><span data-copy-label>Copy</span><span class="a-visually-hidden"> dollar-circle</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#trending-up"></use></svg>
+            <span class="a-icon-tile__name">trending-up</span>
+            <button type="button" class="a-copy" data-copy="trending-up"><span data-copy-label>Copy</span><span class="a-visually-hidden"> trending-up</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#trending-down"></use></svg>
+            <span class="a-icon-tile__name">trending-down</span>
+            <button type="button" class="a-copy" data-copy="trending-down"><span data-copy-label>Copy</span><span class="a-visually-hidden"> trending-down</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bar-chart"></use></svg>
+            <span class="a-icon-tile__name">bar-chart</span>
+            <button type="button" class="a-copy" data-copy="bar-chart"><span data-copy-label>Copy</span><span class="a-visually-hidden"> bar-chart</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#pie-chart"></use></svg>
+            <span class="a-icon-tile__name">pie-chart</span>
+            <button type="button" class="a-copy" data-copy="pie-chart"><span data-copy-label>Copy</span><span class="a-visually-hidden"> pie-chart</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#percent"></use></svg>
+            <span class="a-icon-tile__name">percent</span>
+            <button type="button" class="a-copy" data-copy="percent"><span data-copy-label>Copy</span><span class="a-visually-hidden"> percent</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#file-text"></use></svg>
+            <span class="a-icon-tile__name">file-text</span>
+            <button type="button" class="a-copy" data-copy="file-text"><span data-copy-label>Copy</span><span class="a-visually-hidden"> file-text</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#file-upload"></use></svg>
+            <span class="a-icon-tile__name">file-upload</span>
+            <button type="button" class="a-copy" data-copy="file-upload"><span data-copy-label>Copy</span><span class="a-visually-hidden"> file-upload</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#folder"></use></svg>
+            <span class="a-icon-tile__name">folder</span>
+            <button type="button" class="a-copy" data-copy="folder"><span data-copy-label>Copy</span><span class="a-visually-hidden"> folder</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#briefcase"></use></svg>
+            <span class="a-icon-tile__name">briefcase</span>
+            <button type="button" class="a-copy" data-copy="briefcase"><span data-copy-label>Copy</span><span class="a-visually-hidden"> briefcase</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#building"></use></svg>
+            <span class="a-icon-tile__name">building</span>
+            <button type="button" class="a-copy" data-copy="building"><span data-copy-label>Copy</span><span class="a-visually-hidden"> building</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#tax-form"></use></svg>
+            <span class="a-icon-tile__name">tax-form</span>
+            <button type="button" class="a-copy" data-copy="tax-form"><span data-copy-label>Copy</span><span class="a-visually-hidden"> tax-form</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#reconcile"></use></svg>
+            <span class="a-icon-tile__name">reconcile</span>
+            <button type="button" class="a-copy" data-copy="reconcile"><span data-copy-label>Copy</span><span class="a-visually-hidden"> reconcile</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#payroll"></use></svg>
+            <span class="a-icon-tile__name">payroll</span>
+            <button type="button" class="a-copy" data-copy="payroll"><span data-copy-label>Copy</span><span class="a-visually-hidden"> payroll</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#expense-tag"></use></svg>
+            <span class="a-icon-tile__name">expense-tag</span>
+            <button type="button" class="a-copy" data-copy="expense-tag"><span data-copy-label>Copy</span><span class="a-visually-hidden"> expense-tag</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#recurring-payment"></use></svg>
+            <span class="a-icon-tile__name">recurring-payment</span>
+            <button type="button" class="a-copy" data-copy="recurring-payment"><span data-copy-label>Copy</span><span class="a-visually-hidden"> recurring-payment</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#statement"></use></svg>
+            <span class="a-icon-tile__name">statement</span>
+            <button type="button" class="a-copy" data-copy="statement"><span data-copy-label>Copy</span><span class="a-visually-hidden"> statement</span></button>
+          </li>
+        </ul>
+      </section>
+
+      <section class="a-docs-section" aria-labelledby="communication-and-automation">
+        <h2 id="communication-and-automation">Communication and automation</h2>
+        <p>12 icons, line variant at 24 pixels.</p>
+        <ul class="a-icon-grid" role="list">
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#mail"></use></svg>
+            <span class="a-icon-tile__name">mail</span>
+            <button type="button" class="a-copy" data-copy="mail"><span data-copy-label>Copy</span><span class="a-visually-hidden"> mail</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#mail-check"></use></svg>
+            <span class="a-icon-tile__name">mail-check</span>
+            <button type="button" class="a-copy" data-copy="mail-check"><span data-copy-label>Copy</span><span class="a-visually-hidden"> mail-check</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#phone"></use></svg>
+            <span class="a-icon-tile__name">phone</span>
+            <button type="button" class="a-copy" data-copy="phone"><span data-copy-label>Copy</span><span class="a-visually-hidden"> phone</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#phone-call"></use></svg>
+            <span class="a-icon-tile__name">phone-call</span>
+            <button type="button" class="a-copy" data-copy="phone-call"><span data-copy-label>Copy</span><span class="a-visually-hidden"> phone-call</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#phone-missed"></use></svg>
+            <span class="a-icon-tile__name">phone-missed</span>
+            <button type="button" class="a-copy" data-copy="phone-missed"><span data-copy-label>Copy</span><span class="a-visually-hidden"> phone-missed</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#message"></use></svg>
+            <span class="a-icon-tile__name">message</span>
+            <button type="button" class="a-copy" data-copy="message"><span data-copy-label>Copy</span><span class="a-visually-hidden"> message</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bot"></use></svg>
+            <span class="a-icon-tile__name">bot</span>
+            <button type="button" class="a-copy" data-copy="bot"><span data-copy-label>Copy</span><span class="a-visually-hidden"> bot</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#waveform"></use></svg>
+            <span class="a-icon-tile__name">waveform</span>
+            <button type="button" class="a-copy" data-copy="waveform"><span data-copy-label>Copy</span><span class="a-visually-hidden"> waveform</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#sparkles"></use></svg>
+            <span class="a-icon-tile__name">sparkles</span>
+            <button type="button" class="a-copy" data-copy="sparkles"><span data-copy-label>Copy</span><span class="a-visually-hidden"> sparkles</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#webhook"></use></svg>
+            <span class="a-icon-tile__name">webhook</span>
+            <button type="button" class="a-copy" data-copy="webhook"><span data-copy-label>Copy</span><span class="a-visually-hidden"> webhook</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#clock-play"></use></svg>
+            <span class="a-icon-tile__name">clock-play</span>
+            <button type="button" class="a-copy" data-copy="clock-play"><span data-copy-label>Copy</span><span class="a-visually-hidden"> clock-play</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#send"></use></svg>
+            <span class="a-icon-tile__name">send</span>
+            <button type="button" class="a-copy" data-copy="send"><span data-copy-label>Copy</span><span class="a-visually-hidden"> send</span></button>
+          </li>
+        </ul>
+      </section>
+
+      <section class="a-docs-section" aria-labelledby="status">
+        <h2 id="status">Status</h2>
+        <p>6 icons, line variant at 24 pixels.</p>
+        <ul class="a-icon-grid" role="list">
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#success"></use></svg>
+            <span class="a-icon-tile__name">success</span>
+            <button type="button" class="a-copy" data-copy="success"><span data-copy-label>Copy</span><span class="a-visually-hidden"> success</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#pending"></use></svg>
+            <span class="a-icon-tile__name">pending</span>
+            <button type="button" class="a-copy" data-copy="pending"><span data-copy-label>Copy</span><span class="a-visually-hidden"> pending</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#failed"></use></svg>
+            <span class="a-icon-tile__name">failed</span>
+            <button type="button" class="a-copy" data-copy="failed"><span data-copy-label>Copy</span><span class="a-visually-hidden"> failed</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#refunded"></use></svg>
+            <span class="a-icon-tile__name">refunded</span>
+            <button type="button" class="a-copy" data-copy="refunded"><span data-copy-label>Copy</span><span class="a-visually-hidden"> refunded</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#processing"></use></svg>
+            <span class="a-icon-tile__name">processing</span>
+            <button type="button" class="a-copy" data-copy="processing"><span data-copy-label>Copy</span><span class="a-visually-hidden"> processing</span></button>
+          </li>
+          <li class="a-icon-tile">
+            <svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#paused"></use></svg>
+            <span class="a-icon-tile__name">paused</span>
+            <button type="button" class="a-copy" data-copy="paused"><span data-copy-label>Copy</span><span class="a-visually-hidden"> paused</span></button>
+          </li>
+        </ul>
+      </section>
+
+      <section class="a-docs-section" aria-labelledby="sizes">
+        <h2 id="sizes">Sizes</h2>
+        <p>Line at 16, 20, 24 and 32 pixels, duo at 48. Each size has its own stroke weight; 16 pixels also drops minor details.</p>
+        <div class="a-icon-table" role="table" aria-label="Icon sizes" tabindex="0">
+          <div class="a-icon-table__row" role="row"><span role="columnheader">Icon</span><span role="columnheader">16</span><span role="columnheader">20</span><span role="columnheader">24</span><span role="columnheader">32</span><span role="columnheader">48 duo</span></div>
+          <div class="a-icon-table__row" role="row"><span role="rowheader">invoice</span><span role="cell"><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#invoice"></use></svg></span><span role="cell"><svg class="a-icon a-icon--20" aria-hidden="true"><use href="../../assets/icons/sprite.svg#invoice"></use></svg></span><span role="cell"><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#invoice"></use></svg></span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="../../assets/icons/sprite.svg#invoice"></use></svg></span><span role="cell"><svg class="a-icon a-icon--48" aria-hidden="true"><use href="../../assets/icons/sprite.svg#invoice-duo"></use></svg></span></div>
+          <div class="a-icon-table__row" role="row"><span role="rowheader">credit-card</span><span role="cell"><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#credit-card"></use></svg></span><span role="cell"><svg class="a-icon a-icon--20" aria-hidden="true"><use href="../../assets/icons/sprite.svg#credit-card"></use></svg></span><span role="cell"><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#credit-card"></use></svg></span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="../../assets/icons/sprite.svg#credit-card"></use></svg></span><span role="cell"><svg class="a-icon a-icon--48" aria-hidden="true"><use href="../../assets/icons/sprite.svg#credit-card-duo"></use></svg></span></div>
+          <div class="a-icon-table__row" role="row"><span role="rowheader">phone-call</span><span role="cell"><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#phone-call"></use></svg></span><span role="cell"><svg class="a-icon a-icon--20" aria-hidden="true"><use href="../../assets/icons/sprite.svg#phone-call"></use></svg></span><span role="cell"><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#phone-call"></use></svg></span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="../../assets/icons/sprite.svg#phone-call"></use></svg></span><span role="cell"><svg class="a-icon a-icon--48" aria-hidden="true"><use href="../../assets/icons/sprite.svg#phone-call-duo"></use></svg></span></div>
+          <div class="a-icon-table__row" role="row"><span role="rowheader">reconcile</span><span role="cell"><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#reconcile"></use></svg></span><span role="cell"><svg class="a-icon a-icon--20" aria-hidden="true"><use href="../../assets/icons/sprite.svg#reconcile"></use></svg></span><span role="cell"><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#reconcile"></use></svg></span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="../../assets/icons/sprite.svg#reconcile"></use></svg></span><span role="cell"><svg class="a-icon a-icon--48" aria-hidden="true"><use href="../../assets/icons/sprite.svg#reconcile-duo"></use></svg></span></div>
+          <div class="a-icon-table__row" role="row"><span role="rowheader">calendar</span><span role="cell"><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#calendar"></use></svg></span><span role="cell"><svg class="a-icon a-icon--20" aria-hidden="true"><use href="../../assets/icons/sprite.svg#calendar"></use></svg></span><span role="cell"><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#calendar"></use></svg></span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="../../assets/icons/sprite.svg#calendar"></use></svg></span><span role="cell"><svg class="a-icon a-icon--48" aria-hidden="true"><use href="../../assets/icons/sprite.svg#calendar-duo"></use></svg></span></div>
+          <div class="a-icon-table__row" role="row"><span role="rowheader">shield-check</span><span role="cell"><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#shield-check"></use></svg></span><span role="cell"><svg class="a-icon a-icon--20" aria-hidden="true"><use href="../../assets/icons/sprite.svg#shield-check"></use></svg></span><span role="cell"><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#shield-check"></use></svg></span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="../../assets/icons/sprite.svg#shield-check"></use></svg></span><span role="cell"><svg class="a-icon a-icon--48" aria-hidden="true"><use href="../../assets/icons/sprite.svg#shield-check-duo"></use></svg></span></div>
+          <div class="a-icon-table__row" role="row"><span role="rowheader">bank</span><span role="cell"><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bank"></use></svg></span><span role="cell"><svg class="a-icon a-icon--20" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bank"></use></svg></span><span role="cell"><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bank"></use></svg></span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bank"></use></svg></span><span role="cell"><svg class="a-icon a-icon--48" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bank-duo"></use></svg></span></div>
+          <div class="a-icon-table__row" role="row"><span role="rowheader">bell</span><span role="cell"><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bell"></use></svg></span><span role="cell"><svg class="a-icon a-icon--20" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bell"></use></svg></span><span role="cell"><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bell"></use></svg></span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bell"></use></svg></span><span role="cell"><svg class="a-icon a-icon--48" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bell-duo"></use></svg></span></div>
+        </div>
+      </section>
+
+      <section class="a-docs-section" aria-labelledby="variants">
+        <h2 id="variants">Variants</h2>
+        <p>Line is the default. Duo adds a soft tint for cards and feature rows. Fill marks active navigation and checked states.</p>
+        <div class="a-icon-table a-icon-table--variants" role="table" aria-label="Icon variants" tabindex="0">
+          <div class="a-icon-table__row" role="row"><span role="columnheader">Icon</span><span role="columnheader">Line</span><span role="columnheader">Duo</span><span role="columnheader">Fill</span></div>
+          <div class="a-icon-table__row" role="row"><span role="rowheader">invoice</span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="../../assets/icons/sprite.svg#invoice"></use></svg></span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="../../assets/icons/sprite.svg#invoice-duo"></use></svg></span><span role="cell"><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#invoice-fill"></use></svg></span></div>
+          <div class="a-icon-table__row" role="row"><span role="rowheader">credit-card</span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="../../assets/icons/sprite.svg#credit-card"></use></svg></span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="../../assets/icons/sprite.svg#credit-card-duo"></use></svg></span><span role="cell"><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#credit-card-fill"></use></svg></span></div>
+          <div class="a-icon-table__row" role="row"><span role="rowheader">phone-call</span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="../../assets/icons/sprite.svg#phone-call"></use></svg></span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="../../assets/icons/sprite.svg#phone-call-duo"></use></svg></span><span role="cell"><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#phone-call-fill"></use></svg></span></div>
+          <div class="a-icon-table__row" role="row"><span role="rowheader">reconcile</span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="../../assets/icons/sprite.svg#reconcile"></use></svg></span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="../../assets/icons/sprite.svg#reconcile-duo"></use></svg></span><span role="cell"><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#reconcile-fill"></use></svg></span></div>
+          <div class="a-icon-table__row" role="row"><span role="rowheader">calendar</span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="../../assets/icons/sprite.svg#calendar"></use></svg></span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="../../assets/icons/sprite.svg#calendar-duo"></use></svg></span><span role="cell"><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#calendar-fill"></use></svg></span></div>
+          <div class="a-icon-table__row" role="row"><span role="rowheader">shield-check</span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="../../assets/icons/sprite.svg#shield-check"></use></svg></span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="../../assets/icons/sprite.svg#shield-check-duo"></use></svg></span><span role="cell"><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#shield-check-fill"></use></svg></span></div>
+          <div class="a-icon-table__row" role="row"><span role="rowheader">bank</span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bank"></use></svg></span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bank-duo"></use></svg></span><span role="cell"><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bank-fill"></use></svg></span></div>
+          <div class="a-icon-table__row" role="row"><span role="rowheader">bell</span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bell"></use></svg></span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bell-duo"></use></svg></span><span role="cell"><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bell-fill"></use></svg></span></div>
+        </div>
+      </section>
+
+      <section class="a-docs-section" aria-labelledby="illustrations">
+        <h2 id="illustrations">Illustrations</h2>
+        <p>Two-tone spot illustrations for empty, success, error and onboarding states, at 96 and 64 pixels.</p>
+        <ul class="a-illus-grid" role="list">
+          <li class="a-icon-tile"><svg class="a-illus" aria-hidden="true"><use href="../../assets/icons/sprite.svg#illus-empty-inbox"></use></svg><svg class="a-illus a-illus--64" aria-hidden="true"><use href="../../assets/icons/sprite.svg#illus-empty-inbox"></use></svg><span class="a-icon-tile__name">empty-inbox</span></li>
+          <li class="a-icon-tile"><svg class="a-illus" aria-hidden="true"><use href="../../assets/icons/sprite.svg#illus-empty-search"></use></svg><svg class="a-illus a-illus--64" aria-hidden="true"><use href="../../assets/icons/sprite.svg#illus-empty-search"></use></svg><span class="a-icon-tile__name">empty-search</span></li>
+          <li class="a-icon-tile"><svg class="a-illus" aria-hidden="true"><use href="../../assets/icons/sprite.svg#illus-success"></use></svg><svg class="a-illus a-illus--64" aria-hidden="true"><use href="../../assets/icons/sprite.svg#illus-success"></use></svg><span class="a-icon-tile__name">success</span></li>
+          <li class="a-icon-tile"><svg class="a-illus" aria-hidden="true"><use href="../../assets/icons/sprite.svg#illus-error"></use></svg><svg class="a-illus a-illus--64" aria-hidden="true"><use href="../../assets/icons/sprite.svg#illus-error"></use></svg><span class="a-icon-tile__name">error</span></li>
+          <li class="a-icon-tile"><svg class="a-illus" aria-hidden="true"><use href="../../assets/icons/sprite.svg#illus-upload"></use></svg><svg class="a-illus a-illus--64" aria-hidden="true"><use href="../../assets/icons/sprite.svg#illus-upload"></use></svg><span class="a-icon-tile__name">upload</span></li>
+          <li class="a-icon-tile"><svg class="a-illus" aria-hidden="true"><use href="../../assets/icons/sprite.svg#illus-payment"></use></svg><svg class="a-illus a-illus--64" aria-hidden="true"><use href="../../assets/icons/sprite.svg#illus-payment"></use></svg><span class="a-icon-tile__name">payment</span></li>
+          <li class="a-icon-tile"><svg class="a-illus" aria-hidden="true"><use href="../../assets/icons/sprite.svg#illus-calling"></use></svg><svg class="a-illus a-illus--64" aria-hidden="true"><use href="../../assets/icons/sprite.svg#illus-calling"></use></svg><span class="a-icon-tile__name">calling</span></li>
+          <li class="a-icon-tile"><svg class="a-illus" aria-hidden="true"><use href="../../assets/icons/sprite.svg#illus-documents"></use></svg><svg class="a-illus a-illus--64" aria-hidden="true"><use href="../../assets/icons/sprite.svg#illus-documents"></use></svg><span class="a-icon-tile__name">documents</span></li>
+          <li class="a-icon-tile"><svg class="a-illus" aria-hidden="true"><use href="../../assets/icons/sprite.svg#illus-offline"></use></svg><svg class="a-illus a-illus--64" aria-hidden="true"><use href="../../assets/icons/sprite.svg#illus-offline"></use></svg><span class="a-icon-tile__name">offline</span></li>
+          <li class="a-icon-tile"><svg class="a-illus" aria-hidden="true"><use href="../../assets/icons/sprite.svg#illus-locked"></use></svg><svg class="a-illus a-illus--64" aria-hidden="true"><use href="../../assets/icons/sprite.svg#illus-locked"></use></svg><span class="a-icon-tile__name">locked</span></li>
+        </ul>
+      </section>
+
+      <section class="a-docs-section" aria-labelledby="contact-sheet">
+        <h2 id="contact-sheet">Contact sheet</h2>
+        <p>Every icon at 24 and 16 pixels in both themes, for checking weight, radius and notch consistency.</p>
+        <div class="a-theme-panels">
+          <div class="a-theme-panel" data-theme="light">
+            <h3>Light theme</h3>
+            <div class="a-contact-sheet"><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#home"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#menu"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#close"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#search"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bell"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#settings"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#filter"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#sort"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#more-horizontal"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#more-vertical"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#chevron-up"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#chevron-down"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#chevron-left"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#chevron-right"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#arrow-left"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#arrow-right"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#arrow-up-right"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#external-link"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#plus"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#minus"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#check"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#check-circle"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#x-circle"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#alert-triangle"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#info"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#help-circle"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#eye"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#eye-off"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#copy"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#download"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#upload"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#trash"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#edit"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#link"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#calendar"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#clock"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#globe"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#sun"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#moon"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#logout"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#user"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#users"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#lock"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#shield-check"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#key"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#ledger-book"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#receipt"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#invoice"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#calculator"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bank"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#credit-card"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#wallet"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#coins"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#dollar-circle"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#trending-up"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#trending-down"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bar-chart"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#pie-chart"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#percent"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#file-text"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#file-upload"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#folder"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#briefcase"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#building"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#tax-form"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#reconcile"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#payroll"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#expense-tag"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#recurring-payment"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#statement"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#mail"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#mail-check"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#phone"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#phone-call"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#phone-missed"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#message"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bot"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#waveform"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#sparkles"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#webhook"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#clock-play"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#send"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#success"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#pending"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#failed"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#refunded"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#processing"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#paused"></use></svg></div>
+            <div class="a-contact-sheet"><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#home"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#menu"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#close"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#search"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bell"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#settings"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#filter"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#sort"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#more-horizontal"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#more-vertical"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#chevron-up"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#chevron-down"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#chevron-left"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#chevron-right"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#arrow-left"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#arrow-right"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#arrow-up-right"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#external-link"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#plus"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#minus"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#check"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#check-circle"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#x-circle"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#alert-triangle"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#info"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#help-circle"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#eye"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#eye-off"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#copy"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#download"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#upload"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#trash"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#edit"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#link"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#calendar"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#clock"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#globe"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#sun"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#moon"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#logout"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#user"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#users"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#lock"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#shield-check"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#key"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#ledger-book"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#receipt"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#invoice"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#calculator"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bank"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#credit-card"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#wallet"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#coins"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#dollar-circle"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#trending-up"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#trending-down"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bar-chart"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#pie-chart"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#percent"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#file-text"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#file-upload"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#folder"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#briefcase"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#building"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#tax-form"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#reconcile"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#payroll"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#expense-tag"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#recurring-payment"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#statement"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#mail"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#mail-check"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#phone"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#phone-call"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#phone-missed"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#message"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bot"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#waveform"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#sparkles"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#webhook"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#clock-play"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#send"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#success"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#pending"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#failed"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#refunded"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#processing"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#paused"></use></svg></div>
+          </div>
+          <div class="a-theme-panel" data-theme="dark">
+            <h3>Dark theme</h3>
+            <div class="a-contact-sheet"><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#home"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#menu"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#close"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#search"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bell"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#settings"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#filter"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#sort"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#more-horizontal"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#more-vertical"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#chevron-up"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#chevron-down"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#chevron-left"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#chevron-right"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#arrow-left"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#arrow-right"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#arrow-up-right"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#external-link"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#plus"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#minus"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#check"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#check-circle"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#x-circle"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#alert-triangle"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#info"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#help-circle"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#eye"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#eye-off"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#copy"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#download"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#upload"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#trash"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#edit"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#link"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#calendar"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#clock"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#globe"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#sun"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#moon"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#logout"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#user"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#users"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#lock"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#shield-check"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#key"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#ledger-book"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#receipt"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#invoice"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#calculator"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bank"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#credit-card"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#wallet"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#coins"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#dollar-circle"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#trending-up"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#trending-down"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bar-chart"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#pie-chart"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#percent"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#file-text"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#file-upload"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#folder"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#briefcase"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#building"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#tax-form"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#reconcile"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#payroll"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#expense-tag"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#recurring-payment"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#statement"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#mail"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#mail-check"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#phone"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#phone-call"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#phone-missed"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#message"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bot"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#waveform"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#sparkles"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#webhook"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#clock-play"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#send"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#success"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#pending"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#failed"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#refunded"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#processing"></use></svg><svg class="a-icon" aria-hidden="true"><use href="../../assets/icons/sprite.svg#paused"></use></svg></div>
+            <div class="a-contact-sheet"><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#home"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#menu"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#close"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#search"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bell"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#settings"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#filter"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#sort"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#more-horizontal"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#more-vertical"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#chevron-up"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#chevron-down"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#chevron-left"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#chevron-right"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#arrow-left"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#arrow-right"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#arrow-up-right"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#external-link"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#plus"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#minus"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#check"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#check-circle"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#x-circle"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#alert-triangle"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#info"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#help-circle"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#eye"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#eye-off"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#copy"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#download"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#upload"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#trash"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#edit"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#link"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#calendar"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#clock"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#globe"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#sun"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#moon"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#logout"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#user"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#users"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#lock"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#shield-check"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#key"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#ledger-book"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#receipt"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#invoice"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#calculator"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bank"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#credit-card"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#wallet"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#coins"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#dollar-circle"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#trending-up"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#trending-down"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bar-chart"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#pie-chart"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#percent"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#file-text"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#file-upload"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#folder"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#briefcase"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#building"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#tax-form"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#reconcile"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#payroll"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#expense-tag"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#recurring-payment"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#statement"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#mail"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#mail-check"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#phone"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#phone-call"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#phone-missed"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#message"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#bot"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#waveform"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#sparkles"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#webhook"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#clock-play"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#send"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#success"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#pending"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#failed"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#refunded"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#processing"></use></svg><svg class="a-icon a-icon--16" aria-hidden="true"><use href="../../assets/icons/sprite.svg#paused"></use></svg></div>
+          </div>
+        </div>
+      </section>
+      <!-- /generated:icons -->
+    </main>
+  </div>
+</body>
+</html>
