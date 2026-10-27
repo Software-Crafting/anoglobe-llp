@@ -1,0 +1,11 @@
+{
+  "name": "anoglobe-design-system-tools",
+  "private": true,
+  "type": "module",
+  "description": "Development-only QA scripts. Nothing here is loaded by the design system pages.",
+  "scripts": {
+    "lint": "node lint.mjs",
+    "links": "node check-links.mjs",
+    "check": "node lint.mjs && node check-links.mjs"
+  }
+}
