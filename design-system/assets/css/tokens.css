@@ -1,0 +1,265 @@
+/* Anoglobe design tokens.
+   Raw scales are shadcn colors (ui.shadcn.com/colors, fetched 27 October 2026). They are the only hex
+   values in the system. Components use semantic tokens only, never raw scale steps.
+   Themes: each semantic token is light-dark(light, dark). The OS preference applies by default through
+   color-scheme; data-theme on <html> forces one theme. */
+
+:root {
+  /* Mist: neutral base */
+  --mist-50: #f9fafb;
+  --mist-100: #f0f4f5;
+  --mist-200: #dce5e6;
+  --mist-300: #c1cfd2;
+  --mist-400: #8da5a9;
+  --mist-500: #648085;
+  --mist-600: #4f676b;
+  --mist-700: #3d5155;
+  --mist-800: #2d3c3f;
+  --mist-900: #1e2a2c;
+  --mist-950: #0e1517;
+  --white: #ffffff;
+
+  /* Teal: accent */
+  --teal-50: #f0fdfa;
+  --teal-100: #ccfbf1;
+  --teal-200: #99f6e4;
+  --teal-300: #5eead4;
+  --teal-400: #2dd4bf;
+  --teal-500: #14b8a6;
+  --teal-600: #0d9488;
+  --teal-700: #0f766e;
+  --teal-800: #115e59;
+  --teal-900: #134e4a;
+  --teal-950: #042f2e;
+
+  /* Status scales, steps in use only */
+  --green-50: #f0fdf4;
+  --green-200: #bbf7d0;
+  --green-300: #86efac;
+  --green-400: #4ade80;
+  --green-700: #15803d;
+  --green-800: #166534;
+  --green-950: #052e16;
+
+  --amber-50: #fffbeb;
+  --amber-200: #fde68a;
+  --amber-300: #fcd34d;
+  --amber-400: #fbbf24;
+  --amber-600: #d97706;
+  --amber-700: #b45309;
+  --amber-800: #92400e;
+  --amber-950: #451a03;
+
+  --red-50: #fef2f2;
+  --red-200: #fecaca;
+  --red-300: #fca5a5;
+  --red-400: #f87171;
+  --red-600: #dc2626;
+  --red-700: #b91c1c;
+  --red-800: #991b1b;
+  --red-950: #450a0a;
+
+  --sky-50: #f0f9ff;
+  --sky-200: #bae6fd;
+  --sky-300: #7dd3fc;
+  --sky-400: #38bdf8;
+  --sky-600: #0284c7;
+  --sky-700: #0369a1;
+  --sky-800: #075985;
+  --sky-950: #082f49;
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+:root {
+  /* Surfaces and text */
+  --background: light-dark(var(--mist-50), var(--mist-950));
+  --foreground: light-dark(var(--mist-950), var(--mist-50));
+  --card: light-dark(var(--white), var(--mist-900));
+  --card-foreground: light-dark(var(--mist-950), var(--mist-50));
+  --popover: light-dark(var(--white), var(--mist-900));
+  --popover-foreground: light-dark(var(--mist-950), var(--mist-50));
+  --muted: light-dark(var(--mist-100), var(--mist-800));
+  --muted-foreground: light-dark(var(--mist-600), var(--mist-300));
+
+  /* Actions: primary is the deepest mist so the UI stays monochrome */
+  --primary: light-dark(var(--mist-900), var(--mist-50));
+  --primary-hover: light-dark(var(--mist-800), var(--mist-200));
+  --primary-foreground: light-dark(var(--mist-50), var(--mist-950));
+  --secondary: light-dark(var(--mist-100), var(--mist-800));
+  --secondary-hover: light-dark(var(--mist-200), var(--mist-700));
+  --secondary-foreground: light-dark(var(--mist-900), var(--mist-50));
+
+  /* Accent: the single brand color, for links, focus and highlights.
+     Note: unlike shadcn, --accent here is the brand teal, not a hover surface. Hover surfaces use --muted. */
+  --accent: light-dark(var(--teal-700), var(--teal-400));
+  --accent-hover: light-dark(var(--teal-800), var(--teal-300));
+  --accent-foreground: light-dark(var(--white), var(--mist-950));
+  --accent-subtle: light-dark(var(--teal-50), var(--teal-950));
+  --accent-subtle-foreground: light-dark(var(--teal-800), var(--teal-200));
+  --link: light-dark(var(--teal-700), var(--teal-300));
+  --link-hover: light-dark(var(--teal-800), var(--teal-200));
+  --selection: light-dark(var(--teal-100), var(--teal-900));
+
+  /* Lines. --border is decorative; --input bounds controls and meets 3:1. */
+  --border: light-dark(var(--mist-200), var(--mist-800));
+  --border-strong: light-dark(var(--mist-300), var(--mist-700));
+  --input: light-dark(var(--mist-500), var(--mist-500));
+  --input-hover: light-dark(var(--mist-600), var(--mist-400));
+  --ring: light-dark(var(--teal-600), var(--teal-400));
+
+  /* Status: solid fill, then tinted surface, border, text and icon */
+  --success: light-dark(var(--green-700), var(--green-400));
+  --success-foreground: light-dark(var(--white), var(--mist-950));
+  --success-bg: light-dark(var(--green-50), var(--green-950));
+  --success-border: light-dark(var(--green-200), var(--green-800));
+  --success-fg: light-dark(var(--green-800), var(--green-300));
+  --success-icon: light-dark(var(--green-700), var(--green-400));
+
+  --warning: light-dark(var(--amber-700), var(--amber-400));
+  --warning-foreground: light-dark(var(--white), var(--mist-950));
+  --warning-bg: light-dark(var(--amber-50), var(--amber-950));
+  --warning-border: light-dark(var(--amber-200), var(--amber-800));
+  --warning-fg: light-dark(var(--amber-800), var(--amber-300));
+  --warning-icon: light-dark(var(--amber-700), var(--amber-400));
+
+  --destructive: light-dark(var(--red-600), var(--red-400));
+  --destructive-hover: light-dark(var(--red-700), var(--red-300));
+  --destructive-foreground: light-dark(var(--white), var(--mist-950));
+  --destructive-bg: light-dark(var(--red-50), var(--red-950));
+  --destructive-border: light-dark(var(--red-200), var(--red-800));
+  --destructive-fg: light-dark(var(--red-700), var(--red-300));
+  --destructive-icon: light-dark(var(--red-600), var(--red-400));
+
+  --info: light-dark(var(--sky-700), var(--sky-400));
+  --info-foreground: light-dark(var(--white), var(--mist-950));
+  --info-bg: light-dark(var(--sky-50), var(--sky-950));
+  --info-border: light-dark(var(--sky-200), var(--sky-800));
+  --info-fg: light-dark(var(--sky-800), var(--sky-300));
+  --info-icon: light-dark(var(--sky-700), var(--sky-400));
+
+  /* Admin sidebar */
+  --sidebar: light-dark(var(--mist-100), var(--mist-900));
+  --sidebar-foreground: light-dark(var(--mist-900), var(--mist-100));
+  --sidebar-muted-foreground: light-dark(var(--mist-600), var(--mist-300));
+  --sidebar-border: light-dark(var(--mist-200), var(--mist-800));
+  --sidebar-accent: light-dark(var(--mist-200), var(--mist-800));
+  --sidebar-accent-foreground: light-dark(var(--mist-950), var(--mist-50));
+
+  /* Charts: each meets 3:1 against --card */
+  --chart-1: light-dark(var(--teal-600), var(--teal-400));
+  --chart-2: light-dark(var(--mist-500), var(--mist-400));
+  --chart-3: light-dark(var(--sky-600), var(--sky-400));
+  --chart-4: light-dark(var(--amber-600), var(--amber-400));
+  --chart-5: light-dark(var(--red-600), var(--red-400));
+  --chart-grid: light-dark(var(--mist-200), var(--mist-800));
+
+  /* Scrim and shadows, tinted with mist-950 */
+  --overlay: color-mix(in srgb, var(--mist-950) 55%, transparent);
+  --shadow-sm: 0 1px 2px color-mix(in srgb, var(--mist-950) 8%, transparent);
+  --shadow-md: 0 4px 12px -2px color-mix(in srgb, var(--mist-950) 12%, transparent),
+    0 2px 4px -2px color-mix(in srgb, var(--mist-950) 8%, transparent);
+  --shadow-lg: 0 16px 40px -8px color-mix(in srgb, var(--mist-950) 20%, transparent),
+    0 4px 12px -4px color-mix(in srgb, var(--mist-950) 10%, transparent);
+
+  /* Spacing: 4px base, --space-N is N x 4px */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* Typography (plan/03) */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+  --text-display: clamp(2.25rem, 1.5rem + 3.2vw, 3.5rem);
+  --text-h1: clamp(2rem, 1.6rem + 1.6vw, 2.5rem);
+  --text-h2: clamp(1.5rem, 1.35rem + 0.7vw, 1.875rem);
+  --text-h3: 1.375rem;
+  --text-h4: 1.125rem;
+  --text-body-lg: 1.125rem;
+  --text-body: 1rem;
+  --text-small: 0.875rem;
+  --text-xs: 0.75rem;
+  --leading-display: 1.05;
+  --leading-h1: 1.1;
+  --leading-h2: 1.2;
+  --leading-h3: 1.3;
+  --leading-h4: 1.4;
+  --leading-body: 1.6;
+  --leading-small: 1.5;
+  --leading-xs: 1.4;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 650;
+  --tracking-tight: -0.02em;
+  --measure: 68ch;
+
+  /* Layout (breakpoints live in media queries: 480, 640, 768, 1024, 1280, 1536) */
+  --container: 1200px;
+  --gutter: 1rem;
+  --sidebar-width: 264px;
+  --sidebar-rail: 72px;
+  --topbar-height: 56px;
+  --content-max: 1440px;
+  --onboarding-width: 720px;
+
+  /* Focus ring */
+  --ring-width: 2px;
+  --ring-offset: 2px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-micro: 120ms;
+  --duration-standard: 200ms;
+  --duration-panel: 320ms;
+
+  /* Layers */
+  --z-sticky: 10;
+  --z-dropdown: 30;
+  --z-overlay: 40;
+  --z-dialog: 50;
+  --z-toast: 60;
+  --z-tooltip: 70;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --gutter: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-micro: 0.01ms;
+    --duration-standard: 0.01ms;
+    --duration-panel: 0.01ms;
+  }
+}

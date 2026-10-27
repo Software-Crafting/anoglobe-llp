@@ -6,6 +6,7 @@
   "scripts": {
     "lint": "node lint.mjs",
     "links": "node check-links.mjs",
-    "check": "node lint.mjs && node check-links.mjs"
+    "contrast": "node contrast.mjs",
+    "check": "node lint.mjs && node check-links.mjs && node contrast.mjs"
   }
 }
