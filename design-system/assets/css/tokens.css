@@ -2,7 +2,7 @@
    Raw scales are shadcn colors (ui.shadcn.com/colors, fetched 27 October 2026). They are the only hex
    values in the system. Components use semantic tokens only, never raw scale steps.
    Themes: each semantic token is light-dark(light, dark). The OS preference applies by default through
-   color-scheme; data-theme on <html> forces one theme. */
+   color-scheme; data-theme on <html> (or any element) forces one theme. */
 
 :root {
   /* Mist: neutral base */
@@ -73,11 +73,12 @@
   color-scheme: light dark;
 }
 
-:root[data-theme="light"] {
+/* data-theme works on <html> for the whole page, or on any element to preview one theme inside the other */
+[data-theme="light"] {
   color-scheme: light;
 }
 
-:root[data-theme="dark"] {
+[data-theme="dark"] {
   color-scheme: dark;
 }
 

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anoglobe Design System</title>
+  <meta name="description" content="Design system and UI prototype for Anoglobe Bookkeeping: tokens, components, icons and every page of the site, onboarding flow and admin panel.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <script src="assets/js/theme.js"></script>
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <script src="assets/js/components.js" defer></script>
+</head>
+<body>
+  <a class="a-skip-link" href="#main">Skip to content</a>
+  <header class="a-docs-header">
+    <a class="a-docs-header__brand" href="index.html">
+      <img class="a-logo a-logo--light" src="assets/img/logo.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+      <img class="a-logo a-logo--dark" src="assets/img/logo-reversed.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+      <span class="a-docs-header__label">Design system</span>
+    </a>
+    <button type="button" class="a-theme-text-toggle" data-theme-toggle>Dark theme</button>
+  </header>
+  <div class="a-docs">
+    <nav class="a-docs-nav" aria-label="Design system">
+      <div class="a-docs-nav__group">
+        <p class="a-eyebrow">Foundations</p>
+        <ul class="a-docs-nav__list" role="list">
+          <li><a class="a-docs-nav__link" href="ui-design/foundations/colors.html">Colors</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main id="main" class="a-docs-main">
+      <header>
+        <p class="a-eyebrow">Version 0.1, in progress</p>
+        <h1>Anoglobe Design System</h1>
+        <p class="a-body-lg a-muted">The design system and clickable prototype for Anoglobe Bookkeeping: the public website, the client onboarding and payment flow, and the admin panel. Built in plain HTML, CSS and JavaScript, in light and dark themes.</p>
+      </header>
+
+      <section class="a-docs-section" aria-labelledby="foundations">
+        <h2 id="foundations">Foundations</h2>
+        <p>Tokens and rules that every component and page is built from.</p>
+        <div class="a-link-grid">
+          <a class="a-link-card" href="ui-design/foundations/colors.html">
+            <span class="a-link-card__title">Colors</span>
+            <span class="a-link-card__text">Mist scale, teal accent, status colors and semantic tokens.</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="a-docs-section" aria-labelledby="project">
+        <h2 id="project">Project documents</h2>
+        <p>Scope, open content questions and quality reports.</p>
+        <div class="a-link-grid">
+          <a class="a-link-card" href="PROJECT-BRIEF.md">
+            <span class="a-link-card__title">Project brief</span>
+            <span class="a-link-card__text">Contract scope, exclusions and decisions.</span>
+          </a>
+          <a class="a-link-card" href="CONTENT-TODO.md">
+            <span class="a-link-card__title">Content to do</span>
+            <span class="a-link-card__text">Placeholders that Anoglobe needs to supply.</span>
+          </a>
+          <a class="a-link-card" href="contrast-report.md">
+            <span class="a-link-card__title">Contrast report</span>
+            <span class="a-link-card__text">Every token pair checked in both themes.</span>
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Colors | Anoglobe Design System</title>
+  <meta name="description" content="Mist neutral scale, teal accent, status colors and semantic tokens for light and dark themes.">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <script src="../../assets/js/theme.js"></script>
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/pages.css">
+  <script src="../../assets/js/components.js" defer></script>
+  <script src="../../assets/js/docs.js" defer></script>
+</head>
+<body>
+  <a class="a-skip-link" href="#main">Skip to content</a>
+  <header class="a-docs-header">
+    <a class="a-docs-header__brand" href="../../index.html">
+      <img class="a-logo a-logo--light" src="../../assets/img/logo.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+      <img class="a-logo a-logo--dark" src="../../assets/img/logo-reversed.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+      <span class="a-docs-header__label">Design system</span>
+    </a>
+    <button type="button" class="a-theme-text-toggle" data-theme-toggle>Dark theme</button>
+  </header>
+  <div class="a-docs">
+    <nav class="a-docs-nav" aria-label="Design system">
+      <div class="a-docs-nav__group">
+        <p class="a-eyebrow">Foundations</p>
+        <ul class="a-docs-nav__list" role="list">
+          <li><a class="a-docs-nav__link" href="../../ui-design/foundations/colors.html" aria-current="page">Colors</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main id="main" class="a-docs-main">
+      <header>
+        <p class="a-eyebrow">Foundations</p>
+        <h1>Colors</h1>
+        <p class="a-body-lg a-muted">Mist is the neutral base for every surface, line and text color. Teal is the single accent for links, focus and highlights. Status colors are used only to communicate state.</p>
+      </header>
+
+      <section class="a-docs-section" aria-labelledby="mist">
+        <h2 id="mist">Mist scale</h2>
+        <p>The shadcn Mist scale, a cool green grey. Pages never use these steps directly. They reach them through the semantic tokens below.</p>
+        <ul class="a-swatches" role="list">
+          <li class="a-swatch" data-swatch>
+            <span class="a-swatch__chip" data-swatch-chip style="--swatch: var(--mist-50)"></span>
+            <span class="a-swatch__body">
+              <span class="a-swatch__name">mist-50</span>
+              <code class="a-swatch__value" data-swatch-value></code>
+              <button type="button" class="a-copy" data-copy=""><span data-copy-label>Copy</span><span class="a-visually-hidden"> mist-50 hex value</span></button>
+            </span>
+          </li>
+          <li class="a-swatch" data-swatch>
+            <span class="a-swatch__chip" data-swatch-chip style="--swatch: var(--mist-100)"></span>
+            <span class="a-swatch__body">
+              <span class="a-swatch__name">mist-100</span>
+              <code class="a-swatch__value" data-swatch-value></code>
+              <button type="button" class="a-copy" data-copy=""><span data-copy-label>Copy</span><span class="a-visually-hidden"> mist-100 hex value</span></button>
+            </span>
+          </li>
+          <li class="a-swatch" data-swatch>
+            <span class="a-swatch__chip" data-swatch-chip style="--swatch: var(--mist-200)"></span>
+            <span class="a-swatch__body">
+              <span class="a-swatch__name">mist-200</span>
+              <code class="a-swatch__value" data-swatch-value></code>
+              <button type="button" class="a-copy" data-copy=""><span data-copy-label>Copy</span><span class="a-visually-hidden"> mist-200 hex value</span></button>
+            </span>
+          </li>
+          <li class="a-swatch" data-swatch>
+            <span class="a-swatch__chip" data-swatch-chip style="--swatch: var(--mist-300)"></span>
+            <span class="a-swatch__body">
+              <span class="a-swatch__name">mist-300</span>
+              <code class="a-swatch__value" data-swatch-value></code>
+              <button type="button" class="a-copy" data-copy=""><span data-copy-label>Copy</span><span class="a-visually-hidden"> mist-300 hex value</span></button>
+            </span>
+          </li>
+          <li class="a-swatch" data-swatch>
+            <span class="a-swatch__chip" data-swatch-chip style="--swatch: var(--mist-400)"></span>
+            <span class="a-swatch__body">
+              <span class="a-swatch__name">mist-400</span>
+              <code class="a-swatch__value" data-swatch-value></code>
+              <button type="button" class="a-copy" data-copy=""><span data-copy-label>Copy</span><span class="a-visually-hidden"> mist-400 hex value</span></button>
+            </span>
+          </li>
+          <li class="a-swatch" data-swatch>
+            <span class="a-swatch__chip" data-swatch-chip style="--swatch: var(--mist-500)"></span>
+            <span class="a-swatch__body">
+              <span class="a-swatch__name">mist-500</span>
+              <code class="a-swatch__value" data-swatch-value></code>
+              <button type="button" class="a-copy" data-copy=""><span data-copy-label>Copy</span><span class="a-visually-hidden"> mist-500 hex value</span></button>
+            </span>
+          </li>
+          <li class="a-swatch" data-swatch>
+            <span class="a-swatch__chip" data-swatch-chip style="--swatch: var(--mist-600)"></span>
+            <span class="a-swatch__body">
+              <span class="a-swatch__name">mist-600</span>
+              <code class="a-swatch__value" data-swatch-value></code>
+              <button type="button" class="a-copy" data-copy=""><span data-copy-label>Copy</span><span class="a-visually-hidden"> mist-600 hex value</span></button>
+            </span>
+          </li>
+          <li class="a-swatch" data-swatch>
+            <span class="a-swatch__chip" data-swatch-chip style="--swatch: var(--mist-700)"></span>
+            <span class="a-swatch__body">
+              <span class="a-swatch__name">mist-700</span>
+              <code class="a-swatch__value" data-swatch-value></code>
+              <button type="button" class="a-copy" data-copy=""><span data-copy-label>Copy</span><span class="a-visually-hidden"> mist-700 hex value</span></button>
+            </span>
+          </li>
+          <li class="a-swatch" data-swatch>
+            <span class="a-swatch__chip" data-swatch-chip style="--swatch: var(--mist-800)"></span>
+            <span class="a-swatch__body">
+              <span class="a-swatch__name">mist-800</span>
+              <code class="a-swatch__value" data-swatch-value></code>
+              <button type="button" class="a-copy" data-copy=""><span data-copy-label>Copy</span><span class="a-visually-hidden"> mist-800 hex value</span></button>
+            </span>
+          </li>
+          <li class="a-swatch" data-swatch>
+            <span class="a-swatch__chip" data-swatch-chip style="--swatch: var(--mist-900)"></span>
+            <span class="a-swatch__body">
+              <span class="a-swatch__name">mist-900</span>
+              <code class="a-swatch__value" data-swatch-value></code>
+              <button type="button" class="a-copy" data-copy=""><span data-copy-label>Copy</span><span class="a-visually-hidden"> mist-900 hex value</span></button>
+            </span>
+          </li>
+          <li class="a-swatch" data-swatch>
+            <span class="a-swatch__chip" data-swatch-chip style="--swatch: var(--mist-950)"></span>
+            <span class="a-swatch__body">
+              <span class="a-swatch__name">mist-950</span>
+              <code class="a-swatch__value" data-swatch-value></code>
+              <button type="button" class="a-copy" data-copy=""><span data-copy-label>Copy</span><span class="a-visually-hidden"> mist-950 hex value</span></button>
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="a-docs-section" aria-labelledby="accent">
+        <h2 id="accent">Accent: teal</h2>
+        <p>Links, the focus ring, selected states and chart highlights. In the light theme, text and fills use teal-700 so they meet 4.5:1 on white. The focus ring uses teal-600.</p>
+        <ul class="a-swatches" role="list">
+          <li class="a-swatch" data-swatch>
+            <span class="a-swatch__chip" data-swatch-chip style="--swatch: var(--teal-50)"></span>
+            <span class="a-swatch__body">
+              <span class="a-swatch__name">teal-50</span>
+              <code class="a-swatch__value" data-swatch-value></code>
+              <button type="button" class="a-copy" data-copy=""><span data-copy-label>Copy</span><span class="a-visually-hidden"> teal-50 hex value</span></button>
+            </span>
+          </li>
+          <li class="a-swatch" data-swatch>
+            <span class="a-swatch__chip" data-swatch-chip style="--swatch: var(--teal-100)"></span>
+            <span class="a-swatch__body">
+              <span class="a-swatch__name">teal-100</span>
+              <code class="a-swatch__value" data-swatch-value></code>
+              <button type="button" class="a-copy" data-copy=""><span data-copy-label>Copy</span><span class="a-visually-hidden"> teal-100 hex value</span></button>
+            </span>
+          </li>
+          <li class="a-swatch" data-swatch>
+            <span class="a-swatch__chip" data-swatch-chip style="--swatch: var(--teal-200)"></span>
+            <span class="a-swatch__body">
+              <span class="a-swatch__name">teal-200</span>
+              <code class="a-swatch__value" data-swatch-value></code>
+              <button type="button" class="a-copy" data-copy=""><span data-copy-label>Copy</span><span class="a-visually-hidden"> teal-200 hex value</span></button>
+            </span>
+          </li>
+          <li class="a-swatch" data-swatch>
+            <span class="a-swatch__chip" data-swatch-chip style="--swatch: var(--teal-300)"></span>
+            <span class="a-swatch__body">
+              <span class="a-swatch__name">teal-300</span>
+              <code class="a-swatch__value" data-swatch-value></code>
+              <button type="button" class="a-copy" data-copy=""><span data-copy-label>Copy</span><span class="a-visually-hidden"> teal-300 hex value</span></button>
+            </span>
+          </li>
+          <li class="a-swatch" data-swatch>
+            <span class="a-swatch__chip" data-swatch-chip style="--swatch: var(--teal-400)"></span>
+            <span class="a-swatch__body">
+              <span class="a-swatch__name">teal-400</span>
+              <code class="a-swatch__value" data-swatch-value></code>
+              <button type="button" class="a-copy" data-copy=""><span data-copy-label>Copy</span><span class="a-visually-hidden"> teal-400 hex value</span></button>
+            </span>
+          </li>
+          <li class="a-swatch" data-swatch>
+            <span class="a-swatch__chip" data-swatch-chip style="--swatch: var(--teal-500)"></span>
+            <span class="a-swatch__body">
+              <span class="a-swatch__name">teal-500</span>
+              <code class="a-swatch__value" data-swatch-value></code>
+              <button type="button" class="a-copy" data-copy=""><span data-copy-label>Copy</span><span class="a-visually-hidden"> teal-500 hex value</span></button>
+            </span>
+          </li>
+          <li class="a-swatch" data-swatch>
+            <span class="a-swatch__chip" data-swatch-chip style="--swatch: var(--teal-600)"></span>
+            <span class="a-swatch__body">
+              <span class="a-swatch__name">teal-600</span>
+              <code class="a-swatch__value" data-swatch-value></code>
+              <button type="button" class="a-copy" data-copy=""><span data-copy-label>Copy</span><span class="a-visually-hidden"> teal-600 hex value</span></button>
+            </span>
+          </li>
+          <li class="a-swatch" data-swatch>
+            <span class="a-swatch__chip" data-swatch-chip style="--swatch: var(--teal-700)"></span>
+            <span class="a-swatch__body">
+              <span class="a-swatch__name">teal-700</span>
+              <code class="a-swatch__value" data-swatch-value></code>
+              <button type="button" class="a-copy" data-copy=""><span data-copy-label>Copy</span><span class="a-visually-hidden"> teal-700 hex value</span></button>
+            </span>
+          </li>
+          <li class="a-swatch" data-swatch>
+            <span class="a-swatch__chip" data-swatch-chip style="--swatch: var(--teal-800)"></span>
+            <span class="a-swatch__body">
+              <span class="a-swatch__name">teal-800</span>
+              <code class="a-swatch__value" data-swatch-value></code>
+              <button type="button" class="a-copy" data-copy=""><span data-copy-label>Copy</span><span class="a-visually-hidden"> teal-800 hex value</span></button>
+            </span>
+          </li>
+          <li class="a-swatch" data-swatch>
+            <span class="a-swatch__chip" data-swatch-chip style="--swatch: var(--teal-900)"></span>
+            <span class="a-swatch__body">
+              <span class="a-swatch__name">teal-900</span>
+              <code class="a-swatch__value" data-swatch-value></code>
+              <button type="button" class="a-copy" data-copy=""><span data-copy-label>Copy</span><span class="a-visually-hidden"> teal-900 hex value</span></button>
+            </span>
+          </li>
+          <li class="a-swatch" data-swatch>
+            <span class="a-swatch__chip" data-swatch-chip style="--swatch: var(--teal-950)"></span>
+            <span class="a-swatch__body">
+              <span class="a-swatch__name">teal-950</span>
+              <code class="a-swatch__value" data-swatch-value></code>
+              <button type="button" class="a-copy" data-copy=""><span data-copy-label>Copy</span><span class="a-visually-hidden"> teal-950 hex value</span></button>
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="a-docs-section" aria-labelledby="status">
+        <h2 id="status">Status colors</h2>
+        <p>Success, warning, destructive and info. Each has a solid fill, a tinted surface, a border, a text color and an icon color in both themes.</p>
+        <ul class="a-swatches" role="list">
+          <li class="a-swatch" data-swatch>
+            <span class="a-swatch__chip" data-swatch-chip style="--swatch: var(--success)"></span>
+            <span class="a-swatch__body">
+              <span class="a-swatch__name">success</span>
+              <code class="a-swatch__value" data-swatch-value></code>
+              <button type="button" class="a-copy" data-copy=""><span data-copy-label>Copy</span><span class="a-visually-hidden"> success hex value</span></button>
+            </span>
+          </li>
+          <li class="a-swatch" data-swatch>
+            <span class="a-swatch__chip" data-swatch-chip style="--swatch: var(--warning)"></span>
+            <span class="a-swatch__body">
+              <span class="a-swatch__name">warning</span>
+              <code class="a-swatch__value" data-swatch-value></code>
+              <button type="button" class="a-copy" data-copy=""><span data-copy-label>Copy</span><span class="a-visually-hidden"> warning hex value</span></button>
+            </span>
+          </li>
+          <li class="a-swatch" data-swatch>
+            <span class="a-swatch__chip" data-swatch-chip style="--swatch: var(--destructive)"></span>
+            <span class="a-swatch__body">
+              <span class="a-swatch__name">destructive</span>
+              <code class="a-swatch__value" data-swatch-value></code>
+              <button type="button" class="a-copy" data-copy=""><span data-copy-label>Copy</span><span class="a-visually-hidden"> destructive hex value</span></button>
+            </span>
+          </li>
+          <li class="a-swatch" data-swatch>
+            <span class="a-swatch__chip" data-swatch-chip style="--swatch: var(--info)"></span>
+            <span class="a-swatch__body">
+              <span class="a-swatch__name">info</span>
+              <code class="a-swatch__value" data-swatch-value></code>
+              <button type="button" class="a-copy" data-copy=""><span data-copy-label>Copy</span><span class="a-visually-hidden"> info hex value</span></button>
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="a-docs-section" aria-labelledby="semantic">
+        <h2 id="semantic">Semantic tokens</h2>
+        <p>Components use only these tokens. Each one resolves to a different Mist, teal or status step per theme, shown side by side.</p>
+        <div class="a-theme-panels">
+        <div class="a-theme-panel" data-theme="light">
+          <h3>Light theme</h3>
+          <ul class="a-token-list" role="list">
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--background)"></span>
+              <code class="a-token-list__name">--background</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--card)"></span>
+              <code class="a-token-list__name">--card</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--popover)"></span>
+              <code class="a-token-list__name">--popover</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--muted)"></span>
+              <code class="a-token-list__name">--muted</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--secondary)"></span>
+              <code class="a-token-list__name">--secondary</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--sidebar)"></span>
+              <code class="a-token-list__name">--sidebar</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--foreground)"></span>
+              <code class="a-token-list__name">--foreground</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--muted-foreground)"></span>
+              <code class="a-token-list__name">--muted-foreground</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--primary-foreground)"></span>
+              <code class="a-token-list__name">--primary-foreground</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--link)"></span>
+              <code class="a-token-list__name">--link</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--primary)"></span>
+              <code class="a-token-list__name">--primary</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--primary-hover)"></span>
+              <code class="a-token-list__name">--primary-hover</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--accent)"></span>
+              <code class="a-token-list__name">--accent</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--accent-subtle)"></span>
+              <code class="a-token-list__name">--accent-subtle</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--border)"></span>
+              <code class="a-token-list__name">--border</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--border-strong)"></span>
+              <code class="a-token-list__name">--border-strong</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--input)"></span>
+              <code class="a-token-list__name">--input</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--ring)"></span>
+              <code class="a-token-list__name">--ring</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--success)"></span>
+              <code class="a-token-list__name">--success</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--success-bg)"></span>
+              <code class="a-token-list__name">--success-bg</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--warning)"></span>
+              <code class="a-token-list__name">--warning</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--warning-bg)"></span>
+              <code class="a-token-list__name">--warning-bg</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--destructive)"></span>
+              <code class="a-token-list__name">--destructive</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--destructive-bg)"></span>
+              <code class="a-token-list__name">--destructive-bg</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--info)"></span>
+              <code class="a-token-list__name">--info</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--info-bg)"></span>
+              <code class="a-token-list__name">--info-bg</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--chart-1)"></span>
+              <code class="a-token-list__name">--chart-1</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--chart-2)"></span>
+              <code class="a-token-list__name">--chart-2</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--chart-3)"></span>
+              <code class="a-token-list__name">--chart-3</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--chart-4)"></span>
+              <code class="a-token-list__name">--chart-4</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--chart-5)"></span>
+              <code class="a-token-list__name">--chart-5</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+          </ul>
+        </div>
+        <div class="a-theme-panel" data-theme="dark">
+          <h3>Dark theme</h3>
+          <ul class="a-token-list" role="list">
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--background)"></span>
+              <code class="a-token-list__name">--background</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--card)"></span>
+              <code class="a-token-list__name">--card</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--popover)"></span>
+              <code class="a-token-list__name">--popover</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--muted)"></span>
+              <code class="a-token-list__name">--muted</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--secondary)"></span>
+              <code class="a-token-list__name">--secondary</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--sidebar)"></span>
+              <code class="a-token-list__name">--sidebar</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--foreground)"></span>
+              <code class="a-token-list__name">--foreground</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--muted-foreground)"></span>
+              <code class="a-token-list__name">--muted-foreground</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--primary-foreground)"></span>
+              <code class="a-token-list__name">--primary-foreground</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--link)"></span>
+              <code class="a-token-list__name">--link</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--primary)"></span>
+              <code class="a-token-list__name">--primary</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--primary-hover)"></span>
+              <code class="a-token-list__name">--primary-hover</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--accent)"></span>
+              <code class="a-token-list__name">--accent</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--accent-subtle)"></span>
+              <code class="a-token-list__name">--accent-subtle</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--border)"></span>
+              <code class="a-token-list__name">--border</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--border-strong)"></span>
+              <code class="a-token-list__name">--border-strong</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--input)"></span>
+              <code class="a-token-list__name">--input</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--ring)"></span>
+              <code class="a-token-list__name">--ring</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--success)"></span>
+              <code class="a-token-list__name">--success</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--success-bg)"></span>
+              <code class="a-token-list__name">--success-bg</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--warning)"></span>
+              <code class="a-token-list__name">--warning</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--warning-bg)"></span>
+              <code class="a-token-list__name">--warning-bg</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--destructive)"></span>
+              <code class="a-token-list__name">--destructive</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--destructive-bg)"></span>
+              <code class="a-token-list__name">--destructive-bg</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--info)"></span>
+              <code class="a-token-list__name">--info</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--info-bg)"></span>
+              <code class="a-token-list__name">--info-bg</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--chart-1)"></span>
+              <code class="a-token-list__name">--chart-1</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--chart-2)"></span>
+              <code class="a-token-list__name">--chart-2</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--chart-3)"></span>
+              <code class="a-token-list__name">--chart-3</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--chart-4)"></span>
+              <code class="a-token-list__name">--chart-4</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+            <li class="a-token-list__item" data-swatch>
+              <span class="a-token-list__chip" data-swatch-chip style="--swatch: var(--chart-5)"></span>
+              <code class="a-token-list__name">--chart-5</code>
+              <code class="a-token-list__value" data-swatch-value></code>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </section>
+
+      <section class="a-docs-section" aria-labelledby="contrast">
+        <h2 id="contrast">Contrast pairs</h2>
+        <p>Ratios are measured live from the rendered colors. Text needs 4.5:1. The full check of every pair is in the <a href="../../contrast-report.md">contrast report</a>.</p>
+        <div class="a-theme-panels">
+        <div class="a-theme-panel" data-theme="light">
+          <h3>Light theme</h3>
+          <div class="a-pairs">
+            <div class="a-pair" data-contrast data-min="4.5" style="--pair-fg: var(--foreground); --pair-bg: var(--background)">
+              <span>--foreground on --background</span>
+              <span class="a-pair__value" data-contrast-value></span>
+            </div>
+            <div class="a-pair" data-contrast data-min="4.5" style="--pair-fg: var(--muted-foreground); --pair-bg: var(--card)">
+              <span>--muted-foreground on --card</span>
+              <span class="a-pair__value" data-contrast-value></span>
+            </div>
+            <div class="a-pair" data-contrast data-min="4.5" style="--pair-fg: var(--primary-foreground); --pair-bg: var(--primary)">
+              <span>--primary-foreground on --primary</span>
+              <span class="a-pair__value" data-contrast-value></span>
+            </div>
+            <div class="a-pair" data-contrast data-min="4.5" style="--pair-fg: var(--accent-foreground); --pair-bg: var(--accent)">
+              <span>--accent-foreground on --accent</span>
+              <span class="a-pair__value" data-contrast-value></span>
+            </div>
+            <div class="a-pair" data-contrast data-min="4.5" style="--pair-fg: var(--link); --pair-bg: var(--card)">
+              <span>--link on --card</span>
+              <span class="a-pair__value" data-contrast-value></span>
+            </div>
+            <div class="a-pair" data-contrast data-min="4.5" style="--pair-fg: var(--success-fg); --pair-bg: var(--success-bg)">
+              <span>--success-fg on --success-bg</span>
+              <span class="a-pair__value" data-contrast-value></span>
+            </div>
+            <div class="a-pair" data-contrast data-min="4.5" style="--pair-fg: var(--warning-fg); --pair-bg: var(--warning-bg)">
+              <span>--warning-fg on --warning-bg</span>
+              <span class="a-pair__value" data-contrast-value></span>
+            </div>
+            <div class="a-pair" data-contrast data-min="4.5" style="--pair-fg: var(--destructive-fg); --pair-bg: var(--destructive-bg)">
+              <span>--destructive-fg on --destructive-bg</span>
+              <span class="a-pair__value" data-contrast-value></span>
+            </div>
+            <div class="a-pair" data-contrast data-min="4.5" style="--pair-fg: var(--info-fg); --pair-bg: var(--info-bg)">
+              <span>--info-fg on --info-bg</span>
+              <span class="a-pair__value" data-contrast-value></span>
+            </div>
+          </div>
+        </div>
+        <div class="a-theme-panel" data-theme="dark">
+          <h3>Dark theme</h3>
+          <div class="a-pairs">
+            <div class="a-pair" data-contrast data-min="4.5" style="--pair-fg: var(--foreground); --pair-bg: var(--background)">
+              <span>--foreground on --background</span>
+              <span class="a-pair__value" data-contrast-value></span>
+            </div>
+            <div class="a-pair" data-contrast data-min="4.5" style="--pair-fg: var(--muted-foreground); --pair-bg: var(--card)">
+              <span>--muted-foreground on --card</span>
+              <span class="a-pair__value" data-contrast-value></span>
+            </div>
+            <div class="a-pair" data-contrast data-min="4.5" style="--pair-fg: var(--primary-foreground); --pair-bg: var(--primary)">
+              <span>--primary-foreground on --primary</span>
+              <span class="a-pair__value" data-contrast-value></span>
+            </div>
+            <div class="a-pair" data-contrast data-min="4.5" style="--pair-fg: var(--accent-foreground); --pair-bg: var(--accent)">
+              <span>--accent-foreground on --accent</span>
+              <span class="a-pair__value" data-contrast-value></span>
+            </div>
+            <div class="a-pair" data-contrast data-min="4.5" style="--pair-fg: var(--link); --pair-bg: var(--card)">
+              <span>--link on --card</span>
+              <span class="a-pair__value" data-contrast-value></span>
+            </div>
+            <div class="a-pair" data-contrast data-min="4.5" style="--pair-fg: var(--success-fg); --pair-bg: var(--success-bg)">
+              <span>--success-fg on --success-bg</span>
+              <span class="a-pair__value" data-contrast-value></span>
+            </div>
+            <div class="a-pair" data-contrast data-min="4.5" style="--pair-fg: var(--warning-fg); --pair-bg: var(--warning-bg)">
+              <span>--warning-fg on --warning-bg</span>
+              <span class="a-pair__value" data-contrast-value></span>
+            </div>
+            <div class="a-pair" data-contrast data-min="4.5" style="--pair-fg: var(--destructive-fg); --pair-bg: var(--destructive-bg)">
+              <span>--destructive-fg on --destructive-bg</span>
+              <span class="a-pair__value" data-contrast-value></span>
+            </div>
+            <div class="a-pair" data-contrast data-min="4.5" style="--pair-fg: var(--info-fg); --pair-bg: var(--info-bg)">
+              <span>--info-fg on --info-bg</span>
+              <span class="a-pair__value" data-contrast-value></span>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <section class="a-docs-section" aria-labelledby="rules">
+        <h2 id="rules">Rules</h2>
+        <p>How to apply color in new work.</p>
+        <ul class="a-rules">
+          <li>Use semantic tokens in components and pages. Raw hex values live only in tokens.css.</li>
+          <li>Primary actions are deep Mist. Teal is for links, focus and small highlights, never large fills.</li>
+          <li>Never rely on color alone. Pair status colors with an icon or a text label.</li>
+          <li>Prefer a 1px border over a shadow. Shadows are reserved for popovers, dialogs and toasts.</li>
+          <li>Check every change in both themes and run the contrast check before committing.</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
