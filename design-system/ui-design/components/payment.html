@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payment | Anoglobe Design System</title>
+  <meta name="description" content="Mock payment components for the Anoglobe design system: card element, plan selector, price summary and billing authorization.">
+  <!-- shell:head -->
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <script src="../../assets/js/theme.js"></script>
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components/foundations.css">
+  <link rel="stylesheet" href="../../assets/css/components/forms.css">
+  <link rel="stylesheet" href="../../assets/css/components/overlays.css">
+  <link rel="stylesheet" href="../../assets/css/components/data.css">
+  <link rel="stylesheet" href="../../assets/css/components/payment.css">
+  <link rel="stylesheet" href="../../assets/css/components/feedback.css">
+  <link rel="stylesheet" href="../../assets/css/pages.css">
+  <script src="../../assets/js/components/core.js" defer></script>
+  <script src="../../assets/js/components/forms.js" defer></script>
+  <script src="../../assets/js/components/overlays.js" defer></script>
+  <script src="../../assets/js/components/data.js" defer></script>
+  <script src="../../assets/js/components/payment.js" defer></script>
+  <script src="../../assets/js/components/feedback.js" defer></script>
+  <!-- /shell:head -->
+</head>
+<body>
+  <!-- shell:docs-header -->
+  <a class="a-skip-link" href="#main">Skip to content</a>
+  <header class="a-docs-header">
+    <a class="a-docs-header__brand" href="../../index.html">
+      <img class="a-logo a-logo--light" src="../../assets/img/logo.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+      <img class="a-logo a-logo--dark" src="../../assets/img/logo-reversed.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+      <span class="a-docs-header__label">Design system</span>
+    </a>
+    <button type="button" class="a-btn a-btn--ghost a-btn--icon a-theme-toggle" data-theme-toggle aria-label="Dark theme" data-tooltip="Toggle dark theme">
+      <svg class="a-icon a-theme-toggle__sun" aria-hidden="true"><use href="#sun"></use></svg>
+      <svg class="a-icon a-theme-toggle__moon" aria-hidden="true"><use href="#moon"></use></svg>
+    </button>
+  </header>
+  <div class="a-toast-region" data-icons="check-circle x-circle info alert-triangle close"></div>
+  <!-- /shell:docs-header -->
+  <div class="a-docs">
+    <!-- shell:docs-nav -->
+    <nav class="a-docs-nav" aria-label="Design system" data-scroll-area>
+      <div class="a-docs-nav__group">
+        <p class="a-eyebrow">Foundations</p>
+        <ul class="a-docs-nav__list" role="list">
+          <li><a class="a-docs-nav__link" href="../../ui-design/foundations/colors.html">Colors</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/foundations/icons.html">Icons</a></li>
+        </ul>
+      </div>
+      <div class="a-docs-nav__group">
+        <p class="a-eyebrow">Components</p>
+        <ul class="a-docs-nav__list" role="list">
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/foundations.html">Foundations</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/forms.html">Forms</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/overlays.html">Overlays</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/data.html">Data display</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/payment.html" aria-current="page">Payment</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- /shell:docs-nav -->
+    <main id="main" class="a-docs-main">
+      <header>
+        <p class="a-eyebrow">Components</p>
+        <h1>Payment</h1>
+        <p class="a-body-lg a-muted">Interface only. The real gateway fields replace the card element later; card data is never stored by Anoglobe.</p>
+      </header>
+
+      <section class="a-docs-section" aria-labelledby="card">
+        <h2 id="card">Card payment</h2>
+        <p>The card element stands in for the gateway's hosted fields. It detects the brand, checks the number, expiry and code, and walks through processing, success and decline.</p>
+        <div class="a-example a-example--wide">
+          <h3 class="a-example__title">Pay with card</h3>
+          <div class="a-example__preview a-example__preview--surface">
+            <div class="a-demo-narrow a-summary"><div data-pay-flow>
+              <div data-pay-state="form"><form class="a-form-grid" data-payment-form novalidate>
+              <div class="a-test-mode" role="note"><strong>Test mode.</strong> Use <code>4242 4242 4242 4242</code> to succeed or <code>4000 0000 0000 0002</code> to see a decline, any future date and any CVC.</div>
+              <div class="a-card-field">
+              <p class="a-label" id="demo-card-label">Card details</p>
+              <div class="a-card-element" data-card-element role="group" aria-labelledby="demo-card-label" data-icons="alert-triangle">
+                <div class="a-card-element__number"><span class="a-card-brand" data-brand=""><svg class="a-icon" aria-hidden="true"><use href="#credit-card"></use></svg><span data-brand-name></span></span><input class="a-input" id="demo-number" type="text" inputmode="numeric" autocomplete="cc-number" data-mask="card" placeholder="1234 1234 1234 1234" aria-label="Card number" aria-describedby="demo-card-error"></div>
+                <input class="a-input" id="demo-expiry" type="text" inputmode="numeric" autocomplete="cc-exp" data-mask="expiry" placeholder="MM / YY" aria-label="Expiry date" aria-describedby="demo-card-error">
+                <input class="a-input" id="demo-cvc" type="text" inputmode="numeric" autocomplete="cc-csc" data-mask="cvc" maxlength="3" placeholder="CVC" aria-label="Security code" aria-describedby="demo-card-error">
+              </div>
+              <p class="a-error" id="demo-card-error" data-card-error></p>
+              <p class="a-gateway-note"><svg class="a-icon" aria-hidden="true"><use href="#lock"></use></svg>Card details go straight to Stripe and are never stored by Anoglobe.</p>
+            </div>
+              <fieldset class="a-fieldset">
+              <legend>Billing address</legend>
+              <div class="a-form-grid a-form-grid--2">
+                <div class="a-field a-field--full" data-msg-required="Enter the name shown on the card">
+              <label class="a-label" for="demo-bill-name"><span>Name on card<span class="a-label__required" aria-hidden="true">*</span></span></label>
+              <input class="a-input" id="demo-bill-name" name="demo-bill-name" type="text" aria-describedby="demo-bill-name-error" required autocomplete="cc-name">
+              <p class="a-error" id="demo-bill-name-error"></p>
+            </div>
+                <div class="a-field a-field--full" data-msg-required="Enter the billing street address">
+              <label class="a-label" for="demo-bill-line1"><span>Street address<span class="a-label__required" aria-hidden="true">*</span></span></label>
+              <input class="a-input" id="demo-bill-line1" name="demo-bill-line1" type="text" aria-describedby="demo-bill-line1-error" required autocomplete="address-line1">
+              <p class="a-error" id="demo-bill-line1-error"></p>
+            </div>
+                <div class="a-field a-field--full">
+              <label class="a-label" for="demo-bill-line2"><span>Suite, unit or floor</span><span class="a-label__optional">Optional</span></label>
+              <input class="a-input" id="demo-bill-line2" name="demo-bill-line2" type="text" aria-describedby="demo-bill-line2-error" autocomplete="address-line2">
+              <p class="a-error" id="demo-bill-line2-error"></p>
+            </div>
+                <div class="a-field " data-msg-required="Enter the city">
+              <label class="a-label" for="demo-bill-city"><span>City<span class="a-label__required" aria-hidden="true">*</span></span></label>
+              <input class="a-input" id="demo-bill-city" name="demo-bill-city" type="text" aria-describedby="demo-bill-city-error" required autocomplete="address-level2">
+              <p class="a-error" id="demo-bill-city-error"></p>
+            </div>
+                <div class="a-field " data-msg-required="Choose the billing state">
+              <label class="a-label" id="demo-bill-state-label" for="demo-bill-state"><span>State<span class="a-label__required" aria-hidden="true">*</span></span></label>
+              <div class="a-select" data-listbox="select" data-source="us-states" data-icons="check search">
+                <button type="button" class="a-select__trigger" id="demo-bill-state" aria-haspopup="listbox" aria-expanded="false" aria-controls="demo-bill-state-list" aria-labelledby="demo-bill-state-label demo-bill-state-value" aria-describedby="demo-bill-state-error"><span class="a-select__value is-placeholder" id="demo-bill-state-value">Choose a state</span><svg class="a-icon a-select__chevron" aria-hidden="true"><use href="#chevron-down"></use></svg></button>
+                <input type="hidden" name="demo-bill-state" value="" required>
+                <div class="a-listbox-popover" hidden>
+                <div class="a-listbox-popover__search"><div class="a-input-group"><svg class="a-icon" aria-hidden="true"><use href="#search"></use></svg><input class="a-input" type="text" data-listbox-search role="combobox" aria-expanded="false" aria-autocomplete="list" aria-controls="demo-bill-state-list" aria-label="Search state" autocomplete="off"></div></div>
+                  <ul class="a-listbox" data-scroll-area role="listbox" id="demo-bill-state-list" aria-labelledby="demo-bill-state-label" tabindex="-1"></ul>
+                </div>
+              </div>
+              <p class="a-error" id="demo-bill-state-error"></p>
+            </div>
+                <div class="a-field " data-msg-required="Enter the ZIP code" data-msg-pattern="Enter a 5 digit ZIP code">
+              <label class="a-label" for="demo-bill-zip"><span>ZIP code<span class="a-label__required" aria-hidden="true">*</span></span></label>
+              <input class="a-input" id="demo-bill-zip" name="demo-bill-zip" type="text" aria-describedby="demo-bill-zip-error" required autocomplete="postal-code" inputmode="numeric" data-mask="zip">
+              <p class="a-error" id="demo-bill-zip-error"></p>
+            </div>
+              </div>
+            </fieldset>
+              <div class="a-field" data-msg-required="Check the authorization box to continue">
+              <p class="a-label" id="demo-auth-title">Billing authorization</p>
+              <div class="a-legal" data-scroll-area tabindex="0" role="region" aria-label="Growth plan billing terms">
+                <span class="a-badge a-badge--warning a-legal__flag">Sample wording, pending legal review</span>
+                <p>By checking the box below, I authorize Anoglobe LLP to charge the card above $499.00 today and $499.00 on the same day of each following month for the Growth plan, until I cancel.</p><p>I can cancel at any time before the next billing date by emailing billing@anoglobebookkeeping.com. Charges already made are not refundable except as stated in the Terms of Service.</p><p>All amounts are in US dollars. Anoglobe LLP will email a receipt after each charge and give at least 30 days notice before any price change.</p>
+              </div>
+              <label class="a-check"><input class="a-check__input" type="checkbox" id="demo-auth" name="demo-auth" required><span class="a-check__label">I authorize Anoglobe LLP to charge $499.00 today and $499.00 every month until I cancel.</span></label>
+              <p class="a-error" id="demo-auth-error"></p>
+            </div>
+              <button type="submit" class="a-btn a-btn--primary a-btn--lg a-btn--block"><svg class="a-icon" aria-hidden="true"><use href="#lock"></use></svg>Pay $499.00</button>
+            </form></div>
+              <div data-pay-state="processing" hidden><div class="a-processing" role="status"><span class="a-spinner a-spinner--lg" aria-hidden="true"></span><p class="a-h4" tabindex="-1">Processing your payment</p><p class="a-processing__text">This takes a few seconds. Please keep this page open.</p></div></div>
+              <div data-pay-state="success" hidden><div class="a-result"><span class="a-result__icon"><svg class="a-anim-check" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" pathLength="1"></circle><path d="M8.2 12.3l2.6 2.6 5-5.2" pathLength="1"></path></svg></span><h3 class="a-result__title" tabindex="-1">Payment successful</h3><p class="a-result__text">$499.00 was charged to your card. A receipt is on its way to m.robles@harborlanedental.com.</p><button type="button" class="a-btn a-btn--outline" data-pay-retry>Run the demo again</button></div></div>
+              <div data-pay-state="declined" hidden><div class="a-result"><svg class="a-illus a-illus--64" aria-hidden="true"><use href="#illus-error"></use></svg><h3 class="a-result__title" tabindex="-1">Your card was declined</h3><p class="a-result__text">Your bank did not approve the charge. No money was taken. Try another card or contact your bank.</p><button type="button" class="a-btn a-btn--primary" data-pay-retry>Try another card</button></div></div>
+            </div></div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-1">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-1" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-demo-narrow a-summary&quot;&gt;&lt;div data-pay-flow&gt;
+  &lt;div data-pay-state=&quot;form&quot;&gt;&lt;form class=&quot;a-form-grid&quot; data-payment-form novalidate&gt;
+  &lt;div class=&quot;a-test-mode&quot; role=&quot;note&quot;&gt;&lt;strong&gt;Test mode.&lt;/strong&gt; Use &lt;code&gt;4242 4242 4242 4242&lt;/code&gt; to succeed or &lt;code&gt;4000 0000 0000 0002&lt;/code&gt; to see a decline, any future date and any CVC.&lt;/div&gt;
+  &lt;div class=&quot;a-card-field&quot;&gt;
+  &lt;p class=&quot;a-label&quot; id=&quot;demo-card-label&quot;&gt;Card details&lt;/p&gt;
+  &lt;div class=&quot;a-card-element&quot; data-card-element role=&quot;group&quot; aria-labelledby=&quot;demo-card-label&quot; data-icons=&quot;alert-triangle&quot;&gt;
+    &lt;div class=&quot;a-card-element__number&quot;&gt;&lt;span class=&quot;a-card-brand&quot; data-brand=&quot;&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#credit-card&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span data-brand-name&gt;&lt;/span&gt;&lt;/span&gt;&lt;input class=&quot;a-input&quot; id=&quot;demo-number&quot; type=&quot;text&quot; inputmode=&quot;numeric&quot; autocomplete=&quot;cc-number&quot; data-mask=&quot;card&quot; placeholder=&quot;1234 1234 1234 1234&quot; aria-label=&quot;Card number&quot; aria-describedby=&quot;demo-card-error&quot;&gt;&lt;/div&gt;
+    &lt;input class=&quot;a-input&quot; id=&quot;demo-expiry&quot; type=&quot;text&quot; inputmode=&quot;numeric&quot; autocomplete=&quot;cc-exp&quot; data-mask=&quot;expiry&quot; placeholder=&quot;MM / YY&quot; aria-label=&quot;Expiry date&quot; aria-describedby=&quot;demo-card-error&quot;&gt;
+    &lt;input class=&quot;a-input&quot; id=&quot;demo-cvc&quot; type=&quot;text&quot; inputmode=&quot;numeric&quot; autocomplete=&quot;cc-csc&quot; data-mask=&quot;cvc&quot; maxlength=&quot;3&quot; placeholder=&quot;CVC&quot; aria-label=&quot;Security code&quot; aria-describedby=&quot;demo-card-error&quot;&gt;
+  &lt;/div&gt;
+  &lt;p class=&quot;a-error&quot; id=&quot;demo-card-error&quot; data-card-error&gt;&lt;/p&gt;
+  &lt;p class=&quot;a-gateway-note&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#lock&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Card details go straight to Stripe and are never stored by Anoglobe.&lt;/p&gt;
+&lt;/div&gt;
+  &lt;fieldset class=&quot;a-fieldset&quot;&gt;
+  &lt;legend&gt;Billing address&lt;/legend&gt;
+  &lt;div class=&quot;a-form-grid a-form-grid--2&quot;&gt;
+    &lt;div class=&quot;a-field a-field--full&quot; data-msg-required=&quot;Enter the name shown on the card&quot;&gt;
+  &lt;label class=&quot;a-label&quot; for=&quot;demo-bill-name&quot;&gt;&lt;span&gt;Name on card&lt;span class=&quot;a-label__required&quot; aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+  &lt;input class=&quot;a-input&quot; id=&quot;demo-bill-name&quot; name=&quot;demo-bill-name&quot; type=&quot;text&quot; aria-describedby=&quot;demo-bill-name-error&quot; required autocomplete=&quot;cc-name&quot;&gt;
+  &lt;p class=&quot;a-error&quot; id=&quot;demo-bill-name-error&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+    &lt;div class=&quot;a-field a-field--full&quot; data-msg-required=&quot;Enter the billing street address&quot;&gt;
+  &lt;label class=&quot;a-label&quot; for=&quot;demo-bill-line1&quot;&gt;&lt;span&gt;Street address&lt;span class=&quot;a-label__required&quot; aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+  &lt;input class=&quot;a-input&quot; id=&quot;demo-bill-line1&quot; name=&quot;demo-bill-line1&quot; type=&quot;text&quot; aria-describedby=&quot;demo-bill-line1-error&quot; required autocomplete=&quot;address-line1&quot;&gt;
+  &lt;p class=&quot;a-error&quot; id=&quot;demo-bill-line1-error&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+    &lt;div class=&quot;a-field a-field--full&quot;&gt;
+  &lt;label class=&quot;a-label&quot; for=&quot;demo-bill-line2&quot;&gt;&lt;span&gt;Suite, unit or floor&lt;/span&gt;&lt;span class=&quot;a-label__optional&quot;&gt;Optional&lt;/span&gt;&lt;/label&gt;
+  &lt;input class=&quot;a-input&quot; id=&quot;demo-bill-line2&quot; name=&quot;demo-bill-line2&quot; type=&quot;text&quot; aria-describedby=&quot;demo-bill-line2-error&quot; autocomplete=&quot;address-line2&quot;&gt;
+  &lt;p class=&quot;a-error&quot; id=&quot;demo-bill-line2-error&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+    &lt;div class=&quot;a-field &quot; data-msg-required=&quot;Enter the city&quot;&gt;
+  &lt;label class=&quot;a-label&quot; for=&quot;demo-bill-city&quot;&gt;&lt;span&gt;City&lt;span class=&quot;a-label__required&quot; aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+  &lt;input class=&quot;a-input&quot; id=&quot;demo-bill-city&quot; name=&quot;demo-bill-city&quot; type=&quot;text&quot; aria-describedby=&quot;demo-bill-city-error&quot; required autocomplete=&quot;address-level2&quot;&gt;
+  &lt;p class=&quot;a-error&quot; id=&quot;demo-bill-city-error&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+    &lt;div class=&quot;a-field &quot; data-msg-required=&quot;Choose the billing state&quot;&gt;
+  &lt;label class=&quot;a-label&quot; id=&quot;demo-bill-state-label&quot; for=&quot;demo-bill-state&quot;&gt;&lt;span&gt;State&lt;span class=&quot;a-label__required&quot; aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+  &lt;div class=&quot;a-select&quot; data-listbox=&quot;select&quot; data-source=&quot;us-states&quot; data-icons=&quot;check search&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;a-select__trigger&quot; id=&quot;demo-bill-state&quot; aria-haspopup=&quot;listbox&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;demo-bill-state-list&quot; aria-labelledby=&quot;demo-bill-state-label demo-bill-state-value&quot; aria-describedby=&quot;demo-bill-state-error&quot;&gt;&lt;span class=&quot;a-select__value is-placeholder&quot; id=&quot;demo-bill-state-value&quot;&gt;Choose a state&lt;/span&gt;&lt;svg class=&quot;a-icon a-select__chevron&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#chevron-down&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;
+    &lt;input type=&quot;hidden&quot; name=&quot;demo-bill-state&quot; value=&quot;&quot; required&gt;
+    &lt;div class=&quot;a-listbox-popover&quot; hidden&gt;
+    &lt;div class=&quot;a-listbox-popover__search&quot;&gt;&lt;div class=&quot;a-input-group&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#search&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;input class=&quot;a-input&quot; type=&quot;text&quot; data-listbox-search role=&quot;combobox&quot; aria-expanded=&quot;false&quot; aria-autocomplete=&quot;list&quot; aria-controls=&quot;demo-bill-state-list&quot; aria-label=&quot;Search state&quot; autocomplete=&quot;off&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;ul class=&quot;a-listbox&quot; data-scroll-area role=&quot;listbox&quot; id=&quot;demo-bill-state-list&quot; aria-labelledby=&quot;demo-bill-state-label&quot; tabindex=&quot;-1&quot;&gt;&lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p class=&quot;a-error&quot; id=&quot;demo-bill-state-error&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+    &lt;div class=&quot;a-field &quot; data-msg-required=&quot;Enter the ZIP code&quot; data-msg-pattern=&quot;Enter a 5 digit ZIP code&quot;&gt;
+  &lt;label class=&quot;a-label&quot; for=&quot;demo-bill-zip&quot;&gt;&lt;span&gt;ZIP code&lt;span class=&quot;a-label__required&quot; aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+  &lt;input class=&quot;a-input&quot; id=&quot;demo-bill-zip&quot; name=&quot;demo-bill-zip&quot; type=&quot;text&quot; aria-describedby=&quot;demo-bill-zip-error&quot; required autocomplete=&quot;postal-code&quot; inputmode=&quot;numeric&quot; data-mask=&quot;zip&quot;&gt;
+  &lt;p class=&quot;a-error&quot; id=&quot;demo-bill-zip-error&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/fieldset&gt;
+  &lt;div class=&quot;a-field&quot; data-msg-required=&quot;Check the authorization box to continue&quot;&gt;
+  &lt;p class=&quot;a-label&quot; id=&quot;demo-auth-title&quot;&gt;Billing authorization&lt;/p&gt;
+  &lt;div class=&quot;a-legal&quot; data-scroll-area tabindex=&quot;0&quot; role=&quot;region&quot; aria-label=&quot;Growth plan billing terms&quot;&gt;
+    &lt;span class=&quot;a-badge a-badge--warning a-legal__flag&quot;&gt;Sample wording, pending legal review&lt;/span&gt;
+    &lt;p&gt;By checking the box below, I authorize Anoglobe LLP to charge the card above $499.00 today and $499.00 on the same day of each following month for the Growth plan, until I cancel.&lt;/p&gt;&lt;p&gt;I can cancel at any time before the next billing date by emailing billing@anoglobebookkeeping.com. Charges already made are not refundable except as stated in the Terms of Service.&lt;/p&gt;&lt;p&gt;All amounts are in US dollars. Anoglobe LLP will email a receipt after each charge and give at least 30 days notice before any price change.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;label class=&quot;a-check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; id=&quot;demo-auth&quot; name=&quot;demo-auth&quot; required&gt;&lt;span class=&quot;a-check__label&quot;&gt;I authorize Anoglobe LLP to charge $499.00 today and $499.00 every month until I cancel.&lt;/span&gt;&lt;/label&gt;
+  &lt;p class=&quot;a-error&quot; id=&quot;demo-auth-error&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+  &lt;button type=&quot;submit&quot; class=&quot;a-btn a-btn--primary a-btn--lg a-btn--block&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#lock&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Pay $499.00&lt;/button&gt;
+&lt;/form&gt;&lt;/div&gt;
+  &lt;div data-pay-state=&quot;processing&quot; hidden&gt;&lt;div class=&quot;a-processing&quot; role=&quot;status&quot;&gt;&lt;span class=&quot;a-spinner a-spinner--lg&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;p class=&quot;a-h4&quot; tabindex=&quot;-1&quot;&gt;Processing your payment&lt;/p&gt;&lt;p class=&quot;a-processing__text&quot;&gt;This takes a few seconds. Please keep this page open.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div data-pay-state=&quot;success&quot; hidden&gt;&lt;div class=&quot;a-result&quot;&gt;&lt;span class=&quot;a-result__icon&quot;&gt;&lt;svg class=&quot;a-anim-check&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot;&gt;&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;9&quot; pathLength=&quot;1&quot;&gt;&lt;/circle&gt;&lt;path d=&quot;M8.2 12.3l2.6 2.6 5-5.2&quot; pathLength=&quot;1&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;h3 class=&quot;a-result__title&quot; tabindex=&quot;-1&quot;&gt;Payment successful&lt;/h3&gt;&lt;p class=&quot;a-result__text&quot;&gt;$499.00 was charged to your card. A receipt is on its way to m.robles@harborlanedental.com.&lt;/p&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot; data-pay-retry&gt;Run the demo again&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div data-pay-state=&quot;declined&quot; hidden&gt;&lt;div class=&quot;a-result&quot;&gt;&lt;svg class=&quot;a-illus a-illus--64&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#illus-error&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;h3 class=&quot;a-result__title&quot; tabindex=&quot;-1&quot;&gt;Your card was declined&lt;/h3&gt;&lt;p class=&quot;a-result__text&quot;&gt;Your bank did not approve the charge. No money was taken. Try another card or contact your bank.&lt;/p&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--primary&quot; data-pay-retry&gt;Try another card&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="plans">
+        <h2 id="plans">Plan selector</h2>
+        <p>Monthly plans and one-time projects as choice cards. Prices are sample values.</p>
+        <div class="a-example a-example--wide">
+          <h3 class="a-example__title">Choose a plan</h3>
+          <div class="a-example__preview a-example__preview--stack">
+            <fieldset class="a-fieldset a-demo-grid"><legend>Monthly bookkeeping</legend>
+              <div class="a-choice-cards"><label class="a-choice-card"><input class="a-radio__input" type="radio" name="plan" value="starter" data-price="299" data-plan-name="Starter" data-recurring="true" required><span class="a-choice-card__title">Starter</span><span class="a-plan-price">$299<span> per month</span></span><ul class="a-plan-features" role="list"><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Up to 100 transactions a month</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>2 bank or card accounts</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Monthly reconciliation and close</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Profit and loss, balance sheet</li></ul></label><label class="a-choice-card"><input class="a-radio__input" type="radio" name="plan" value="growth" data-price="499" data-plan-name="Growth" data-recurring="true" checked required><span class="a-choice-card__title">Growth</span><span class="a-badge a-badge--accent">Most chosen</span><span class="a-plan-price">$499<span> per month</span></span><ul class="a-plan-features" role="list"><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Up to 300 transactions a month</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>5 bank or card accounts</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Everything in Starter</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Accounts payable and receivable tracking</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Quarterly review call</li></ul></label><label class="a-choice-card"><input class="a-radio__input" type="radio" name="plan" value="scale" data-price="899" data-plan-name="Scale" data-recurring="true" required><span class="a-choice-card__title">Scale</span><span class="a-plan-price">$899<span> per month</span></span><ul class="a-plan-features" role="list"><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Up to 750 transactions a month</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Unlimited accounts</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Everything in Growth</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Payroll journal entries</li><li><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Dedicated bookkeeper</li></ul></label></div>
+            </fieldset>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-2">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-2" tabindex="0" data-scroll-area hidden><code>&lt;fieldset class=&quot;a-fieldset a-demo-grid&quot;&gt;&lt;legend&gt;Monthly bookkeeping&lt;/legend&gt;
+  &lt;div class=&quot;a-choice-cards&quot;&gt;&lt;label class=&quot;a-choice-card&quot;&gt;&lt;input class=&quot;a-radio__input&quot; type=&quot;radio&quot; name=&quot;plan&quot; value=&quot;starter&quot; data-price=&quot;299&quot; data-plan-name=&quot;Starter&quot; data-recurring=&quot;true&quot; required&gt;&lt;span class=&quot;a-choice-card__title&quot;&gt;Starter&lt;/span&gt;&lt;span class=&quot;a-plan-price&quot;&gt;$299&lt;span&gt; per month&lt;/span&gt;&lt;/span&gt;&lt;ul class=&quot;a-plan-features&quot; role=&quot;list&quot;&gt;&lt;li&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Up to 100 transactions a month&lt;/li&gt;&lt;li&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;2 bank or card accounts&lt;/li&gt;&lt;li&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Monthly reconciliation and close&lt;/li&gt;&lt;li&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Profit and loss, balance sheet&lt;/li&gt;&lt;/ul&gt;&lt;/label&gt;&lt;label class=&quot;a-choice-card&quot;&gt;&lt;input class=&quot;a-radio__input&quot; type=&quot;radio&quot; name=&quot;plan&quot; value=&quot;growth&quot; data-price=&quot;499&quot; data-plan-name=&quot;Growth&quot; data-recurring=&quot;true&quot; checked required&gt;&lt;span class=&quot;a-choice-card__title&quot;&gt;Growth&lt;/span&gt;&lt;span class=&quot;a-badge a-badge--accent&quot;&gt;Most chosen&lt;/span&gt;&lt;span class=&quot;a-plan-price&quot;&gt;$499&lt;span&gt; per month&lt;/span&gt;&lt;/span&gt;&lt;ul class=&quot;a-plan-features&quot; role=&quot;list&quot;&gt;&lt;li&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Up to 300 transactions a month&lt;/li&gt;&lt;li&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;5 bank or card accounts&lt;/li&gt;&lt;li&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Everything in Starter&lt;/li&gt;&lt;li&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Accounts payable and receivable tracking&lt;/li&gt;&lt;li&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Quarterly review call&lt;/li&gt;&lt;/ul&gt;&lt;/label&gt;&lt;label class=&quot;a-choice-card&quot;&gt;&lt;input class=&quot;a-radio__input&quot; type=&quot;radio&quot; name=&quot;plan&quot; value=&quot;scale&quot; data-price=&quot;899&quot; data-plan-name=&quot;Scale&quot; data-recurring=&quot;true&quot; required&gt;&lt;span class=&quot;a-choice-card__title&quot;&gt;Scale&lt;/span&gt;&lt;span class=&quot;a-plan-price&quot;&gt;$899&lt;span&gt; per month&lt;/span&gt;&lt;/span&gt;&lt;ul class=&quot;a-plan-features&quot; role=&quot;list&quot;&gt;&lt;li&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Up to 750 transactions a month&lt;/li&gt;&lt;li&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Unlimited accounts&lt;/li&gt;&lt;li&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Everything in Growth&lt;/li&gt;&lt;li&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Payroll journal entries&lt;/li&gt;&lt;li&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Dedicated bookkeeper&lt;/li&gt;&lt;/ul&gt;&lt;/label&gt;&lt;/div&gt;
+&lt;/fieldset&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="summary">
+        <h2 id="summary">Price summary</h2>
+        <p>Line items, any discount, and the amount due today. Recurring plans state what happens next month.</p>
+        <div class="a-example a-example--wide">
+          <h3 class="a-example__title">Summaries</h3>
+          <div class="a-example__preview ">
+            <div class="a-demo-grid">
+              <div class="a-summary" role="group" aria-label="Order summary">
+              <p class="a-summary__title">Order summary</p>
+              <dl class="a-summary__lines"><div class="a-summary__line"><dt>Growth plan, monthly</dt><dd>$499.00</dd></div><div class="a-summary__line"><dt>Onboarding setup</dt><dd>$150.00</dd></div><div class="a-summary__line a-summary__line--discount"><dt>Setup waived, first month</dt><dd>-$150.00</dd></div></dl>
+              <dl class="a-summary__total"><dt>Due today</dt><dd>$499.00</dd></dl>
+              <p class="a-summary__note">Then $499.00 on the 27th of each month. Cancel any time.</p>
+            </div>
+              <div class="a-summary" role="group" aria-label="Order summary">
+              <p class="a-summary__title">Order summary</p>
+              <dl class="a-summary__lines"><div class="a-summary__line"><dt>Catch-up project, Jan to Sep 2026</dt><dd>$1,250.00</dd></div><div class="a-summary__line"><dt>Bank accounts, 3</dt><dd>Included</dd></div></dl>
+              <dl class="a-summary__total"><dt>Due today</dt><dd>$1,250.00</dd></dl>
+              <p class="a-summary__note">One-time charge. No recurring billing.</p>
+            </div>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-3">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-3" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-demo-grid&quot;&gt;
+  &lt;div class=&quot;a-summary&quot; role=&quot;group&quot; aria-label=&quot;Order summary&quot;&gt;
+  &lt;p class=&quot;a-summary__title&quot;&gt;Order summary&lt;/p&gt;
+  &lt;dl class=&quot;a-summary__lines&quot;&gt;&lt;div class=&quot;a-summary__line&quot;&gt;&lt;dt&gt;Growth plan, monthly&lt;/dt&gt;&lt;dd&gt;$499.00&lt;/dd&gt;&lt;/div&gt;&lt;div class=&quot;a-summary__line&quot;&gt;&lt;dt&gt;Onboarding setup&lt;/dt&gt;&lt;dd&gt;$150.00&lt;/dd&gt;&lt;/div&gt;&lt;div class=&quot;a-summary__line a-summary__line--discount&quot;&gt;&lt;dt&gt;Setup waived, first month&lt;/dt&gt;&lt;dd&gt;-$150.00&lt;/dd&gt;&lt;/div&gt;&lt;/dl&gt;
+  &lt;dl class=&quot;a-summary__total&quot;&gt;&lt;dt&gt;Due today&lt;/dt&gt;&lt;dd&gt;$499.00&lt;/dd&gt;&lt;/dl&gt;
+  &lt;p class=&quot;a-summary__note&quot;&gt;Then $499.00 on the 27th of each month. Cancel any time.&lt;/p&gt;
+&lt;/div&gt;
+  &lt;div class=&quot;a-summary&quot; role=&quot;group&quot; aria-label=&quot;Order summary&quot;&gt;
+  &lt;p class=&quot;a-summary__title&quot;&gt;Order summary&lt;/p&gt;
+  &lt;dl class=&quot;a-summary__lines&quot;&gt;&lt;div class=&quot;a-summary__line&quot;&gt;&lt;dt&gt;Catch-up project, Jan to Sep 2026&lt;/dt&gt;&lt;dd&gt;$1,250.00&lt;/dd&gt;&lt;/div&gt;&lt;div class=&quot;a-summary__line&quot;&gt;&lt;dt&gt;Bank accounts, 3&lt;/dt&gt;&lt;dd&gt;Included&lt;/dd&gt;&lt;/div&gt;&lt;/dl&gt;
+  &lt;dl class=&quot;a-summary__total&quot;&gt;&lt;dt&gt;Due today&lt;/dt&gt;&lt;dd&gt;$1,250.00&lt;/dd&gt;&lt;/dl&gt;
+  &lt;p class=&quot;a-summary__note&quot;&gt;One-time charge. No recurring billing.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="trust">
+        <h2 id="trust">Secure badge and authorization</h2>
+        <p>A plain note about who handles card data, and the authorization the client agrees to before paying.</p>
+        <div class="a-example">
+          <h3 class="a-example__title">Badge</h3>
+          <div class="a-example__preview ">
+            <span class="a-secure-badge"><svg class="a-icon" aria-hidden="true"><use href="#shield-check"></use></svg>Payments secured by <strong>Stripe</strong></span>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-4">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-4" tabindex="0" data-scroll-area hidden><code>&lt;span class=&quot;a-secure-badge&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#shield-check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Payments secured by &lt;strong&gt;Stripe&lt;/strong&gt;&lt;/span&gt;</code></pre>
+        </div>
+        <div class="a-example">
+          <h3 class="a-example__title">One-time authorization</h3>
+          <div class="a-example__preview ">
+            <div class="a-demo-narrow"><div class="a-field" data-msg-required="Check the authorization box to continue">
+              <p class="a-label" id="demo-auth2-title">Billing authorization</p>
+              <div class="a-legal" data-scroll-area tabindex="0" role="region" aria-label="Catch-up project billing terms">
+                <span class="a-badge a-badge--warning a-legal__flag">Sample wording, pending legal review</span>
+                <p>By checking the box below, I authorize Anoglobe LLP to charge the card above a one-time amount of $1,250.00 for the Catch-up project.</p><p>This is a single charge. No recurring payments will be made unless I sign up for a monthly plan separately.</p><p>All amounts are in US dollars. Anoglobe LLP will email a receipt after the charge.</p>
+              </div>
+              <label class="a-check"><input class="a-check__input" type="checkbox" id="demo-auth2" name="demo-auth2" required><span class="a-check__label">I authorize Anoglobe LLP to charge $1,250.00 one time for the Catch-up project.</span></label>
+              <p class="a-error" id="demo-auth2-error"></p>
+            </div></div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-5">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-5" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-demo-narrow&quot;&gt;&lt;div class=&quot;a-field&quot; data-msg-required=&quot;Check the authorization box to continue&quot;&gt;
+  &lt;p class=&quot;a-label&quot; id=&quot;demo-auth2-title&quot;&gt;Billing authorization&lt;/p&gt;
+  &lt;div class=&quot;a-legal&quot; data-scroll-area tabindex=&quot;0&quot; role=&quot;region&quot; aria-label=&quot;Catch-up project billing terms&quot;&gt;
+    &lt;span class=&quot;a-badge a-badge--warning a-legal__flag&quot;&gt;Sample wording, pending legal review&lt;/span&gt;
+    &lt;p&gt;By checking the box below, I authorize Anoglobe LLP to charge the card above a one-time amount of $1,250.00 for the Catch-up project.&lt;/p&gt;&lt;p&gt;This is a single charge. No recurring payments will be made unless I sign up for a monthly plan separately.&lt;/p&gt;&lt;p&gt;All amounts are in US dollars. Anoglobe LLP will email a receipt after the charge.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;label class=&quot;a-check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; id=&quot;demo-auth2&quot; name=&quot;demo-auth2&quot; required&gt;&lt;span class=&quot;a-check__label&quot;&gt;I authorize Anoglobe LLP to charge $1,250.00 one time for the Catch-up project.&lt;/span&gt;&lt;/label&gt;
+  &lt;p class=&quot;a-error&quot; id=&quot;demo-auth2-error&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+    </main>
+  </div>
+  <!-- icons -->
+  <svg class="a-sprite" aria-hidden="true" focusable="false">
+    <symbol id="alert-triangle" viewBox="0 0 24 24"><path d="M10.3 4.4a2 2 0 0 1 3.4 0l7.6 13.1a2 2 0 0 1-1.7 3H4.4a2 2 0 0 1-1.7-3z" style="stroke-dasharray: calc(57.868 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.767 - var(--icon-gap) / 2)"/><path d="M12 9.5v4"/><path d="M12 16.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="check-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M8.2 12.3l2.6 2.6 5-5.2"/></symbol>
+    <symbol id="chevron-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></symbol>
+    <symbol id="credit-card" viewBox="0 0 24 24"><path d="M5 5H19a2.5 2.5 0 0 1 2.5 2.5V16.5a2.5 2.5 0 0 1 -2.5 2.5H5a2.5 2.5 0 0 1 -2.5 -2.5V7.5a2.5 2.5 0 0 1 2.5 -2.5z" style="stroke-dasharray: calc(61.71 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.368 - var(--icon-gap) / 2)"/><path d="M2.5 10h19"/><path d="M6 15h3.5"/></symbol>
+    <symbol id="illus-error" viewBox="0 0 96 96"><g stroke-width="var(--illus-stroke, 2.5)" stroke-linecap="round" stroke-linejoin="round"><path style="fill: var(--illus-surface, currentColor); fill-opacity: var(--illus-surface-opacity, .12); stroke: none" d="M42.6 18a6.2 6.2 0 0 1 10.8 0l26 45a6.2 6.2 0 0 1-5.4 9.3H22a6.2 6.2 0 0 1-5.4-9.3z"/><path style="fill: none; stroke: var(--illus-line, currentColor)" d="M42.6 18a6.2 6.2 0 0 1 10.8 0l26 45a6.2 6.2 0 0 1-5.4 9.3H22a6.2 6.2 0 0 1-5.4-9.3z"/><path style="fill: none; stroke: var(--illus-accent, currentColor)" d="M48 36v14M48 59h.1"/></g></symbol>
+    <symbol id="info" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M12 11v5.5"/><path d="M12 7.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="lock" viewBox="0 0 24 24"><path d="M7 10.5H17a2.5 2.5 0 0 1 2.5 2.5V18.5a2.5 2.5 0 0 1 -2.5 2.5H7a2.5 2.5 0 0 1 -2.5 -2.5V13a2.5 2.5 0 0 1 2.5 -2.5z" style="stroke-dasharray: calc(46.71 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(37.368 - var(--icon-gap) / 2)"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/><path d="M12 14.5v2.5"/></symbol>
+    <symbol id="moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z" style="stroke-dasharray: calc(58.676 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(26.404 - var(--icon-gap) / 2)"/></symbol>
+    <symbol id="search" viewBox="0 0 24 24"><path d="M10.5 4a6.5 6.5 0 1 1 0 13a6.5 6.5 0 1 1 0 -13z" style="stroke-dasharray: calc(40.846 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(35.945 - var(--icon-gap) / 2)"/><path d="M15.5 15.5 20 20"/></symbol>
+    <symbol id="shield-check" viewBox="0 0 24 24"><path d="M12 3 19.5 6v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6z" style="stroke-dasharray: calc(53.137 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(47.823 - var(--icon-gap) / 2)"/><path d="M8.8 12.2l2.2 2.2 4.2-4.4"/></symbol>
+    <symbol id="sun" viewBox="0 0 24 24"><path d="M12 7.8a4.2 4.2 0 1 1 0 8.4a4.2 4.2 0 1 1 0 -8.4z" style="stroke-dasharray: calc(26.393 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(23.226 - var(--icon-gap) / 2)"/><path d="M12 2.5v2"/><path d="M12 19.5v2"/><path d="M2.5 12h2"/><path d="M19.5 12h2"/><path d="M5.6 5.6l1.2 1.2"/><path d="M17.2 17.2l1.2 1.2"/><path d="M5.6 18.4l1.2-1.2"/><path d="M17.2 6.8l1.2-1.2"/></symbol>
+    <symbol id="x-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M9.2 9.2l5.6 5.6"/><path d="M14.8 9.2l-5.6 5.6"/></symbol>
+  </svg>
+  <!-- /icons -->
+</body>
+</html>

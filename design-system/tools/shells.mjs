@@ -4,7 +4,7 @@
 // there, exists(path) tells whether a page has been built yet.
 
 export const COMPONENT_CSS = ["foundations", "forms", "overlays", "data", "payment", "admin", "feedback"];
-export const COMPONENT_JS = ["core", "forms", "overlays", "data", "feedback"];
+export const COMPONENT_JS = ["core", "forms", "overlays", "data", "payment", "feedback"];
 
 export const DOCS_NAV = [
   {
