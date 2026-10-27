@@ -4,7 +4,7 @@
 // there, exists(path) tells whether a page has been built yet.
 
 export const COMPONENT_CSS = ["foundations", "forms", "overlays", "data", "payment", "admin", "feedback"];
-export const COMPONENT_JS = ["core", "forms", "overlays", "data", "payment", "feedback"];
+export const COMPONENT_JS = ["core", "forms", "overlays", "data", "payment", "admin", "feedback"];
 
 export const DOCS_NAV = [
   {
@@ -244,7 +244,7 @@ ${SITE_NAV.map(([name, href]) => `          <li><a class="a-site-nav__link" href
         <span class="a-admin-sidebar__name">Anoglobe <span class="a-muted">Admin</span></span>
       </a>
     </div>
-    <nav class="a-admin-nav a-scroll" aria-label="Admin sections">
+    <nav class="a-admin-nav" aria-label="Admin sections" data-scroll-area>
 ${builtGroups(ADMIN_NAV, exists).map(
   ({ group, items }) => `      <div class="a-admin-nav__group">
         <p class="a-admin-nav__label">${group}</p>
@@ -252,7 +252,7 @@ ${builtGroups(ADMIN_NAV, exists).map(
 ${items
   .map(
     ([name, href, iconName, badge]) =>
-      `          <li><a class="a-admin-nav__link" href="${root}${href}"${current(href, active)} data-tooltip="${name}" data-tooltip-side="right">${icon(root, iconName)}<span class="a-admin-nav__text">${name}</span>${badge ? `<span class="a-badge a-badge--neutral a-admin-nav__badge">${badge}</span>` : ""}</a></li>`,
+      `          <li><a class="a-admin-nav__link" href="${root}${href}"${current(href, active)} data-tooltip="${name}" data-tooltip-side="right" data-tooltip-when="collapsed">${icon(root, href === active ? `${iconName}-fill` : iconName)}<span class="a-admin-nav__text">${name}</span>${badge ? `<span class="a-badge a-badge--neutral a-admin-nav__badge">${badge}</span>` : ""}</a></li>`,
   )
   .join("\n")}
         </ul>
@@ -260,7 +260,7 @@ ${items
 ).join("\n")}
     </nav>
     <div class="a-admin-sidebar__footer">
-      <button type="button" class="a-admin-nav__link a-admin-sidebar__collapse" data-sidebar-collapse aria-pressed="false">${icon(root, "chevron-left")}<span class="a-admin-nav__text">Collapse</span></button>
+      <button type="button" class="a-admin-nav__link a-admin-sidebar__collapse" data-sidebar-collapse aria-pressed="false" aria-label="Collapse sidebar" data-tooltip="Expand sidebar" data-tooltip-side="right" data-tooltip-when="collapsed">${icon(root, "chevron-left")}<span class="a-admin-nav__text">Collapse</span></button>
     </div>
   </aside>
   <div class="a-admin-scrim" data-sidebar-scrim hidden></div>

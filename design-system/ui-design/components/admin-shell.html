@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin shell | Anoglobe Design System</title>
+  <meta name="description" content="Admin shell components for the Anoglobe design system: sidebar, top bar, page header, inline edit, settings and save bar.">
+  <!-- shell:head -->
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <script src="../../assets/js/theme.js"></script>
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components/foundations.css">
+  <link rel="stylesheet" href="../../assets/css/components/forms.css">
+  <link rel="stylesheet" href="../../assets/css/components/overlays.css">
+  <link rel="stylesheet" href="../../assets/css/components/data.css">
+  <link rel="stylesheet" href="../../assets/css/components/payment.css">
+  <link rel="stylesheet" href="../../assets/css/components/admin.css">
+  <link rel="stylesheet" href="../../assets/css/components/feedback.css">
+  <link rel="stylesheet" href="../../assets/css/pages.css">
+  <script src="../../assets/js/components/core.js" defer></script>
+  <script src="../../assets/js/components/forms.js" defer></script>
+  <script src="../../assets/js/components/overlays.js" defer></script>
+  <script src="../../assets/js/components/data.js" defer></script>
+  <script src="../../assets/js/components/payment.js" defer></script>
+  <script src="../../assets/js/components/admin.js" defer></script>
+  <script src="../../assets/js/components/feedback.js" defer></script>
+  <!-- /shell:head -->
+</head>
+<body>
+  <!-- shell:docs-header -->
+  <a class="a-skip-link" href="#main">Skip to content</a>
+  <header class="a-docs-header">
+    <a class="a-docs-header__brand" href="../../index.html">
+      <img class="a-logo a-logo--light" src="../../assets/img/logo.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+      <img class="a-logo a-logo--dark" src="../../assets/img/logo-reversed.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+      <span class="a-docs-header__label">Design system</span>
+    </a>
+    <button type="button" class="a-btn a-btn--ghost a-btn--icon a-theme-toggle" data-theme-toggle aria-label="Dark theme" data-tooltip="Toggle dark theme">
+      <svg class="a-icon a-theme-toggle__sun" aria-hidden="true"><use href="#sun"></use></svg>
+      <svg class="a-icon a-theme-toggle__moon" aria-hidden="true"><use href="#moon"></use></svg>
+    </button>
+  </header>
+  <div class="a-toast-region" data-icons="check-circle x-circle info alert-triangle close"></div>
+  <!-- /shell:docs-header -->
+  <div class="a-docs">
+    <!-- shell:docs-nav -->
+    <nav class="a-docs-nav" aria-label="Design system" data-scroll-area>
+      <div class="a-docs-nav__group">
+        <p class="a-eyebrow">Foundations</p>
+        <ul class="a-docs-nav__list" role="list">
+          <li><a class="a-docs-nav__link" href="../../ui-design/foundations/colors.html">Colors</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/foundations/icons.html">Icons</a></li>
+        </ul>
+      </div>
+      <div class="a-docs-nav__group">
+        <p class="a-eyebrow">Components</p>
+        <ul class="a-docs-nav__list" role="list">
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/foundations.html">Foundations</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/forms.html">Forms</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/overlays.html">Overlays</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/data.html">Data display</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/payment.html">Payment</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/admin-shell.html" aria-current="page">Admin shell</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- /shell:docs-nav -->
+    <main id="main" class="a-docs-main">
+      <header>
+        <p class="a-eyebrow">Components</p>
+        <h1>Admin shell</h1>
+        <p class="a-body-lg a-muted">The frame and controls the Anoglobe team works in every day.</p>
+      </header>
+
+      <section class="a-docs-section" aria-labelledby="shell">
+        <h2 id="shell">Shell</h2>
+        <p>Sidebar with grouped navigation, active state and badges, a top bar with search, notifications and the user menu. The sidebar collapses to an icon rail and remembers the choice.</p>
+        <div class="a-example a-example--wide">
+          <h3 class="a-example__title">Admin frame</h3>
+          <div class="a-example__preview a-example__preview--stack">
+            <div class="a-admin a-admin--demo" data-admin>
+              <!-- shell:admin-sidebar -->
+  <aside class="a-admin-sidebar" id="admin-sidebar" data-admin-sidebar aria-label="Admin">
+    <div class="a-admin-sidebar__brand">
+        <img class="a-admin-sidebar__mark a-logo--light" src="../../assets/img/logo-mark.svg" width="28" height="28" alt="">
+        <img class="a-admin-sidebar__mark a-logo--dark" src="../../assets/img/logo-mark-reversed.svg" width="28" height="28" alt="">
+        <span class="a-admin-sidebar__name">Anoglobe <span class="a-muted">Admin</span></span>
+      </a>
+    </div>
+    <nav class="a-admin-nav" aria-label="Admin sections" data-scroll-area>
+
+    </nav>
+    <div class="a-admin-sidebar__footer">
+      <button type="button" class="a-admin-nav__link a-admin-sidebar__collapse" data-sidebar-collapse aria-pressed="false" aria-label="Collapse sidebar" data-tooltip="Expand sidebar" data-tooltip-side="right" data-tooltip-when="collapsed"><svg class="a-icon" aria-hidden="true"><use href="#chevron-left"></use></svg><span class="a-admin-nav__text">Collapse</span></button>
+    </div>
+  </aside>
+  <div class="a-admin-scrim" data-sidebar-scrim hidden></div>
+  <!-- /shell:admin-sidebar -->
+              <div class="a-admin__main">
+                <!-- shell:admin-topbar -->
+    <header class="a-admin-topbar">
+      <button type="button" class="a-btn a-btn--ghost a-btn--icon a-admin-topbar__menu" aria-controls="admin-sidebar" aria-expanded="false" aria-label="Open navigation" data-sidebar-open>
+        <svg class="a-icon" aria-hidden="true"><use href="#menu"></use></svg>
+      </button>
+      <button type="button" class="a-admin-search" data-command-open>
+        <svg class="a-icon" aria-hidden="true"><use href="#search"></use></svg>
+        <span>Search clients, payments, calls</span>
+        <kbd class="a-kbd">Ctrl K</kbd>
+      </button>
+      <div class="a-admin-topbar__tools">
+        <button type="button" class="a-btn a-btn--ghost a-btn--icon a-theme-toggle" data-theme-toggle aria-label="Dark theme" data-tooltip="Toggle dark theme">
+      <svg class="a-icon a-theme-toggle__sun" aria-hidden="true"><use href="#sun"></use></svg>
+      <svg class="a-icon a-theme-toggle__moon" aria-hidden="true"><use href="#moon"></use></svg>
+    </button>
+        <div class="a-popover-anchor">
+          <button type="button" class="a-btn a-btn--ghost a-btn--icon a-notify-btn" aria-label="Notifications, 3 unread" aria-haspopup="dialog" aria-expanded="false" aria-controls="notifications" data-popover-trigger>
+            <svg class="a-icon" aria-hidden="true"><use href="#bell"></use></svg><span class="a-notify-btn__dot"></span>
+          </button>
+          <div class="a-popover a-notifications" id="notifications" role="dialog" aria-label="Notifications" hidden>
+            <div class="a-popover__header"><p class="a-h4">Notifications</p><button type="button" class="a-btn a-btn--link a-btn--sm">Mark all read</button></div>
+            <ul role="list" class="a-notifications__list">
+              <li class="a-notifications__item is-unread"><svg class="a-icon" aria-hidden="true"><use href="#user"></use></svg><div><p><strong>Harbor Lane Dental</strong> completed signup</p><p class="a-xs a-muted">4 minutes ago</p></div></li>
+              <li class="a-notifications__item is-unread"><svg class="a-icon" aria-hidden="true"><use href="#x-circle"></use></svg><div><p>Payment failed for <strong>Bright Path Tutoring</strong></p><p class="a-xs a-muted">38 minutes ago</p></div></li>
+              <li class="a-notifications__item is-unread"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg><div><p>AI call answered by <strong>Cedar &amp; Pine Studio</strong></p><p class="a-xs a-muted">1 hour ago</p></div></li>
+              <li class="a-notifications__item"><svg class="a-icon" aria-hidden="true"><use href="#credit-card"></use></svg><div><p>$499.00 received from <strong>Northwind Logistics</strong></p><p class="a-xs a-muted">Yesterday</p></div></li>
+            </ul>
+          </div>
+        </div>
+        <div class="a-menu-anchor">
+          <button type="button" class="a-user-btn" aria-haspopup="menu" aria-expanded="false" aria-controls="user-menu" data-menu-trigger>
+            <span class="a-avatar a-avatar--sm" aria-hidden="true">PN</span>
+            <span class="a-user-btn__name">Priya Nair</span>
+            <svg class="a-icon" aria-hidden="true"><use href="#chevron-down"></use></svg>
+          </button>
+          <div class="a-menu" id="user-menu" role="menu" aria-label="Account" hidden>
+            <div class="a-menu__separator" role="separator"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="a-toast-region" data-icons="check-circle x-circle info alert-triangle close"></div>
+    <!-- /shell:admin-topbar -->
+                <div class="a-admin__content">
+                  <header class="a-page-header">
+                    <nav class="a-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="#shell">Dashboard</a></li><li><span aria-current="page">Registrations</span></li></ol></nav>
+                    <div class="a-page-header__row">
+                      <div class="a-page-header__title"><p class="a-h2">Registrations</p></div>
+                      <div class="a-page-header__actions"><button type="button" class="a-btn a-btn--outline"><svg class="a-icon" aria-hidden="true"><use href="#download"></use></svg>Export</button><button type="button" class="a-btn a-btn--primary"><svg class="a-icon" aria-hidden="true"><use href="#link"></use></svg>Copy signup link</button></div>
+                    </div>
+                    <p class="a-page-header__description">Everyone who started or finished onboarding.</p>
+                  </header>
+                  <p class="a-small a-muted">Collapse the sidebar with the button at its foot. Under 1024 pixels it becomes a drawer opened from the menu button.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="header">
+        <h2 id="header">Page header and tabs</h2>
+        <p>Breadcrumb, title, status and the page's main actions, then tabs for the sections of one record.</p>
+        <div class="a-example">
+          <h3 class="a-example__title">Record header</h3>
+          <div class="a-example__preview a-example__preview--stack">
+            <div class="a-demo-grid">
+              <header class="a-page-header">
+                    <nav class="a-breadcrumb" aria-label="Example breadcrumb"><ol><li><a href="#header">Dashboard</a></li><li><a href="#header">Registrations</a></li><li><span aria-current="page">Harbor Lane Dental, LLC</span></li></ol></nav>
+                    <div class="a-page-header__row">
+                      <div class="a-page-header__title"><p class="a-h2">Harbor Lane Dental, LLC</p><span class="a-status a-status--success">Active</span></div>
+                      <div class="a-page-header__actions"><button type="button" class="a-btn a-btn--outline"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>Retry call</button><button type="button" class="a-btn a-btn--primary"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg>Email client</button></div>
+                    </div>
+                    <p class="a-page-header__description">Growth plan, signed up Oct 21, 2026</p>
+                  </header>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-2">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-2" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-demo-grid&quot;&gt;
+  &lt;header class=&quot;a-page-header&quot;&gt;
+        &lt;nav class=&quot;a-breadcrumb&quot; aria-label=&quot;Example breadcrumb&quot;&gt;&lt;ol&gt;&lt;li&gt;&lt;a href=&quot;#header&quot;&gt;Dashboard&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#header&quot;&gt;Registrations&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;span aria-current=&quot;page&quot;&gt;Harbor Lane Dental, LLC&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/nav&gt;
+        &lt;div class=&quot;a-page-header__row&quot;&gt;
+          &lt;div class=&quot;a-page-header__title&quot;&gt;&lt;p class=&quot;a-h2&quot;&gt;Harbor Lane Dental, LLC&lt;/p&gt;&lt;span class=&quot;a-status a-status--success&quot;&gt;Active&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;a-page-header__actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#phone-call&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Retry call&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--primary&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#mail&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Email client&lt;/button&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p class=&quot;a-page-header__description&quot;&gt;Growth plan, signed up Oct 21, 2026&lt;/p&gt;
+      &lt;/header&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="inline">
+        <h2 id="inline">Inline edit</h2>
+        <p>Change one value in place. Enter saves, Escape cancels, and a toast confirms.</p>
+        <div class="a-example a-example--wide">
+          <h3 class="a-example__title">Editable fields</h3>
+          <div class="a-example__preview ">
+            <div class="a-form-grid a-form-grid--2 a-demo-grid">
+              <div class="a-field">
+              <p class="a-label" id="ie-phone-label">Phone</p>
+              <div class="a-inline-edit" data-inline-edit="Phone">
+                <span class="a-inline-edit__value">(512) 555-0186</span>
+                <button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" data-inline-start aria-label="Edit phone" data-tooltip="Edit"><svg class="a-icon" aria-hidden="true"><use href="#edit"></use></svg></button>
+                <div class="a-inline-edit__form" hidden><input class="a-input" type="text" aria-labelledby="ie-phone-label"><button type="button" class="a-btn a-btn--primary a-btn--sm" data-inline-save>Save</button><button type="button" class="a-btn a-btn--ghost a-btn--sm" data-inline-cancel>Cancel</button></div>
+              </div>
+            </div>
+              <div class="a-field">
+              <p class="a-label" id="ie-contact-label">Primary contact</p>
+              <div class="a-inline-edit" data-inline-edit="Primary contact">
+                <span class="a-inline-edit__value">Maria Robles</span>
+                <button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" data-inline-start aria-label="Edit primary contact" data-tooltip="Edit"><svg class="a-icon" aria-hidden="true"><use href="#edit"></use></svg></button>
+                <div class="a-inline-edit__form" hidden><input class="a-input" type="text" aria-labelledby="ie-contact-label"><button type="button" class="a-btn a-btn--primary a-btn--sm" data-inline-save>Save</button><button type="button" class="a-btn a-btn--ghost a-btn--sm" data-inline-cancel>Cancel</button></div>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-3">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-3" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-form-grid a-form-grid--2 a-demo-grid&quot;&gt;
+  &lt;div class=&quot;a-field&quot;&gt;
+  &lt;p class=&quot;a-label&quot; id=&quot;ie-phone-label&quot;&gt;Phone&lt;/p&gt;
+  &lt;div class=&quot;a-inline-edit&quot; data-inline-edit=&quot;Phone&quot;&gt;
+    &lt;span class=&quot;a-inline-edit__value&quot;&gt;(512) 555-0186&lt;/span&gt;
+    &lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--icon a-btn--sm&quot; data-inline-start aria-label=&quot;Edit phone&quot; data-tooltip=&quot;Edit&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#edit&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;
+    &lt;div class=&quot;a-inline-edit__form&quot; hidden&gt;&lt;input class=&quot;a-input&quot; type=&quot;text&quot; aria-labelledby=&quot;ie-phone-label&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--primary a-btn--sm&quot; data-inline-save&gt;Save&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--sm&quot; data-inline-cancel&gt;Cancel&lt;/button&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+  &lt;div class=&quot;a-field&quot;&gt;
+  &lt;p class=&quot;a-label&quot; id=&quot;ie-contact-label&quot;&gt;Primary contact&lt;/p&gt;
+  &lt;div class=&quot;a-inline-edit&quot; data-inline-edit=&quot;Primary contact&quot;&gt;
+    &lt;span class=&quot;a-inline-edit__value&quot;&gt;Maria Robles&lt;/span&gt;
+    &lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--icon a-btn--sm&quot; data-inline-start aria-label=&quot;Edit primary contact&quot; data-tooltip=&quot;Edit&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#edit&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;
+    &lt;div class=&quot;a-inline-edit__form&quot; hidden&gt;&lt;input class=&quot;a-input&quot; type=&quot;text&quot; aria-labelledby=&quot;ie-contact-label&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--primary a-btn--sm&quot; data-inline-save&gt;Save&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--sm&quot; data-inline-cancel&gt;Cancel&lt;/button&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="settings">
+        <h2 id="settings">Settings section and save bar</h2>
+        <p>Settings are grouped with an explanation on the left. A save bar appears as soon as something changes.</p>
+        <div class="a-example a-example--wide">
+          <h3 class="a-example__title">Change a setting</h3>
+          <div class="a-example__preview a-example__preview--stack">
+            <form class="a-demo-grid" data-dirty-form data-save-message="Notification settings saved">
+              <section class="a-settings-section" aria-labelledby="notifications-title">
+              <div class="a-settings-section__intro"><h2 class="a-settings-section__title" id="notifications-title">Notifications</h2><p class="a-settings-section__text">Who on the team hears about new signups and failed payments.</p></div>
+              <div class="a-card"><div class="a-card__content a-form-grid"><label class="a-switch"><input class="a-switch__input" type="checkbox" role="switch" checked>Email the team on every new signup</label><label class="a-switch"><input class="a-switch__input" type="checkbox" role="switch" checked>Email the team on failed payments</label><label class="a-switch"><input class="a-switch__input" type="checkbox" role="switch">Daily summary at 8:00 AM ET</label></div></div>
+            </section>
+              <div class="a-save-bar" data-save-bar hidden role="region" aria-label="Unsaved changes"><span>You have unsaved changes</span><div class="a-save-bar__actions"><button type="button" class="a-btn a-btn--ghost a-btn--sm" data-discard>Discard</button><button type="submit" class="a-btn a-btn--primary a-btn--sm">Save changes</button></div></div>
+            </form>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-4">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-4" tabindex="0" data-scroll-area hidden><code>&lt;form class=&quot;a-demo-grid&quot; data-dirty-form data-save-message=&quot;Notification settings saved&quot;&gt;
+  &lt;section class=&quot;a-settings-section&quot; aria-labelledby=&quot;notifications-title&quot;&gt;
+  &lt;div class=&quot;a-settings-section__intro&quot;&gt;&lt;h2 class=&quot;a-settings-section__title&quot; id=&quot;notifications-title&quot;&gt;Notifications&lt;/h2&gt;&lt;p class=&quot;a-settings-section__text&quot;&gt;Who on the team hears about new signups and failed payments.&lt;/p&gt;&lt;/div&gt;
+  &lt;div class=&quot;a-card&quot;&gt;&lt;div class=&quot;a-card__content a-form-grid&quot;&gt;&lt;label class=&quot;a-switch&quot;&gt;&lt;input class=&quot;a-switch__input&quot; type=&quot;checkbox&quot; role=&quot;switch&quot; checked&gt;Email the team on every new signup&lt;/label&gt;&lt;label class=&quot;a-switch&quot;&gt;&lt;input class=&quot;a-switch__input&quot; type=&quot;checkbox&quot; role=&quot;switch&quot; checked&gt;Email the team on failed payments&lt;/label&gt;&lt;label class=&quot;a-switch&quot;&gt;&lt;input class=&quot;a-switch__input&quot; type=&quot;checkbox&quot; role=&quot;switch&quot;&gt;Daily summary at 8:00 AM ET&lt;/label&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/section&gt;
+  &lt;div class=&quot;a-save-bar&quot; data-save-bar hidden role=&quot;region&quot; aria-label=&quot;Unsaved changes&quot;&gt;&lt;span&gt;You have unsaved changes&lt;/span&gt;&lt;div class=&quot;a-save-bar__actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--sm&quot; data-discard&gt;Discard&lt;/button&gt;&lt;button type=&quot;submit&quot; class=&quot;a-btn a-btn--primary a-btn--sm&quot;&gt;Save changes&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+      </section>
+    </main>
+  <dialog class="a-dialog a-command" id="command-palette" aria-label="Command palette">
+    <div class="a-command__search"><svg class="a-icon" aria-hidden="true"><use href="#search"></use></svg><input class="a-command__input" type="text" role="combobox" aria-expanded="true" aria-controls="command-list" aria-autocomplete="list" aria-label="Search pages, clients and actions" placeholder="Search pages, clients and actions" autocomplete="off"></div>
+    <ul class="a-listbox" data-scroll-area role="listbox" id="command-list" aria-label="Results"><li role="presentation"><p class="a-listbox__group-label" id="cmd-g0">Go to</p><ul role="group" class="a-listbox__group" aria-labelledby="cmd-g0"><li role="option" class="a-option" id="cmd-dash" data-href="../../ui-design/admin/dashboard.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#home"></use></svg>Dashboard</li><li role="option" class="a-option" id="cmd-reg" data-href="../../ui-design/admin/registrations.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#users"></use></svg>Registrations</li><li role="option" class="a-option" id="cmd-pay" data-href="../../ui-design/admin/payments.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#credit-card"></use></svg>Payments</li><li role="option" class="a-option" id="cmd-calls" data-href="../../ui-design/admin/ai-calls.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>AI calls</li><li role="option" class="a-option" id="cmd-settings" data-href="../../ui-design/admin/settings.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#settings"></use></svg>Settings</li></ul></li><li role="presentation"><p class="a-listbox__group-label" id="cmd-g1">Clients</p><ul role="group" class="a-listbox__group" aria-labelledby="cmd-g1"><li role="option" class="a-option" id="cmd-c1" data-href="../../ui-design/admin/registration-detail.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#building"></use></svg>Harbor Lane Dental, LLC<span class="a-option__meta">Growth</span></li><li role="option" class="a-option" id="cmd-c2" data-href="../../ui-design/admin/registration-detail.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#building"></use></svg>Northwind Logistics Inc.<span class="a-option__meta">Scale</span></li><li role="option" class="a-option" id="cmd-c3" data-href="../../ui-design/admin/registration-detail.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#building"></use></svg>Bright Path Tutoring<span class="a-option__meta">Payment failed</span></li></ul></li><li role="presentation"><p class="a-listbox__group-label" id="cmd-g2">Actions</p><ul role="group" class="a-listbox__group" aria-labelledby="cmd-g2"><li role="option" class="a-option" id="cmd-export" data-toast="Export started. Your CSV will download shortly." aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#download"></use></svg>Export registrations as CSV</li><li role="option" class="a-option" id="cmd-link" data-toast="Signup link copied" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#link"></use></svg>Copy signup link</li></ul></li><li class="a-listbox__empty" role="presentation" hidden>No results. Try a client name or page.</li></ul>
+    <div class="a-command__footer"><span><kbd class="a-kbd">Up</kbd> <kbd class="a-kbd">Down</kbd> to move</span><span><kbd class="a-kbd">Enter</kbd> to open</span><span><kbd class="a-kbd">Esc</kbd> to close</span></div>
+  </dialog>
+  </div>
+  <!-- icons -->
+  <svg class="a-sprite" aria-hidden="true" focusable="false">
+    <symbol id="alert-triangle" viewBox="0 0 24 24"><path d="M10.3 4.4a2 2 0 0 1 3.4 0l7.6 13.1a2 2 0 0 1-1.7 3H4.4a2 2 0 0 1-1.7-3z" style="stroke-dasharray: calc(57.868 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.767 - var(--icon-gap) / 2)"/><path d="M12 9.5v4"/><path d="M12 16.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="bell" viewBox="0 0 24 24"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15z" style="stroke-dasharray: calc(49.852 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(28.914 - var(--icon-gap) / 2)"/><path d="M10 21.2h4"/></symbol>
+    <symbol id="building" viewBox="0 0 24 24"><path d="M4.5 21V4.5A1.5 1.5 0 0 1 6 3h7.5A1.5 1.5 0 0 1 15 4.5V21z" style="stroke-dasharray: calc(55.713 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(38.999 - var(--icon-gap) / 2)"/><path d="M15 9h3a1.5 1.5 0 0 1 1.5 1.5V21"/><path d="M3 21h18"/><path d="M8 7.5h3.5"/><path d="M8 11h3.5"/><path d="M8 14.5h3.5" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="check-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M8.2 12.3l2.6 2.6 5-5.2"/></symbol>
+    <symbol id="chevron-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="chevron-left" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></symbol>
+    <symbol id="credit-card" viewBox="0 0 24 24"><path d="M5 5H19a2.5 2.5 0 0 1 2.5 2.5V16.5a2.5 2.5 0 0 1 -2.5 2.5H5a2.5 2.5 0 0 1 -2.5 -2.5V7.5a2.5 2.5 0 0 1 2.5 -2.5z" style="stroke-dasharray: calc(61.71 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.368 - var(--icon-gap) / 2)"/><path d="M2.5 10h19"/><path d="M6 15h3.5"/></symbol>
+    <symbol id="download" viewBox="0 0 24 24"><path d="M12 4v11"/><path d="M7.5 10.5 12 15l4.5-4.5"/><path d="M4.5 19.5h15"/></symbol>
+    <symbol id="edit" viewBox="0 0 24 24"><path d="M15.2 4.3a2 2 0 0 1 2.8 0l1.7 1.7a2 2 0 0 1 0 2.8L9 19.5l-4.5 1 1-4.5z" style="stroke-dasharray: calc(48.158 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(33.71 - var(--icon-gap) / 2)"/><path d="M13.5 6l4.5 4.5"/></symbol>
+    <symbol id="home" viewBox="0 0 24 24"><path d="M4 10.2 12 3.8l8 6.4v9.3a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19.7z" style="stroke-dasharray: calc(56.816 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(44.316 - var(--icon-gap) / 2)"/><path d="M10 21.2v-5.7h4v5.7"/></symbol>
+    <symbol id="info" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M12 11v5.5"/><path d="M12 7.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+    <symbol id="mail" viewBox="0 0 24 24"><path d="M5.5 5H18.5a2.5 2.5 0 0 1 2.5 2.5V16.5a2.5 2.5 0 0 1 -2.5 2.5H5.5a2.5 2.5 0 0 1 -2.5 -2.5V7.5a2.5 2.5 0 0 1 2.5 -2.5z" style="stroke-dasharray: calc(59.71 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(47.768 - var(--icon-gap) / 2)"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
+    <symbol id="menu" viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h10"/></symbol>
+    <symbol id="moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z" style="stroke-dasharray: calc(58.676 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(26.404 - var(--icon-gap) / 2)"/></symbol>
+    <symbol id="phone-call" viewBox="0 0 24 24"><path d="M5.2 3.5h2.9l1.5 4-2 1.3a10.5 10.5 0 0 0 7.6 7.6l1.3-2 4 1.5v2.9a1.6 1.6 0 0 1-1.7 1.6A16.6 16.6 0 0 1 3.6 5.2a1.6 1.6 0 0 1 1.6-1.7z" style="stroke-dasharray: calc(59.014 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(22.425 - var(--icon-gap) / 2)"/><path d="M14.5 3.5a6 6 0 0 1 6 6"/><path d="M14.5 7a2.5 2.5 0 0 1 2.5 2.5"/></symbol>
+    <symbol id="search" viewBox="0 0 24 24"><path d="M10.5 4a6.5 6.5 0 1 1 0 13a6.5 6.5 0 1 1 0 -13z" style="stroke-dasharray: calc(40.846 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(35.945 - var(--icon-gap) / 2)"/><path d="M15.5 15.5 20 20"/></symbol>
+    <symbol id="settings" viewBox="0 0 24 24"><path d="M12 2.8 20 7.4v9.2L12 21.2 4 16.6V7.4z" style="stroke-dasharray: calc(55.313 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(50.888 - var(--icon-gap) / 2)"/><path d="M12 9a3 3 0 1 1 0 6a3 3 0 1 1 0 -6z"/></symbol>
+    <symbol id="sun" viewBox="0 0 24 24"><path d="M12 7.8a4.2 4.2 0 1 1 0 8.4a4.2 4.2 0 1 1 0 -8.4z" style="stroke-dasharray: calc(26.393 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(23.226 - var(--icon-gap) / 2)"/><path d="M12 2.5v2"/><path d="M12 19.5v2"/><path d="M2.5 12h2"/><path d="M19.5 12h2"/><path d="M5.6 5.6l1.2 1.2"/><path d="M17.2 17.2l1.2 1.2"/><path d="M5.6 18.4l1.2-1.2"/><path d="M17.2 6.8l1.2-1.2"/></symbol>
+    <symbol id="user" viewBox="0 0 24 24"><path d="M12 4a4 4 0 1 1 0 8a4 4 0 1 1 0 -8z" style="stroke-dasharray: calc(25.136 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(22.12 - var(--icon-gap) / 2)"/><path d="M4.5 20.5c.8-3.8 3.8-6 7.5-6s6.7 2.2 7.5 6"/></symbol>
+    <symbol id="users" viewBox="0 0 24 24"><path d="M9 5a3.5 3.5 0 1 1 0 7a3.5 3.5 0 1 1 0 -7z" style="stroke-dasharray: calc(21.994 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(19.355 - var(--icon-gap) / 2)"/><path d="M2.5 19.5c.7-3.3 3.3-5.2 6.5-5.2s5.8 1.9 6.5 5.2"/><path d="M15.5 5.2a3.5 3.5 0 0 1 0 6.6"/><path d="M17.5 14.6c2 .7 3.4 2.4 4 4.9"/></symbol>
+    <symbol id="x-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M9.2 9.2l5.6 5.6"/><path d="M14.8 9.2l-5.6 5.6"/></symbol>
+  </svg>
+  <!-- /icons -->
+</body>
+</html>
