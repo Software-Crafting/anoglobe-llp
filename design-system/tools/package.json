@@ -7,6 +7,12 @@
     "lint": "node lint.mjs",
     "links": "node check-links.mjs",
     "contrast": "node contrast.mjs",
-    "check": "node lint.mjs && node check-links.mjs && node contrast.mjs"
+    "check": "node lint.mjs && node check-links.mjs && node contrast.mjs",
+    "audit": "node audit.mjs",
+    "screenshots": "node audit.mjs --screenshots"
+  },
+  "devDependencies": {
+    "axe-core": "^4.14.0",
+    "playwright-core": "^1.64.1"
   }
 }
