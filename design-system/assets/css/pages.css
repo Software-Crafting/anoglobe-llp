@@ -198,6 +198,7 @@
   --icon-knockout: var(--card);
   display: grid;
   overflow-x: auto;
+  overflow-y: hidden;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   background: var(--card);

@@ -133,7 +133,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-2);
-  min-height: 40px;
+  height: var(--control-height);
   padding: 0 var(--space-4);
   border: 1px solid transparent;
   border-radius: var(--radius-md);
@@ -222,7 +222,7 @@
 }
 
 .a-btn--link {
-  min-height: auto;
+  height: auto;
   padding: 0;
   color: var(--link);
   text-decoration: underline;
@@ -235,24 +235,24 @@
 }
 
 .a-btn--sm {
-  min-height: 32px;
+  height: var(--control-height-sm);
   padding: 0 var(--space-3);
   font-size: var(--text-xs);
 }
 
 .a-btn--lg {
-  min-height: 48px;
+  height: var(--control-height-lg);
   padding: 0 var(--space-6);
   font-size: var(--text-body);
 }
 
 .a-btn--icon {
-  min-width: 40px;
+  width: var(--control-height);
   padding: 0;
 }
 
 .a-btn--icon.a-btn--sm {
-  min-width: 32px;
+  width: var(--control-height-sm);
 }
 
 .a-btn--block {
@@ -301,16 +301,12 @@
 }
 
 @media (pointer: coarse) {
-  .a-btn {
-    min-height: 44px;
+  .a-btn--sm {
+    height: var(--control-height);
   }
 
-  .a-btn--icon {
-    min-width: 44px;
-  }
-
-  .a-btn--link {
-    min-height: auto;
+  .a-btn--icon.a-btn--sm {
+    width: var(--control-height);
   }
 }
 
@@ -928,7 +924,7 @@
   flex-shrink: 0;
   align-items: center;
   gap: var(--space-2);
-  min-height: 40px;
+  min-height: var(--control-height);
   margin-bottom: -1px;
   padding: 0 var(--space-3);
   border-bottom: 2px solid transparent;
@@ -1279,4 +1275,109 @@
   width: 0;
   height: 0;
   overflow: hidden;
+}
+
+/* Scroll area: our own vertical and horizontal scrollbars over any scrolling element.
+   Mark the scrolling element with data-scroll-area; core.js wraps it and draws the bars. */
+.a-scroll-area {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+}
+
+.a-scroll-area__viewport {
+  scrollbar-width: none;
+  overscroll-behavior: contain;
+}
+
+.a-scroll-area__viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.a-scrollbar {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  padding: 2px;
+  opacity: 0;
+  touch-action: none;
+  transition: opacity var(--duration-standard) var(--ease-out);
+}
+
+.a-scrollbar[hidden] {
+  display: none;
+}
+
+.a-scrollbar--y {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 12px;
+}
+
+.a-scrollbar--x {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 12px;
+}
+
+.a-scroll-area.has-both > .a-scrollbar--y {
+  bottom: 12px;
+}
+
+.a-scroll-area.has-both > .a-scrollbar--x {
+  right: 12px;
+}
+
+.a-scrollbar__thumb {
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+  background: var(--border-strong);
+  transition:
+    background-color var(--duration-micro) var(--ease-out),
+    width var(--duration-micro) var(--ease-out),
+    height var(--duration-micro) var(--ease-out);
+}
+
+.a-scrollbar--y .a-scrollbar__thumb {
+  width: 6px;
+  margin-left: auto;
+  height: var(--thumb-size, 24px);
+  transform: translateY(var(--thumb-offset, 0));
+}
+
+.a-scrollbar--x .a-scrollbar__thumb {
+  height: 6px;
+  margin-top: auto;
+  width: var(--thumb-size, 24px);
+  transform: translateX(var(--thumb-offset, 0));
+}
+
+.a-scroll-area:hover > .a-scrollbar,
+.a-scroll-area.is-scrolling > .a-scrollbar,
+.a-scroll-area:focus-within > .a-scrollbar,
+.a-scrollbar.is-dragging {
+  opacity: 1;
+}
+
+.a-scrollbar:hover .a-scrollbar__thumb,
+.a-scrollbar.is-dragging .a-scrollbar__thumb {
+  background: var(--muted-foreground);
+}
+
+.a-scrollbar--y:hover .a-scrollbar__thumb,
+.a-scrollbar--y.is-dragging .a-scrollbar__thumb {
+  width: 8px;
+}
+
+.a-scrollbar--x:hover .a-scrollbar__thumb,
+.a-scrollbar--x.is-dragging .a-scrollbar__thumb {
+  height: 8px;
+}
+
+@media (hover: none) {
+  .a-scrollbar {
+    pointer-events: none;
+  }
 }

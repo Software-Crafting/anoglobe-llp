@@ -12,8 +12,10 @@
   <link rel="stylesheet" href="../../assets/css/base.css">
   <link rel="stylesheet" href="../../assets/css/layout.css">
   <link rel="stylesheet" href="../../assets/css/components/foundations.css">
+  <link rel="stylesheet" href="../../assets/css/components/forms.css">
   <link rel="stylesheet" href="../../assets/css/pages.css">
   <script src="../../assets/js/components/core.js" defer></script>
+  <script src="../../assets/js/components/forms.js" defer></script>
   <!-- /shell:head -->
 </head>
 <body>
@@ -33,7 +35,7 @@
   <!-- /shell:docs-header -->
   <div class="a-docs">
     <!-- shell:docs-nav -->
-    <nav class="a-docs-nav" aria-label="Design system">
+    <nav class="a-docs-nav" aria-label="Design system" data-scroll-area>
       <div class="a-docs-nav__group">
         <p class="a-eyebrow">Foundations</p>
         <ul class="a-docs-nav__list" role="list">
@@ -45,6 +47,7 @@
         <p class="a-eyebrow">Components</p>
         <ul class="a-docs-nav__list" role="list">
           <li><a class="a-docs-nav__link" href="../../ui-design/components/foundations.html" aria-current="page">Foundations</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/forms.html">Forms</a></li>
         </ul>
       </div>
     </nav>
@@ -73,7 +76,7 @@
           <div class="a-example__bar">
             <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-1">Show code</button>
           </div>
-          <pre class="a-code a-example__code" id="code-1" tabindex="0" hidden><code>&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--primary&quot;&gt;Continue&lt;/button&gt;
+          <pre class="a-code a-example__code" id="code-1" tabindex="0" data-scroll-area hidden><code>&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--primary&quot;&gt;Continue&lt;/button&gt;
 &lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--secondary&quot;&gt;Save draft&lt;/button&gt;
 &lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot;&gt;Export CSV&lt;/button&gt;
 &lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost&quot;&gt;Cancel&lt;/button&gt;
@@ -93,7 +96,7 @@
           <div class="a-example__bar">
             <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-2">Show code</button>
           </div>
-          <pre class="a-code a-example__code" id="code-2" tabindex="0" hidden><code>&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--primary a-btn--sm&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#plus&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Add client&lt;/button&gt;
+          <pre class="a-code a-example__code" id="code-2" tabindex="0" data-scroll-area hidden><code>&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--primary a-btn--sm&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#plus&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Add client&lt;/button&gt;
 &lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--primary&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#download&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Download receipt&lt;/button&gt;
 &lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--primary a-btn--lg&quot;&gt;Get started&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#arrow-right&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;
 &lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline a-btn--icon&quot; aria-label=&quot;Edit&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#edit&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;
@@ -110,7 +113,7 @@
           <div class="a-example__bar">
             <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-3">Show code</button>
           </div>
-          <pre class="a-code a-example__code" id="code-3" tabindex="0" hidden><code>&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--primary&quot; disabled&gt;Disabled&lt;/button&gt;
+          <pre class="a-code a-example__code" id="code-3" tabindex="0" data-scroll-area hidden><code>&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--primary&quot; disabled&gt;Disabled&lt;/button&gt;
 &lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--primary&quot; aria-busy=&quot;true&quot;&gt;&lt;span class=&quot;a-spinner&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;Processing payment&lt;/button&gt;
 &lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot; aria-disabled=&quot;true&quot;&gt;Not available&lt;/button&gt;</code></pre>
         </div>
@@ -126,7 +129,7 @@
           <div class="a-example__bar">
             <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-4">Show code</button>
           </div>
-          <pre class="a-code a-example__code" id="code-4" tabindex="0" hidden><code>&lt;div class=&quot;a-btn-group&quot; role=&quot;group&quot; aria-label=&quot;Date range&quot;&gt;
+          <pre class="a-code a-example__code" id="code-4" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-btn-group&quot; role=&quot;group&quot; aria-label=&quot;Date range&quot;&gt;
   &lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot;&gt;7 days&lt;/button&gt;
   &lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot;&gt;30 days&lt;/button&gt;
   &lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot;&gt;Quarter&lt;/button&gt;
@@ -151,7 +154,7 @@
           <div class="a-example__bar">
             <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-5">Show code</button>
           </div>
-          <pre class="a-code a-example__code" id="code-5" tabindex="0" hidden><code>&lt;span class=&quot;a-badge&quot;&gt;Draft&lt;/span&gt;
+          <pre class="a-code a-example__code" id="code-5" tabindex="0" data-scroll-area hidden><code>&lt;span class=&quot;a-badge&quot;&gt;Draft&lt;/span&gt;
 &lt;span class=&quot;a-badge a-badge--neutral&quot;&gt;One-time&lt;/span&gt;
 &lt;span class=&quot;a-badge a-badge--accent&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#recurring-payment&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Monthly&lt;/span&gt;
 &lt;span class=&quot;a-badge a-badge--solid&quot;&gt;New&lt;/span&gt;
@@ -172,7 +175,7 @@
           <div class="a-example__bar">
             <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-6">Show code</button>
           </div>
-          <pre class="a-code a-example__code" id="code-6" tabindex="0" hidden><code>&lt;span class=&quot;a-status a-status--success&quot;&gt;Active&lt;/span&gt;
+          <pre class="a-code a-example__code" id="code-6" tabindex="0" data-scroll-area hidden><code>&lt;span class=&quot;a-status a-status--success&quot;&gt;Active&lt;/span&gt;
 &lt;span class=&quot;a-status a-status--warning&quot;&gt;Pending documents&lt;/span&gt;
 &lt;span class=&quot;a-status a-status--destructive&quot;&gt;Payment failed&lt;/span&gt;
 &lt;span class=&quot;a-status a-status--info&quot;&gt;Call scheduled&lt;/span&gt;
@@ -199,7 +202,7 @@
           <div class="a-example__bar">
             <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-7">Show code</button>
           </div>
-          <pre class="a-code a-example__code" id="code-7" tabindex="0" hidden><code>&lt;span class=&quot;a-avatar a-avatar--sm&quot; aria-hidden=&quot;true&quot;&gt;MR&lt;/span&gt;
+          <pre class="a-code a-example__code" id="code-7" tabindex="0" data-scroll-area hidden><code>&lt;span class=&quot;a-avatar a-avatar--sm&quot; aria-hidden=&quot;true&quot;&gt;MR&lt;/span&gt;
 &lt;span class=&quot;a-avatar&quot; aria-hidden=&quot;true&quot;&gt;JW&lt;/span&gt;
 &lt;span class=&quot;a-avatar a-avatar--lg&quot; aria-hidden=&quot;true&quot;&gt;DO&lt;/span&gt;
 &lt;span class=&quot;a-avatar a-avatar--neutral&quot; aria-hidden=&quot;true&quot;&gt;HL&lt;/span&gt;
@@ -229,7 +232,7 @@
           <div class="a-example__bar">
             <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-8">Show code</button>
           </div>
-          <pre class="a-code a-example__code" id="code-8" tabindex="0" hidden><code>&lt;p class=&quot;a-small&quot;&gt;Press &lt;kbd class=&quot;a-kbd&quot;&gt;Ctrl K&lt;/kbd&gt; to search&lt;/p&gt;
+          <pre class="a-code a-example__code" id="code-8" tabindex="0" data-scroll-area hidden><code>&lt;p class=&quot;a-small&quot;&gt;Press &lt;kbd class=&quot;a-kbd&quot;&gt;Ctrl K&lt;/kbd&gt; to search&lt;/p&gt;
 &lt;hr class=&quot;a-separator a-demo-narrow&quot;&gt;
 &lt;span class=&quot;a-spinner&quot; role=&quot;status&quot; aria-label=&quot;Loading&quot;&gt;&lt;/span&gt;
 &lt;span class=&quot;a-spinner a-spinner--lg&quot; role=&quot;status&quot; aria-label=&quot;Loading&quot;&gt;&lt;/span&gt;
@@ -257,7 +260,7 @@
           <div class="a-example__bar">
             <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-9">Show code</button>
           </div>
-          <pre class="a-code a-example__code" id="code-9" tabindex="0" hidden><code>&lt;div class=&quot;a-demo-narrow&quot;&gt;
+          <pre class="a-code a-example__code" id="code-9" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-demo-narrow&quot;&gt;
   &lt;div class=&quot;a-progress-label&quot;&gt;&lt;span id=&quot;progress-label&quot;&gt;Bank statements, March 2026.pdf&lt;/span&gt;&lt;span class=&quot;a-tabular&quot;&gt;64%&lt;/span&gt;&lt;/div&gt;
   &lt;div class=&quot;a-progress&quot; role=&quot;progressbar&quot; aria-labelledby=&quot;progress-label&quot; aria-valuenow=&quot;64&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;--value: 64%&quot;&gt;&lt;span class=&quot;a-progress__bar&quot;&gt;&lt;/span&gt;&lt;/div&gt;
 &lt;/div&gt;
@@ -282,7 +285,7 @@
           <div class="a-example__bar">
             <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-10">Show code</button>
           </div>
-          <pre class="a-code a-example__code" id="code-10" tabindex="0" hidden><code>&lt;ul class=&quot;a-tag-list&quot; role=&quot;list&quot; aria-label=&quot;Active filters&quot;&gt;
+          <pre class="a-code a-example__code" id="code-10" tabindex="0" data-scroll-area hidden><code>&lt;ul class=&quot;a-tag-list&quot; role=&quot;list&quot; aria-label=&quot;Active filters&quot;&gt;
   &lt;li class=&quot;a-tag&quot; data-dismissible=&quot;Status: Active&quot;&gt;Status: Active&lt;button type=&quot;button&quot; class=&quot;a-tag__remove&quot; data-dismiss aria-label=&quot;Remove Status: Active&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#close&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/li&gt;
   &lt;li class=&quot;a-tag&quot; data-dismissible=&quot;Plan: Growth&quot;&gt;Plan: Growth&lt;button type=&quot;button&quot; class=&quot;a-tag__remove&quot; data-dismiss aria-label=&quot;Remove Plan: Growth&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#close&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/li&gt;
   &lt;li class=&quot;a-tag&quot;&gt;QuickBooks Online&lt;/li&gt;
@@ -319,7 +322,7 @@
           <div class="a-example__bar">
             <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-11">Show code</button>
           </div>
-          <pre class="a-code a-example__code" id="code-11" tabindex="0" hidden><code>&lt;div class=&quot;a-demo-grid&quot;&gt;
+          <pre class="a-code a-example__code" id="code-11" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-demo-grid&quot;&gt;
   &lt;article class=&quot;a-card&quot;&gt;
     &lt;div class=&quot;a-card__header&quot;&gt;
       &lt;div&gt;
@@ -357,7 +360,7 @@
           <div class="a-example__bar">
             <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-12">Show code</button>
           </div>
-          <pre class="a-code a-example__code" id="code-12" tabindex="0" hidden><code>&lt;div class=&quot;a-demo-grid&quot;&gt;
+          <pre class="a-code a-example__code" id="code-12" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-demo-grid&quot;&gt;
   &lt;div class=&quot;a-alert a-alert--info&quot; role=&quot;status&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#info&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;p class=&quot;a-alert__title&quot;&gt;Your call is scheduled&lt;/p&gt;&lt;p class=&quot;a-alert__body&quot;&gt;Our onboarding assistant will call you at (415) 555-0132 within 15 minutes.&lt;/p&gt;&lt;/div&gt;
   &lt;div class=&quot;a-alert a-alert--success&quot; role=&quot;status&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check-circle&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;p class=&quot;a-alert__title&quot;&gt;Payment received&lt;/p&gt;&lt;p class=&quot;a-alert__body&quot;&gt;$499.00 charged to Visa ending 4242.&lt;/p&gt;&lt;/div&gt;
   &lt;div class=&quot;a-alert a-alert--warning&quot; role=&quot;status&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#alert-triangle&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;p class=&quot;a-alert__title&quot;&gt;Documents missing&lt;/p&gt;&lt;p class=&quot;a-alert__body&quot;&gt;Upload your last two bank statements so we can start reconciling.&lt;/p&gt;&lt;/div&gt;
@@ -376,7 +379,7 @@
           <div class="a-example__bar">
             <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-13">Show code</button>
           </div>
-          <pre class="a-code a-example__code" id="code-13" tabindex="0" hidden><code>&lt;div class=&quot;a-banner&quot; data-dismissible=&quot;Notice&quot;&gt;
+          <pre class="a-code a-example__code" id="code-13" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-banner&quot; data-dismissible=&quot;Notice&quot;&gt;
   &lt;span&gt;Tax season is close. Get your books ready before April 15, 2027.&lt;/span&gt;
   &lt;a href=&quot;#alerts&quot;&gt;See catch-up plans&lt;/a&gt;
   &lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--icon a-btn--sm a-banner__dismiss&quot; data-dismiss aria-label=&quot;Dismiss notice&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#close&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;
@@ -399,7 +402,7 @@
           <div class="a-example__bar">
             <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-14">Show code</button>
           </div>
-          <pre class="a-code a-example__code" id="code-14" tabindex="0" hidden><code>&lt;div class=&quot;a-empty a-demo-narrow&quot;&gt;
+          <pre class="a-code a-example__code" id="code-14" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-empty a-demo-narrow&quot;&gt;
   &lt;svg class=&quot;a-illus&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#illus-empty-inbox&quot;&gt;&lt;/use&gt;&lt;/svg&gt;
   &lt;p class=&quot;a-empty__title&quot;&gt;No registrations yet&lt;/p&gt;
   &lt;p class=&quot;a-empty__text&quot;&gt;New signups appear here as soon as a client finishes the first onboarding step.&lt;/p&gt;
@@ -422,7 +425,7 @@
           <div class="a-example__bar">
             <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-15">Show code</button>
           </div>
-          <pre class="a-code a-example__code" id="code-15" tabindex="0" hidden><code>&lt;div class=&quot;a-stat-grid a-demo-grid&quot;&gt;
+          <pre class="a-code a-example__code" id="code-15" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-stat-grid a-demo-grid&quot;&gt;
   &lt;div class=&quot;a-stat&quot;&gt;&lt;p class=&quot;a-stat__label&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#users&quot;&gt;&lt;/use&gt;&lt;/svg&gt;New signups&lt;/p&gt;&lt;p class=&quot;a-stat__value&quot;&gt;48&lt;/p&gt;&lt;p class=&quot;a-stat__meta&quot;&gt;&lt;span class=&quot;a-badge a-badge--success&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#trending-up&quot;&gt;&lt;/use&gt;&lt;/svg&gt;12%&lt;/span&gt;vs last month&lt;/p&gt;&lt;/div&gt;
   &lt;div class=&quot;a-stat&quot;&gt;&lt;p class=&quot;a-stat__label&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#recurring-payment&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Monthly recurring revenue&lt;/p&gt;&lt;p class=&quot;a-stat__value&quot;&gt;$21,940&lt;/p&gt;&lt;p class=&quot;a-stat__meta&quot;&gt;&lt;span class=&quot;a-badge a-badge--success&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#trending-up&quot;&gt;&lt;/use&gt;&lt;/svg&gt;6.4%&lt;/span&gt;vs last month&lt;/p&gt;&lt;/div&gt;
   &lt;div class=&quot;a-stat&quot;&gt;&lt;p class=&quot;a-stat__label&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#x-circle&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Failed payments&lt;/p&gt;&lt;p class=&quot;a-stat__value&quot;&gt;3&lt;/p&gt;&lt;p class=&quot;a-stat__meta&quot;&gt;&lt;span class=&quot;a-badge a-badge--destructive&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#trending-up&quot;&gt;&lt;/use&gt;&lt;/svg&gt;2 more&lt;/span&gt;vs last month&lt;/p&gt;&lt;/div&gt;
@@ -449,7 +452,7 @@
           <div class="a-example__bar">
             <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-16">Show code</button>
           </div>
-          <pre class="a-code a-example__code" id="code-16" tabindex="0" hidden><code>&lt;div class=&quot;a-accordion a-demo-narrow&quot;&gt;
+          <pre class="a-code a-example__code" id="code-16" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-accordion a-demo-narrow&quot;&gt;
   &lt;div class=&quot;a-accordion__item&quot;&gt;
     &lt;h3 class=&quot;a-accordion__heading&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-accordion__trigger&quot; data-disclosure aria-expanded=&quot;true&quot; aria-controls=&quot;faq-1&quot;&gt;Which accounting software do you work with?&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#chevron-down&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/h3&gt;
     &lt;div class=&quot;a-accordion__panel&quot; id=&quot;faq-1&quot;&gt;We work in QuickBooks Online and Xero. If you use something else, we can migrate your books during onboarding.&lt;/div&gt;
@@ -468,7 +471,7 @@
           <h3 class="a-example__title">Line tabs</h3>
           <div class="a-example__preview a-example__preview--stack">
             <div class="a-tabs a-demo-grid" data-tabs>
-              <div role="tablist" class="a-tabs__list" aria-label="Client record">
+              <div role="tablist" class="a-tabs__list" data-scroll-area aria-label="Client record">
                 <button type="button" role="tab" class="a-tabs__tab" id="tab-overview" aria-controls="panel-overview" aria-selected="true"><svg class="a-icon" aria-hidden="true"><use href="#user"></use></svg>Overview</button>
                 <button type="button" role="tab" class="a-tabs__tab" id="tab-payments" aria-controls="panel-payments" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#credit-card"></use></svg>Payments</button>
                 <button type="button" role="tab" class="a-tabs__tab" id="tab-calls" aria-controls="panel-calls" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>Calls</button>
@@ -481,8 +484,8 @@
           <div class="a-example__bar">
             <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-17">Show code</button>
           </div>
-          <pre class="a-code a-example__code" id="code-17" tabindex="0" hidden><code>&lt;div class=&quot;a-tabs a-demo-grid&quot; data-tabs&gt;
-  &lt;div role=&quot;tablist&quot; class=&quot;a-tabs__list&quot; aria-label=&quot;Client record&quot;&gt;
+          <pre class="a-code a-example__code" id="code-17" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-tabs a-demo-grid&quot; data-tabs&gt;
+  &lt;div role=&quot;tablist&quot; class=&quot;a-tabs__list&quot; data-scroll-area aria-label=&quot;Client record&quot;&gt;
     &lt;button type=&quot;button&quot; role=&quot;tab&quot; class=&quot;a-tabs__tab&quot; id=&quot;tab-overview&quot; aria-controls=&quot;panel-overview&quot; aria-selected=&quot;true&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#user&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Overview&lt;/button&gt;
     &lt;button type=&quot;button&quot; role=&quot;tab&quot; class=&quot;a-tabs__tab&quot; id=&quot;tab-payments&quot; aria-controls=&quot;panel-payments&quot; aria-selected=&quot;false&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#credit-card&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Payments&lt;/button&gt;
     &lt;button type=&quot;button&quot; role=&quot;tab&quot; class=&quot;a-tabs__tab&quot; id=&quot;tab-calls&quot; aria-controls=&quot;panel-calls&quot; aria-selected=&quot;false&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#phone-call&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Calls&lt;/button&gt;
@@ -496,7 +499,7 @@
           <h3 class="a-example__title">Pill tabs</h3>
           <div class="a-example__preview a-example__preview--stack">
             <div class="a-tabs a-tabs--pill" data-tabs>
-              <div role="tablist" class="a-tabs__list" aria-label="Billing type">
+              <div role="tablist" class="a-tabs__list" data-scroll-area aria-label="Billing type">
                 <button type="button" role="tab" class="a-tabs__tab" id="tab-monthly" aria-controls="panel-monthly" aria-selected="true">Monthly</button>
                 <button type="button" role="tab" class="a-tabs__tab" id="tab-onetime" aria-controls="panel-onetime" aria-selected="false">One-time project</button>
               </div>
@@ -507,8 +510,8 @@
           <div class="a-example__bar">
             <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-18">Show code</button>
           </div>
-          <pre class="a-code a-example__code" id="code-18" tabindex="0" hidden><code>&lt;div class=&quot;a-tabs a-tabs--pill&quot; data-tabs&gt;
-  &lt;div role=&quot;tablist&quot; class=&quot;a-tabs__list&quot; aria-label=&quot;Billing type&quot;&gt;
+          <pre class="a-code a-example__code" id="code-18" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-tabs a-tabs--pill&quot; data-tabs&gt;
+  &lt;div role=&quot;tablist&quot; class=&quot;a-tabs__list&quot; data-scroll-area aria-label=&quot;Billing type&quot;&gt;
     &lt;button type=&quot;button&quot; role=&quot;tab&quot; class=&quot;a-tabs__tab&quot; id=&quot;tab-monthly&quot; aria-controls=&quot;panel-monthly&quot; aria-selected=&quot;true&quot;&gt;Monthly&lt;/button&gt;
     &lt;button type=&quot;button&quot; role=&quot;tab&quot; class=&quot;a-tabs__tab&quot; id=&quot;tab-onetime&quot; aria-controls=&quot;panel-onetime&quot; aria-selected=&quot;false&quot;&gt;One-time project&lt;/button&gt;
   &lt;/div&gt;
@@ -534,7 +537,7 @@
           <div class="a-example__bar">
             <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-19">Show code</button>
           </div>
-          <pre class="a-code a-example__code" id="code-19" tabindex="0" hidden><code>&lt;nav class=&quot;a-breadcrumb&quot; aria-label=&quot;Breadcrumb&quot;&gt;
+          <pre class="a-code a-example__code" id="code-19" tabindex="0" data-scroll-area hidden><code>&lt;nav class=&quot;a-breadcrumb&quot; aria-label=&quot;Breadcrumb&quot;&gt;
   &lt;ol&gt;
     &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;Dashboard&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;Registrations&lt;/a&gt;&lt;/li&gt;
@@ -561,7 +564,7 @@
           <div class="a-example__bar">
             <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-20">Show code</button>
           </div>
-          <pre class="a-code a-example__code" id="code-20" tabindex="0" hidden><code>&lt;nav class=&quot;a-pagination a-demo-grid&quot; aria-label=&quot;Pagination&quot;&gt;
+          <pre class="a-code a-example__code" id="code-20" tabindex="0" data-scroll-area hidden><code>&lt;nav class=&quot;a-pagination a-demo-grid&quot; aria-label=&quot;Pagination&quot;&gt;
   &lt;p class=&quot;a-small a-muted&quot;&gt;Showing 1 to 10 of 128&lt;/p&gt;
   &lt;ul class=&quot;a-pagination__list&quot; role=&quot;list&quot;&gt;
     &lt;li&gt;&lt;a class=&quot;a-pagination__link&quot; href=&quot;#navigation&quot; aria-label=&quot;Previous page&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#chevron-left&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/li&gt;
@@ -592,7 +595,7 @@
           <div class="a-example__bar">
             <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-21">Show code</button>
           </div>
-          <pre class="a-code a-example__code" id="code-21" tabindex="0" hidden><code>&lt;ol class=&quot;a-steps a-demo-grid&quot; aria-label=&quot;Onboarding progress&quot;&gt;
+          <pre class="a-code a-example__code" id="code-21" tabindex="0" data-scroll-area hidden><code>&lt;ol class=&quot;a-steps a-demo-grid&quot; aria-label=&quot;Onboarding progress&quot;&gt;
   &lt;li class=&quot;a-steps__item is-complete&quot;&gt;&lt;span class=&quot;a-steps__bar&quot;&gt;&lt;/span&gt;&lt;span class=&quot;a-steps__label&quot;&gt;&lt;span class=&quot;a-steps__text&quot;&gt;Account&lt;span class=&quot;a-visually-hidden&quot;&gt;, complete&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li class=&quot;a-steps__item is-complete&quot;&gt;&lt;span class=&quot;a-steps__bar&quot;&gt;&lt;/span&gt;&lt;span class=&quot;a-steps__label&quot;&gt;&lt;span class=&quot;a-steps__text&quot;&gt;Business&lt;span class=&quot;a-visually-hidden&quot;&gt;, complete&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li class=&quot;a-steps__item&quot; aria-current=&quot;step&quot;&gt;&lt;span class=&quot;a-steps__bar&quot;&gt;&lt;/span&gt;&lt;span class=&quot;a-steps__label&quot;&gt;&lt;span class=&quot;a-steps__text&quot;&gt;Services&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
@@ -612,7 +615,7 @@
           <div class="a-example__bar">
             <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-22">Show code</button>
           </div>
-          <pre class="a-code a-example__code" id="code-22" tabindex="0" hidden><code>&lt;ol class=&quot;a-steps a-steps--vertical&quot; aria-label=&quot;Setup&quot;&gt;
+          <pre class="a-code a-example__code" id="code-22" tabindex="0" data-scroll-area hidden><code>&lt;ol class=&quot;a-steps a-steps--vertical&quot; aria-label=&quot;Setup&quot;&gt;
   &lt;li class=&quot;a-steps__item is-complete&quot;&gt;&lt;span class=&quot;a-steps__label&quot;&gt;&lt;span class=&quot;a-steps__text&quot;&gt;Create account&lt;span class=&quot;a-visually-hidden&quot;&gt;, complete&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li class=&quot;a-steps__item&quot; aria-current=&quot;step&quot;&gt;&lt;span class=&quot;a-steps__label&quot;&gt;&lt;span class=&quot;a-steps__text&quot;&gt;Connect bank feeds&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
   &lt;li class=&quot;a-steps__item&quot;&gt;&lt;span class=&quot;a-steps__label&quot;&gt;&lt;span class=&quot;a-steps__text&quot;&gt;First monthly close&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
@@ -630,7 +633,7 @@
           <div class="a-example__bar">
             <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-23">Show code</button>
           </div>
-          <pre class="a-code a-example__code" id="code-23" tabindex="0" hidden><code>&lt;ol class=&quot;a-timeline a-demo-narrow&quot;&gt;
+          <pre class="a-code a-example__code" id="code-23" tabindex="0" data-scroll-area hidden><code>&lt;ol class=&quot;a-timeline a-demo-narrow&quot;&gt;
   &lt;li class=&quot;a-timeline__item&quot;&gt;&lt;span class=&quot;a-timeline__marker a-timeline__marker--success&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;&lt;div&gt;&lt;p class=&quot;a-timeline__title&quot;&gt;Payment received&lt;/p&gt;&lt;p class=&quot;a-timeline__meta&quot;&gt;Oct 21, 2026, 10:42 AM&lt;/p&gt;&lt;p class=&quot;a-timeline__body&quot;&gt;$499.00, Growth plan, first month.&lt;/p&gt;&lt;/div&gt;&lt;/li&gt;
   &lt;li class=&quot;a-timeline__item&quot;&gt;&lt;span class=&quot;a-timeline__marker a-timeline__marker--accent&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#mail&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;&lt;div&gt;&lt;p class=&quot;a-timeline__title&quot;&gt;Confirmation email sent&lt;/p&gt;&lt;p class=&quot;a-timeline__meta&quot;&gt;Oct 21, 2026, 10:42 AM&lt;/p&gt;&lt;/div&gt;&lt;/li&gt;
   &lt;li class=&quot;a-timeline__item&quot;&gt;&lt;span class=&quot;a-timeline__marker&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#phone-call&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;&lt;div&gt;&lt;p class=&quot;a-timeline__title&quot;&gt;Welcome call answered&lt;/p&gt;&lt;p class=&quot;a-timeline__meta&quot;&gt;Oct 21, 2026, 10:58 AM, 4 min 12 s&lt;/p&gt;&lt;/div&gt;&lt;/li&gt;

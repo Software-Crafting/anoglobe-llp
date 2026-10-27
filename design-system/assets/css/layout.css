@@ -62,7 +62,6 @@
   padding: var(--space-3) var(--gutter);
   border-bottom: 1px solid var(--border);
   overflow-x: auto;
-  scrollbar-width: thin;
 }
 
 .a-docs-nav__group {
@@ -132,16 +131,21 @@
     grid-template-columns: 232px minmax(0, 1fr);
   }
 
-  .a-docs-nav {
+  .a-docs > .a-scroll-area {
     position: sticky;
     top: var(--topbar-height);
-    flex-direction: column;
     align-self: start;
-    gap: var(--space-6);
     height: calc(100vh - var(--topbar-height));
+    border-right: 1px solid var(--border);
+  }
+
+  .a-docs-nav {
+    flex-direction: column;
+    gap: var(--space-6);
+    height: 100%;
     padding: var(--space-8) var(--space-4);
     border-bottom: 0;
-    border-right: 1px solid var(--border);
+    overflow-x: hidden;
     overflow-y: auto;
   }
 

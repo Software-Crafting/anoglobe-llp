@@ -108,8 +108,109 @@
     }
   });
 
-  document.addEventListener("keydown", onTabKey);
-  document.addEventListener("DOMContentLoaded", () => initTabs());
+  // Scroll area: wraps an element marked data-scroll-area and draws our own scrollbars. The element
+  // keeps native scrolling (wheel, touch, keyboard); the bars mirror it and can be dragged or clicked.
+  const MIN_THUMB = 24;
+  const AXES = {
+    y: { size: "clientHeight", total: "scrollHeight", pos: "scrollTop", track: "clientHeight", pointer: "clientY", rect: "top" },
+    x: { size: "clientWidth", total: "scrollWidth", pos: "scrollLeft", track: "clientWidth", pointer: "clientX", rect: "left" },
+  };
 
-  window.Anoglobe = Object.assign(window.Anoglobe || {}, { announce, initTabs, selectTab });
+  function enhanceScroll(viewport) {
+    if (viewport.closest(".a-scroll-area") === viewport.parentElement && viewport.parentElement.classList.contains("a-scroll-area")) return;
+    const area = document.createElement("div");
+    area.className = `a-scroll-area ${viewport.dataset.scrollArea || ""}`.trim();
+    viewport.before(area);
+    area.append(viewport);
+    viewport.classList.add("a-scroll-area__viewport");
+    const bars = {};
+    for (const axis of Object.keys(AXES)) {
+      const bar = document.createElement("div");
+      bar.className = `a-scrollbar a-scrollbar--${axis}`;
+      bar.setAttribute("aria-hidden", "true");
+      bar.innerHTML = '<div class="a-scrollbar__thumb"></div>';
+      area.append(bar);
+      bars[axis] = bar;
+      bindBar(viewport, bar, axis);
+    }
+
+    let frame = 0;
+    let idleTimer = 0;
+    const update = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        const overflowing = {};
+        for (const [axis, keys] of Object.entries(AXES)) {
+          const bar = bars[axis];
+          const overflow = viewport[keys.total] - viewport[keys.size];
+          overflowing[axis] = overflow > 1;
+          bar.hidden = !overflowing[axis];
+          if (!overflowing[axis]) continue;
+          const track = bar[keys.track] - 4;
+          const thumb = Math.max(MIN_THUMB, (viewport[keys.size] / viewport[keys.total]) * track);
+          const offset = (viewport[keys.pos] / overflow) * (track - thumb);
+          bar.style.setProperty("--thumb-size", `${thumb}px`);
+          bar.style.setProperty("--thumb-offset", `${offset}px`);
+        }
+        area.classList.toggle("has-both", overflowing.x && overflowing.y);
+      });
+    };
+    viewport.addEventListener("scroll", () => {
+      update();
+      area.classList.add("is-scrolling");
+      clearTimeout(idleTimer);
+      idleTimer = setTimeout(() => area.classList.remove("is-scrolling"), 900);
+    }, { passive: true });
+    new ResizeObserver(update).observe(viewport);
+    new MutationObserver(update).observe(viewport, { childList: true, subtree: true, attributes: true, attributeFilter: ["hidden", "class"] });
+    viewport.scrollArea = { update };
+    update();
+  }
+
+  function bindBar(viewport, bar, axis) {
+    const keys = AXES[axis];
+    const thumb = bar.firstElementChild;
+    bar.addEventListener("pointerdown", (event) => {
+      event.preventDefault();
+      const overflow = viewport[keys.total] - viewport[keys.size];
+      const track = bar[keys.track] - 4;
+      const thumbSize = thumb.getBoundingClientRect()[axis === "y" ? "height" : "width"];
+      if (event.target !== thumb) {
+        // Click on the track pages toward the pointer.
+        const thumbStart = thumb.getBoundingClientRect()[keys.rect];
+        const direction = event[keys.pointer] < thumbStart ? -1 : 1;
+        viewport.scrollBy({ [axis === "y" ? "top" : "left"]: direction * viewport[keys.size] * 0.9, behavior: "smooth" });
+        return;
+      }
+      const startPointer = event[keys.pointer];
+      const startScroll = viewport[keys.pos];
+      const ratio = overflow / Math.max(1, track - thumbSize);
+      bar.classList.add("is-dragging");
+      bar.setPointerCapture(event.pointerId);
+      const move = (moveEvent) => {
+        viewport[keys.pos] = startScroll + (moveEvent[keys.pointer] - startPointer) * ratio;
+      };
+      const end = () => {
+        bar.classList.remove("is-dragging");
+        bar.removeEventListener("pointermove", move);
+        bar.removeEventListener("pointerup", end);
+        bar.removeEventListener("pointercancel", end);
+      };
+      bar.addEventListener("pointermove", move);
+      bar.addEventListener("pointerup", end);
+      bar.addEventListener("pointercancel", end);
+    });
+  }
+
+  function initScrollAreas(root = document) {
+    for (const element of root.querySelectorAll("[data-scroll-area]")) enhanceScroll(element);
+  }
+
+  document.addEventListener("keydown", onTabKey);
+  document.addEventListener("DOMContentLoaded", () => {
+    initTabs();
+    initScrollAreas();
+  });
+
+  window.Anoglobe = Object.assign(window.Anoglobe || {}, { announce, initTabs, selectTab, initScrollAreas });
 })();

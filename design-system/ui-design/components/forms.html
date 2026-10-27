@@ -1,0 +1,768 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form controls | Anoglobe Design System</title>
+  <meta name="description" content="Custom form controls for the Anoglobe design system: inputs, select, combobox, date picker, sliders, upload and validation.">
+  <!-- shell:head -->
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <script src="../../assets/js/theme.js"></script>
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components/foundations.css">
+  <link rel="stylesheet" href="../../assets/css/components/forms.css">
+  <link rel="stylesheet" href="../../assets/css/pages.css">
+  <script src="../../assets/js/components/core.js" defer></script>
+  <script src="../../assets/js/components/forms.js" defer></script>
+  <!-- /shell:head -->
+</head>
+<body>
+  <!-- shell:docs-header -->
+  <a class="a-skip-link" href="#main">Skip to content</a>
+  <header class="a-docs-header">
+    <a class="a-docs-header__brand" href="../../index.html">
+      <img class="a-logo a-logo--light" src="../../assets/img/logo.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+      <img class="a-logo a-logo--dark" src="../../assets/img/logo-reversed.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+      <span class="a-docs-header__label">Design system</span>
+    </a>
+    <button type="button" class="a-btn a-btn--ghost a-btn--icon a-theme-toggle" data-theme-toggle aria-label="Dark theme" data-tooltip="Toggle dark theme">
+      <svg class="a-icon a-theme-toggle__sun" aria-hidden="true"><use href="#sun"></use></svg>
+      <svg class="a-icon a-theme-toggle__moon" aria-hidden="true"><use href="#moon"></use></svg>
+    </button>
+  </header>
+  <!-- /shell:docs-header -->
+  <div class="a-docs">
+    <!-- shell:docs-nav -->
+    <nav class="a-docs-nav" aria-label="Design system" data-scroll-area>
+      <div class="a-docs-nav__group">
+        <p class="a-eyebrow">Foundations</p>
+        <ul class="a-docs-nav__list" role="list">
+          <li><a class="a-docs-nav__link" href="../../ui-design/foundations/colors.html">Colors</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/foundations/icons.html">Icons</a></li>
+        </ul>
+      </div>
+      <div class="a-docs-nav__group">
+        <p class="a-eyebrow">Components</p>
+        <ul class="a-docs-nav__list" role="list">
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/foundations.html">Foundations</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/forms.html" aria-current="page">Forms</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- /shell:docs-nav -->
+    <main id="main" class="a-docs-main">
+      <header>
+        <p class="a-eyebrow">Components</p>
+        <h1>Form controls</h1>
+        <p class="a-body-lg a-muted">Every control is our own design with a real input underneath, so forms submit normally and screen readers announce the right roles and states.</p>
+      </header>
+
+      <section class="a-docs-section" aria-labelledby="text">
+        <h2 id="text">Text inputs</h2>
+        <p>Label above, hint below, error under the hint. Errors say exactly what to fix.</p>
+        <div class="a-example a-example--wide">
+          <h3 class="a-example__title">Basic fields</h3>
+          <div class="a-example__preview a-example__preview--stack">
+            <div class="a-form-grid a-form-grid--2 a-demo-grid">
+              <div class="a-field ">
+              <label class="a-label" for="demo-name"><span>Full name<span class="a-label__required" aria-hidden="true">*</span></span></label>
+              <input class="a-input" id="demo-name" name="demo-name" type="text" aria-describedby="demo-name-error" required autocomplete="name" value="Maria Robles">
+              <p class="a-error" id="demo-name-error"></p>
+            </div>
+              <div class="a-field " data-msg-pattern="Enter an email like name@company.com">
+              <label class="a-label" for="demo-email"><span>Work email<span class="a-label__required" aria-hidden="true">*</span></span></label>
+              <input class="a-input" id="demo-email" name="demo-email" type="email" aria-describedby="demo-email-hint demo-email-error" required placeholder="you@company.com" autocomplete="email">
+              <p class="a-hint" id="demo-email-hint">We send your signup confirmation here.</p>
+              <p class="a-error" id="demo-email-error"></p>
+            </div>
+              <div class="a-field " data-msg-pattern="Enter a web address like example.com">
+              <label class="a-label" for="demo-web"><span>Website</span><span class="a-label__optional">Optional</span></label>
+              <input class="a-input" id="demo-web" name="demo-web" type="text" aria-describedby="demo-web-error" placeholder="harborlanedental.com" data-validate="url">
+              <p class="a-error" id="demo-web-error"></p>
+            </div>
+              <div class="a-field ">
+              <label class="a-label" for="demo-disabled"><span>Account ID</span></label>
+              <input class="a-input" id="demo-disabled" name="demo-disabled" type="text" aria-describedby="demo-disabled-error" value="AG-10482" disabled>
+              <p class="a-error" id="demo-disabled-error"></p>
+            </div>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-1">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-1" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-form-grid a-form-grid--2 a-demo-grid&quot;&gt;
+  &lt;div class=&quot;a-field &quot;&gt;
+  &lt;label class=&quot;a-label&quot; for=&quot;demo-name&quot;&gt;&lt;span&gt;Full name&lt;span class=&quot;a-label__required&quot; aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+  &lt;input class=&quot;a-input&quot; id=&quot;demo-name&quot; name=&quot;demo-name&quot; type=&quot;text&quot; aria-describedby=&quot;demo-name-error&quot; required autocomplete=&quot;name&quot; value=&quot;Maria Robles&quot;&gt;
+  &lt;p class=&quot;a-error&quot; id=&quot;demo-name-error&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+  &lt;div class=&quot;a-field &quot; data-msg-pattern=&quot;Enter an email like name@company.com&quot;&gt;
+  &lt;label class=&quot;a-label&quot; for=&quot;demo-email&quot;&gt;&lt;span&gt;Work email&lt;span class=&quot;a-label__required&quot; aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+  &lt;input class=&quot;a-input&quot; id=&quot;demo-email&quot; name=&quot;demo-email&quot; type=&quot;email&quot; aria-describedby=&quot;demo-email-hint demo-email-error&quot; required placeholder=&quot;you@company.com&quot; autocomplete=&quot;email&quot;&gt;
+  &lt;p class=&quot;a-hint&quot; id=&quot;demo-email-hint&quot;&gt;We send your signup confirmation here.&lt;/p&gt;
+  &lt;p class=&quot;a-error&quot; id=&quot;demo-email-error&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+  &lt;div class=&quot;a-field &quot; data-msg-pattern=&quot;Enter a web address like example.com&quot;&gt;
+  &lt;label class=&quot;a-label&quot; for=&quot;demo-web&quot;&gt;&lt;span&gt;Website&lt;/span&gt;&lt;span class=&quot;a-label__optional&quot;&gt;Optional&lt;/span&gt;&lt;/label&gt;
+  &lt;input class=&quot;a-input&quot; id=&quot;demo-web&quot; name=&quot;demo-web&quot; type=&quot;text&quot; aria-describedby=&quot;demo-web-error&quot; placeholder=&quot;harborlanedental.com&quot; data-validate=&quot;url&quot;&gt;
+  &lt;p class=&quot;a-error&quot; id=&quot;demo-web-error&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+  &lt;div class=&quot;a-field &quot;&gt;
+  &lt;label class=&quot;a-label&quot; for=&quot;demo-disabled&quot;&gt;&lt;span&gt;Account ID&lt;/span&gt;&lt;/label&gt;
+  &lt;input class=&quot;a-input&quot; id=&quot;demo-disabled&quot; name=&quot;demo-disabled&quot; type=&quot;text&quot; aria-describedby=&quot;demo-disabled-error&quot; value=&quot;AG-10482&quot; disabled&gt;
+  &lt;p class=&quot;a-error&quot; id=&quot;demo-disabled-error&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div class="a-example">
+          <h3 class="a-example__title">Error state</h3>
+          <div class="a-example__preview ">
+            <div class="a-field a-demo-narrow">
+              <label class="a-label" for="demo-ein-error">Employer Identification Number (EIN)</label>
+              <input class="a-input a-input--mono" id="demo-ein-error" type="text" inputmode="numeric" data-mask="ein" value="12-34567" aria-invalid="true" aria-describedby="demo-ein-error-msg">
+              <p class="a-error" id="demo-ein-error-msg"><svg class="a-icon" aria-hidden="true"><use href="#alert-triangle"></use></svg><span>Enter a 9 digit EIN, like 12-3456789.</span></p>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-2">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-2" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-field a-demo-narrow&quot;&gt;
+  &lt;label class=&quot;a-label&quot; for=&quot;demo-ein-error&quot;&gt;Employer Identification Number (EIN)&lt;/label&gt;
+  &lt;input class=&quot;a-input a-input--mono&quot; id=&quot;demo-ein-error&quot; type=&quot;text&quot; inputmode=&quot;numeric&quot; data-mask=&quot;ein&quot; value=&quot;12-34567&quot; aria-invalid=&quot;true&quot; aria-describedby=&quot;demo-ein-error-msg&quot;&gt;
+  &lt;p class=&quot;a-error&quot; id=&quot;demo-ein-error-msg&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#alert-triangle&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span&gt;Enter a 9 digit EIN, like 12-3456789.&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div class="a-example a-example--wide">
+          <h3 class="a-example__title">Icons, addons and password</h3>
+          <div class="a-example__preview a-example__preview--stack">
+            <div class="a-form-grid a-form-grid--2 a-demo-grid">
+              <div class="a-field"><label class="a-label" for="demo-search">Search clients</label><div class="a-input-group"><svg class="a-icon" aria-hidden="true"><use href="#search"></use></svg><input class="a-input" id="demo-search" type="search" placeholder="Name, email or EIN"></div></div>
+              <div class="a-field"><label class="a-label" for="demo-site">Company website</label><div class="a-input-group"><span class="a-input-group__addon">https://</span><input class="a-input" id="demo-site" type="text" placeholder="yourcompany.com"></div></div>
+              <div class="a-field" data-password><label class="a-label" for="demo-password">Password</label><div class="a-input-group"><input class="a-input" id="demo-password" type="password" autocomplete="new-password" minlength="10" aria-describedby="demo-password-hint" value="ledger-2026"><button type="button" class="a-input-group__action" data-password-toggle aria-pressed="false" aria-label="Show password"><svg class="a-icon a-password__show" aria-hidden="true"><use href="#eye"></use></svg><svg class="a-icon a-password__hide" aria-hidden="true"><use href="#eye-off"></use></svg></button></div><p class="a-hint" id="demo-password-hint">At least 10 characters.</p></div>
+              <div class="a-field"><label class="a-label" for="demo-amount">Project amount</label><div class="a-input-group"><span class="a-input-group__addon">$</span><input class="a-input a-tabular" id="demo-amount" type="text" inputmode="decimal" data-currency value="1,250.00"><span class="a-input-group__addon a-input-group__addon--end">USD</span></div></div>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-3">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-3" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-form-grid a-form-grid--2 a-demo-grid&quot;&gt;
+  &lt;div class=&quot;a-field&quot;&gt;&lt;label class=&quot;a-label&quot; for=&quot;demo-search&quot;&gt;Search clients&lt;/label&gt;&lt;div class=&quot;a-input-group&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#search&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;input class=&quot;a-input&quot; id=&quot;demo-search&quot; type=&quot;search&quot; placeholder=&quot;Name, email or EIN&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&quot;a-field&quot;&gt;&lt;label class=&quot;a-label&quot; for=&quot;demo-site&quot;&gt;Company website&lt;/label&gt;&lt;div class=&quot;a-input-group&quot;&gt;&lt;span class=&quot;a-input-group__addon&quot;&gt;https://&lt;/span&gt;&lt;input class=&quot;a-input&quot; id=&quot;demo-site&quot; type=&quot;text&quot; placeholder=&quot;yourcompany.com&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&quot;a-field&quot; data-password&gt;&lt;label class=&quot;a-label&quot; for=&quot;demo-password&quot;&gt;Password&lt;/label&gt;&lt;div class=&quot;a-input-group&quot;&gt;&lt;input class=&quot;a-input&quot; id=&quot;demo-password&quot; type=&quot;password&quot; autocomplete=&quot;new-password&quot; minlength=&quot;10&quot; aria-describedby=&quot;demo-password-hint&quot; value=&quot;ledger-2026&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-input-group__action&quot; data-password-toggle aria-pressed=&quot;false&quot; aria-label=&quot;Show password&quot;&gt;&lt;svg class=&quot;a-icon a-password__show&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#eye&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;svg class=&quot;a-icon a-password__hide&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#eye-off&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/div&gt;&lt;p class=&quot;a-hint&quot; id=&quot;demo-password-hint&quot;&gt;At least 10 characters.&lt;/p&gt;&lt;/div&gt;
+  &lt;div class=&quot;a-field&quot;&gt;&lt;label class=&quot;a-label&quot; for=&quot;demo-amount&quot;&gt;Project amount&lt;/label&gt;&lt;div class=&quot;a-input-group&quot;&gt;&lt;span class=&quot;a-input-group__addon&quot;&gt;$&lt;/span&gt;&lt;input class=&quot;a-input a-tabular&quot; id=&quot;demo-amount&quot; type=&quot;text&quot; inputmode=&quot;decimal&quot; data-currency value=&quot;1,250.00&quot;&gt;&lt;span class=&quot;a-input-group__addon a-input-group__addon--end&quot;&gt;USD&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div class="a-example a-example--wide">
+          <h3 class="a-example__title">Textarea with counter and number stepper</h3>
+          <div class="a-example__preview a-example__preview--stack">
+            <div class="a-form-grid a-form-grid--2 a-demo-grid">
+              <div class="a-field"><label class="a-label" for="demo-notes"><span>Anything we should know?</span><span class="a-label__optional">Optional</span></label><textarea class="a-textarea" id="demo-notes" maxlength="500" data-counter="demo-notes-count" placeholder="Prior bookkeeper, cleanup needs, deadlines"></textarea><p class="a-counter" id="demo-notes-count" aria-live="polite"></p></div>
+              <div class="a-field"><label class="a-label" for="demo-accounts">Bank and card accounts</label><div class="a-number" data-number><button type="button" class="a-number__btn" data-step="-1" aria-label="Decrease"><svg class="a-icon" aria-hidden="true"><use href="#minus"></use></svg></button><input class="a-input" id="demo-accounts" type="number" min="1" max="25" value="3" inputmode="numeric"><button type="button" class="a-number__btn" data-step="1" aria-label="Increase"><svg class="a-icon" aria-hidden="true"><use href="#plus"></use></svg></button></div><p class="a-hint">Checking, savings and credit cards you want reconciled.</p></div>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-4">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-4" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-form-grid a-form-grid--2 a-demo-grid&quot;&gt;
+  &lt;div class=&quot;a-field&quot;&gt;&lt;label class=&quot;a-label&quot; for=&quot;demo-notes&quot;&gt;&lt;span&gt;Anything we should know?&lt;/span&gt;&lt;span class=&quot;a-label__optional&quot;&gt;Optional&lt;/span&gt;&lt;/label&gt;&lt;textarea class=&quot;a-textarea&quot; id=&quot;demo-notes&quot; maxlength=&quot;500&quot; data-counter=&quot;demo-notes-count&quot; placeholder=&quot;Prior bookkeeper, cleanup needs, deadlines&quot;&gt;&lt;/textarea&gt;&lt;p class=&quot;a-counter&quot; id=&quot;demo-notes-count&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;&lt;/div&gt;
+  &lt;div class=&quot;a-field&quot;&gt;&lt;label class=&quot;a-label&quot; for=&quot;demo-accounts&quot;&gt;Bank and card accounts&lt;/label&gt;&lt;div class=&quot;a-number&quot; data-number&gt;&lt;button type=&quot;button&quot; class=&quot;a-number__btn&quot; data-step=&quot;-1&quot; aria-label=&quot;Decrease&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#minus&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;input class=&quot;a-input&quot; id=&quot;demo-accounts&quot; type=&quot;number&quot; min=&quot;1&quot; max=&quot;25&quot; value=&quot;3&quot; inputmode=&quot;numeric&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-number__btn&quot; data-step=&quot;1&quot; aria-label=&quot;Increase&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#plus&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/div&gt;&lt;p class=&quot;a-hint&quot;&gt;Checking, savings and credit cards you want reconciled.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div class="a-example a-example--wide">
+          <h3 class="a-example__title">Masks</h3>
+          <div class="a-example__preview a-example__preview--stack">
+            <div class="a-form-grid a-form-grid--3 a-demo-grid">
+              <div class="a-field " data-msg-pattern="Enter a 9 digit EIN">
+              <label class="a-label" for="demo-ein"><span>EIN</span></label>
+              <input class="a-input" id="demo-ein" name="demo-ein" type="text" aria-describedby="demo-ein-hint demo-ein-error" inputmode="numeric" data-mask="ein">
+              <p class="a-hint" id="demo-ein-hint">Format 12-3456789</p>
+              <p class="a-error" id="demo-ein-error"></p>
+            </div>
+              <div class="a-field " data-msg-pattern="Enter a 5 digit ZIP code">
+              <label class="a-label" for="demo-zip"><span>ZIP code</span></label>
+              <input class="a-input" id="demo-zip" name="demo-zip" type="text" aria-describedby="demo-zip-hint demo-zip-error" autocomplete="postal-code" inputmode="numeric" data-mask="zip">
+              <p class="a-hint" id="demo-zip-hint">5 or 9 digits</p>
+              <p class="a-error" id="demo-zip-error"></p>
+            </div>
+              <div class="a-field"><p class="a-label">Owner SSN on file</p><p class="a-input a-input--mono" aria-label="Social Security number ending in 6789">&bull;&bull;&bull;-&bull;&bull;-6789</p><p class="a-hint">Shown masked. Never displayed in full.</p></div>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-5">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-5" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-form-grid a-form-grid--3 a-demo-grid&quot;&gt;
+  &lt;div class=&quot;a-field &quot; data-msg-pattern=&quot;Enter a 9 digit EIN&quot;&gt;
+  &lt;label class=&quot;a-label&quot; for=&quot;demo-ein&quot;&gt;&lt;span&gt;EIN&lt;/span&gt;&lt;/label&gt;
+  &lt;input class=&quot;a-input&quot; id=&quot;demo-ein&quot; name=&quot;demo-ein&quot; type=&quot;text&quot; aria-describedby=&quot;demo-ein-hint demo-ein-error&quot; inputmode=&quot;numeric&quot; data-mask=&quot;ein&quot;&gt;
+  &lt;p class=&quot;a-hint&quot; id=&quot;demo-ein-hint&quot;&gt;Format 12-3456789&lt;/p&gt;
+  &lt;p class=&quot;a-error&quot; id=&quot;demo-ein-error&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+  &lt;div class=&quot;a-field &quot; data-msg-pattern=&quot;Enter a 5 digit ZIP code&quot;&gt;
+  &lt;label class=&quot;a-label&quot; for=&quot;demo-zip&quot;&gt;&lt;span&gt;ZIP code&lt;/span&gt;&lt;/label&gt;
+  &lt;input class=&quot;a-input&quot; id=&quot;demo-zip&quot; name=&quot;demo-zip&quot; type=&quot;text&quot; aria-describedby=&quot;demo-zip-hint demo-zip-error&quot; autocomplete=&quot;postal-code&quot; inputmode=&quot;numeric&quot; data-mask=&quot;zip&quot;&gt;
+  &lt;p class=&quot;a-hint&quot; id=&quot;demo-zip-hint&quot;&gt;5 or 9 digits&lt;/p&gt;
+  &lt;p class=&quot;a-error&quot; id=&quot;demo-zip-error&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+  &lt;div class=&quot;a-field&quot;&gt;&lt;p class=&quot;a-label&quot;&gt;Owner SSN on file&lt;/p&gt;&lt;p class=&quot;a-input a-input--mono&quot; aria-label=&quot;Social Security number ending in 6789&quot;&gt;&amp;bull;&amp;bull;&amp;bull;-&amp;bull;&amp;bull;-6789&lt;/p&gt;&lt;p class=&quot;a-hint&quot;&gt;Shown masked. Never displayed in full.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="selects">
+        <h2 id="selects">Select, combobox and multi-select</h2>
+        <p>Our own listbox: arrow keys move, typing jumps to a match, Enter selects and Escape closes. A hidden input carries the value.</p>
+        <div class="a-example a-example--wide">
+          <h3 class="a-example__title">Select, searchable and grouped</h3>
+          <div class="a-example__preview a-example__preview--stack">
+            <div class="a-form-grid a-form-grid--3 a-demo-grid">
+              <div class="a-field ">
+              <label class="a-label" id="demo-software-label" for="demo-software"><span>Accounting software</span></label>
+              <div class="a-select" data-listbox="select" data-icons="check search">
+                <button type="button" class="a-select__trigger" id="demo-software" aria-haspopup="listbox" aria-expanded="false" aria-controls="demo-software-list" aria-labelledby="demo-software-label demo-software-value" aria-describedby="demo-software-error"><span class="a-select__value" id="demo-software-value">QuickBooks Online</span><svg class="a-icon a-select__chevron" aria-hidden="true"><use href="#chevron-down"></use></svg></button>
+                <input type="hidden" name="demo-software" value="qbo">
+                <div class="a-listbox-popover" hidden>
+                  <ul class="a-listbox" data-scroll-area role="listbox" id="demo-software-list" aria-labelledby="demo-software-label" tabindex="-1"><li role="option" class="a-option" data-value="qbo" aria-selected="true">QuickBooks Online<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="xero" aria-selected="false">Xero<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="freshbooks" aria-selected="false">FreshBooks<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="wave" aria-selected="false">Wave<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="sage" aria-selected="false">Sage Intacct<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="netsuite" aria-selected="false">NetSuite<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="excel" aria-selected="false">Spreadsheets<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="none" aria-selected="false">None yet<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li></ul>
+                </div>
+              </div>
+              <p class="a-error" id="demo-software-error"></p>
+            </div>
+              <div class="a-field ">
+              <label class="a-label" id="demo-state-label" for="demo-state"><span>State of formation</span></label>
+              <div class="a-select" data-listbox="select" data-source="us-states" data-icons="check search">
+                <button type="button" class="a-select__trigger" id="demo-state" aria-haspopup="listbox" aria-expanded="false" aria-controls="demo-state-list" aria-labelledby="demo-state-label demo-state-value" aria-describedby="demo-state-hint demo-state-error"><span class="a-select__value is-placeholder" id="demo-state-value">Choose a state</span><svg class="a-icon a-select__chevron" aria-hidden="true"><use href="#chevron-down"></use></svg></button>
+                <input type="hidden" name="demo-state" value="">
+                <div class="a-listbox-popover" hidden>
+                <div class="a-listbox-popover__search"><div class="a-input-group"><svg class="a-icon" aria-hidden="true"><use href="#search"></use></svg><input class="a-input" type="text" data-listbox-search role="combobox" aria-expanded="false" aria-autocomplete="list" aria-controls="demo-state-list" aria-label="Search state of formation" autocomplete="off"></div></div>
+                  <ul class="a-listbox" data-scroll-area role="listbox" id="demo-state-list" aria-labelledby="demo-state-label" tabindex="-1"></ul>
+                </div>
+              </div>
+              <p class="a-hint" id="demo-state-hint">Where your business is registered.</p>
+              <p class="a-error" id="demo-state-error"></p>
+            </div>
+              <div class="a-field ">
+              <label class="a-label" id="demo-entity-label" for="demo-entity"><span>Entity type</span></label>
+              <div class="a-select" data-listbox="select" data-icons="check search">
+                <button type="button" class="a-select__trigger" id="demo-entity" aria-haspopup="listbox" aria-expanded="false" aria-controls="demo-entity-list" aria-labelledby="demo-entity-label demo-entity-value" aria-describedby="demo-entity-error"><span class="a-select__value is-placeholder" id="demo-entity-value">Choose entity type</span><svg class="a-icon a-select__chevron" aria-hidden="true"><use href="#chevron-down"></use></svg></button>
+                <input type="hidden" name="demo-entity" value="">
+                <div class="a-listbox-popover" hidden>
+                  <ul class="a-listbox" data-scroll-area role="listbox" id="demo-entity-list" aria-labelledby="demo-entity-label" tabindex="-1"><li role="presentation"><p class="a-listbox__group-label" id="demo-entity-g0">Corporations</p><ul role="group" class="a-listbox__group" aria-labelledby="demo-entity-g0"><li role="option" class="a-option" data-value="c-corp" aria-selected="false">C corporation<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="s-corp" aria-selected="false">S corporation<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li></ul></li><li role="presentation"><p class="a-listbox__group-label" id="demo-entity-g1">Partnerships</p><ul role="group" class="a-listbox__group" aria-labelledby="demo-entity-g1"><li role="option" class="a-option" data-value="llc-multi" aria-selected="false">Multi-member LLC<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="partnership" aria-selected="false">General partnership<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li></ul></li><li role="presentation"><p class="a-listbox__group-label" id="demo-entity-g2">Single owner</p><ul role="group" class="a-listbox__group" aria-labelledby="demo-entity-g2"><li role="option" class="a-option" data-value="llc-single" aria-selected="false">Single-member LLC<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="sole" aria-selected="false">Sole proprietorship<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li></ul></li></ul>
+                </div>
+              </div>
+              <p class="a-error" id="demo-entity-error"></p>
+            </div>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-6">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-6" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-form-grid a-form-grid--3 a-demo-grid&quot;&gt;
+  &lt;div class=&quot;a-field &quot;&gt;
+  &lt;label class=&quot;a-label&quot; id=&quot;demo-software-label&quot; for=&quot;demo-software&quot;&gt;&lt;span&gt;Accounting software&lt;/span&gt;&lt;/label&gt;
+  &lt;div class=&quot;a-select&quot; data-listbox=&quot;select&quot; data-icons=&quot;check search&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;a-select__trigger&quot; id=&quot;demo-software&quot; aria-haspopup=&quot;listbox&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;demo-software-list&quot; aria-labelledby=&quot;demo-software-label demo-software-value&quot; aria-describedby=&quot;demo-software-error&quot;&gt;&lt;span class=&quot;a-select__value&quot; id=&quot;demo-software-value&quot;&gt;QuickBooks Online&lt;/span&gt;&lt;svg class=&quot;a-icon a-select__chevron&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#chevron-down&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;
+    &lt;input type=&quot;hidden&quot; name=&quot;demo-software&quot; value=&quot;qbo&quot;&gt;
+    &lt;div class=&quot;a-listbox-popover&quot; hidden&gt;
+      &lt;ul class=&quot;a-listbox&quot; data-scroll-area role=&quot;listbox&quot; id=&quot;demo-software-list&quot; aria-labelledby=&quot;demo-software-label&quot; tabindex=&quot;-1&quot;&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;qbo&quot; aria-selected=&quot;true&quot;&gt;QuickBooks Online&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;xero&quot; aria-selected=&quot;false&quot;&gt;Xero&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;freshbooks&quot; aria-selected=&quot;false&quot;&gt;FreshBooks&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;wave&quot; aria-selected=&quot;false&quot;&gt;Wave&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;sage&quot; aria-selected=&quot;false&quot;&gt;Sage Intacct&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;netsuite&quot; aria-selected=&quot;false&quot;&gt;NetSuite&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;excel&quot; aria-selected=&quot;false&quot;&gt;Spreadsheets&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;none&quot; aria-selected=&quot;false&quot;&gt;None yet&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p class=&quot;a-error&quot; id=&quot;demo-software-error&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+  &lt;div class=&quot;a-field &quot;&gt;
+  &lt;label class=&quot;a-label&quot; id=&quot;demo-state-label&quot; for=&quot;demo-state&quot;&gt;&lt;span&gt;State of formation&lt;/span&gt;&lt;/label&gt;
+  &lt;div class=&quot;a-select&quot; data-listbox=&quot;select&quot; data-source=&quot;us-states&quot; data-icons=&quot;check search&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;a-select__trigger&quot; id=&quot;demo-state&quot; aria-haspopup=&quot;listbox&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;demo-state-list&quot; aria-labelledby=&quot;demo-state-label demo-state-value&quot; aria-describedby=&quot;demo-state-hint demo-state-error&quot;&gt;&lt;span class=&quot;a-select__value is-placeholder&quot; id=&quot;demo-state-value&quot;&gt;Choose a state&lt;/span&gt;&lt;svg class=&quot;a-icon a-select__chevron&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#chevron-down&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;
+    &lt;input type=&quot;hidden&quot; name=&quot;demo-state&quot; value=&quot;&quot;&gt;
+    &lt;div class=&quot;a-listbox-popover&quot; hidden&gt;
+    &lt;div class=&quot;a-listbox-popover__search&quot;&gt;&lt;div class=&quot;a-input-group&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#search&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;input class=&quot;a-input&quot; type=&quot;text&quot; data-listbox-search role=&quot;combobox&quot; aria-expanded=&quot;false&quot; aria-autocomplete=&quot;list&quot; aria-controls=&quot;demo-state-list&quot; aria-label=&quot;Search state of formation&quot; autocomplete=&quot;off&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;ul class=&quot;a-listbox&quot; data-scroll-area role=&quot;listbox&quot; id=&quot;demo-state-list&quot; aria-labelledby=&quot;demo-state-label&quot; tabindex=&quot;-1&quot;&gt;&lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p class=&quot;a-hint&quot; id=&quot;demo-state-hint&quot;&gt;Where your business is registered.&lt;/p&gt;
+  &lt;p class=&quot;a-error&quot; id=&quot;demo-state-error&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+  &lt;div class=&quot;a-field &quot;&gt;
+  &lt;label class=&quot;a-label&quot; id=&quot;demo-entity-label&quot; for=&quot;demo-entity&quot;&gt;&lt;span&gt;Entity type&lt;/span&gt;&lt;/label&gt;
+  &lt;div class=&quot;a-select&quot; data-listbox=&quot;select&quot; data-icons=&quot;check search&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;a-select__trigger&quot; id=&quot;demo-entity&quot; aria-haspopup=&quot;listbox&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;demo-entity-list&quot; aria-labelledby=&quot;demo-entity-label demo-entity-value&quot; aria-describedby=&quot;demo-entity-error&quot;&gt;&lt;span class=&quot;a-select__value is-placeholder&quot; id=&quot;demo-entity-value&quot;&gt;Choose entity type&lt;/span&gt;&lt;svg class=&quot;a-icon a-select__chevron&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#chevron-down&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;
+    &lt;input type=&quot;hidden&quot; name=&quot;demo-entity&quot; value=&quot;&quot;&gt;
+    &lt;div class=&quot;a-listbox-popover&quot; hidden&gt;
+      &lt;ul class=&quot;a-listbox&quot; data-scroll-area role=&quot;listbox&quot; id=&quot;demo-entity-list&quot; aria-labelledby=&quot;demo-entity-label&quot; tabindex=&quot;-1&quot;&gt;&lt;li role=&quot;presentation&quot;&gt;&lt;p class=&quot;a-listbox__group-label&quot; id=&quot;demo-entity-g0&quot;&gt;Corporations&lt;/p&gt;&lt;ul role=&quot;group&quot; class=&quot;a-listbox__group&quot; aria-labelledby=&quot;demo-entity-g0&quot;&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;c-corp&quot; aria-selected=&quot;false&quot;&gt;C corporation&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;s-corp&quot; aria-selected=&quot;false&quot;&gt;S corporation&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li role=&quot;presentation&quot;&gt;&lt;p class=&quot;a-listbox__group-label&quot; id=&quot;demo-entity-g1&quot;&gt;Partnerships&lt;/p&gt;&lt;ul role=&quot;group&quot; class=&quot;a-listbox__group&quot; aria-labelledby=&quot;demo-entity-g1&quot;&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;llc-multi&quot; aria-selected=&quot;false&quot;&gt;Multi-member LLC&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;partnership&quot; aria-selected=&quot;false&quot;&gt;General partnership&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li role=&quot;presentation&quot;&gt;&lt;p class=&quot;a-listbox__group-label&quot; id=&quot;demo-entity-g2&quot;&gt;Single owner&lt;/p&gt;&lt;ul role=&quot;group&quot; class=&quot;a-listbox__group&quot; aria-labelledby=&quot;demo-entity-g2&quot;&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;llc-single&quot; aria-selected=&quot;false&quot;&gt;Single-member LLC&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;sole&quot; aria-selected=&quot;false&quot;&gt;Sole proprietorship&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p class=&quot;a-error&quot; id=&quot;demo-entity-error&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div class="a-example a-example--wide">
+          <h3 class="a-example__title">Combobox and multi-select</h3>
+          <div class="a-example__preview a-example__preview--stack">
+            <div class="a-form-grid a-form-grid--2 a-demo-grid">
+              <div class="a-field">
+                <label class="a-label" for="demo-industry" id="demo-industry-label">Industry</label>
+                <div class="a-select" data-listbox="combobox" data-icons="check">
+                  <div class="a-input-group"><svg class="a-icon" aria-hidden="true"><use href="#search"></use></svg><input class="a-input" id="demo-industry" type="text" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-controls="demo-industry-list" autocomplete="off" placeholder="Start typing, for example dental"></div>
+                  <input type="hidden" name="industry" value="">
+                  <div class="a-listbox-popover" hidden><ul class="a-listbox" data-scroll-area role="listbox" id="demo-industry-list" aria-labelledby="demo-industry-label"><li role="option" class="a-option" data-value="dental" aria-selected="false">Dental practice<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="ecommerce" aria-selected="false">Ecommerce<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="construction" aria-selected="false">Construction<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="restaurant" aria-selected="false">Restaurant and food service<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="realestate" aria-selected="false">Real estate<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="agency" aria-selected="false">Marketing agency<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="saas" aria-selected="false">Software and SaaS<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="medical" aria-selected="false">Medical practice<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="legal" aria-selected="false">Law firm<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="nonprofit" aria-selected="false">Nonprofit<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li></ul></div>
+                </div>
+              </div>
+              <div class="a-field">
+                <label class="a-label" for="demo-services" id="demo-services-label">Services needed</label>
+                <div class="a-select" data-listbox="multi" data-icons="check close">
+                  <div class="a-multiselect__control"><span data-chips class="a-tag-list"></span><input class="a-multiselect__input" id="demo-services" type="text" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-controls="demo-services-list" autocomplete="off" placeholder="Add a service"></div>
+                  <input type="hidden" name="services" value="">
+                  <div class="a-listbox-popover" hidden><ul class="a-listbox" data-scroll-area role="listbox" id="demo-services-list" aria-labelledby="demo-services-label" aria-multiselectable="true"><li role="option" class="a-option" data-value="monthly" aria-selected="true">Monthly bookkeeping<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="catchup" aria-selected="false">Catch-up bookkeeping<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="cleanup" aria-selected="false">Books cleanup<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="payroll" aria-selected="true">Payroll support<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="ap" aria-selected="false">Accounts payable<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="salestax" aria-selected="false">Sales tax filing support<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li></ul></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-7">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-7" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-form-grid a-form-grid--2 a-demo-grid&quot;&gt;
+  &lt;div class=&quot;a-field&quot;&gt;
+    &lt;label class=&quot;a-label&quot; for=&quot;demo-industry&quot; id=&quot;demo-industry-label&quot;&gt;Industry&lt;/label&gt;
+    &lt;div class=&quot;a-select&quot; data-listbox=&quot;combobox&quot; data-icons=&quot;check&quot;&gt;
+      &lt;div class=&quot;a-input-group&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#search&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;input class=&quot;a-input&quot; id=&quot;demo-industry&quot; type=&quot;text&quot; role=&quot;combobox&quot; aria-expanded=&quot;false&quot; aria-autocomplete=&quot;list&quot; aria-controls=&quot;demo-industry-list&quot; autocomplete=&quot;off&quot; placeholder=&quot;Start typing, for example dental&quot;&gt;&lt;/div&gt;
+      &lt;input type=&quot;hidden&quot; name=&quot;industry&quot; value=&quot;&quot;&gt;
+      &lt;div class=&quot;a-listbox-popover&quot; hidden&gt;&lt;ul class=&quot;a-listbox&quot; data-scroll-area role=&quot;listbox&quot; id=&quot;demo-industry-list&quot; aria-labelledby=&quot;demo-industry-label&quot;&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;dental&quot; aria-selected=&quot;false&quot;&gt;Dental practice&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;ecommerce&quot; aria-selected=&quot;false&quot;&gt;Ecommerce&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;construction&quot; aria-selected=&quot;false&quot;&gt;Construction&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;restaurant&quot; aria-selected=&quot;false&quot;&gt;Restaurant and food service&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;realestate&quot; aria-selected=&quot;false&quot;&gt;Real estate&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;agency&quot; aria-selected=&quot;false&quot;&gt;Marketing agency&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;saas&quot; aria-selected=&quot;false&quot;&gt;Software and SaaS&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;medical&quot; aria-selected=&quot;false&quot;&gt;Medical practice&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;legal&quot; aria-selected=&quot;false&quot;&gt;Law firm&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;nonprofit&quot; aria-selected=&quot;false&quot;&gt;Nonprofit&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;a-field&quot;&gt;
+    &lt;label class=&quot;a-label&quot; for=&quot;demo-services&quot; id=&quot;demo-services-label&quot;&gt;Services needed&lt;/label&gt;
+    &lt;div class=&quot;a-select&quot; data-listbox=&quot;multi&quot; data-icons=&quot;check close&quot;&gt;
+      &lt;div class=&quot;a-multiselect__control&quot;&gt;&lt;span data-chips class=&quot;a-tag-list&quot;&gt;&lt;/span&gt;&lt;input class=&quot;a-multiselect__input&quot; id=&quot;demo-services&quot; type=&quot;text&quot; role=&quot;combobox&quot; aria-expanded=&quot;false&quot; aria-autocomplete=&quot;list&quot; aria-controls=&quot;demo-services-list&quot; autocomplete=&quot;off&quot; placeholder=&quot;Add a service&quot;&gt;&lt;/div&gt;
+      &lt;input type=&quot;hidden&quot; name=&quot;services&quot; value=&quot;&quot;&gt;
+      &lt;div class=&quot;a-listbox-popover&quot; hidden&gt;&lt;ul class=&quot;a-listbox&quot; data-scroll-area role=&quot;listbox&quot; id=&quot;demo-services-list&quot; aria-labelledby=&quot;demo-services-label&quot; aria-multiselectable=&quot;true&quot;&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;monthly&quot; aria-selected=&quot;true&quot;&gt;Monthly bookkeeping&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;catchup&quot; aria-selected=&quot;false&quot;&gt;Catch-up bookkeeping&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;cleanup&quot; aria-selected=&quot;false&quot;&gt;Books cleanup&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;payroll&quot; aria-selected=&quot;true&quot;&gt;Payroll support&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;ap&quot; aria-selected=&quot;false&quot;&gt;Accounts payable&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;li role=&quot;option&quot; class=&quot;a-option&quot; data-value=&quot;salestax&quot; aria-selected=&quot;false&quot;&gt;Sales tax filing support&lt;svg class=&quot;a-icon a-option__check&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div class="a-example">
+          <h3 class="a-example__title">Phone with country</h3>
+          <div class="a-example__preview ">
+            <div class="a-field a-demo-narrow">
+              <label class="a-label" for="demo-phone">Phone</label>
+              <div class="a-phone">
+                <div class="a-select" data-listbox="select" data-source="phone-countries" data-icons="check">
+                  <button type="button" class="a-select__trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="demo-country-list" aria-labelledby="demo-country-label demo-country-value"><span class="a-visually-hidden" id="demo-country-label">Country code</span><span class="a-select__value" id="demo-country-value">US +1</span><svg class="a-icon a-select__chevron" aria-hidden="true"><use href="#chevron-down"></use></svg></button>
+                  <input type="hidden" name="phone-country" value="+1|US">
+                  <div class="a-listbox-popover" hidden><ul class="a-listbox" data-scroll-area role="listbox" id="demo-country-list" aria-label="Country code" tabindex="-1"></ul></div>
+                </div>
+                <input class="a-input" id="demo-phone" type="tel" inputmode="tel" data-mask="phone" autocomplete="tel-national" placeholder="(415) 555-0132">
+              </div>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-8">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-8" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-field a-demo-narrow&quot;&gt;
+  &lt;label class=&quot;a-label&quot; for=&quot;demo-phone&quot;&gt;Phone&lt;/label&gt;
+  &lt;div class=&quot;a-phone&quot;&gt;
+    &lt;div class=&quot;a-select&quot; data-listbox=&quot;select&quot; data-source=&quot;phone-countries&quot; data-icons=&quot;check&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;a-select__trigger&quot; aria-haspopup=&quot;listbox&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;demo-country-list&quot; aria-labelledby=&quot;demo-country-label demo-country-value&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot; id=&quot;demo-country-label&quot;&gt;Country code&lt;/span&gt;&lt;span class=&quot;a-select__value&quot; id=&quot;demo-country-value&quot;&gt;US +1&lt;/span&gt;&lt;svg class=&quot;a-icon a-select__chevron&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#chevron-down&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;
+      &lt;input type=&quot;hidden&quot; name=&quot;phone-country&quot; value=&quot;+1|US&quot;&gt;
+      &lt;div class=&quot;a-listbox-popover&quot; hidden&gt;&lt;ul class=&quot;a-listbox&quot; data-scroll-area role=&quot;listbox&quot; id=&quot;demo-country-list&quot; aria-label=&quot;Country code&quot; tabindex=&quot;-1&quot;&gt;&lt;/ul&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;input class=&quot;a-input&quot; id=&quot;demo-phone&quot; type=&quot;tel&quot; inputmode=&quot;tel&quot; data-mask=&quot;phone&quot; autocomplete=&quot;tel-national&quot; placeholder=&quot;(415) 555-0132&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="choices">
+        <h2 id="choices">Checkbox, radio, switch</h2>
+        <p>Real inputs with our own visuals. Cards make the whole surface the click target.</p>
+        <div class="a-example a-example--wide">
+          <h3 class="a-example__title">Checkboxes and radios</h3>
+          <div class="a-example__preview ">
+            <div class="a-demo-grid">
+              <fieldset class="a-fieldset"><legend>Email me about</legend>
+                <div class="a-choice-list">
+                  <label class="a-check"><input class="a-check__input" type="checkbox" id="demo-c1" name="demo-c1" checked><span class="a-check__label">Payment receipts</span></label>
+                  <label class="a-check"><input class="a-check__input" type="checkbox" id="demo-c2" name="demo-c2" aria-describedby="demo-c2-hint"><span class="a-check__label">Monthly close reports</span><span class="a-check__hint" id="demo-c2-hint">Sent on the 10th of each month.</span></label>
+                  <label class="a-check"><input class="a-check__input" type="checkbox" id="demo-c3" name="demo-c3"><span class="a-check__label">Product updates</span></label>
+                </div>
+              </fieldset>
+              <fieldset class="a-fieldset"><legend>Preferred contact</legend>
+                <div class="a-choice-list">
+                  <label class="a-radio"><input class="a-radio__input" type="radio" id="demo-r1" name="contact" value="demo-r1" checked><span class="a-check__label">Email</span></label>
+                  <label class="a-radio"><input class="a-radio__input" type="radio" id="demo-r2" name="contact" value="demo-r2"><span class="a-check__label">Phone call</span><span class="a-check__hint">Our assistant calls within business hours.</span></label>
+                  <label class="a-radio"><input class="a-radio__input" type="radio" id="demo-r3" name="contact" value="demo-r3"><span class="a-check__label">Text message</span></label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-9">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-9" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-demo-grid&quot;&gt;
+  &lt;fieldset class=&quot;a-fieldset&quot;&gt;&lt;legend&gt;Email me about&lt;/legend&gt;
+    &lt;div class=&quot;a-choice-list&quot;&gt;
+      &lt;label class=&quot;a-check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; id=&quot;demo-c1&quot; name=&quot;demo-c1&quot; checked&gt;&lt;span class=&quot;a-check__label&quot;&gt;Payment receipts&lt;/span&gt;&lt;/label&gt;
+      &lt;label class=&quot;a-check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; id=&quot;demo-c2&quot; name=&quot;demo-c2&quot; aria-describedby=&quot;demo-c2-hint&quot;&gt;&lt;span class=&quot;a-check__label&quot;&gt;Monthly close reports&lt;/span&gt;&lt;span class=&quot;a-check__hint&quot; id=&quot;demo-c2-hint&quot;&gt;Sent on the 10th of each month.&lt;/span&gt;&lt;/label&gt;
+      &lt;label class=&quot;a-check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; id=&quot;demo-c3&quot; name=&quot;demo-c3&quot;&gt;&lt;span class=&quot;a-check__label&quot;&gt;Product updates&lt;/span&gt;&lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+  &lt;fieldset class=&quot;a-fieldset&quot;&gt;&lt;legend&gt;Preferred contact&lt;/legend&gt;
+    &lt;div class=&quot;a-choice-list&quot;&gt;
+      &lt;label class=&quot;a-radio&quot;&gt;&lt;input class=&quot;a-radio__input&quot; type=&quot;radio&quot; id=&quot;demo-r1&quot; name=&quot;contact&quot; value=&quot;demo-r1&quot; checked&gt;&lt;span class=&quot;a-check__label&quot;&gt;Email&lt;/span&gt;&lt;/label&gt;
+      &lt;label class=&quot;a-radio&quot;&gt;&lt;input class=&quot;a-radio__input&quot; type=&quot;radio&quot; id=&quot;demo-r2&quot; name=&quot;contact&quot; value=&quot;demo-r2&quot;&gt;&lt;span class=&quot;a-check__label&quot;&gt;Phone call&lt;/span&gt;&lt;span class=&quot;a-check__hint&quot;&gt;Our assistant calls within business hours.&lt;/span&gt;&lt;/label&gt;
+      &lt;label class=&quot;a-radio&quot;&gt;&lt;input class=&quot;a-radio__input&quot; type=&quot;radio&quot; id=&quot;demo-r3&quot; name=&quot;contact&quot; value=&quot;demo-r3&quot;&gt;&lt;span class=&quot;a-check__label&quot;&gt;Text message&lt;/span&gt;&lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div class="a-example a-example--wide">
+          <h3 class="a-example__title">Choice cards</h3>
+          <div class="a-example__preview a-example__preview--stack">
+            <fieldset class="a-fieldset a-demo-grid"><legend>How do you want to pay?</legend>
+              <div class="a-choice-cards">
+                <label class="a-choice-card"><input class="a-radio__input" type="radio" id="demo-plan-monthly" name="billing" value="demo-plan-monthly" checked><span class="a-choice-card__icon"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="#recurring-payment-duo"></use></svg></span><span class="a-choice-card__title">Monthly plan</span><span class="a-choice-card__text">Ongoing bookkeeping, billed every month.</span><span class="a-choice-card__meta">From $299 per month</span></label>
+                <label class="a-choice-card"><input class="a-radio__input" type="radio" id="demo-plan-project" name="billing" value="demo-plan-project"><span class="a-choice-card__icon"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="#briefcase-duo"></use></svg></span><span class="a-choice-card__title">One-time project</span><span class="a-choice-card__text">Catch-up or cleanup, billed once.</span><span class="a-choice-card__meta">From $950</span></label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-10">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-10" tabindex="0" data-scroll-area hidden><code>&lt;fieldset class=&quot;a-fieldset a-demo-grid&quot;&gt;&lt;legend&gt;How do you want to pay?&lt;/legend&gt;
+  &lt;div class=&quot;a-choice-cards&quot;&gt;
+    &lt;label class=&quot;a-choice-card&quot;&gt;&lt;input class=&quot;a-radio__input&quot; type=&quot;radio&quot; id=&quot;demo-plan-monthly&quot; name=&quot;billing&quot; value=&quot;demo-plan-monthly&quot; checked&gt;&lt;span class=&quot;a-choice-card__icon&quot;&gt;&lt;svg class=&quot;a-icon a-icon--32&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#recurring-payment-duo&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span class=&quot;a-choice-card__title&quot;&gt;Monthly plan&lt;/span&gt;&lt;span class=&quot;a-choice-card__text&quot;&gt;Ongoing bookkeeping, billed every month.&lt;/span&gt;&lt;span class=&quot;a-choice-card__meta&quot;&gt;From $299 per month&lt;/span&gt;&lt;/label&gt;
+    &lt;label class=&quot;a-choice-card&quot;&gt;&lt;input class=&quot;a-radio__input&quot; type=&quot;radio&quot; id=&quot;demo-plan-project&quot; name=&quot;billing&quot; value=&quot;demo-plan-project&quot;&gt;&lt;span class=&quot;a-choice-card__icon&quot;&gt;&lt;svg class=&quot;a-icon a-icon--32&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#briefcase-duo&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span class=&quot;a-choice-card__title&quot;&gt;One-time project&lt;/span&gt;&lt;span class=&quot;a-choice-card__text&quot;&gt;Catch-up or cleanup, billed once.&lt;/span&gt;&lt;span class=&quot;a-choice-card__meta&quot;&gt;From $950&lt;/span&gt;&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/fieldset&gt;</code></pre>
+        </div>
+        <div class="a-example">
+          <h3 class="a-example__title">Switches</h3>
+          <div class="a-example__preview ">
+            <div class="a-choice-list">
+              <label class="a-switch"><input class="a-switch__input" type="checkbox" role="switch" checked>Trigger AI call after signup</label>
+              <label class="a-switch"><input class="a-switch__input" type="checkbox" role="switch">Notify team on failed payments</label>
+              <label class="a-switch"><input class="a-switch__input" type="checkbox" role="switch" disabled>Two-factor sign in (required by admin)</label>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-11">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-11" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-choice-list&quot;&gt;
+  &lt;label class=&quot;a-switch&quot;&gt;&lt;input class=&quot;a-switch__input&quot; type=&quot;checkbox&quot; role=&quot;switch&quot; checked&gt;Trigger AI call after signup&lt;/label&gt;
+  &lt;label class=&quot;a-switch&quot;&gt;&lt;input class=&quot;a-switch__input&quot; type=&quot;checkbox&quot; role=&quot;switch&quot;&gt;Notify team on failed payments&lt;/label&gt;
+  &lt;label class=&quot;a-switch&quot;&gt;&lt;input class=&quot;a-switch__input&quot; type=&quot;checkbox&quot; role=&quot;switch&quot; disabled&gt;Two-factor sign in (required by admin)&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="ranges">
+        <h2 id="ranges">Slider, segmented control, toggle group</h2>
+        <p>Sliders for approximate amounts, segmented controls for one of a few options, toggle groups for view settings.</p>
+        <div class="a-example a-example--wide">
+          <h3 class="a-example__title">Sliders</h3>
+          <div class="a-example__preview ">
+            <div class="a-demo-grid">
+              <div class="a-slider" data-slider data-format="transactions">
+                <div class="a-slider__head"><label for="demo-volume">Monthly transactions</label><output class="a-slider__value" for="demo-volume" data-slider-output></output></div>
+                <div class="a-slider__track"><span class="a-slider__rail"></span><input class="a-range" id="demo-volume" type="range" min="0" max="1000" step="25" value="300"></div>
+                <div class="a-slider__scale" aria-hidden="true"><span>0</span><span>500</span><span>1,000+</span></div>
+              </div>
+              <div class="a-slider a-slider--range" data-slider data-format="currency">
+                <div class="a-slider__head"><span id="demo-range-label">Amount</span><output class="a-slider__value" data-slider-output></output></div>
+                <div class="a-slider__track"><span class="a-slider__rail"></span><input class="a-range" type="range" min="0" max="5000" step="50" value="250" aria-label="Minimum amount"><input class="a-range" type="range" min="0" max="5000" step="50" value="2500" aria-label="Maximum amount"></div>
+              </div>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-12">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-12" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-demo-grid&quot;&gt;
+  &lt;div class=&quot;a-slider&quot; data-slider data-format=&quot;transactions&quot;&gt;
+    &lt;div class=&quot;a-slider__head&quot;&gt;&lt;label for=&quot;demo-volume&quot;&gt;Monthly transactions&lt;/label&gt;&lt;output class=&quot;a-slider__value&quot; for=&quot;demo-volume&quot; data-slider-output&gt;&lt;/output&gt;&lt;/div&gt;
+    &lt;div class=&quot;a-slider__track&quot;&gt;&lt;span class=&quot;a-slider__rail&quot;&gt;&lt;/span&gt;&lt;input class=&quot;a-range&quot; id=&quot;demo-volume&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;1000&quot; step=&quot;25&quot; value=&quot;300&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;a-slider__scale&quot; aria-hidden=&quot;true&quot;&gt;&lt;span&gt;0&lt;/span&gt;&lt;span&gt;500&lt;/span&gt;&lt;span&gt;1,000+&lt;/span&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;a-slider a-slider--range&quot; data-slider data-format=&quot;currency&quot;&gt;
+    &lt;div class=&quot;a-slider__head&quot;&gt;&lt;span id=&quot;demo-range-label&quot;&gt;Amount&lt;/span&gt;&lt;output class=&quot;a-slider__value&quot; data-slider-output&gt;&lt;/output&gt;&lt;/div&gt;
+    &lt;div class=&quot;a-slider__track&quot;&gt;&lt;span class=&quot;a-slider__rail&quot;&gt;&lt;/span&gt;&lt;input class=&quot;a-range&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;5000&quot; step=&quot;50&quot; value=&quot;250&quot; aria-label=&quot;Minimum amount&quot;&gt;&lt;input class=&quot;a-range&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;5000&quot; step=&quot;50&quot; value=&quot;2500&quot; aria-label=&quot;Maximum amount&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div class="a-example">
+          <h3 class="a-example__title">Segmented control and toggle group</h3>
+          <div class="a-example__preview ">
+            <fieldset class="a-segmented"><legend class="a-visually-hidden">Transaction volume</legend>
+              <label class="a-segmented__option"><input type="radio" name="volume" value="low"><span>Under 100</span></label>
+              <label class="a-segmented__option"><input type="radio" name="volume" value="mid" checked><span>100 to 300</span></label>
+              <label class="a-segmented__option"><input type="radio" name="volume" value="high"><span>300+</span></label>
+            </fieldset>
+            <div class="a-segmented" role="group" aria-label="Table density" data-toggle-group="single">
+              <button type="button" class="a-toggle" aria-pressed="true">Comfortable</button>
+              <button type="button" class="a-toggle" aria-pressed="false">Compact</button>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-13">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-13" tabindex="0" data-scroll-area hidden><code>&lt;fieldset class=&quot;a-segmented&quot;&gt;&lt;legend class=&quot;a-visually-hidden&quot;&gt;Transaction volume&lt;/legend&gt;
+  &lt;label class=&quot;a-segmented__option&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;volume&quot; value=&quot;low&quot;&gt;&lt;span&gt;Under 100&lt;/span&gt;&lt;/label&gt;
+  &lt;label class=&quot;a-segmented__option&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;volume&quot; value=&quot;mid&quot; checked&gt;&lt;span&gt;100 to 300&lt;/span&gt;&lt;/label&gt;
+  &lt;label class=&quot;a-segmented__option&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;volume&quot; value=&quot;high&quot;&gt;&lt;span&gt;300+&lt;/span&gt;&lt;/label&gt;
+&lt;/fieldset&gt;
+&lt;div class=&quot;a-segmented&quot; role=&quot;group&quot; aria-label=&quot;Table density&quot; data-toggle-group=&quot;single&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;a-toggle&quot; aria-pressed=&quot;true&quot;&gt;Comfortable&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;a-toggle&quot; aria-pressed=&quot;false&quot;&gt;Compact&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="dates">
+        <h2 id="dates">Date and time</h2>
+        <p>Type a date or pick it. In the calendar, arrows move by day and week, Page Up and Page Down move by month, and the title jumps to months and years.</p>
+        <div class="a-example a-example--wide">
+          <h3 class="a-example__title">Date, range and time</h3>
+          <div class="a-example__preview a-example__preview--stack">
+            <div class="a-form-grid a-form-grid--3 a-demo-grid">
+              <div class="a-field ">
+              <label class="a-label" for="demo-start"><span>Preferred start date</span></label>
+              <div class="a-datepicker" data-datepicker data-min="today" data-icons="chevron-left chevron-right chevron-down">
+                <div class="a-input-group"><input class="a-input" type="text" inputmode="numeric" data-mask="date" placeholder="MM/DD/YYYY" autocomplete="off" id="demo-start" name="demo-start" aria-describedby="demo-start-hint demo-start-error"><button type="button" class="a-input-group__action" data-datepicker-open aria-haspopup="dialog" aria-expanded="false" aria-label="Choose date"><svg class="a-icon" aria-hidden="true"><use href="#calendar"></use></svg></button></div>
+              </div>
+              <p class="a-hint" id="demo-start-hint">Weekdays only. Earliest is tomorrow.</p>
+              <p class="a-error" id="demo-start-error"></p>
+            </div>
+              <div class="a-field ">
+              <label class="a-label" for="demo-period"><span>Statement period</span></label>
+              <div class="a-datepicker" data-datepicker="range" data-icons="chevron-left chevron-right chevron-down">
+                <div class="a-input-group"><input class="a-input" type="text" inputmode="numeric" data-mask="date" placeholder="MM/DD/YYYY" autocomplete="off" id="demo-period" name="demo-period-start" aria-label="Start date" aria-describedby="demo-period-error"><span class="a-input-group__sep" aria-hidden="true">to</span><input class="a-input" type="text" inputmode="numeric" data-mask="date" placeholder="MM/DD/YYYY" autocomplete="off" id="demo-period-end" name="demo-period-end" aria-label="End date"><button type="button" class="a-input-group__action" data-datepicker-open aria-haspopup="dialog" aria-expanded="false" aria-label="Choose date range"><svg class="a-icon" aria-hidden="true"><use href="#calendar"></use></svg></button></div>
+              </div>
+              <p class="a-error" id="demo-period-error"></p>
+            </div>
+              <div class="a-field ">
+              <label class="a-label" id="demo-time-label" for="demo-time"><span>Call time (ET)</span></label>
+              <div class="a-select" data-listbox="select" data-source="times" data-icons="check search">
+                <button type="button" class="a-select__trigger" id="demo-time" aria-haspopup="listbox" aria-expanded="false" aria-controls="demo-time-list" aria-labelledby="demo-time-label demo-time-value" aria-describedby="demo-time-error"><span class="a-select__value is-placeholder" id="demo-time-value">Choose a time</span><svg class="a-icon a-select__chevron" aria-hidden="true"><use href="#chevron-down"></use></svg></button>
+                <input type="hidden" name="demo-time" value="">
+                <div class="a-listbox-popover" hidden>
+                  <ul class="a-listbox" data-scroll-area role="listbox" id="demo-time-list" aria-labelledby="demo-time-label" tabindex="-1"></ul>
+                </div>
+              </div>
+              <p class="a-error" id="demo-time-error"></p>
+            </div>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-14">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-14" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-form-grid a-form-grid--3 a-demo-grid&quot;&gt;
+  &lt;div class=&quot;a-field &quot;&gt;
+  &lt;label class=&quot;a-label&quot; for=&quot;demo-start&quot;&gt;&lt;span&gt;Preferred start date&lt;/span&gt;&lt;/label&gt;
+  &lt;div class=&quot;a-datepicker&quot; data-datepicker data-min=&quot;today&quot; data-icons=&quot;chevron-left chevron-right chevron-down&quot;&gt;
+    &lt;div class=&quot;a-input-group&quot;&gt;&lt;input class=&quot;a-input&quot; type=&quot;text&quot; inputmode=&quot;numeric&quot; data-mask=&quot;date&quot; placeholder=&quot;MM/DD/YYYY&quot; autocomplete=&quot;off&quot; id=&quot;demo-start&quot; name=&quot;demo-start&quot; aria-describedby=&quot;demo-start-hint demo-start-error&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-input-group__action&quot; data-datepicker-open aria-haspopup=&quot;dialog&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Choose date&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#calendar&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p class=&quot;a-hint&quot; id=&quot;demo-start-hint&quot;&gt;Weekdays only. Earliest is tomorrow.&lt;/p&gt;
+  &lt;p class=&quot;a-error&quot; id=&quot;demo-start-error&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+  &lt;div class=&quot;a-field &quot;&gt;
+  &lt;label class=&quot;a-label&quot; for=&quot;demo-period&quot;&gt;&lt;span&gt;Statement period&lt;/span&gt;&lt;/label&gt;
+  &lt;div class=&quot;a-datepicker&quot; data-datepicker=&quot;range&quot; data-icons=&quot;chevron-left chevron-right chevron-down&quot;&gt;
+    &lt;div class=&quot;a-input-group&quot;&gt;&lt;input class=&quot;a-input&quot; type=&quot;text&quot; inputmode=&quot;numeric&quot; data-mask=&quot;date&quot; placeholder=&quot;MM/DD/YYYY&quot; autocomplete=&quot;off&quot; id=&quot;demo-period&quot; name=&quot;demo-period-start&quot; aria-label=&quot;Start date&quot; aria-describedby=&quot;demo-period-error&quot;&gt;&lt;span class=&quot;a-input-group__sep&quot; aria-hidden=&quot;true&quot;&gt;to&lt;/span&gt;&lt;input class=&quot;a-input&quot; type=&quot;text&quot; inputmode=&quot;numeric&quot; data-mask=&quot;date&quot; placeholder=&quot;MM/DD/YYYY&quot; autocomplete=&quot;off&quot; id=&quot;demo-period-end&quot; name=&quot;demo-period-end&quot; aria-label=&quot;End date&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-input-group__action&quot; data-datepicker-open aria-haspopup=&quot;dialog&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Choose date range&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#calendar&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p class=&quot;a-error&quot; id=&quot;demo-period-error&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+  &lt;div class=&quot;a-field &quot;&gt;
+  &lt;label class=&quot;a-label&quot; id=&quot;demo-time-label&quot; for=&quot;demo-time&quot;&gt;&lt;span&gt;Call time (ET)&lt;/span&gt;&lt;/label&gt;
+  &lt;div class=&quot;a-select&quot; data-listbox=&quot;select&quot; data-source=&quot;times&quot; data-icons=&quot;check search&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;a-select__trigger&quot; id=&quot;demo-time&quot; aria-haspopup=&quot;listbox&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;demo-time-list&quot; aria-labelledby=&quot;demo-time-label demo-time-value&quot; aria-describedby=&quot;demo-time-error&quot;&gt;&lt;span class=&quot;a-select__value is-placeholder&quot; id=&quot;demo-time-value&quot;&gt;Choose a time&lt;/span&gt;&lt;svg class=&quot;a-icon a-select__chevron&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#chevron-down&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;
+    &lt;input type=&quot;hidden&quot; name=&quot;demo-time&quot; value=&quot;&quot;&gt;
+    &lt;div class=&quot;a-listbox-popover&quot; hidden&gt;
+      &lt;ul class=&quot;a-listbox&quot; data-scroll-area role=&quot;listbox&quot; id=&quot;demo-time-list&quot; aria-labelledby=&quot;demo-time-label&quot; tabindex=&quot;-1&quot;&gt;&lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p class=&quot;a-error&quot; id=&quot;demo-time-error&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="otp">
+        <h2 id="otp">One-time code</h2>
+        <p>Six digits with auto advance and paste support.</p>
+        <div class="a-example">
+          <h3 class="a-example__title">Verification code</h3>
+          <div class="a-example__preview ">
+            <div class="a-field">
+              <p class="a-label" id="demo-otp-label">Enter the 6 digit code sent to m.robles@harborlanedental.com</p>
+              <div class="a-otp" data-otp role="group" aria-labelledby="demo-otp-label">
+                <input class="a-otp__cell" type="text" inputmode="numeric" autocomplete="one-time-code" aria-label="Digit 1" maxlength="1">
+                <input class="a-otp__cell" type="text" inputmode="numeric" aria-label="Digit 2" maxlength="1">
+                <input class="a-otp__cell" type="text" inputmode="numeric" aria-label="Digit 3" maxlength="1">
+                <input class="a-otp__cell" type="text" inputmode="numeric" aria-label="Digit 4" maxlength="1">
+                <input class="a-otp__cell" type="text" inputmode="numeric" aria-label="Digit 5" maxlength="1">
+                <input class="a-otp__cell" type="text" inputmode="numeric" aria-label="Digit 6" maxlength="1">
+                <input type="hidden" name="otp">
+              </div>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-15">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-15" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-field&quot;&gt;
+  &lt;p class=&quot;a-label&quot; id=&quot;demo-otp-label&quot;&gt;Enter the 6 digit code sent to m.robles@harborlanedental.com&lt;/p&gt;
+  &lt;div class=&quot;a-otp&quot; data-otp role=&quot;group&quot; aria-labelledby=&quot;demo-otp-label&quot;&gt;
+    &lt;input class=&quot;a-otp__cell&quot; type=&quot;text&quot; inputmode=&quot;numeric&quot; autocomplete=&quot;one-time-code&quot; aria-label=&quot;Digit 1&quot; maxlength=&quot;1&quot;&gt;
+    &lt;input class=&quot;a-otp__cell&quot; type=&quot;text&quot; inputmode=&quot;numeric&quot; aria-label=&quot;Digit 2&quot; maxlength=&quot;1&quot;&gt;
+    &lt;input class=&quot;a-otp__cell&quot; type=&quot;text&quot; inputmode=&quot;numeric&quot; aria-label=&quot;Digit 3&quot; maxlength=&quot;1&quot;&gt;
+    &lt;input class=&quot;a-otp__cell&quot; type=&quot;text&quot; inputmode=&quot;numeric&quot; aria-label=&quot;Digit 4&quot; maxlength=&quot;1&quot;&gt;
+    &lt;input class=&quot;a-otp__cell&quot; type=&quot;text&quot; inputmode=&quot;numeric&quot; aria-label=&quot;Digit 5&quot; maxlength=&quot;1&quot;&gt;
+    &lt;input class=&quot;a-otp__cell&quot; type=&quot;text&quot; inputmode=&quot;numeric&quot; aria-label=&quot;Digit 6&quot; maxlength=&quot;1&quot;&gt;
+    &lt;input type=&quot;hidden&quot; name=&quot;otp&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="upload">
+        <h2 id="upload">File upload</h2>
+        <p>Drop files or browse. Each file shows progress, and type or size problems are explained on the file itself.</p>
+        <div class="a-example a-example--wide">
+          <h3 class="a-example__title">Dropzone</h3>
+          <div class="a-example__preview ">
+            <div class="a-demo-grid">
+              <div class="a-dropzone" data-dropzone="demo-files" data-max-mb="25" data-icons="file-text check-circle x-circle trash">
+                <span class="a-dropzone__icon"><svg class="a-icon a-icon--48" aria-hidden="true"><use href="#file-upload-duo"></use></svg></span>
+                <p class="a-dropzone__title">Drag files here or <span>browse</span></p>
+                <p class="a-dropzone__hint">PDF, CSV, XLSX or JPG, up to 25 MB each</p>
+                <input class="a-dropzone__input" type="file" multiple accept=".pdf,.csv,.xlsx,.jpg" aria-label="Upload bank statements, PDF, CSV, XLSX or JPG up to 25 MB">
+              </div>
+              <ul class="a-file-list" id="demo-files" aria-label="Uploaded files">
+                <li class="a-file is-done"><svg class="a-icon" aria-hidden="true"><use href="#check-circle"></use></svg><span class="a-file__name">Chase business checking, Sept 2026.pdf</span><span class="a-file__meta">1.2 MB, uploaded</span><span class="a-file__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" data-file-remove aria-label="Remove Chase business checking, Sept 2026.pdf"><svg class="a-icon" aria-hidden="true"><use href="#trash"></use></svg></button></span></li>
+                <li class="a-file is-error"><svg class="a-icon" aria-hidden="true"><use href="#x-circle"></use></svg><span class="a-file__name">Receipts photo.heic</span><span class="a-file__meta">HEIC files are not accepted. Use PDF, CSV, XLSX, JPG.</span><span class="a-file__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" data-file-remove aria-label="Remove Receipts photo.heic"><svg class="a-icon" aria-hidden="true"><use href="#trash"></use></svg></button></span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-16">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-16" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-demo-grid&quot;&gt;
+  &lt;div class=&quot;a-dropzone&quot; data-dropzone=&quot;demo-files&quot; data-max-mb=&quot;25&quot; data-icons=&quot;file-text check-circle x-circle trash&quot;&gt;
+    &lt;span class=&quot;a-dropzone__icon&quot;&gt;&lt;svg class=&quot;a-icon a-icon--48&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#file-upload-duo&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;
+    &lt;p class=&quot;a-dropzone__title&quot;&gt;Drag files here or &lt;span&gt;browse&lt;/span&gt;&lt;/p&gt;
+    &lt;p class=&quot;a-dropzone__hint&quot;&gt;PDF, CSV, XLSX or JPG, up to 25 MB each&lt;/p&gt;
+    &lt;input class=&quot;a-dropzone__input&quot; type=&quot;file&quot; multiple accept=&quot;.pdf,.csv,.xlsx,.jpg&quot; aria-label=&quot;Upload bank statements, PDF, CSV, XLSX or JPG up to 25 MB&quot;&gt;
+  &lt;/div&gt;
+  &lt;ul class=&quot;a-file-list&quot; id=&quot;demo-files&quot; aria-label=&quot;Uploaded files&quot;&gt;
+    &lt;li class=&quot;a-file is-done&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check-circle&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span class=&quot;a-file__name&quot;&gt;Chase business checking, Sept 2026.pdf&lt;/span&gt;&lt;span class=&quot;a-file__meta&quot;&gt;1.2 MB, uploaded&lt;/span&gt;&lt;span class=&quot;a-file__actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--icon a-btn--sm&quot; data-file-remove aria-label=&quot;Remove Chase business checking, Sept 2026.pdf&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#trash&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li class=&quot;a-file is-error&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#x-circle&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span class=&quot;a-file__name&quot;&gt;Receipts photo.heic&lt;/span&gt;&lt;span class=&quot;a-file__meta&quot;&gt;HEIC files are not accepted. Use PDF, CSV, XLSX, JPG.&lt;/span&gt;&lt;span class=&quot;a-file__actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--icon a-btn--sm&quot; data-file-remove aria-label=&quot;Remove Receipts photo.heic&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#trash&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="validation">
+        <h2 id="validation">Validation and form footer</h2>
+        <p>Fields validate when you leave them and again on submit. Submit moves focus to the first problem and announces how many fields need attention.</p>
+        <div class="a-example a-example--wide">
+          <h3 class="a-example__title">Try submitting empty</h3>
+          <div class="a-example__preview a-example__preview--stack">
+            <form class="a-demo-grid" data-validate-form novalidate>
+              <div class="a-form-grid a-form-grid--2">
+                <div class="a-field " data-msg-required="Enter your legal business name">
+              <label class="a-label" for="val-name"><span>Legal business name<span class="a-label__required" aria-hidden="true">*</span></span></label>
+              <input class="a-input" id="val-name" name="val-name" type="text" aria-describedby="val-name-error" required>
+              <p class="a-error" id="val-name-error"></p>
+            </div>
+                <div class="a-field " data-msg-required="Enter your work email" data-msg-pattern="Enter an email like name@company.com">
+              <label class="a-label" for="val-email"><span>Work email<span class="a-label__required" aria-hidden="true">*</span></span></label>
+              <input class="a-input" id="val-email" name="val-email" type="email" aria-describedby="val-email-error" required>
+              <p class="a-error" id="val-email-error"></p>
+            </div>
+                <div class="a-field " data-msg-required="Enter your EIN" data-msg-pattern="Enter a 9 digit EIN, like 12-3456789">
+              <label class="a-label" for="val-ein"><span>EIN<span class="a-label__required" aria-hidden="true">*</span></span></label>
+              <input class="a-input" id="val-ein" name="val-ein" type="text" aria-describedby="val-ein-error" required inputmode="numeric" data-mask="ein">
+              <p class="a-error" id="val-ein-error"></p>
+            </div>
+                <div class="a-field " data-msg-required="Choose the state where you registered">
+              <label class="a-label" id="val-state-label" for="val-state"><span>State<span class="a-label__required" aria-hidden="true">*</span></span></label>
+              <div class="a-select" data-listbox="select" data-source="us-states" data-icons="check search">
+                <button type="button" class="a-select__trigger" id="val-state" aria-haspopup="listbox" aria-expanded="false" aria-controls="val-state-list" aria-labelledby="val-state-label val-state-value" aria-describedby="val-state-error"><span class="a-select__value is-placeholder" id="val-state-value">Choose a state</span><svg class="a-icon a-select__chevron" aria-hidden="true"><use href="#chevron-down"></use></svg></button>
+                <input type="hidden" name="val-state" value="" required>
+                <div class="a-listbox-popover" hidden>
+                <div class="a-listbox-popover__search"><div class="a-input-group"><svg class="a-icon" aria-hidden="true"><use href="#search"></use></svg><input class="a-input" type="text" data-listbox-search role="combobox" aria-expanded="false" aria-autocomplete="list" aria-controls="val-state-list" aria-label="Search state" autocomplete="off"></div></div>
+                  <ul class="a-listbox" data-scroll-area role="listbox" id="val-state-list" aria-labelledby="val-state-label" tabindex="-1"></ul>
+                </div>
+              </div>
+              <p class="a-error" id="val-state-error"></p>
+            </div>
+              </div>
+              <div class="a-field" data-msg-required="Accept the terms to continue"><label class="a-check"><input class="a-check__input" type="checkbox" id="val-terms" name="val-terms" required><span class="a-check__label">I agree to the <a href="#validation">terms of service</a></span></label><p class="a-error" id="val-terms-error"></p></div>
+              <div class="a-form-actions">
+                <button type="button" class="a-btn a-btn--ghost"><svg class="a-icon" aria-hidden="true"><use href="#arrow-left"></use></svg>Back</button>
+                <div class="a-form-actions__end"><button type="button" class="a-btn a-btn--outline">Save and continue later</button><button type="submit" class="a-btn a-btn--primary">Continue<svg class="a-icon" aria-hidden="true"><use href="#arrow-right"></use></svg></button></div>
+              </div>
+            </form>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-17">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-17" tabindex="0" data-scroll-area hidden><code>&lt;form class=&quot;a-demo-grid&quot; data-validate-form novalidate&gt;
+  &lt;div class=&quot;a-form-grid a-form-grid--2&quot;&gt;
+    &lt;div class=&quot;a-field &quot; data-msg-required=&quot;Enter your legal business name&quot;&gt;
+  &lt;label class=&quot;a-label&quot; for=&quot;val-name&quot;&gt;&lt;span&gt;Legal business name&lt;span class=&quot;a-label__required&quot; aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+  &lt;input class=&quot;a-input&quot; id=&quot;val-name&quot; name=&quot;val-name&quot; type=&quot;text&quot; aria-describedby=&quot;val-name-error&quot; required&gt;
+  &lt;p class=&quot;a-error&quot; id=&quot;val-name-error&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+    &lt;div class=&quot;a-field &quot; data-msg-required=&quot;Enter your work email&quot; data-msg-pattern=&quot;Enter an email like name@company.com&quot;&gt;
+  &lt;label class=&quot;a-label&quot; for=&quot;val-email&quot;&gt;&lt;span&gt;Work email&lt;span class=&quot;a-label__required&quot; aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+  &lt;input class=&quot;a-input&quot; id=&quot;val-email&quot; name=&quot;val-email&quot; type=&quot;email&quot; aria-describedby=&quot;val-email-error&quot; required&gt;
+  &lt;p class=&quot;a-error&quot; id=&quot;val-email-error&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+    &lt;div class=&quot;a-field &quot; data-msg-required=&quot;Enter your EIN&quot; data-msg-pattern=&quot;Enter a 9 digit EIN, like 12-3456789&quot;&gt;
+  &lt;label class=&quot;a-label&quot; for=&quot;val-ein&quot;&gt;&lt;span&gt;EIN&lt;span class=&quot;a-label__required&quot; aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+  &lt;input class=&quot;a-input&quot; id=&quot;val-ein&quot; name=&quot;val-ein&quot; type=&quot;text&quot; aria-describedby=&quot;val-ein-error&quot; required inputmode=&quot;numeric&quot; data-mask=&quot;ein&quot;&gt;
+  &lt;p class=&quot;a-error&quot; id=&quot;val-ein-error&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+    &lt;div class=&quot;a-field &quot; data-msg-required=&quot;Choose the state where you registered&quot;&gt;
+  &lt;label class=&quot;a-label&quot; id=&quot;val-state-label&quot; for=&quot;val-state&quot;&gt;&lt;span&gt;State&lt;span class=&quot;a-label__required&quot; aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+  &lt;div class=&quot;a-select&quot; data-listbox=&quot;select&quot; data-source=&quot;us-states&quot; data-icons=&quot;check search&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;a-select__trigger&quot; id=&quot;val-state&quot; aria-haspopup=&quot;listbox&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;val-state-list&quot; aria-labelledby=&quot;val-state-label val-state-value&quot; aria-describedby=&quot;val-state-error&quot;&gt;&lt;span class=&quot;a-select__value is-placeholder&quot; id=&quot;val-state-value&quot;&gt;Choose a state&lt;/span&gt;&lt;svg class=&quot;a-icon a-select__chevron&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#chevron-down&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;
+    &lt;input type=&quot;hidden&quot; name=&quot;val-state&quot; value=&quot;&quot; required&gt;
+    &lt;div class=&quot;a-listbox-popover&quot; hidden&gt;
+    &lt;div class=&quot;a-listbox-popover__search&quot;&gt;&lt;div class=&quot;a-input-group&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#search&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;input class=&quot;a-input&quot; type=&quot;text&quot; data-listbox-search role=&quot;combobox&quot; aria-expanded=&quot;false&quot; aria-autocomplete=&quot;list&quot; aria-controls=&quot;val-state-list&quot; aria-label=&quot;Search state&quot; autocomplete=&quot;off&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;ul class=&quot;a-listbox&quot; data-scroll-area role=&quot;listbox&quot; id=&quot;val-state-list&quot; aria-labelledby=&quot;val-state-label&quot; tabindex=&quot;-1&quot;&gt;&lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p class=&quot;a-error&quot; id=&quot;val-state-error&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;a-field&quot; data-msg-required=&quot;Accept the terms to continue&quot;&gt;&lt;label class=&quot;a-check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; id=&quot;val-terms&quot; name=&quot;val-terms&quot; required&gt;&lt;span class=&quot;a-check__label&quot;&gt;I agree to the &lt;a href=&quot;#validation&quot;&gt;terms of service&lt;/a&gt;&lt;/span&gt;&lt;/label&gt;&lt;p class=&quot;a-error&quot; id=&quot;val-terms-error&quot;&gt;&lt;/p&gt;&lt;/div&gt;
+  &lt;div class=&quot;a-form-actions&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#arrow-left&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Back&lt;/button&gt;
+    &lt;div class=&quot;a-form-actions__end&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot;&gt;Save and continue later&lt;/button&gt;&lt;button type=&quot;submit&quot; class=&quot;a-btn a-btn--primary&quot;&gt;Continue&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#arrow-right&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+      </section>
+    </main>
+  </div>
+  <!-- icons -->
+  <svg class="a-sprite" aria-hidden="true" focusable="false">
+    <symbol id="alert-triangle" viewBox="0 0 24 24"><path d="M10.3 4.4a2 2 0 0 1 3.4 0l7.6 13.1a2 2 0 0 1-1.7 3H4.4a2 2 0 0 1-1.7-3z" style="stroke-dasharray: calc(57.868 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.767 - var(--icon-gap) / 2)"/><path d="M12 9.5v4"/><path d="M12 16.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="arrow-left" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="M11 6l-6 6 6 6"/></symbol>
+    <symbol id="arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></symbol>
+    <symbol id="briefcase-duo" viewBox="0 0 24 24"><path d="M5.5 7H18.5a2.5 2.5 0 0 1 2.5 2.5V17.5a2.5 2.5 0 0 1 -2.5 2.5H5.5a2.5 2.5 0 0 1 -2.5 -2.5V9.5a2.5 2.5 0 0 1 2.5 -2.5z" style="fill: currentColor; fill-opacity: .15; stroke: none"/><path d="M5.5 7H18.5a2.5 2.5 0 0 1 2.5 2.5V17.5a2.5 2.5 0 0 1 -2.5 2.5H5.5a2.5 2.5 0 0 1 -2.5 -2.5V9.5a2.5 2.5 0 0 1 2.5 -2.5z" style="stroke-dasharray: calc(57.71 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(46.168 - var(--icon-gap) / 2)"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7"/><path d="M3 12.5h18"/></symbol>
+    <symbol id="calendar" viewBox="0 0 24 24"><path d="M6 5H18a2.5 2.5 0 0 1 2.5 2.5V18a2.5 2.5 0 0 1 -2.5 2.5H6a2.5 2.5 0 0 1 -2.5 -2.5V7.5a2.5 2.5 0 0 1 2.5 -2.5z" style="stroke-dasharray: calc(60.71 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(48.568 - var(--icon-gap) / 2)"/><path d="M3.5 10h17"/><path d="M8 3v4"/><path d="M16 3v4"/><path d="M8 14h.01" style="display: var(--icon-minor-display, inline)"/><path d="M12 14h.01" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="check-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M8.2 12.3l2.6 2.6 5-5.2"/></symbol>
+    <symbol id="chevron-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="chevron-left" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+    <symbol id="chevron-right" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></symbol>
+    <symbol id="eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" style="stroke-dasharray: calc(48.149 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(38.519 - var(--icon-gap) / 2)"/><path d="M12 9.2a2.8 2.8 0 1 1 0 5.6a2.8 2.8 0 1 1 0 -5.6z"/></symbol>
+    <symbol id="eye-off" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" style="stroke-dasharray: calc(48.149 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(38.519 - var(--icon-gap) / 2)"/><path d="M12 9.2a2.8 2.8 0 1 1 0 5.6a2.8 2.8 0 1 1 0 -5.6z"/><path d="M4 4l16 16"/></symbol>
+    <symbol id="file-text" viewBox="0 0 24 24"><path d="M6.5 3H14l4.5 4.5v12A1.5 1.5 0 0 1 17 21H6.5A1.5 1.5 0 0 1 5 19.5v-15A1.5 1.5 0 0 1 6.5 3z" style="stroke-dasharray: calc(58.434 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(51.422 - var(--icon-gap) / 2)"/><path d="M14 3v4.5h4.5"/><path d="M8.5 12h7"/><path d="M8.5 15.5h7"/><path d="M8.5 8.5h2" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="file-upload-duo" viewBox="0 0 24 24"><path d="M6.5 3H14l4.5 4.5v12A1.5 1.5 0 0 1 17 21H6.5A1.5 1.5 0 0 1 5 19.5v-15A1.5 1.5 0 0 1 6.5 3z" style="fill: currentColor; fill-opacity: .15; stroke: none"/><path d="M6.5 3H14l4.5 4.5v12A1.5 1.5 0 0 1 17 21H6.5A1.5 1.5 0 0 1 5 19.5v-15A1.5 1.5 0 0 1 6.5 3z" style="stroke-dasharray: calc(58.434 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(51.422 - var(--icon-gap) / 2)"/><path d="M14 3v4.5h4.5"/><path d="M12 17.5v-6"/><path d="M9.5 14 12 11.5l2.5 2.5"/></symbol>
+    <symbol id="minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z" style="stroke-dasharray: calc(58.676 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(26.404 - var(--icon-gap) / 2)"/></symbol>
+    <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="M5 12h14"/></symbol>
+    <symbol id="recurring-payment-duo" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-14 5.3"/><path d="M4 12a8 8 0 0 1 14-5.3"/><path d="M18.5 3v4h-4"/><path d="M5.5 21v-4h4"/><path d="M12 9v6" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="search" viewBox="0 0 24 24"><path d="M10.5 4a6.5 6.5 0 1 1 0 13a6.5 6.5 0 1 1 0 -13z" style="stroke-dasharray: calc(40.846 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(35.945 - var(--icon-gap) / 2)"/><path d="M15.5 15.5 20 20"/></symbol>
+    <symbol id="sun" viewBox="0 0 24 24"><path d="M12 7.8a4.2 4.2 0 1 1 0 8.4a4.2 4.2 0 1 1 0 -8.4z" style="stroke-dasharray: calc(26.393 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(23.226 - var(--icon-gap) / 2)"/><path d="M12 2.5v2"/><path d="M12 19.5v2"/><path d="M2.5 12h2"/><path d="M19.5 12h2"/><path d="M5.6 5.6l1.2 1.2"/><path d="M17.2 17.2l1.2 1.2"/><path d="M5.6 18.4l1.2-1.2"/><path d="M17.2 6.8l1.2-1.2"/></symbol>
+    <symbol id="trash" viewBox="0 0 24 24"><path d="M6 7h12l-1 12.6a1.5 1.5 0 0 1-1.5 1.4h-7A1.5 1.5 0 0 1 7 19.6z" style="stroke-dasharray: calc(48.799 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(42.943 - var(--icon-gap) / 2)"/><path d="M4 7h16"/><path d="M9.5 7V4.5h5V7"/><path d="M10 11v6" style="display: var(--icon-minor-display, inline)"/><path d="M14 11v6" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="x-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M9.2 9.2l5.6 5.6"/><path d="M14.8 9.2l-5.6 5.6"/></symbol>
+  </svg>
+  <!-- /icons -->
+</body>
+</html>

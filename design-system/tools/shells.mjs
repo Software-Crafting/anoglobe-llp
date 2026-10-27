@@ -129,7 +129,7 @@ ${COMPONENT_JS.map((name) => `  <script src="${root}assets/js/components/${name}
   `,
 
   "docs-nav": ({ root, path, exists }) => `
-    <nav class="a-docs-nav" aria-label="Design system">
+    <nav class="a-docs-nav" aria-label="Design system" data-scroll-area>
 ${builtGroups(DOCS_NAV, exists).map(
   ({ group, items }) => `      <div class="a-docs-nav__group">
         <p class="a-eyebrow">${group}</p>

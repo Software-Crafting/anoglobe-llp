@@ -168,7 +168,7 @@ ${list.map((icon) => tile(icon.name)).join("\n")}
   `      <section class="a-docs-section" aria-labelledby="sizes">
         <h2 id="sizes">Sizes</h2>
         <p>Line at 16, 20, 24 and 32 pixels, duo at 48. Each size has its own stroke weight; 16 pixels also drops minor details.</p>
-        <div class="a-icon-table" role="table" aria-label="Icon sizes" tabindex="0">
+        <div class="a-icon-table" role="table" aria-label="Icon sizes" tabindex="0" data-scroll-area>
           <div class="a-icon-table__row" role="row"><span role="columnheader">Icon</span><span role="columnheader">16</span><span role="columnheader">20</span><span role="columnheader">24</span><span role="columnheader">32</span><span role="columnheader">48 duo</span></div>
 ${SAMPLE.map((name) => `          <div class="a-icon-table__row" role="row"><span role="rowheader">${name}</span><span role="cell">${use(name, "a-icon a-icon--16")}</span><span role="cell">${use(name, "a-icon a-icon--20")}</span><span role="cell">${use(name)}</span><span role="cell">${use(name, "a-icon a-icon--32")}</span><span role="cell">${use(`${name}-duo`, "a-icon a-icon--48")}</span></div>`).join("\n")}
         </div>
@@ -176,7 +176,7 @@ ${SAMPLE.map((name) => `          <div class="a-icon-table__row" role="row"><spa
   `      <section class="a-docs-section" aria-labelledby="variants">
         <h2 id="variants">Variants</h2>
         <p>Line is the default. Duo adds a soft tint for cards and feature rows. Fill marks active navigation and checked states.</p>
-        <div class="a-icon-table a-icon-table--variants" role="table" aria-label="Icon variants" tabindex="0">
+        <div class="a-icon-table a-icon-table--variants" role="table" aria-label="Icon variants" tabindex="0" data-scroll-area>
           <div class="a-icon-table__row" role="row"><span role="columnheader">Icon</span><span role="columnheader">Line</span><span role="columnheader">Duo</span><span role="columnheader">Fill</span></div>
 ${SAMPLE.map((name) => `          <div class="a-icon-table__row" role="row"><span role="rowheader">${name}</span><span role="cell">${use(name, "a-icon a-icon--32")}</span><span role="cell">${use(`${name}-duo`, "a-icon a-icon--32")}</span><span role="cell">${use(`${name}-fill`)}</span></div>`).join("\n")}
         </div>

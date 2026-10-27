@@ -12,8 +12,10 @@
   <link rel="stylesheet" href="../../assets/css/base.css">
   <link rel="stylesheet" href="../../assets/css/layout.css">
   <link rel="stylesheet" href="../../assets/css/components/foundations.css">
+  <link rel="stylesheet" href="../../assets/css/components/forms.css">
   <link rel="stylesheet" href="../../assets/css/pages.css">
   <script src="../../assets/js/components/core.js" defer></script>
+  <script src="../../assets/js/components/forms.js" defer></script>
   <!-- /shell:head -->
 </head>
 <body>
@@ -33,7 +35,7 @@
   <!-- /shell:docs-header -->
   <div class="a-docs">
     <!-- shell:docs-nav -->
-    <nav class="a-docs-nav" aria-label="Design system">
+    <nav class="a-docs-nav" aria-label="Design system" data-scroll-area>
       <div class="a-docs-nav__group">
         <p class="a-eyebrow">Foundations</p>
         <ul class="a-docs-nav__list" role="list">
@@ -45,6 +47,7 @@
         <p class="a-eyebrow">Components</p>
         <ul class="a-docs-nav__list" role="list">
           <li><a class="a-docs-nav__link" href="../../ui-design/components/foundations.html">Foundations</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/forms.html">Forms</a></li>
         </ul>
       </div>
     </nav>
@@ -59,7 +62,7 @@
       <section class="a-docs-section" aria-labelledby="usage">
         <h2 id="usage">Usage</h2>
         <p>Reference a symbol by name and size it with a class. Stroke weight, notch size and detail level adjust per size, so a 16 pixel icon is drawn heavier and simpler than a 32 pixel one.</p>
-        <pre class="a-code" tabindex="0"><code>&lt;svg class=&quot;a-icon a-icon--20&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#invoice&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+        <pre class="a-code" tabindex="0" data-scroll-area><code>&lt;svg class=&quot;a-icon a-icon--20&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#invoice&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
         <ul class="a-rules">
           <li>Variants: <code>#name</code> for line, <code>#name-duo</code> for duo, <code>#name-fill</code> for fill.</li>
           <li>Sizes: <code>a-icon--16</code>, <code>a-icon--20</code>, default 24, <code>a-icon--32</code>, <code>a-icon--48</code>.</li>
@@ -541,7 +544,7 @@
       <section class="a-docs-section" aria-labelledby="sizes">
         <h2 id="sizes">Sizes</h2>
         <p>Line at 16, 20, 24 and 32 pixels, duo at 48. Each size has its own stroke weight; 16 pixels also drops minor details.</p>
-        <div class="a-icon-table" role="table" aria-label="Icon sizes" tabindex="0">
+        <div class="a-icon-table" role="table" aria-label="Icon sizes" tabindex="0" data-scroll-area>
           <div class="a-icon-table__row" role="row"><span role="columnheader">Icon</span><span role="columnheader">16</span><span role="columnheader">20</span><span role="columnheader">24</span><span role="columnheader">32</span><span role="columnheader">48 duo</span></div>
           <div class="a-icon-table__row" role="row"><span role="rowheader">invoice</span><span role="cell"><svg class="a-icon a-icon--16" aria-hidden="true"><use href="#invoice"></use></svg></span><span role="cell"><svg class="a-icon a-icon--20" aria-hidden="true"><use href="#invoice"></use></svg></span><span role="cell"><svg class="a-icon" aria-hidden="true"><use href="#invoice"></use></svg></span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="#invoice"></use></svg></span><span role="cell"><svg class="a-icon a-icon--48" aria-hidden="true"><use href="#invoice-duo"></use></svg></span></div>
           <div class="a-icon-table__row" role="row"><span role="rowheader">credit-card</span><span role="cell"><svg class="a-icon a-icon--16" aria-hidden="true"><use href="#credit-card"></use></svg></span><span role="cell"><svg class="a-icon a-icon--20" aria-hidden="true"><use href="#credit-card"></use></svg></span><span role="cell"><svg class="a-icon" aria-hidden="true"><use href="#credit-card"></use></svg></span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="#credit-card"></use></svg></span><span role="cell"><svg class="a-icon a-icon--48" aria-hidden="true"><use href="#credit-card-duo"></use></svg></span></div>
@@ -557,7 +560,7 @@
       <section class="a-docs-section" aria-labelledby="variants">
         <h2 id="variants">Variants</h2>
         <p>Line is the default. Duo adds a soft tint for cards and feature rows. Fill marks active navigation and checked states.</p>
-        <div class="a-icon-table a-icon-table--variants" role="table" aria-label="Icon variants" tabindex="0">
+        <div class="a-icon-table a-icon-table--variants" role="table" aria-label="Icon variants" tabindex="0" data-scroll-area>
           <div class="a-icon-table__row" role="row"><span role="columnheader">Icon</span><span role="columnheader">Line</span><span role="columnheader">Duo</span><span role="columnheader">Fill</span></div>
           <div class="a-icon-table__row" role="row"><span role="rowheader">invoice</span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="#invoice"></use></svg></span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="#invoice-duo"></use></svg></span><span role="cell"><svg class="a-icon" aria-hidden="true"><use href="#invoice-fill"></use></svg></span></div>
           <div class="a-icon-table__row" role="row"><span role="rowheader">credit-card</span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="#credit-card"></use></svg></span><span role="cell"><svg class="a-icon a-icon--32" aria-hidden="true"><use href="#credit-card-duo"></use></svg></span><span role="cell"><svg class="a-icon" aria-hidden="true"><use href="#credit-card-fill"></use></svg></span></div>

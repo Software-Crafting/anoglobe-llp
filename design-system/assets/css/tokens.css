@@ -232,6 +232,11 @@
   --content-max: 1440px;
   --onboarding-width: 720px;
 
+  /* Controls: every input, select and button shares these heights */
+  --control-height: 40px;
+  --control-height-sm: 32px;
+  --control-height-lg: 48px;
+
   /* Focus ring */
   --ring-width: 2px;
   --ring-offset: 2px;
@@ -254,6 +259,12 @@
 @media (min-width: 640px) {
   :root {
     --gutter: 1.5rem;
+  }
+}
+
+@media (pointer: coarse) {
+  :root {
+    --control-height: 44px;
   }
 }
 
