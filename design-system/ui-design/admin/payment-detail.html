@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payment PAY-9101 | Anoglobe Admin</title>
+  <meta name="description" content="Payment detail: amount breakdown, gateway reference, billing authorization and refund.">
+  <meta name="robots" content="noindex">
+  <!-- shell:head -->
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <script src="../../assets/js/theme.js"></script>
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components/foundations.css">
+  <link rel="stylesheet" href="../../assets/css/components/forms.css">
+  <link rel="stylesheet" href="../../assets/css/components/overlays.css">
+  <link rel="stylesheet" href="../../assets/css/components/data.css">
+  <link rel="stylesheet" href="../../assets/css/components/payment.css">
+  <link rel="stylesheet" href="../../assets/css/components/admin.css">
+  <link rel="stylesheet" href="../../assets/css/components/feedback.css">
+  <link rel="stylesheet" href="../../assets/css/pages.css">
+  <script src="../../assets/js/components/core.js" defer></script>
+  <script src="../../assets/js/components/forms.js" defer></script>
+  <script src="../../assets/js/components/overlays.js" defer></script>
+  <script src="../../assets/js/components/data.js" defer></script>
+  <script src="../../assets/js/components/payment.js" defer></script>
+  <script src="../../assets/js/components/admin.js" defer></script>
+  <script src="../../assets/js/components/site.js" defer></script>
+  <script src="../../assets/js/components/feedback.js" defer></script>
+  <!-- /shell:head -->
+</head>
+<body>
+  <div class="a-admin" data-admin>
+    <!-- shell:admin-sidebar -->
+  <a class="a-skip-link" href="#main">Skip to content</a>
+  <aside class="a-admin-sidebar" id="admin-sidebar" data-admin-sidebar aria-label="Admin">
+    <div class="a-admin-sidebar__brand">
+      <a href="../../ui-design/admin/dashboard.html" class="a-admin-sidebar__logo">
+        <img class="a-admin-sidebar__mark a-logo--light" src="../../assets/img/logo-mark.svg" width="28" height="28" alt="">
+        <img class="a-admin-sidebar__mark a-logo--dark" src="../../assets/img/logo-mark-reversed.svg" width="28" height="28" alt="">
+        <span class="a-admin-sidebar__name">Anoglobe <span class="a-muted">Admin</span></span>
+      </a>
+    </div>
+    <nav class="a-admin-nav" aria-label="Admin sections" data-scroll-area>
+      <div class="a-admin-nav__group">
+        <p class="a-admin-nav__label">Overview</p>
+        <ul role="list">
+          <li><a class="a-admin-nav__link" href="../../ui-design/admin/dashboard.html" data-tooltip="Dashboard" data-tooltip-side="right" data-tooltip-when="collapsed"><svg class="a-icon" aria-hidden="true"><use href="#home"></use></svg><span class="a-admin-nav__text">Dashboard</span></a></li>
+        </ul>
+      </div>
+      <div class="a-admin-nav__group">
+        <p class="a-admin-nav__label">Clients</p>
+        <ul role="list">
+          <li><a class="a-admin-nav__link" href="../../ui-design/admin/registrations.html" data-tooltip="Registrations" data-tooltip-side="right" data-tooltip-when="collapsed"><svg class="a-icon" aria-hidden="true"><use href="#users"></use></svg><span class="a-admin-nav__text">Registrations</span><span class="a-badge a-badge--neutral a-admin-nav__badge">12</span></a></li>
+          <li><a class="a-admin-nav__link" href="../../ui-design/admin/documents.html" data-tooltip="Documents" data-tooltip-side="right" data-tooltip-when="collapsed"><svg class="a-icon" aria-hidden="true"><use href="#folder"></use></svg><span class="a-admin-nav__text">Documents</span></a></li>
+        </ul>
+      </div>
+      <div class="a-admin-nav__group">
+        <p class="a-admin-nav__label">Billing</p>
+        <ul role="list">
+          <li><a class="a-admin-nav__link" href="../../ui-design/admin/payments.html" aria-current="page" data-tooltip="Payments" data-tooltip-side="right" data-tooltip-when="collapsed"><svg class="a-icon" aria-hidden="true"><use href="#credit-card-fill"></use></svg><span class="a-admin-nav__text">Payments</span></a></li>
+          <li><a class="a-admin-nav__link" href="../../ui-design/admin/subscriptions.html" data-tooltip="Subscriptions" data-tooltip-side="right" data-tooltip-when="collapsed"><svg class="a-icon" aria-hidden="true"><use href="#recurring-payment"></use></svg><span class="a-admin-nav__text">Subscriptions</span></a></li>
+        </ul>
+      </div>
+      <div class="a-admin-nav__group">
+        <p class="a-admin-nav__label">Automation</p>
+        <ul role="list">
+          <li><a class="a-admin-nav__link" href="../../ui-design/admin/ai-calls.html" data-tooltip="AI calls" data-tooltip-side="right" data-tooltip-when="collapsed"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg><span class="a-admin-nav__text">AI calls</span><span class="a-badge a-badge--neutral a-admin-nav__badge">3</span></a></li>
+          <li><a class="a-admin-nav__link" href="../../ui-design/admin/emails.html" data-tooltip="Emails" data-tooltip-side="right" data-tooltip-when="collapsed"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg><span class="a-admin-nav__text">Emails</span></a></li>
+        </ul>
+      </div>
+      <div class="a-admin-nav__group">
+        <p class="a-admin-nav__label">Workspace</p>
+        <ul role="list">
+          <li><a class="a-admin-nav__link" href="../../ui-design/admin/team.html" data-tooltip="Team" data-tooltip-side="right" data-tooltip-when="collapsed"><svg class="a-icon" aria-hidden="true"><use href="#users"></use></svg><span class="a-admin-nav__text">Team</span></a></li>
+          <li><a class="a-admin-nav__link" href="../../ui-design/admin/audit-log.html" data-tooltip="Audit log" data-tooltip-side="right" data-tooltip-when="collapsed"><svg class="a-icon" aria-hidden="true"><use href="#file-text"></use></svg><span class="a-admin-nav__text">Audit log</span></a></li>
+          <li><a class="a-admin-nav__link" href="../../ui-design/admin/settings.html" data-tooltip="Settings" data-tooltip-side="right" data-tooltip-when="collapsed"><svg class="a-icon" aria-hidden="true"><use href="#settings"></use></svg><span class="a-admin-nav__text">Settings</span></a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="a-admin-sidebar__footer">
+      <button type="button" class="a-admin-nav__link a-admin-sidebar__collapse" data-sidebar-collapse aria-pressed="false" aria-label="Collapse sidebar" data-tooltip="Expand sidebar" data-tooltip-side="right" data-tooltip-when="collapsed"><svg class="a-icon" aria-hidden="true"><use href="#chevron-left"></use></svg><span class="a-admin-nav__text">Collapse</span></button>
+    </div>
+  </aside>
+  <div class="a-admin-scrim" data-sidebar-scrim hidden></div>
+  <!-- /shell:admin-sidebar -->
+    <div class="a-admin__main">
+      <!-- shell:admin-topbar -->
+    <header class="a-admin-topbar">
+      <button type="button" class="a-btn a-btn--ghost a-btn--icon a-admin-topbar__menu" aria-controls="admin-sidebar" aria-expanded="false" aria-label="Open navigation" data-sidebar-open>
+        <svg class="a-icon" aria-hidden="true"><use href="#menu"></use></svg>
+      </button>
+      <button type="button" class="a-admin-search" data-command-open>
+        <svg class="a-icon" aria-hidden="true"><use href="#search"></use></svg>
+        <span>Search clients, payments, calls</span>
+        <kbd class="a-kbd">Ctrl K</kbd>
+      </button>
+      <div class="a-admin-topbar__tools">
+        <button type="button" class="a-btn a-btn--ghost a-btn--icon a-theme-toggle" data-theme-toggle aria-label="Dark theme" data-tooltip="Toggle dark theme">
+      <svg class="a-icon a-theme-toggle__sun" aria-hidden="true"><use href="#sun"></use></svg>
+      <svg class="a-icon a-theme-toggle__moon" aria-hidden="true"><use href="#moon"></use></svg>
+    </button>
+        <div class="a-popover-anchor">
+          <button type="button" class="a-btn a-btn--ghost a-btn--icon a-notify-btn" aria-label="Notifications, 3 unread" aria-haspopup="dialog" aria-expanded="false" aria-controls="notifications" data-popover-trigger>
+            <svg class="a-icon" aria-hidden="true"><use href="#bell"></use></svg><span class="a-notify-btn__dot"></span>
+          </button>
+          <div class="a-popover a-notifications" id="notifications" role="dialog" aria-label="Notifications" hidden>
+            <div class="a-popover__header"><p class="a-h4">Notifications</p><button type="button" class="a-btn a-btn--link a-btn--sm">Mark all read</button></div>
+            <ul role="list" class="a-notifications__list">
+              <li class="a-notifications__item is-unread"><svg class="a-icon" aria-hidden="true"><use href="#user"></use></svg><div><p><strong>Harbor Lane Dental</strong> completed signup</p><p class="a-xs a-muted">4 minutes ago</p></div></li>
+              <li class="a-notifications__item is-unread"><svg class="a-icon" aria-hidden="true"><use href="#x-circle"></use></svg><div><p>Payment failed for <strong>Bright Path Tutoring</strong></p><p class="a-xs a-muted">38 minutes ago</p></div></li>
+              <li class="a-notifications__item is-unread"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg><div><p>AI call answered by <strong>Cedar &amp; Pine Studio</strong></p><p class="a-xs a-muted">1 hour ago</p></div></li>
+              <li class="a-notifications__item"><svg class="a-icon" aria-hidden="true"><use href="#credit-card"></use></svg><div><p>$499.00 received from <strong>Northwind Logistics</strong></p><p class="a-xs a-muted">Yesterday</p></div></li>
+            </ul>
+          </div>
+        </div>
+        <div class="a-menu-anchor">
+          <button type="button" class="a-user-btn" aria-haspopup="menu" aria-expanded="false" aria-controls="user-menu" data-menu-trigger>
+            <span class="a-avatar a-avatar--sm" aria-hidden="true">PN</span>
+            <span class="a-user-btn__name">Priya Nair</span>
+            <svg class="a-icon" aria-hidden="true"><use href="#chevron-down"></use></svg>
+          </button>
+          <div class="a-menu" id="user-menu" role="menu" aria-label="Account" hidden>
+            <a class="a-menu__item" role="menuitem" href="../../ui-design/admin/profile.html"><svg class="a-icon" aria-hidden="true"><use href="#user"></use></svg>Profile</a>
+            <a class="a-menu__item" role="menuitem" href="../../ui-design/admin/settings.html"><svg class="a-icon" aria-hidden="true"><use href="#settings"></use></svg>Settings</a>
+            <div class="a-menu__separator" role="separator"></div>
+            <a class="a-menu__item" role="menuitem" href="../../ui-design/admin/login.html"><svg class="a-icon" aria-hidden="true"><use href="#logout"></use></svg>Sign out</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="a-toast-region" data-icons="check-circle x-circle info alert-triangle close"></div>
+    <!-- /shell:admin-topbar -->
+      <main id="main" class="a-admin__content">
+      
+      <header class="a-page-header">
+        <nav class="a-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="dashboard.html">Dashboard</a></li><li><a href="payments.html">Payments</a></li><li><span aria-current="page">PAY-9101</span></li></ol></nav>
+        <div class="a-page-header__row">
+          <div class="a-page-header__title"><h1>PAY-9101</h1><span class="a-status a-status--success">Succeeded</span></div>
+          <div class="a-page-header__actions"><button type="button" class="a-btn a-btn--outline" data-print><svg class="a-icon" aria-hidden="true"><use href="#download"></use></svg>Download receipt</button><button type="button" class="a-btn a-btn--destructive" data-dialog-open="dlg-refund"><svg class="a-icon" aria-hidden="true"><use href="#refunded"></use></svg>Refund</button></div>
+        </div>
+        <p class="a-page-header__description">Harbor Lane Dental, LLC, Oct 21, 2026, 10:42 AM ET</p>
+      </header>
+      <div class="a-admin-grid a-admin-grid--main-side">
+        <div class="a-admin-grid">
+          <section class="a-card" aria-labelledby="h-break"><div class="a-card__header"><h2 class="a-card__title" id="h-break">Amount</h2></div><div class="a-card__content">
+            <dl class="a-summary__lines"><div class="a-summary__line"><dt>Growth plan, Oct 21 to Nov 20</dt><dd>$499.00</dd></div><div class="a-summary__line"><dt>Onboarding setup</dt><dd>$150.00</dd></div><div class="a-summary__line a-summary__line--discount"><dt>Setup waived</dt><dd>-$150.00</dd></div><div class="a-summary__line"><dt>Sales tax</dt><dd>$0.00</dd></div></dl>
+            <dl class="a-summary__total"><dt>Charged</dt><dd>$499.00</dd></dl>
+            <dl class="a-summary__lines a-onb__next"><div class="a-summary__line"><dt>Stripe fee (2.9% + $0.30)</dt><dd>-$14.77</dd></div><div class="a-summary__line"><dt>Net to Anoglobe</dt><dd>$484.23</dd></div></dl>
+          </div></section>
+          <section class="a-card" aria-labelledby="h-auth"><div class="a-card__header"><h2 class="a-card__title" id="h-auth">Billing authorization</h2><span class="a-badge a-badge--success"><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Recorded</span></div><div class="a-card__content"><dl class="a-dl"><dt>Type</dt><dd>Monthly recurring, until cancelled</dd><dt>Agreed text</dt><dd>"I authorize Anoglobe LLP to charge $499.00 today and $499.00 every month until I cancel."</dd><dt>Accepted by</dt><dd>Maria Robles</dd><dt>Accepted at</dt><dd>Oct 21, 2026, 10:41:52 AM ET</dd><dt>IP address</dt><dd class="a-mono">203.0.113.48</dd></dl></div></section>
+        </div>
+        <div class="a-admin-grid">
+          <section class="a-card" aria-labelledby="h-gw"><div class="a-card__header"><h2 class="a-card__title" id="h-gw">Gateway</h2></div><div class="a-card__content"><dl class="a-dl"><dt>Processor</dt><dd>Stripe</dd><dt>Payment ID</dt><dd><span class="a-mono a-small">pi_3Q8x2LKd71Ua0p</span> <button type="button" class="a-copy" data-copy="pi_3Q8x2LKd71Ua0p"><span data-copy-label>Copy</span><span class="a-visually-hidden"> payment ID</span></button></dd><dt>Card</dt><dd>Visa ending 4242, exp 08/29</dd><dt>Risk</dt><dd>Normal</dd><dt>Subscription</dt><dd class="a-mono a-small">sub_1Q8x2MKd71Ua</dd></dl></div></section>
+          <section class="a-card" aria-labelledby="h-tl"><div class="a-card__header"><h2 class="a-card__title" id="h-tl">Timeline</h2></div><div class="a-card__content"><ol class="a-timeline">
+            <li class="a-timeline__item"><span class="a-timeline__marker a-timeline__marker--success"><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg></span><div><p class="a-timeline__title">Payment succeeded</p><p class="a-timeline__meta">10:42:03 AM</p></div></li>
+            <li class="a-timeline__item"><span class="a-timeline__marker"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg></span><div><p class="a-timeline__title">Receipt emailed</p><p class="a-timeline__meta">10:42:05 AM</p></div></li>
+            <li class="a-timeline__item"><span class="a-timeline__marker a-timeline__marker--accent"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg></span><div><p class="a-timeline__title">AI call triggered</p><p class="a-timeline__meta">10:42:06 AM</p></div></li>
+          </ol></div></section>
+        </div>
+      </div>
+      <dialog class="a-dialog" id="dlg-refund" role="alertdialog" aria-labelledby="dlg-refund-title" aria-describedby="dlg-refund-desc" data-dismissable="false">
+        <div class="a-dialog__header"><div><h2 class="a-dialog__title" id="dlg-refund-title">Refund this payment?</h2><p class="a-dialog__description" id="dlg-refund-desc">Money returns to Visa ending 4242 in 5 to 10 business days. Refunds are a showcase feature, scope to confirm.</p></div></div>
+        <div class="a-dialog__body">
+          <div class="a-field"><label class="a-label" for="refund-amount">Amount</label><div class="a-input-group"><span class="a-input-group__addon">$</span><input class="a-input a-tabular" id="refund-amount" type="text" inputmode="decimal" data-currency value="499.00"><span class="a-input-group__addon a-input-group__addon--end">USD</span></div><p class="a-hint">Up to $499.00</p></div>
+          <div class="a-field ">
+  <label class="a-label" id="refund-reason-label" for="refund-reason"><span>Reason</span></label>
+  <div class="a-select" data-listbox="select" data-icons="check search">
+    <button type="button" class="a-select__trigger" id="refund-reason" aria-haspopup="listbox" aria-expanded="false" aria-controls="refund-reason-list" aria-labelledby="refund-reason-label refund-reason-value" aria-describedby="refund-reason-error"><span class="a-select__value is-placeholder" id="refund-reason-value">Choose a reason</span><svg class="a-icon a-select__chevron" aria-hidden="true"><use href="#chevron-down"></use></svg></button>
+    <input type="hidden" name="refund-reason" value="">
+    <div class="a-listbox-popover" hidden>
+      <ul class="a-listbox" data-scroll-area role="listbox" id="refund-reason-list" aria-labelledby="refund-reason-label" tabindex="-1"><li role="option" class="a-option" data-value="requested" aria-selected="false">Requested by client<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="duplicate" aria-selected="false">Duplicate charge<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="fraud" aria-selected="false">Fraudulent<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li><li role="option" class="a-option" data-value="other" aria-selected="false">Other<svg class="a-icon a-option__check" aria-hidden="true"><use href="#check"></use></svg></li></ul>
+    </div>
+  </div>
+  <p class="a-error" id="refund-reason-error"></p>
+</div>
+        </div>
+        <div class="a-dialog__footer"><button type="button" class="a-btn a-btn--ghost" data-dialog-close autofocus>Keep payment</button><button type="button" class="a-btn a-btn--destructive" data-dialog-close data-toast="Refund issued" data-toast-variant="success">Refund payment</button></div>
+      </dialog>
+      </main>
+    </div>
+  </div>
+  <dialog class="a-dialog a-command" id="command-palette" aria-label="Command palette">
+    <div class="a-command__search"><svg class="a-icon" aria-hidden="true"><use href="#search"></use></svg><input class="a-command__input" type="text" role="combobox" aria-expanded="true" aria-controls="command-list" aria-autocomplete="list" aria-label="Search pages, clients and actions" placeholder="Search pages, clients and actions" autocomplete="off"></div>
+    <ul class="a-listbox" data-scroll-area role="listbox" id="command-list" aria-label="Results"><li role="presentation"><p class="a-listbox__group-label" id="cmd-g0">Go to</p><ul role="group" class="a-listbox__group" aria-labelledby="cmd-g0"><li role="option" class="a-option" id="cmd-dash" data-href="../../ui-design/admin/dashboard.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#home"></use></svg>Dashboard</li><li role="option" class="a-option" id="cmd-reg" data-href="../../ui-design/admin/registrations.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#users"></use></svg>Registrations</li><li role="option" class="a-option" id="cmd-pay" data-href="../../ui-design/admin/payments.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#credit-card"></use></svg>Payments</li><li role="option" class="a-option" id="cmd-calls" data-href="../../ui-design/admin/ai-calls.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>AI calls</li><li role="option" class="a-option" id="cmd-settings" data-href="../../ui-design/admin/settings.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#settings"></use></svg>Settings</li></ul></li><li role="presentation"><p class="a-listbox__group-label" id="cmd-g1">Clients</p><ul role="group" class="a-listbox__group" aria-labelledby="cmd-g1"><li role="option" class="a-option" id="cmd-c1" data-href="../../ui-design/admin/registration-detail.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#building"></use></svg>Harbor Lane Dental, LLC<span class="a-option__meta">Growth</span></li><li role="option" class="a-option" id="cmd-c2" data-href="../../ui-design/admin/registration-detail.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#building"></use></svg>Northwind Logistics Inc.<span class="a-option__meta">Scale</span></li><li role="option" class="a-option" id="cmd-c3" data-href="../../ui-design/admin/registration-detail.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#building"></use></svg>Bright Path Tutoring<span class="a-option__meta">Payment failed</span></li></ul></li><li role="presentation"><p class="a-listbox__group-label" id="cmd-g2">Actions</p><ul role="group" class="a-listbox__group" aria-labelledby="cmd-g2"><li role="option" class="a-option" id="cmd-export" data-toast="Export started. Your CSV will download shortly." aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#download"></use></svg>Export registrations as CSV</li><li role="option" class="a-option" id="cmd-link" data-toast="Signup link copied" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#link"></use></svg>Copy signup link</li></ul></li><li class="a-listbox__empty" role="presentation" hidden>No results. Try a client name or page.</li></ul>
+    <div class="a-command__footer"><span><kbd class="a-kbd">Up</kbd> <kbd class="a-kbd">Down</kbd> to move</span><span><kbd class="a-kbd">Enter</kbd> to open</span><span><kbd class="a-kbd">Esc</kbd> to close</span></div>
+  </dialog>
+  <!-- icons -->
+  <svg class="a-sprite" aria-hidden="true" focusable="false">
+    <symbol id="alert-triangle" viewBox="0 0 24 24"><path d="M10.3 4.4a2 2 0 0 1 3.4 0l7.6 13.1a2 2 0 0 1-1.7 3H4.4a2 2 0 0 1-1.7-3z" style="stroke-dasharray: calc(57.868 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.767 - var(--icon-gap) / 2)"/><path d="M12 9.5v4"/><path d="M12 16.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="bell" viewBox="0 0 24 24"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15z" style="stroke-dasharray: calc(49.852 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(28.914 - var(--icon-gap) / 2)"/><path d="M10 21.2h4"/></symbol>
+    <symbol id="building" viewBox="0 0 24 24"><path d="M4.5 21V4.5A1.5 1.5 0 0 1 6 3h7.5A1.5 1.5 0 0 1 15 4.5V21z" style="stroke-dasharray: calc(55.713 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(38.999 - var(--icon-gap) / 2)"/><path d="M15 9h3a1.5 1.5 0 0 1 1.5 1.5V21"/><path d="M3 21h18"/><path d="M8 7.5h3.5"/><path d="M8 11h3.5"/><path d="M8 14.5h3.5" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="check-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M8.2 12.3l2.6 2.6 5-5.2"/></symbol>
+    <symbol id="chevron-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="chevron-left" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></symbol>
+    <symbol id="credit-card" viewBox="0 0 24 24"><path d="M5 5H19a2.5 2.5 0 0 1 2.5 2.5V16.5a2.5 2.5 0 0 1 -2.5 2.5H5a2.5 2.5 0 0 1 -2.5 -2.5V7.5a2.5 2.5 0 0 1 2.5 -2.5z" style="stroke-dasharray: calc(61.71 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.368 - var(--icon-gap) / 2)"/><path d="M2.5 10h19"/><path d="M6 15h3.5"/></symbol>
+    <symbol id="credit-card-fill" viewBox="0 0 24 24"><path d="M5 5H19a2.5 2.5 0 0 1 2.5 2.5V16.5a2.5 2.5 0 0 1 -2.5 2.5H5a2.5 2.5 0 0 1 -2.5 -2.5V7.5a2.5 2.5 0 0 1 2.5 -2.5z" style="fill: currentColor"/><path d="M2.5 10h19" style="stroke: var(--icon-knockout, var(--background))"/><path d="M6 15h3.5" style="stroke: var(--icon-knockout, var(--background))"/></symbol>
+    <symbol id="download" viewBox="0 0 24 24"><path d="M12 4v11"/><path d="M7.5 10.5 12 15l4.5-4.5"/><path d="M4.5 19.5h15"/></symbol>
+    <symbol id="file-text" viewBox="0 0 24 24"><path d="M6.5 3H14l4.5 4.5v12A1.5 1.5 0 0 1 17 21H6.5A1.5 1.5 0 0 1 5 19.5v-15A1.5 1.5 0 0 1 6.5 3z" style="stroke-dasharray: calc(58.434 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(51.422 - var(--icon-gap) / 2)"/><path d="M14 3v4.5h4.5"/><path d="M8.5 12h7"/><path d="M8.5 15.5h7"/><path d="M8.5 8.5h2" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="folder" viewBox="0 0 24 24"><path d="M3.5 6.5A1.5 1.5 0 0 1 5 5h4.3l2 2.2H19a1.5 1.5 0 0 1 1.5 1.5v9.8A1.5 1.5 0 0 1 19 20H5a1.5 1.5 0 0 1-1.5-1.5z" style="stroke-dasharray: calc(60.199 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(48.159 - var(--icon-gap) / 2)"/><path d="M3.5 10.5h17" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="home" viewBox="0 0 24 24"><path d="M4 10.2 12 3.8l8 6.4v9.3a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19.7z" style="stroke-dasharray: calc(56.816 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(44.316 - var(--icon-gap) / 2)"/><path d="M10 21.2v-5.7h4v5.7"/></symbol>
+    <symbol id="info" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M12 11v5.5"/><path d="M12 7.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+    <symbol id="logout" viewBox="0 0 24 24"><path d="M9.5 20H6.5A1.5 1.5 0 0 1 5 18.5v-13A1.5 1.5 0 0 1 6.5 4h3"/><path d="M15 8l4 4-4 4"/><path d="M19 12h-9"/></symbol>
+    <symbol id="mail" viewBox="0 0 24 24"><path d="M5.5 5H18.5a2.5 2.5 0 0 1 2.5 2.5V16.5a2.5 2.5 0 0 1 -2.5 2.5H5.5a2.5 2.5 0 0 1 -2.5 -2.5V7.5a2.5 2.5 0 0 1 2.5 -2.5z" style="stroke-dasharray: calc(59.71 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(47.768 - var(--icon-gap) / 2)"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
+    <symbol id="menu" viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h10"/></symbol>
+    <symbol id="moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z" style="stroke-dasharray: calc(58.676 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(26.404 - var(--icon-gap) / 2)"/></symbol>
+    <symbol id="phone-call" viewBox="0 0 24 24"><path d="M5.2 3.5h2.9l1.5 4-2 1.3a10.5 10.5 0 0 0 7.6 7.6l1.3-2 4 1.5v2.9a1.6 1.6 0 0 1-1.7 1.6A16.6 16.6 0 0 1 3.6 5.2a1.6 1.6 0 0 1 1.6-1.7z" style="stroke-dasharray: calc(59.014 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(22.425 - var(--icon-gap) / 2)"/><path d="M14.5 3.5a6 6 0 0 1 6 6"/><path d="M14.5 7a2.5 2.5 0 0 1 2.5 2.5"/></symbol>
+    <symbol id="recurring-payment" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-14 5.3"/><path d="M4 12a8 8 0 0 1 14-5.3"/><path d="M18.5 3v4h-4"/><path d="M5.5 21v-4h4"/><path d="M12 9v6" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="refunded" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M9 9.5h4.5a2.5 2.5 0 0 1 0 5H9.5"/><path d="M11 7.5 9 9.5l2 2"/></symbol>
+    <symbol id="search" viewBox="0 0 24 24"><path d="M10.5 4a6.5 6.5 0 1 1 0 13a6.5 6.5 0 1 1 0 -13z" style="stroke-dasharray: calc(40.846 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(35.945 - var(--icon-gap) / 2)"/><path d="M15.5 15.5 20 20"/></symbol>
+    <symbol id="settings" viewBox="0 0 24 24"><path d="M12 2.8 20 7.4v9.2L12 21.2 4 16.6V7.4z" style="stroke-dasharray: calc(55.313 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(50.888 - var(--icon-gap) / 2)"/><path d="M12 9a3 3 0 1 1 0 6a3 3 0 1 1 0 -6z"/></symbol>
+    <symbol id="sun" viewBox="0 0 24 24"><path d="M12 7.8a4.2 4.2 0 1 1 0 8.4a4.2 4.2 0 1 1 0 -8.4z" style="stroke-dasharray: calc(26.393 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(23.226 - var(--icon-gap) / 2)"/><path d="M12 2.5v2"/><path d="M12 19.5v2"/><path d="M2.5 12h2"/><path d="M19.5 12h2"/><path d="M5.6 5.6l1.2 1.2"/><path d="M17.2 17.2l1.2 1.2"/><path d="M5.6 18.4l1.2-1.2"/><path d="M17.2 6.8l1.2-1.2"/></symbol>
+    <symbol id="user" viewBox="0 0 24 24"><path d="M12 4a4 4 0 1 1 0 8a4 4 0 1 1 0 -8z" style="stroke-dasharray: calc(25.136 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(22.12 - var(--icon-gap) / 2)"/><path d="M4.5 20.5c.8-3.8 3.8-6 7.5-6s6.7 2.2 7.5 6"/></symbol>
+    <symbol id="users" viewBox="0 0 24 24"><path d="M9 5a3.5 3.5 0 1 1 0 7a3.5 3.5 0 1 1 0 -7z" style="stroke-dasharray: calc(21.994 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(19.355 - var(--icon-gap) / 2)"/><path d="M2.5 19.5c.7-3.3 3.3-5.2 6.5-5.2s5.8 1.9 6.5 5.2"/><path d="M15.5 5.2a3.5 3.5 0 0 1 0 6.6"/><path d="M17.5 14.6c2 .7 3.4 2.4 4 4.9"/></symbol>
+    <symbol id="x-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M9.2 9.2l5.6 5.6"/><path d="M14.8 9.2l-5.6 5.6"/></symbol>
+  </svg>
+  <!-- /icons -->
+</body>
+</html>

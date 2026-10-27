@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registrations | Anoglobe Admin</title>
+  <meta name="description" content="All client registrations with status, plan, payment and AI call status.">
+  <meta name="robots" content="noindex">
+  <!-- shell:head -->
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <script src="../../assets/js/theme.js"></script>
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components/foundations.css">
+  <link rel="stylesheet" href="../../assets/css/components/forms.css">
+  <link rel="stylesheet" href="../../assets/css/components/overlays.css">
+  <link rel="stylesheet" href="../../assets/css/components/data.css">
+  <link rel="stylesheet" href="../../assets/css/components/payment.css">
+  <link rel="stylesheet" href="../../assets/css/components/admin.css">
+  <link rel="stylesheet" href="../../assets/css/components/feedback.css">
+  <link rel="stylesheet" href="../../assets/css/pages.css">
+  <script src="../../assets/js/components/core.js" defer></script>
+  <script src="../../assets/js/components/forms.js" defer></script>
+  <script src="../../assets/js/components/overlays.js" defer></script>
+  <script src="../../assets/js/components/data.js" defer></script>
+  <script src="../../assets/js/components/payment.js" defer></script>
+  <script src="../../assets/js/components/admin.js" defer></script>
+  <script src="../../assets/js/components/site.js" defer></script>
+  <script src="../../assets/js/components/feedback.js" defer></script>
+  <!-- /shell:head -->
+</head>
+<body>
+  <div class="a-admin" data-admin>
+    <!-- shell:admin-sidebar -->
+  <a class="a-skip-link" href="#main">Skip to content</a>
+  <aside class="a-admin-sidebar" id="admin-sidebar" data-admin-sidebar aria-label="Admin">
+    <div class="a-admin-sidebar__brand">
+      <a href="../../ui-design/admin/dashboard.html" class="a-admin-sidebar__logo">
+        <img class="a-admin-sidebar__mark a-logo--light" src="../../assets/img/logo-mark.svg" width="28" height="28" alt="">
+        <img class="a-admin-sidebar__mark a-logo--dark" src="../../assets/img/logo-mark-reversed.svg" width="28" height="28" alt="">
+        <span class="a-admin-sidebar__name">Anoglobe <span class="a-muted">Admin</span></span>
+      </a>
+    </div>
+    <nav class="a-admin-nav" aria-label="Admin sections" data-scroll-area>
+      <div class="a-admin-nav__group">
+        <p class="a-admin-nav__label">Overview</p>
+        <ul role="list">
+          <li><a class="a-admin-nav__link" href="../../ui-design/admin/dashboard.html" data-tooltip="Dashboard" data-tooltip-side="right" data-tooltip-when="collapsed"><svg class="a-icon" aria-hidden="true"><use href="#home"></use></svg><span class="a-admin-nav__text">Dashboard</span></a></li>
+        </ul>
+      </div>
+      <div class="a-admin-nav__group">
+        <p class="a-admin-nav__label">Clients</p>
+        <ul role="list">
+          <li><a class="a-admin-nav__link" href="../../ui-design/admin/registrations.html" aria-current="page" data-tooltip="Registrations" data-tooltip-side="right" data-tooltip-when="collapsed"><svg class="a-icon" aria-hidden="true"><use href="#users-fill"></use></svg><span class="a-admin-nav__text">Registrations</span><span class="a-badge a-badge--neutral a-admin-nav__badge">12</span></a></li>
+          <li><a class="a-admin-nav__link" href="../../ui-design/admin/documents.html" data-tooltip="Documents" data-tooltip-side="right" data-tooltip-when="collapsed"><svg class="a-icon" aria-hidden="true"><use href="#folder"></use></svg><span class="a-admin-nav__text">Documents</span></a></li>
+        </ul>
+      </div>
+      <div class="a-admin-nav__group">
+        <p class="a-admin-nav__label">Billing</p>
+        <ul role="list">
+          <li><a class="a-admin-nav__link" href="../../ui-design/admin/payments.html" data-tooltip="Payments" data-tooltip-side="right" data-tooltip-when="collapsed"><svg class="a-icon" aria-hidden="true"><use href="#credit-card"></use></svg><span class="a-admin-nav__text">Payments</span></a></li>
+          <li><a class="a-admin-nav__link" href="../../ui-design/admin/subscriptions.html" data-tooltip="Subscriptions" data-tooltip-side="right" data-tooltip-when="collapsed"><svg class="a-icon" aria-hidden="true"><use href="#recurring-payment"></use></svg><span class="a-admin-nav__text">Subscriptions</span></a></li>
+        </ul>
+      </div>
+      <div class="a-admin-nav__group">
+        <p class="a-admin-nav__label">Automation</p>
+        <ul role="list">
+          <li><a class="a-admin-nav__link" href="../../ui-design/admin/ai-calls.html" data-tooltip="AI calls" data-tooltip-side="right" data-tooltip-when="collapsed"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg><span class="a-admin-nav__text">AI calls</span><span class="a-badge a-badge--neutral a-admin-nav__badge">3</span></a></li>
+          <li><a class="a-admin-nav__link" href="../../ui-design/admin/emails.html" data-tooltip="Emails" data-tooltip-side="right" data-tooltip-when="collapsed"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg><span class="a-admin-nav__text">Emails</span></a></li>
+        </ul>
+      </div>
+      <div class="a-admin-nav__group">
+        <p class="a-admin-nav__label">Workspace</p>
+        <ul role="list">
+          <li><a class="a-admin-nav__link" href="../../ui-design/admin/team.html" data-tooltip="Team" data-tooltip-side="right" data-tooltip-when="collapsed"><svg class="a-icon" aria-hidden="true"><use href="#users"></use></svg><span class="a-admin-nav__text">Team</span></a></li>
+          <li><a class="a-admin-nav__link" href="../../ui-design/admin/audit-log.html" data-tooltip="Audit log" data-tooltip-side="right" data-tooltip-when="collapsed"><svg class="a-icon" aria-hidden="true"><use href="#file-text"></use></svg><span class="a-admin-nav__text">Audit log</span></a></li>
+          <li><a class="a-admin-nav__link" href="../../ui-design/admin/settings.html" data-tooltip="Settings" data-tooltip-side="right" data-tooltip-when="collapsed"><svg class="a-icon" aria-hidden="true"><use href="#settings"></use></svg><span class="a-admin-nav__text">Settings</span></a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="a-admin-sidebar__footer">
+      <button type="button" class="a-admin-nav__link a-admin-sidebar__collapse" data-sidebar-collapse aria-pressed="false" aria-label="Collapse sidebar" data-tooltip="Expand sidebar" data-tooltip-side="right" data-tooltip-when="collapsed"><svg class="a-icon" aria-hidden="true"><use href="#chevron-left"></use></svg><span class="a-admin-nav__text">Collapse</span></button>
+    </div>
+  </aside>
+  <div class="a-admin-scrim" data-sidebar-scrim hidden></div>
+  <!-- /shell:admin-sidebar -->
+    <div class="a-admin__main">
+      <!-- shell:admin-topbar -->
+    <header class="a-admin-topbar">
+      <button type="button" class="a-btn a-btn--ghost a-btn--icon a-admin-topbar__menu" aria-controls="admin-sidebar" aria-expanded="false" aria-label="Open navigation" data-sidebar-open>
+        <svg class="a-icon" aria-hidden="true"><use href="#menu"></use></svg>
+      </button>
+      <button type="button" class="a-admin-search" data-command-open>
+        <svg class="a-icon" aria-hidden="true"><use href="#search"></use></svg>
+        <span>Search clients, payments, calls</span>
+        <kbd class="a-kbd">Ctrl K</kbd>
+      </button>
+      <div class="a-admin-topbar__tools">
+        <button type="button" class="a-btn a-btn--ghost a-btn--icon a-theme-toggle" data-theme-toggle aria-label="Dark theme" data-tooltip="Toggle dark theme">
+      <svg class="a-icon a-theme-toggle__sun" aria-hidden="true"><use href="#sun"></use></svg>
+      <svg class="a-icon a-theme-toggle__moon" aria-hidden="true"><use href="#moon"></use></svg>
+    </button>
+        <div class="a-popover-anchor">
+          <button type="button" class="a-btn a-btn--ghost a-btn--icon a-notify-btn" aria-label="Notifications, 3 unread" aria-haspopup="dialog" aria-expanded="false" aria-controls="notifications" data-popover-trigger>
+            <svg class="a-icon" aria-hidden="true"><use href="#bell"></use></svg><span class="a-notify-btn__dot"></span>
+          </button>
+          <div class="a-popover a-notifications" id="notifications" role="dialog" aria-label="Notifications" hidden>
+            <div class="a-popover__header"><p class="a-h4">Notifications</p><button type="button" class="a-btn a-btn--link a-btn--sm">Mark all read</button></div>
+            <ul role="list" class="a-notifications__list">
+              <li class="a-notifications__item is-unread"><svg class="a-icon" aria-hidden="true"><use href="#user"></use></svg><div><p><strong>Harbor Lane Dental</strong> completed signup</p><p class="a-xs a-muted">4 minutes ago</p></div></li>
+              <li class="a-notifications__item is-unread"><svg class="a-icon" aria-hidden="true"><use href="#x-circle"></use></svg><div><p>Payment failed for <strong>Bright Path Tutoring</strong></p><p class="a-xs a-muted">38 minutes ago</p></div></li>
+              <li class="a-notifications__item is-unread"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg><div><p>AI call answered by <strong>Cedar &amp; Pine Studio</strong></p><p class="a-xs a-muted">1 hour ago</p></div></li>
+              <li class="a-notifications__item"><svg class="a-icon" aria-hidden="true"><use href="#credit-card"></use></svg><div><p>$499.00 received from <strong>Northwind Logistics</strong></p><p class="a-xs a-muted">Yesterday</p></div></li>
+            </ul>
+          </div>
+        </div>
+        <div class="a-menu-anchor">
+          <button type="button" class="a-user-btn" aria-haspopup="menu" aria-expanded="false" aria-controls="user-menu" data-menu-trigger>
+            <span class="a-avatar a-avatar--sm" aria-hidden="true">PN</span>
+            <span class="a-user-btn__name">Priya Nair</span>
+            <svg class="a-icon" aria-hidden="true"><use href="#chevron-down"></use></svg>
+          </button>
+          <div class="a-menu" id="user-menu" role="menu" aria-label="Account" hidden>
+            <a class="a-menu__item" role="menuitem" href="../../ui-design/admin/profile.html"><svg class="a-icon" aria-hidden="true"><use href="#user"></use></svg>Profile</a>
+            <a class="a-menu__item" role="menuitem" href="../../ui-design/admin/settings.html"><svg class="a-icon" aria-hidden="true"><use href="#settings"></use></svg>Settings</a>
+            <div class="a-menu__separator" role="separator"></div>
+            <a class="a-menu__item" role="menuitem" href="../../ui-design/admin/login.html"><svg class="a-icon" aria-hidden="true"><use href="#logout"></use></svg>Sign out</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="a-toast-region" data-icons="check-circle x-circle info alert-triangle close"></div>
+    <!-- /shell:admin-topbar -->
+      <main id="main" class="a-admin__content">
+      
+      <header class="a-page-header">
+        <nav class="a-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="dashboard.html">Dashboard</a></li><li><span aria-current="page">Registrations</span></li></ol></nav>
+        <div class="a-page-header__row">
+          <div class="a-page-header__title"><h1>Registrations</h1></div>
+          <div class="a-page-header__actions"><a class="a-btn a-btn--outline" href="../../ui-design/onboarding/flow.html"><svg class="a-icon" aria-hidden="true"><use href="#external-link"></use></svg>Open signup form</a><button type="button" class="a-btn a-btn--primary" data-toast-demo="Signup link copied" data-variant="success"><svg class="a-icon" aria-hidden="true"><use href="#link"></use></svg>Copy signup link</button></div>
+        </div>
+        <p class="a-page-header__description">24 businesses started onboarding. Sample records.</p>
+      </header>
+      <div class="a-table-card">
+        <div class="a-toolbar">
+          <div class="a-toolbar__search"><div class="a-input-group"><svg class="a-icon" aria-hidden="true"><use href="#search"></use></svg><input class="a-input" type="search" placeholder="Search business, contact, email or ID" aria-label="Search business, contact, email or ID" data-table-search="reg-table"></div></div>
+          <button type="button" class="a-btn a-btn--outline" data-popover-trigger data-align="start" aria-expanded="false" aria-controls="reg-table-filter"><svg class="a-icon" aria-hidden="true"><use href="#filter"></use></svg>Filter</button><div class="a-popover" id="reg-table-filter" role="dialog" aria-label="Filters" hidden><div class="a-choice-list"><label class="a-check"><input class="a-check__input" type="checkbox" id="reg-table-f-active" data-table-filter="reg-table" data-key="status" value="active" data-label="Active"><span class="a-check__label">Active</span></label><label class="a-check"><input class="a-check__input" type="checkbox" id="reg-table-f-pending" data-table-filter="reg-table" data-key="status" value="pending" data-label="Pending documents"><span class="a-check__label">Pending documents</span></label><label class="a-check"><input class="a-check__input" type="checkbox" id="reg-table-f-failed" data-table-filter="reg-table" data-key="status" value="failed" data-label="Payment failed"><span class="a-check__label">Payment failed</span></label><label class="a-check"><input class="a-check__input" type="checkbox" id="reg-table-f-review" data-table-filter="reg-table" data-key="status" value="review" data-label="In review"><span class="a-check__label">In review</span></label><label class="a-check"><input class="a-check__input" type="checkbox" id="reg-table-f-paused" data-table-filter="reg-table" data-key="status" value="paused" data-label="Paused"><span class="a-check__label">Paused</span></label><hr class="a-separator"><label class="a-check"><input class="a-check__input" type="checkbox" id="reg-table-f-starter" data-table-filter="reg-table" data-key="plan" value="starter" data-label="Starter"><span class="a-check__label">Starter</span></label><label class="a-check"><input class="a-check__input" type="checkbox" id="reg-table-f-growth" data-table-filter="reg-table" data-key="plan" value="growth" data-label="Growth"><span class="a-check__label">Growth</span></label><label class="a-check"><input class="a-check__input" type="checkbox" id="reg-table-f-scale" data-table-filter="reg-table" data-key="plan" value="scale" data-label="Scale"><span class="a-check__label">Scale</span></label><label class="a-check"><input class="a-check__input" type="checkbox" id="reg-table-f-catchup" data-table-filter="reg-table" data-key="plan" value="catchup" data-label="Catch-up project"><span class="a-check__label">Catch-up project</span></label><label class="a-check"><input class="a-check__input" type="checkbox" id="reg-table-f-cleanup" data-table-filter="reg-table" data-key="plan" value="cleanup" data-label="Books cleanup"><span class="a-check__label">Books cleanup</span></label></div></div>
+          <div class="a-toolbar__end">
+            <div class="a-segmented" role="group" aria-label="Row density" data-toggle-group="single" data-density-for="reg-table"><button type="button" class="a-toggle" data-density="comfortable" aria-pressed="true">Comfortable</button><button type="button" class="a-toggle" data-density="compact" aria-pressed="false">Compact</button></div>
+            <button type="button" class="a-btn a-btn--outline" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-controls="reg-table-cols" data-align="end"><svg class="a-icon" aria-hidden="true"><use href="#settings"></use></svg>Columns</button><div class="a-menu" id="reg-table-cols" role="menu" aria-label="Visible columns" hidden><button type="button" class="a-menu__item" role="menuitemcheckbox" aria-checked="true" data-column-toggle="reg-table:contact"><span class="a-menu__check"><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg></span>Contact</button><button type="button" class="a-menu__item" role="menuitemcheckbox" aria-checked="true" data-column-toggle="reg-table:plan"><span class="a-menu__check"><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg></span>Plan</button><button type="button" class="a-menu__item" role="menuitemcheckbox" aria-checked="true" data-column-toggle="reg-table:call"><span class="a-menu__check"><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg></span>AI call</button><button type="button" class="a-menu__item" role="menuitemcheckbox" aria-checked="true" data-column-toggle="reg-table:state"><span class="a-menu__check"><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg></span>State</button></div>
+            <button type="button" class="a-btn a-btn--outline" data-toast-demo="Export started. Your CSV will download shortly." data-variant="info"><svg class="a-icon" aria-hidden="true"><use href="#download"></use></svg>Export</button>
+          </div>
+          <div class="a-filter-chips" data-filter-chips="reg-table" data-icons="close"></div>
+        </div>
+        <div class="a-bulk-bar" data-bulk-for="reg-table" hidden><span data-bulk-count>0 selected</span><div class="a-bulk-bar__actions"><button type="button" class="a-btn a-btn--outline a-btn--sm" data-bulk-action="Emailed"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg>Email</button><button type="button" class="a-btn a-btn--outline a-btn--sm" data-bulk-action="Exported"><svg class="a-icon" aria-hidden="true"><use href="#download"></use></svg>Export</button></div></div>
+        <div class="a-table-scroll" data-scroll-area tabindex="0" role="region" aria-label="Business, contact, email or id table">
+          <table class="a-table a-table--stack" id="reg-table" data-table data-page-size="10">
+            <thead><tr><th scope="col" class="a-table__check"><input class="a-check__input" type="checkbox" data-select-all aria-label="Select all visible rows"></th><th scope="col" class="a-table__sticky"><button type="button" class="a-sort">Business<svg class="a-icon" aria-hidden="true"><use href="#chevron-up"></use></svg></button></th><th scope="col" data-col="contact"><button type="button" class="a-sort">Contact<svg class="a-icon" aria-hidden="true"><use href="#chevron-up"></use></svg></button></th><th scope="col" data-col="plan"><button type="button" class="a-sort">Plan<svg class="a-icon" aria-hidden="true"><use href="#chevron-up"></use></svg></button></th><th scope="col" class="a-table__num" data-type="number"><button type="button" class="a-sort">Amount<svg class="a-icon" aria-hidden="true"><use href="#chevron-up"></use></svg></button></th><th scope="col"><button type="button" class="a-sort">Status<svg class="a-icon" aria-hidden="true"><use href="#chevron-up"></use></svg></button></th><th scope="col" data-col="call"><button type="button" class="a-sort">AI call<svg class="a-icon" aria-hidden="true"><use href="#chevron-up"></use></svg></button></th><th scope="col" data-col="state"><button type="button" class="a-sort">State<svg class="a-icon" aria-hidden="true"><use href="#chevron-up"></use></svg></button></th><th scope="col"><button type="button" class="a-sort">Signed up<svg class="a-icon" aria-hidden="true"><use href="#chevron-up"></use></svg></button></th><th scope="col" class="a-table__actions"><span class="a-visually-hidden">Actions</span></th></tr></thead>
+            <tbody>
+              <tr data-row data-status="active" data-plan="growth" data-call="answered">
+                <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Harbor Lane Dental, LLC"></td><td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">HL</span><div><a href="registration-detail.html">Harbor Lane Dental, LLC</a><span class="a-table__sub">AG-10482</span></div></div></td>
+                <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Maria Robles</span><span class="a-table__sub">m.robles@harborlanedental.com</span></td>
+                <td data-label="Plan" data-col="plan">Growth<span class="a-table__sub">Monthly</span></td>
+                <td class="a-table__num" data-label="Amount" data-sort="499">$499.00</td>
+                <td data-label="Status"><span class="a-status a-status--success">Active</span></td>
+                <td data-label="AI call" data-col="call"><span class="a-status a-status--success">Answered</span></td>
+                <td data-label="State" data-col="state">TX</td>
+                <td data-label="Signed up" data-sort="2026-10-21">Oct 21, 2026</td>
+                <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-controls="m-AG-10482" data-align="end" aria-label="Actions for Harbor Lane Dental, LLC"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button><div class="a-menu" id="m-AG-10482" role="menu" aria-label="Actions for Harbor Lane Dental, LLC" hidden><a class="a-menu__item" role="menuitem" href="registration-detail.html"><svg class="a-icon" aria-hidden="true"><use href="#eye"></use></svg>View details</a><button class="a-menu__item" role="menuitem" type="button" data-toast="Email draft opened for Maria Robles"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg>Email client</button><button class="a-menu__item" role="menuitem" type="button" data-toast="Call queued for Harbor Lane Dental, LLC"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>Retry AI call</button></div></td>
+              </tr>
+              <tr data-row data-status="active" data-plan="scale" data-call="answered">
+                <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Northwind Logistics Inc."></td><td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">NI</span><div><a href="registration-detail.html">Northwind Logistics Inc.</a><span class="a-table__sub">AG-10481</span></div></div></td>
+                <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Daniel Okafor</span><span class="a-table__sub">dokafor@northwindlogistics.com</span></td>
+                <td data-label="Plan" data-col="plan">Scale<span class="a-table__sub">Monthly</span></td>
+                <td class="a-table__num" data-label="Amount" data-sort="899">$899.00</td>
+                <td data-label="Status"><span class="a-status a-status--success">Active</span></td>
+                <td data-label="AI call" data-col="call"><span class="a-status a-status--success">Answered</span></td>
+                <td data-label="State" data-col="state">IL</td>
+                <td data-label="Signed up" data-sort="2026-10-20">Oct 20, 2026</td>
+                <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-controls="m-AG-10481" data-align="end" aria-label="Actions for Northwind Logistics Inc."><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button><div class="a-menu" id="m-AG-10481" role="menu" aria-label="Actions for Northwind Logistics Inc." hidden><a class="a-menu__item" role="menuitem" href="registration-detail.html"><svg class="a-icon" aria-hidden="true"><use href="#eye"></use></svg>View details</a><button class="a-menu__item" role="menuitem" type="button" data-toast="Email draft opened for Daniel Okafor"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg>Email client</button><button class="a-menu__item" role="menuitem" type="button" data-toast="Call queued for Northwind Logistics Inc."><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>Retry AI call</button></div></td>
+              </tr>
+              <tr data-row data-status="failed" data-plan="starter" data-call="noanswer">
+                <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Bright Path Tutoring"></td><td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">BT</span><div><a href="registration-detail.html">Bright Path Tutoring</a><span class="a-table__sub">AG-10480</span></div></div></td>
+                <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Priya Shah</span><span class="a-table__sub">priya@brightpathtutoring.com</span></td>
+                <td data-label="Plan" data-col="plan">Starter<span class="a-table__sub">Monthly</span></td>
+                <td class="a-table__num" data-label="Amount" data-sort="299">$299.00</td>
+                <td data-label="Status"><span class="a-status a-status--destructive">Payment failed</span></td>
+                <td data-label="AI call" data-col="call"><span class="a-status a-status--warning">No answer</span></td>
+                <td data-label="State" data-col="state">NJ</td>
+                <td data-label="Signed up" data-sort="2026-10-20">Oct 20, 2026</td>
+                <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-controls="m-AG-10480" data-align="end" aria-label="Actions for Bright Path Tutoring"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button><div class="a-menu" id="m-AG-10480" role="menu" aria-label="Actions for Bright Path Tutoring" hidden><a class="a-menu__item" role="menuitem" href="registration-detail.html"><svg class="a-icon" aria-hidden="true"><use href="#eye"></use></svg>View details</a><button class="a-menu__item" role="menuitem" type="button" data-toast="Email draft opened for Priya Shah"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg>Email client</button><button class="a-menu__item" role="menuitem" type="button" data-toast="Call queued for Bright Path Tutoring"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>Retry AI call</button></div></td>
+              </tr>
+              <tr data-row data-status="review" data-plan="growth" data-call="answered">
+                <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Cedar & Pine Studio"></td><td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">CS</span><div><a href="registration-detail.html">Cedar & Pine Studio</a><span class="a-table__sub">AG-10479</span></div></div></td>
+                <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Hannah Lee</span><span class="a-table__sub">hello@cedarandpine.studio</span></td>
+                <td data-label="Plan" data-col="plan">Growth<span class="a-table__sub">Monthly</span></td>
+                <td class="a-table__num" data-label="Amount" data-sort="499">$499.00</td>
+                <td data-label="Status"><span class="a-status a-status--info">In review</span></td>
+                <td data-label="AI call" data-col="call"><span class="a-status a-status--success">Answered</span></td>
+                <td data-label="State" data-col="state">OR</td>
+                <td data-label="Signed up" data-sort="2026-10-19">Oct 19, 2026</td>
+                <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-controls="m-AG-10479" data-align="end" aria-label="Actions for Cedar & Pine Studio"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button><div class="a-menu" id="m-AG-10479" role="menu" aria-label="Actions for Cedar & Pine Studio" hidden><a class="a-menu__item" role="menuitem" href="registration-detail.html"><svg class="a-icon" aria-hidden="true"><use href="#eye"></use></svg>View details</a><button class="a-menu__item" role="menuitem" type="button" data-toast="Email draft opened for Hannah Lee"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg>Email client</button><button class="a-menu__item" role="menuitem" type="button" data-toast="Call queued for Cedar & Pine Studio"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>Retry AI call</button></div></td>
+              </tr>
+              <tr data-row data-status="active" data-plan="scale" data-call="answered">
+                <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Summit Ridge Roofing Co."></td><td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">SC</span><div><a href="registration-detail.html">Summit Ridge Roofing Co.</a><span class="a-table__sub">AG-10478</span></div></div></td>
+                <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Marcus Bell</span><span class="a-table__sub">marcus@summitridgeroofing.com</span></td>
+                <td data-label="Plan" data-col="plan">Scale<span class="a-table__sub">Monthly</span></td>
+                <td class="a-table__num" data-label="Amount" data-sort="899">$899.00</td>
+                <td data-label="Status"><span class="a-status a-status--success">Active</span></td>
+                <td data-label="AI call" data-col="call"><span class="a-status a-status--success">Answered</span></td>
+                <td data-label="State" data-col="state">CO</td>
+                <td data-label="Signed up" data-sort="2026-10-18">Oct 18, 2026</td>
+                <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-controls="m-AG-10478" data-align="end" aria-label="Actions for Summit Ridge Roofing Co."><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button><div class="a-menu" id="m-AG-10478" role="menu" aria-label="Actions for Summit Ridge Roofing Co." hidden><a class="a-menu__item" role="menuitem" href="registration-detail.html"><svg class="a-icon" aria-hidden="true"><use href="#eye"></use></svg>View details</a><button class="a-menu__item" role="menuitem" type="button" data-toast="Email draft opened for Marcus Bell"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg>Email client</button><button class="a-menu__item" role="menuitem" type="button" data-toast="Call queued for Summit Ridge Roofing Co."><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>Retry AI call</button></div></td>
+              </tr>
+              <tr data-row data-status="pending" data-plan="starter" data-call="queued">
+                <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Little Fern Bakery"></td><td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">LB</span><div><a href="registration-detail.html">Little Fern Bakery</a><span class="a-table__sub">AG-10477</span></div></div></td>
+                <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Sofia Marquez</span><span class="a-table__sub">sofia@littlefernbakery.com</span></td>
+                <td data-label="Plan" data-col="plan">Starter<span class="a-table__sub">Monthly</span></td>
+                <td class="a-table__num" data-label="Amount" data-sort="299">$299.00</td>
+                <td data-label="Status"><span class="a-status a-status--warning">Pending documents</span></td>
+                <td data-label="AI call" data-col="call"><span class="a-status a-status--info">Queued</span></td>
+                <td data-label="State" data-col="state">CA</td>
+                <td data-label="Signed up" data-sort="2026-10-18">Oct 18, 2026</td>
+                <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-controls="m-AG-10477" data-align="end" aria-label="Actions for Little Fern Bakery"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button><div class="a-menu" id="m-AG-10477" role="menu" aria-label="Actions for Little Fern Bakery" hidden><a class="a-menu__item" role="menuitem" href="registration-detail.html"><svg class="a-icon" aria-hidden="true"><use href="#eye"></use></svg>View details</a><button class="a-menu__item" role="menuitem" type="button" data-toast="Email draft opened for Sofia Marquez"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg>Email client</button><button class="a-menu__item" role="menuitem" type="button" data-toast="Call queued for Little Fern Bakery"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>Retry AI call</button></div></td>
+              </tr>
+              <tr data-row data-status="active" data-plan="catchup" data-call="answered">
+                <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Atlas Home Health Partners"></td><td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">AP</span><div><a href="registration-detail.html">Atlas Home Health Partners</a><span class="a-table__sub">AG-10476</span></div></div></td>
+                <td data-label="Contact" data-col="contact"><span class="a-table__truncate">James Whitfield</span><span class="a-table__sub">jwhitfield@atlashomehealth.com</span></td>
+                <td data-label="Plan" data-col="plan">Catch-up project<span class="a-table__sub">One-time</span></td>
+                <td class="a-table__num" data-label="Amount" data-sort="1250">$1,250.00</td>
+                <td data-label="Status"><span class="a-status a-status--success">Active</span></td>
+                <td data-label="AI call" data-col="call"><span class="a-status a-status--success">Answered</span></td>
+                <td data-label="State" data-col="state">FL</td>
+                <td data-label="Signed up" data-sort="2026-10-17">Oct 17, 2026</td>
+                <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-controls="m-AG-10476" data-align="end" aria-label="Actions for Atlas Home Health Partners"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button><div class="a-menu" id="m-AG-10476" role="menu" aria-label="Actions for Atlas Home Health Partners" hidden><a class="a-menu__item" role="menuitem" href="registration-detail.html"><svg class="a-icon" aria-hidden="true"><use href="#eye"></use></svg>View details</a><button class="a-menu__item" role="menuitem" type="button" data-toast="Email draft opened for James Whitfield"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg>Email client</button><button class="a-menu__item" role="menuitem" type="button" data-toast="Call queued for Atlas Home Health Partners"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>Retry AI call</button></div></td>
+              </tr>
+              <tr data-row data-status="active" data-plan="growth" data-call="noanswer">
+                <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Bluewater Charters"></td><td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">BC</span><div><a href="registration-detail.html">Bluewater Charters</a><span class="a-table__sub">AG-10475</span></div></div></td>
+                <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Ethan Brooks</span><span class="a-table__sub">ethan@bluewatercharters.com</span></td>
+                <td data-label="Plan" data-col="plan">Growth<span class="a-table__sub">Monthly</span></td>
+                <td class="a-table__num" data-label="Amount" data-sort="499">$499.00</td>
+                <td data-label="Status"><span class="a-status a-status--success">Active</span></td>
+                <td data-label="AI call" data-col="call"><span class="a-status a-status--warning">No answer</span></td>
+                <td data-label="State" data-col="state">FL</td>
+                <td data-label="Signed up" data-sort="2026-10-16">Oct 16, 2026</td>
+                <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-controls="m-AG-10475" data-align="end" aria-label="Actions for Bluewater Charters"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button><div class="a-menu" id="m-AG-10475" role="menu" aria-label="Actions for Bluewater Charters" hidden><a class="a-menu__item" role="menuitem" href="registration-detail.html"><svg class="a-icon" aria-hidden="true"><use href="#eye"></use></svg>View details</a><button class="a-menu__item" role="menuitem" type="button" data-toast="Email draft opened for Ethan Brooks"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg>Email client</button><button class="a-menu__item" role="menuitem" type="button" data-toast="Call queued for Bluewater Charters"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>Retry AI call</button></div></td>
+              </tr>
+              <tr data-row data-status="pending" data-plan="growth" data-call="answered">
+                <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Kinfolk Coffee Roasters"></td><td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">KR</span><div><a href="registration-detail.html">Kinfolk Coffee Roasters</a><span class="a-table__sub">AG-10474</span></div></div></td>
+                <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Amara Johnson</span><span class="a-table__sub">amara@kinfolkroasters.com</span></td>
+                <td data-label="Plan" data-col="plan">Growth<span class="a-table__sub">Monthly</span></td>
+                <td class="a-table__num" data-label="Amount" data-sort="499">$499.00</td>
+                <td data-label="Status"><span class="a-status a-status--warning">Pending documents</span></td>
+                <td data-label="AI call" data-col="call"><span class="a-status a-status--success">Answered</span></td>
+                <td data-label="State" data-col="state">WA</td>
+                <td data-label="Signed up" data-sort="2026-10-15">Oct 15, 2026</td>
+                <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-controls="m-AG-10474" data-align="end" aria-label="Actions for Kinfolk Coffee Roasters"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button><div class="a-menu" id="m-AG-10474" role="menu" aria-label="Actions for Kinfolk Coffee Roasters" hidden><a class="a-menu__item" role="menuitem" href="registration-detail.html"><svg class="a-icon" aria-hidden="true"><use href="#eye"></use></svg>View details</a><button class="a-menu__item" role="menuitem" type="button" data-toast="Email draft opened for Amara Johnson"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg>Email client</button><button class="a-menu__item" role="menuitem" type="button" data-toast="Call queued for Kinfolk Coffee Roasters"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>Retry AI call</button></div></td>
+              </tr>
+              <tr data-row data-status="active" data-plan="scale" data-call="answered">
+                <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Greenleaf Property Management"></td><td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">GM</span><div><a href="registration-detail.html">Greenleaf Property Management</a><span class="a-table__sub">AG-10473</span></div></div></td>
+                <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Robert Chen</span><span class="a-table__sub">rchen@greenleafpm.com</span></td>
+                <td data-label="Plan" data-col="plan">Scale<span class="a-table__sub">Monthly</span></td>
+                <td class="a-table__num" data-label="Amount" data-sort="899">$899.00</td>
+                <td data-label="Status"><span class="a-status a-status--success">Active</span></td>
+                <td data-label="AI call" data-col="call"><span class="a-status a-status--success">Answered</span></td>
+                <td data-label="State" data-col="state">AZ</td>
+                <td data-label="Signed up" data-sort="2026-10-14">Oct 14, 2026</td>
+                <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-controls="m-AG-10473" data-align="end" aria-label="Actions for Greenleaf Property Management"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button><div class="a-menu" id="m-AG-10473" role="menu" aria-label="Actions for Greenleaf Property Management" hidden><a class="a-menu__item" role="menuitem" href="registration-detail.html"><svg class="a-icon" aria-hidden="true"><use href="#eye"></use></svg>View details</a><button class="a-menu__item" role="menuitem" type="button" data-toast="Email draft opened for Robert Chen"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg>Email client</button><button class="a-menu__item" role="menuitem" type="button" data-toast="Call queued for Greenleaf Property Management"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>Retry AI call</button></div></td>
+              </tr>
+              <tr data-row data-status="review" data-plan="cleanup" data-call="ringing">
+                <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Pixel Forge Media"></td><td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">PM</span><div><a href="registration-detail.html">Pixel Forge Media</a><span class="a-table__sub">AG-10472</span></div></div></td>
+                <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Lena Novak</span><span class="a-table__sub">lena@pixelforge.media</span></td>
+                <td data-label="Plan" data-col="plan">Books cleanup<span class="a-table__sub">One-time</span></td>
+                <td class="a-table__num" data-label="Amount" data-sort="950">$950.00</td>
+                <td data-label="Status"><span class="a-status a-status--info">In review</span></td>
+                <td data-label="AI call" data-col="call"><span class="a-status a-status--info">Ringing</span></td>
+                <td data-label="State" data-col="state">NY</td>
+                <td data-label="Signed up" data-sort="2026-10-14">Oct 14, 2026</td>
+                <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-controls="m-AG-10472" data-align="end" aria-label="Actions for Pixel Forge Media"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button><div class="a-menu" id="m-AG-10472" role="menu" aria-label="Actions for Pixel Forge Media" hidden><a class="a-menu__item" role="menuitem" href="registration-detail.html"><svg class="a-icon" aria-hidden="true"><use href="#eye"></use></svg>View details</a><button class="a-menu__item" role="menuitem" type="button" data-toast="Email draft opened for Lena Novak"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg>Email client</button><button class="a-menu__item" role="menuitem" type="button" data-toast="Call queued for Pixel Forge Media"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>Retry AI call</button></div></td>
+              </tr>
+              <tr data-row data-status="active" data-plan="starter" data-call="answered">
+                <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Oak & Iron Fitness"></td><td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">OF</span><div><a href="registration-detail.html">Oak & Iron Fitness</a><span class="a-table__sub">AG-10471</span></div></div></td>
+                <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Tyler Grant</span><span class="a-table__sub">tyler@oakandironfitness.com</span></td>
+                <td data-label="Plan" data-col="plan">Starter<span class="a-table__sub">Monthly</span></td>
+                <td class="a-table__num" data-label="Amount" data-sort="299">$299.00</td>
+                <td data-label="Status"><span class="a-status a-status--success">Active</span></td>
+                <td data-label="AI call" data-col="call"><span class="a-status a-status--success">Answered</span></td>
+                <td data-label="State" data-col="state">GA</td>
+                <td data-label="Signed up" data-sort="2026-10-12">Oct 12, 2026</td>
+                <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-controls="m-AG-10471" data-align="end" aria-label="Actions for Oak & Iron Fitness"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button><div class="a-menu" id="m-AG-10471" role="menu" aria-label="Actions for Oak & Iron Fitness" hidden><a class="a-menu__item" role="menuitem" href="registration-detail.html"><svg class="a-icon" aria-hidden="true"><use href="#eye"></use></svg>View details</a><button class="a-menu__item" role="menuitem" type="button" data-toast="Email draft opened for Tyler Grant"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg>Email client</button><button class="a-menu__item" role="menuitem" type="button" data-toast="Call queued for Oak & Iron Fitness"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>Retry AI call</button></div></td>
+              </tr>
+              <tr data-row data-status="active" data-plan="growth" data-call="answered">
+                <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Riverbend Veterinary Clinic"></td><td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">RC</span><div><a href="registration-detail.html">Riverbend Veterinary Clinic</a><span class="a-table__sub">AG-10470</span></div></div></td>
+                <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Dr. Alicia Moreno</span><span class="a-table__sub">amoreno@riverbendvet.com</span></td>
+                <td data-label="Plan" data-col="plan">Growth<span class="a-table__sub">Monthly</span></td>
+                <td class="a-table__num" data-label="Amount" data-sort="499">$499.00</td>
+                <td data-label="Status"><span class="a-status a-status--success">Active</span></td>
+                <td data-label="AI call" data-col="call"><span class="a-status a-status--success">Answered</span></td>
+                <td data-label="State" data-col="state">TN</td>
+                <td data-label="Signed up" data-sort="2026-10-11">Oct 11, 2026</td>
+                <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-controls="m-AG-10470" data-align="end" aria-label="Actions for Riverbend Veterinary Clinic"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button><div class="a-menu" id="m-AG-10470" role="menu" aria-label="Actions for Riverbend Veterinary Clinic" hidden><a class="a-menu__item" role="menuitem" href="registration-detail.html"><svg class="a-icon" aria-hidden="true"><use href="#eye"></use></svg>View details</a><button class="a-menu__item" role="menuitem" type="button" data-toast="Email draft opened for Dr. Alicia Moreno"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg>Email client</button><button class="a-menu__item" role="menuitem" type="button" data-toast="Call queued for Riverbend Veterinary Clinic"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>Retry AI call</button></div></td>
+              </tr>
+              <tr data-row data-status="paused" data-plan="growth" data-call="answered">
+                <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Copperline Electric"></td><td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">CE</span><div><a href="registration-detail.html">Copperline Electric</a><span class="a-table__sub">AG-10469</span></div></div></td>
+                <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Victor Ramos</span><span class="a-table__sub">victor@copperlineelectric.com</span></td>
+                <td data-label="Plan" data-col="plan">Growth<span class="a-table__sub">Monthly</span></td>
+                <td class="a-table__num" data-label="Amount" data-sort="499">$499.00</td>
+                <td data-label="Status"><span class="a-status">Paused</span></td>
+                <td data-label="AI call" data-col="call"><span class="a-status a-status--success">Answered</span></td>
+                <td data-label="State" data-col="state">NV</td>
+                <td data-label="Signed up" data-sort="2026-10-09">Oct 9, 2026</td>
+                <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-controls="m-AG-10469" data-align="end" aria-label="Actions for Copperline Electric"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button><div class="a-menu" id="m-AG-10469" role="menu" aria-label="Actions for Copperline Electric" hidden><a class="a-menu__item" role="menuitem" href="registration-detail.html"><svg class="a-icon" aria-hidden="true"><use href="#eye"></use></svg>View details</a><button class="a-menu__item" role="menuitem" type="button" data-toast="Email draft opened for Victor Ramos"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg>Email client</button><button class="a-menu__item" role="menuitem" type="button" data-toast="Call queued for Copperline Electric"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>Retry AI call</button></div></td>
+              </tr>
+              <tr data-row data-status="active" data-plan="starter" data-call="failed">
+                <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Meadowbrook Montessori"></td><td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">MM</span><div><a href="registration-detail.html">Meadowbrook Montessori</a><span class="a-table__sub">AG-10468</span></div></div></td>
+                <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Grace Kim</span><span class="a-table__sub">gkim@meadowbrookmontessori.org</span></td>
+                <td data-label="Plan" data-col="plan">Starter<span class="a-table__sub">Monthly</span></td>
+                <td class="a-table__num" data-label="Amount" data-sort="299">$299.00</td>
+                <td data-label="Status"><span class="a-status a-status--success">Active</span></td>
+                <td data-label="AI call" data-col="call"><span class="a-status a-status--destructive">Failed</span></td>
+                <td data-label="State" data-col="state">VA</td>
+                <td data-label="Signed up" data-sort="2026-10-08">Oct 8, 2026</td>
+                <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-controls="m-AG-10468" data-align="end" aria-label="Actions for Meadowbrook Montessori"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button><div class="a-menu" id="m-AG-10468" role="menu" aria-label="Actions for Meadowbrook Montessori" hidden><a class="a-menu__item" role="menuitem" href="registration-detail.html"><svg class="a-icon" aria-hidden="true"><use href="#eye"></use></svg>View details</a><button class="a-menu__item" role="menuitem" type="button" data-toast="Email draft opened for Grace Kim"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg>Email client</button><button class="a-menu__item" role="menuitem" type="button" data-toast="Call queued for Meadowbrook Montessori"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>Retry AI call</button></div></td>
+              </tr>
+              <tr data-row data-status="active" data-plan="growth" data-call="answered">
+                <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Ironclad Auto Repair"></td><td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">IR</span><div><a href="registration-detail.html">Ironclad Auto Repair</a><span class="a-table__sub">AG-10467</span></div></div></td>
+                <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Luis Fernandez</span><span class="a-table__sub">luis@ironcladauto.com</span></td>
+                <td data-label="Plan" data-col="plan">Growth<span class="a-table__sub">Monthly</span></td>
+                <td class="a-table__num" data-label="Amount" data-sort="499">$499.00</td>
+                <td data-label="Status"><span class="a-status a-status--success">Active</span></td>
+                <td data-label="AI call" data-col="call"><span class="a-status a-status--success">Answered</span></td>
+                <td data-label="State" data-col="state">TX</td>
+                <td data-label="Signed up" data-sort="2026-10-07">Oct 7, 2026</td>
+                <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-controls="m-AG-10467" data-align="end" aria-label="Actions for Ironclad Auto Repair"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button><div class="a-menu" id="m-AG-10467" role="menu" aria-label="Actions for Ironclad Auto Repair" hidden><a class="a-menu__item" role="menuitem" href="registration-detail.html"><svg class="a-icon" aria-hidden="true"><use href="#eye"></use></svg>View details</a><button class="a-menu__item" role="menuitem" type="button" data-toast="Email draft opened for Luis Fernandez"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg>Email client</button><button class="a-menu__item" role="menuitem" type="button" data-toast="Call queued for Ironclad Auto Repair"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>Retry AI call</button></div></td>
+              </tr>
+              <tr data-row data-status="pending" data-plan="catchup" data-call="noanswer">
+                <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Saffron Table Catering"></td><td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">SC</span><div><a href="registration-detail.html">Saffron Table Catering</a><span class="a-table__sub">AG-10466</span></div></div></td>
+                <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Nadia Rahman</span><span class="a-table__sub">nadia@saffrontable.com</span></td>
+                <td data-label="Plan" data-col="plan">Catch-up project<span class="a-table__sub">One-time</span></td>
+                <td class="a-table__num" data-label="Amount" data-sort="1250">$1,250.00</td>
+                <td data-label="Status"><span class="a-status a-status--warning">Pending documents</span></td>
+                <td data-label="AI call" data-col="call"><span class="a-status a-status--warning">No answer</span></td>
+                <td data-label="State" data-col="state">IL</td>
+                <td data-label="Signed up" data-sort="2026-10-06">Oct 6, 2026</td>
+                <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-controls="m-AG-10466" data-align="end" aria-label="Actions for Saffron Table Catering"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button><div class="a-menu" id="m-AG-10466" role="menu" aria-label="Actions for Saffron Table Catering" hidden><a class="a-menu__item" role="menuitem" href="registration-detail.html"><svg class="a-icon" aria-hidden="true"><use href="#eye"></use></svg>View details</a><button class="a-menu__item" role="menuitem" type="button" data-toast="Email draft opened for Nadia Rahman"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg>Email client</button><button class="a-menu__item" role="menuitem" type="button" data-toast="Call queued for Saffron Table Catering"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>Retry AI call</button></div></td>
+              </tr>
+              <tr data-row data-status="active" data-plan="growth" data-call="answered">
+                <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Clearview Optometry"></td><td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">CO</span><div><a href="registration-detail.html">Clearview Optometry</a><span class="a-table__sub">AG-10465</span></div></div></td>
+                <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Dr. Samuel Price</span><span class="a-table__sub">sprice@clearviewoptometry.com</span></td>
+                <td data-label="Plan" data-col="plan">Growth<span class="a-table__sub">Monthly</span></td>
+                <td class="a-table__num" data-label="Amount" data-sort="499">$499.00</td>
+                <td data-label="Status"><span class="a-status a-status--success">Active</span></td>
+                <td data-label="AI call" data-col="call"><span class="a-status a-status--success">Answered</span></td>
+                <td data-label="State" data-col="state">OH</td>
+                <td data-label="Signed up" data-sort="2026-10-03">Oct 3, 2026</td>
+                <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-controls="m-AG-10465" data-align="end" aria-label="Actions for Clearview Optometry"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button><div class="a-menu" id="m-AG-10465" role="menu" aria-label="Actions for Clearview Optometry" hidden><a class="a-menu__item" role="menuitem" href="registration-detail.html"><svg class="a-icon" aria-hidden="true"><use href="#eye"></use></svg>View details</a><button class="a-menu__item" role="menuitem" type="button" data-toast="Email draft opened for Dr. Samuel Price"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg>Email client</button><button class="a-menu__item" role="menuitem" type="button" data-toast="Call queued for Clearview Optometry"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>Retry AI call</button></div></td>
+              </tr>
+              <tr data-row data-status="active" data-plan="scale" data-call="answered">
+                <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Lantern Legal Group"></td><td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">LG</span><div><a href="registration-detail.html">Lantern Legal Group</a><span class="a-table__sub">AG-10464</span></div></div></td>
+                <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Olivia Turner</span><span class="a-table__sub">oturner@lanternlegal.com</span></td>
+                <td data-label="Plan" data-col="plan">Scale<span class="a-table__sub">Monthly</span></td>
+                <td class="a-table__num" data-label="Amount" data-sort="899">$899.00</td>
+                <td data-label="Status"><span class="a-status a-status--success">Active</span></td>
+                <td data-label="AI call" data-col="call"><span class="a-status a-status--success">Answered</span></td>
+                <td data-label="State" data-col="state">MA</td>
+                <td data-label="Signed up" data-sort="2026-10-02">Oct 2, 2026</td>
+                <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-controls="m-AG-10464" data-align="end" aria-label="Actions for Lantern Legal Group"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button><div class="a-menu" id="m-AG-10464" role="menu" aria-label="Actions for Lantern Legal Group" hidden><a class="a-menu__item" role="menuitem" href="registration-detail.html"><svg class="a-icon" aria-hidden="true"><use href="#eye"></use></svg>View details</a><button class="a-menu__item" role="menuitem" type="button" data-toast="Email draft opened for Olivia Turner"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg>Email client</button><button class="a-menu__item" role="menuitem" type="button" data-toast="Call queued for Lantern Legal Group"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>Retry AI call</button></div></td>
+              </tr>
+              <tr data-row data-status="failed" data-plan="starter" data-call="queued">
+                <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Tidewater Marine Supply"></td><td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">TS</span><div><a href="registration-detail.html">Tidewater Marine Supply</a><span class="a-table__sub">AG-10463</span></div></div></td>
+                <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Henry Walsh</span><span class="a-table__sub">hwalsh@tidewatermarine.com</span></td>
+                <td data-label="Plan" data-col="plan">Starter<span class="a-table__sub">Monthly</span></td>
+                <td class="a-table__num" data-label="Amount" data-sort="299">$299.00</td>
+                <td data-label="Status"><span class="a-status a-status--destructive">Payment failed</span></td>
+                <td data-label="AI call" data-col="call"><span class="a-status a-status--info">Queued</span></td>
+                <td data-label="State" data-col="state">SC</td>
+                <td data-label="Signed up" data-sort="2026-09-30">Sep 30, 2026</td>
+                <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-controls="m-AG-10463" data-align="end" aria-label="Actions for Tidewater Marine Supply"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button><div class="a-menu" id="m-AG-10463" role="menu" aria-label="Actions for Tidewater Marine Supply" hidden><a class="a-menu__item" role="menuitem" href="registration-detail.html"><svg class="a-icon" aria-hidden="true"><use href="#eye"></use></svg>View details</a><button class="a-menu__item" role="menuitem" type="button" data-toast="Email draft opened for Henry Walsh"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg>Email client</button><button class="a-menu__item" role="menuitem" type="button" data-toast="Call queued for Tidewater Marine Supply"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>Retry AI call</button></div></td>
+              </tr>
+              <tr data-row data-status="active" data-plan="growth" data-call="answered">
+                <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Brightside Pediatrics"></td><td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">BP</span><div><a href="registration-detail.html">Brightside Pediatrics</a><span class="a-table__sub">AG-10462</span></div></div></td>
+                <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Dr. Kavya Iyer</span><span class="a-table__sub">kiyer@brightsidepeds.com</span></td>
+                <td data-label="Plan" data-col="plan">Growth<span class="a-table__sub">Monthly</span></td>
+                <td class="a-table__num" data-label="Amount" data-sort="499">$499.00</td>
+                <td data-label="Status"><span class="a-status a-status--success">Active</span></td>
+                <td data-label="AI call" data-col="call"><span class="a-status a-status--success">Answered</span></td>
+                <td data-label="State" data-col="state">NC</td>
+                <td data-label="Signed up" data-sort="2026-09-28">Sep 28, 2026</td>
+                <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-controls="m-AG-10462" data-align="end" aria-label="Actions for Brightside Pediatrics"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button><div class="a-menu" id="m-AG-10462" role="menu" aria-label="Actions for Brightside Pediatrics" hidden><a class="a-menu__item" role="menuitem" href="registration-detail.html"><svg class="a-icon" aria-hidden="true"><use href="#eye"></use></svg>View details</a><button class="a-menu__item" role="menuitem" type="button" data-toast="Email draft opened for Dr. Kavya Iyer"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg>Email client</button><button class="a-menu__item" role="menuitem" type="button" data-toast="Call queued for Brightside Pediatrics"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>Retry AI call</button></div></td>
+              </tr>
+              <tr data-row data-status="active" data-plan="starter" data-call="answered">
+                <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Wildflower Yoga Collective"></td><td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">WC</span><div><a href="registration-detail.html">Wildflower Yoga Collective</a><span class="a-table__sub">AG-10461</span></div></div></td>
+                <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Emma Dawson</span><span class="a-table__sub">emma@wildfloweryoga.co</span></td>
+                <td data-label="Plan" data-col="plan">Starter<span class="a-table__sub">Monthly</span></td>
+                <td class="a-table__num" data-label="Amount" data-sort="299">$299.00</td>
+                <td data-label="Status"><span class="a-status a-status--success">Active</span></td>
+                <td data-label="AI call" data-col="call"><span class="a-status a-status--success">Answered</span></td>
+                <td data-label="State" data-col="state">MN</td>
+                <td data-label="Signed up" data-sort="2026-09-25">Sep 25, 2026</td>
+                <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-controls="m-AG-10461" data-align="end" aria-label="Actions for Wildflower Yoga Collective"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button><div class="a-menu" id="m-AG-10461" role="menu" aria-label="Actions for Wildflower Yoga Collective" hidden><a class="a-menu__item" role="menuitem" href="registration-detail.html"><svg class="a-icon" aria-hidden="true"><use href="#eye"></use></svg>View details</a><button class="a-menu__item" role="menuitem" type="button" data-toast="Email draft opened for Emma Dawson"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg>Email client</button><button class="a-menu__item" role="menuitem" type="button" data-toast="Call queued for Wildflower Yoga Collective"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>Retry AI call</button></div></td>
+              </tr>
+              <tr data-row data-status="active" data-plan="cleanup" data-call="answered">
+                <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Granite Peak Builders"></td><td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">GB</span><div><a href="registration-detail.html">Granite Peak Builders</a><span class="a-table__sub">AG-10460</span></div></div></td>
+                <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Noah Fischer</span><span class="a-table__sub">noah@granitepeakbuilders.com</span></td>
+                <td data-label="Plan" data-col="plan">Books cleanup<span class="a-table__sub">One-time</span></td>
+                <td class="a-table__num" data-label="Amount" data-sort="950">$950.00</td>
+                <td data-label="Status"><span class="a-status a-status--success">Active</span></td>
+                <td data-label="AI call" data-col="call"><span class="a-status a-status--success">Answered</span></td>
+                <td data-label="State" data-col="state">UT</td>
+                <td data-label="Signed up" data-sort="2026-09-22">Sep 22, 2026</td>
+                <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-controls="m-AG-10460" data-align="end" aria-label="Actions for Granite Peak Builders"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button><div class="a-menu" id="m-AG-10460" role="menu" aria-label="Actions for Granite Peak Builders" hidden><a class="a-menu__item" role="menuitem" href="registration-detail.html"><svg class="a-icon" aria-hidden="true"><use href="#eye"></use></svg>View details</a><button class="a-menu__item" role="menuitem" type="button" data-toast="Email draft opened for Noah Fischer"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg>Email client</button><button class="a-menu__item" role="menuitem" type="button" data-toast="Call queued for Granite Peak Builders"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>Retry AI call</button></div></td>
+              </tr>
+              <tr data-row data-status="paused" data-plan="starter" data-call="noanswer">
+                <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Second Story Books"></td><td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">SB</span><div><a href="registration-detail.html">Second Story Books</a><span class="a-table__sub">AG-10459</span></div></div></td>
+                <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Ruth Abernathy</span><span class="a-table__sub">ruth@secondstorybooks.com</span></td>
+                <td data-label="Plan" data-col="plan">Starter<span class="a-table__sub">Monthly</span></td>
+                <td class="a-table__num" data-label="Amount" data-sort="299">$299.00</td>
+                <td data-label="Status"><span class="a-status">Paused</span></td>
+                <td data-label="AI call" data-col="call"><span class="a-status a-status--warning">No answer</span></td>
+                <td data-label="State" data-col="state">PA</td>
+                <td data-label="Signed up" data-sort="2026-09-19">Sep 19, 2026</td>
+                <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-controls="m-AG-10459" data-align="end" aria-label="Actions for Second Story Books"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button><div class="a-menu" id="m-AG-10459" role="menu" aria-label="Actions for Second Story Books" hidden><a class="a-menu__item" role="menuitem" href="registration-detail.html"><svg class="a-icon" aria-hidden="true"><use href="#eye"></use></svg>View details</a><button class="a-menu__item" role="menuitem" type="button" data-toast="Email draft opened for Ruth Abernathy"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg>Email client</button><button class="a-menu__item" role="menuitem" type="button" data-toast="Call queued for Second Story Books"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>Retry AI call</button></div></td>
+              </tr>
+              <tr class="a-table__state" data-empty hidden><td colspan="10"><div class="a-empty"><svg class="a-illus a-illus--64" aria-hidden="true"><use href="#illus-empty-search"></use></svg><p class="a-empty__title">No registrations match</p><p class="a-empty__text">Try a different search or clear the filters.</p></div></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <nav class="a-pagination a-table-card__foot" aria-label="Table pages" data-pagination-for="reg-table" data-icons="chevron-left chevron-right"></nav>
+      </div>
+      </main>
+    </div>
+  </div>
+  <dialog class="a-dialog a-command" id="command-palette" aria-label="Command palette">
+    <div class="a-command__search"><svg class="a-icon" aria-hidden="true"><use href="#search"></use></svg><input class="a-command__input" type="text" role="combobox" aria-expanded="true" aria-controls="command-list" aria-autocomplete="list" aria-label="Search pages, clients and actions" placeholder="Search pages, clients and actions" autocomplete="off"></div>
+    <ul class="a-listbox" data-scroll-area role="listbox" id="command-list" aria-label="Results"><li role="presentation"><p class="a-listbox__group-label" id="cmd-g0">Go to</p><ul role="group" class="a-listbox__group" aria-labelledby="cmd-g0"><li role="option" class="a-option" id="cmd-dash" data-href="../../ui-design/admin/dashboard.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#home"></use></svg>Dashboard</li><li role="option" class="a-option" id="cmd-reg" data-href="../../ui-design/admin/registrations.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#users"></use></svg>Registrations</li><li role="option" class="a-option" id="cmd-pay" data-href="../../ui-design/admin/payments.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#credit-card"></use></svg>Payments</li><li role="option" class="a-option" id="cmd-calls" data-href="../../ui-design/admin/ai-calls.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>AI calls</li><li role="option" class="a-option" id="cmd-settings" data-href="../../ui-design/admin/settings.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#settings"></use></svg>Settings</li></ul></li><li role="presentation"><p class="a-listbox__group-label" id="cmd-g1">Clients</p><ul role="group" class="a-listbox__group" aria-labelledby="cmd-g1"><li role="option" class="a-option" id="cmd-c1" data-href="../../ui-design/admin/registration-detail.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#building"></use></svg>Harbor Lane Dental, LLC<span class="a-option__meta">Growth</span></li><li role="option" class="a-option" id="cmd-c2" data-href="../../ui-design/admin/registration-detail.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#building"></use></svg>Northwind Logistics Inc.<span class="a-option__meta">Scale</span></li><li role="option" class="a-option" id="cmd-c3" data-href="../../ui-design/admin/registration-detail.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#building"></use></svg>Bright Path Tutoring<span class="a-option__meta">Payment failed</span></li></ul></li><li role="presentation"><p class="a-listbox__group-label" id="cmd-g2">Actions</p><ul role="group" class="a-listbox__group" aria-labelledby="cmd-g2"><li role="option" class="a-option" id="cmd-export" data-toast="Export started. Your CSV will download shortly." aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#download"></use></svg>Export registrations as CSV</li><li role="option" class="a-option" id="cmd-link" data-toast="Signup link copied" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#link"></use></svg>Copy signup link</li></ul></li><li class="a-listbox__empty" role="presentation" hidden>No results. Try a client name or page.</li></ul>
+    <div class="a-command__footer"><span><kbd class="a-kbd">Up</kbd> <kbd class="a-kbd">Down</kbd> to move</span><span><kbd class="a-kbd">Enter</kbd> to open</span><span><kbd class="a-kbd">Esc</kbd> to close</span></div>
+  </dialog>
+  <!-- icons -->
+  <svg class="a-sprite" aria-hidden="true" focusable="false">
+    <symbol id="alert-triangle" viewBox="0 0 24 24"><path d="M10.3 4.4a2 2 0 0 1 3.4 0l7.6 13.1a2 2 0 0 1-1.7 3H4.4a2 2 0 0 1-1.7-3z" style="stroke-dasharray: calc(57.868 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.767 - var(--icon-gap) / 2)"/><path d="M12 9.5v4"/><path d="M12 16.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="bell" viewBox="0 0 24 24"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15z" style="stroke-dasharray: calc(49.852 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(28.914 - var(--icon-gap) / 2)"/><path d="M10 21.2h4"/></symbol>
+    <symbol id="building" viewBox="0 0 24 24"><path d="M4.5 21V4.5A1.5 1.5 0 0 1 6 3h7.5A1.5 1.5 0 0 1 15 4.5V21z" style="stroke-dasharray: calc(55.713 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(38.999 - var(--icon-gap) / 2)"/><path d="M15 9h3a1.5 1.5 0 0 1 1.5 1.5V21"/><path d="M3 21h18"/><path d="M8 7.5h3.5"/><path d="M8 11h3.5"/><path d="M8 14.5h3.5" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="check-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M8.2 12.3l2.6 2.6 5-5.2"/></symbol>
+    <symbol id="chevron-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="chevron-left" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+    <symbol id="chevron-right" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+    <symbol id="chevron-up" viewBox="0 0 24 24"><path d="M6 15l6-6 6 6"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></symbol>
+    <symbol id="credit-card" viewBox="0 0 24 24"><path d="M5 5H19a2.5 2.5 0 0 1 2.5 2.5V16.5a2.5 2.5 0 0 1 -2.5 2.5H5a2.5 2.5 0 0 1 -2.5 -2.5V7.5a2.5 2.5 0 0 1 2.5 -2.5z" style="stroke-dasharray: calc(61.71 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.368 - var(--icon-gap) / 2)"/><path d="M2.5 10h19"/><path d="M6 15h3.5"/></symbol>
+    <symbol id="download" viewBox="0 0 24 24"><path d="M12 4v11"/><path d="M7.5 10.5 12 15l4.5-4.5"/><path d="M4.5 19.5h15"/></symbol>
+    <symbol id="external-link" viewBox="0 0 24 24"><path d="M10 4.5H6.5a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V14"/><path d="M14 4h6v6"/><path d="M20 4l-8.5 8.5"/></symbol>
+    <symbol id="eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" style="stroke-dasharray: calc(48.149 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(38.519 - var(--icon-gap) / 2)"/><path d="M12 9.2a2.8 2.8 0 1 1 0 5.6a2.8 2.8 0 1 1 0 -5.6z"/></symbol>
+    <symbol id="file-text" viewBox="0 0 24 24"><path d="M6.5 3H14l4.5 4.5v12A1.5 1.5 0 0 1 17 21H6.5A1.5 1.5 0 0 1 5 19.5v-15A1.5 1.5 0 0 1 6.5 3z" style="stroke-dasharray: calc(58.434 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(51.422 - var(--icon-gap) / 2)"/><path d="M14 3v4.5h4.5"/><path d="M8.5 12h7"/><path d="M8.5 15.5h7"/><path d="M8.5 8.5h2" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="filter" viewBox="0 0 24 24"><path d="M3.5 5h17l-6.5 8v6l-4 2v-8z" style="stroke-dasharray: calc(56.088 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(47.675 - var(--icon-gap) / 2)"/></symbol>
+    <symbol id="folder" viewBox="0 0 24 24"><path d="M3.5 6.5A1.5 1.5 0 0 1 5 5h4.3l2 2.2H19a1.5 1.5 0 0 1 1.5 1.5v9.8A1.5 1.5 0 0 1 19 20H5a1.5 1.5 0 0 1-1.5-1.5z" style="stroke-dasharray: calc(60.199 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(48.159 - var(--icon-gap) / 2)"/><path d="M3.5 10.5h17" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="home" viewBox="0 0 24 24"><path d="M4 10.2 12 3.8l8 6.4v9.3a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19.7z" style="stroke-dasharray: calc(56.816 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(44.316 - var(--icon-gap) / 2)"/><path d="M10 21.2v-5.7h4v5.7"/></symbol>
+    <symbol id="illus-empty-search" viewBox="0 0 96 96"><g stroke-width="var(--illus-stroke, 2.5)" stroke-linecap="round" stroke-linejoin="round"><circle style="fill: var(--illus-surface, currentColor); fill-opacity: var(--illus-surface-opacity, .12); stroke: none" cx="42" cy="42" r="22"/><path style="fill: none; stroke: var(--illus-line, currentColor)" d="M42 20a22 22 0 1 1 0 44 22 22 0 1 1 0-44zM58 58l18 18"/><path style="fill: none; stroke: var(--illus-accent, currentColor)" d="M34 42h16"/></g></symbol>
+    <symbol id="info" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M12 11v5.5"/><path d="M12 7.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+    <symbol id="logout" viewBox="0 0 24 24"><path d="M9.5 20H6.5A1.5 1.5 0 0 1 5 18.5v-13A1.5 1.5 0 0 1 6.5 4h3"/><path d="M15 8l4 4-4 4"/><path d="M19 12h-9"/></symbol>
+    <symbol id="mail" viewBox="0 0 24 24"><path d="M5.5 5H18.5a2.5 2.5 0 0 1 2.5 2.5V16.5a2.5 2.5 0 0 1 -2.5 2.5H5.5a2.5 2.5 0 0 1 -2.5 -2.5V7.5a2.5 2.5 0 0 1 2.5 -2.5z" style="stroke-dasharray: calc(59.71 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(47.768 - var(--icon-gap) / 2)"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
+    <symbol id="menu" viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h10"/></symbol>
+    <symbol id="moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z" style="stroke-dasharray: calc(58.676 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(26.404 - var(--icon-gap) / 2)"/></symbol>
+    <symbol id="more-horizontal" viewBox="0 0 24 24"><path d="M5.5 12h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/><path d="M12 12h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/><path d="M18.5 12h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="phone-call" viewBox="0 0 24 24"><path d="M5.2 3.5h2.9l1.5 4-2 1.3a10.5 10.5 0 0 0 7.6 7.6l1.3-2 4 1.5v2.9a1.6 1.6 0 0 1-1.7 1.6A16.6 16.6 0 0 1 3.6 5.2a1.6 1.6 0 0 1 1.6-1.7z" style="stroke-dasharray: calc(59.014 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(22.425 - var(--icon-gap) / 2)"/><path d="M14.5 3.5a6 6 0 0 1 6 6"/><path d="M14.5 7a2.5 2.5 0 0 1 2.5 2.5"/></symbol>
+    <symbol id="recurring-payment" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-14 5.3"/><path d="M4 12a8 8 0 0 1 14-5.3"/><path d="M18.5 3v4h-4"/><path d="M5.5 21v-4h4"/><path d="M12 9v6" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="search" viewBox="0 0 24 24"><path d="M10.5 4a6.5 6.5 0 1 1 0 13a6.5 6.5 0 1 1 0 -13z" style="stroke-dasharray: calc(40.846 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(35.945 - var(--icon-gap) / 2)"/><path d="M15.5 15.5 20 20"/></symbol>
+    <symbol id="settings" viewBox="0 0 24 24"><path d="M12 2.8 20 7.4v9.2L12 21.2 4 16.6V7.4z" style="stroke-dasharray: calc(55.313 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(50.888 - var(--icon-gap) / 2)"/><path d="M12 9a3 3 0 1 1 0 6a3 3 0 1 1 0 -6z"/></symbol>
+    <symbol id="sun" viewBox="0 0 24 24"><path d="M12 7.8a4.2 4.2 0 1 1 0 8.4a4.2 4.2 0 1 1 0 -8.4z" style="stroke-dasharray: calc(26.393 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(23.226 - var(--icon-gap) / 2)"/><path d="M12 2.5v2"/><path d="M12 19.5v2"/><path d="M2.5 12h2"/><path d="M19.5 12h2"/><path d="M5.6 5.6l1.2 1.2"/><path d="M17.2 17.2l1.2 1.2"/><path d="M5.6 18.4l1.2-1.2"/><path d="M17.2 6.8l1.2-1.2"/></symbol>
+    <symbol id="user" viewBox="0 0 24 24"><path d="M12 4a4 4 0 1 1 0 8a4 4 0 1 1 0 -8z" style="stroke-dasharray: calc(25.136 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(22.12 - var(--icon-gap) / 2)"/><path d="M4.5 20.5c.8-3.8 3.8-6 7.5-6s6.7 2.2 7.5 6"/></symbol>
+    <symbol id="users" viewBox="0 0 24 24"><path d="M9 5a3.5 3.5 0 1 1 0 7a3.5 3.5 0 1 1 0 -7z" style="stroke-dasharray: calc(21.994 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(19.355 - var(--icon-gap) / 2)"/><path d="M2.5 19.5c.7-3.3 3.3-5.2 6.5-5.2s5.8 1.9 6.5 5.2"/><path d="M15.5 5.2a3.5 3.5 0 0 1 0 6.6"/><path d="M17.5 14.6c2 .7 3.4 2.4 4 4.9"/></symbol>
+    <symbol id="users-fill" viewBox="0 0 24 24"><path d="M9 5a3.5 3.5 0 1 1 0 7a3.5 3.5 0 1 1 0 -7z" style="fill: currentColor"/><path d="M2.5 19.5c.7-3.3 3.3-5.2 6.5-5.2s5.8 1.9 6.5 5.2"/><path d="M15.5 5.2a3.5 3.5 0 0 1 0 6.6"/><path d="M17.5 14.6c2 .7 3.4 2.4 4 4.9"/></symbol>
+    <symbol id="x-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M9.2 9.2l5.6 5.6"/><path d="M14.8 9.2l-5.6 5.6"/></symbol>
+  </svg>
+  <!-- /icons -->
+</body>
+</html>

@@ -236,6 +236,7 @@ ${SITE_NAV.map(([name, href]) => `          <li><a class="a-site-nav__link" href
   "admin-sidebar": ({ root, path, exists }) => {
     const active = ADMIN_PARENT[path] || path;
     return `
+  <a class="a-skip-link" href="#main">Skip to content</a>
   <aside class="a-admin-sidebar" id="admin-sidebar" data-admin-sidebar aria-label="Admin">
     <div class="a-admin-sidebar__brand">
       <a href="${root}ui-design/admin/dashboard.html" class="a-admin-sidebar__logo">

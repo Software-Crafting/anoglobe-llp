@@ -188,6 +188,20 @@
     }
   });
 
+  // Login demo: any password signs in, "wrong" shows the error state.
+  document.addEventListener("a-valid-submit", (event) => {
+    const form = event.target.closest("[data-login-form]");
+    if (!form) return;
+    const error = document.querySelector("[data-login-error]");
+    if (form.querySelector("input[type=password], input[autocomplete=current-password]").value === "wrong") {
+      error.hidden = false;
+      form.querySelector("input[autocomplete=current-password]").setAttribute("aria-invalid", "true");
+      form.querySelector("input[autocomplete=current-password]").focus();
+      return;
+    }
+    window.location.href = "dashboard.html";
+  });
+
   window.matchMedia("(min-width: 1024px)").addEventListener("change", (query) => {
     if (query.matches) for (const shell of document.querySelectorAll("[data-admin]")) closeDrawer(shell, false);
   });

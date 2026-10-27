@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in | Anoglobe Admin</title>
+  <meta name="description" content="Sign in to the Anoglobe admin panel.">
+  <meta name="robots" content="noindex">
+  <!-- shell:head -->
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <script src="../../assets/js/theme.js"></script>
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components/foundations.css">
+  <link rel="stylesheet" href="../../assets/css/components/forms.css">
+  <link rel="stylesheet" href="../../assets/css/components/overlays.css">
+  <link rel="stylesheet" href="../../assets/css/components/data.css">
+  <link rel="stylesheet" href="../../assets/css/components/payment.css">
+  <link rel="stylesheet" href="../../assets/css/components/admin.css">
+  <link rel="stylesheet" href="../../assets/css/components/feedback.css">
+  <link rel="stylesheet" href="../../assets/css/pages.css">
+  <script src="../../assets/js/components/core.js" defer></script>
+  <script src="../../assets/js/components/forms.js" defer></script>
+  <script src="../../assets/js/components/overlays.js" defer></script>
+  <script src="../../assets/js/components/data.js" defer></script>
+  <script src="../../assets/js/components/payment.js" defer></script>
+  <script src="../../assets/js/components/admin.js" defer></script>
+  <script src="../../assets/js/components/site.js" defer></script>
+  <script src="../../assets/js/components/feedback.js" defer></script>
+  <!-- /shell:head -->
+</head>
+<body>
+  <a class="a-skip-link" href="#main">Skip to content</a>
+  <div class="a-auth__theme"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-theme-toggle" data-theme-toggle aria-label="Dark theme"><svg class="a-icon a-theme-toggle__sun" aria-hidden="true"><use href="#sun"></use></svg><svg class="a-icon a-theme-toggle__moon" aria-hidden="true"><use href="#moon"></use></svg></button></div>
+  <main id="main" class="a-auth">
+    <div class="a-auth__card">
+      <img class="a-logo a-logo--light" src="../../assets/img/logo.svg" width="223" height="28" alt="Anoglobe Bookkeeping"><img class="a-logo a-logo--dark" src="../../assets/img/logo-reversed.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+      <div class="a-auth__head"><h1>Sign in to Anoglobe Admin</h1><p>For the Anoglobe team only.</p></div>
+      <div class="a-alert a-alert--destructive" role="alert" hidden data-login-error><svg class="a-icon" aria-hidden="true"><use href="#x-circle"></use></svg><p class="a-alert__title">That email and password do not match</p><p class="a-alert__body">Check both and try again. After 5 attempts the account locks for 15 minutes.</p></div>
+      <form class="a-form-grid" data-validate-form data-login-form novalidate>
+        <div class="a-field " data-msg-required="Enter your work email" data-msg-pattern="Enter an email like name@company.com">
+  <label class="a-label" for="login-email"><span>Work email<span class="a-label__required" aria-hidden="true">*</span></span></label>
+  <input class="a-input" id="login-email" name="login-email" type="email" aria-describedby="login-email-error" required autocomplete="username" value="priya.nair@anoglobebookkeeping.com">
+  <p class="a-error" id="login-email-error"></p>
+</div>
+        <div class="a-field" data-password data-msg-required="Enter your password"><div class="a-label"><label for="login-password">Password</label><a class="a-small" href="forgot-password.html">Forgot password?</a></div><div class="a-input-group"><input class="a-input" id="login-password" type="password" autocomplete="current-password" required aria-describedby="login-password-error"><button type="button" class="a-input-group__action" data-password-toggle aria-pressed="false" aria-label="Show password"><svg class="a-icon a-password__show" aria-hidden="true"><use href="#eye"></use></svg><svg class="a-icon a-password__hide" aria-hidden="true"><use href="#eye-off"></use></svg></button></div><p class="a-error" id="login-password-error"></p></div>
+        <label class="a-check"><input class="a-check__input" type="checkbox" id="login-remember" name="login-remember"><span class="a-check__label">Keep me signed in for 7 days</span></label>
+        <button type="submit" class="a-btn a-btn--primary a-btn--block">Sign in</button>
+      </form>
+      <p class="a-auth__foot">Demo: any password signs in. Type <code>wrong</code> to see the error.</p>
+    </div>
+  </main>
+  <div class="a-toast-region" data-icons="check-circle x-circle info alert-triangle close"></div>
+  <!-- icons -->
+  <svg class="a-sprite" aria-hidden="true" focusable="false">
+    <symbol id="alert-triangle" viewBox="0 0 24 24"><path d="M10.3 4.4a2 2 0 0 1 3.4 0l7.6 13.1a2 2 0 0 1-1.7 3H4.4a2 2 0 0 1-1.7-3z" style="stroke-dasharray: calc(57.868 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.767 - var(--icon-gap) / 2)"/><path d="M12 9.5v4"/><path d="M12 16.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="check-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M8.2 12.3l2.6 2.6 5-5.2"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></symbol>
+    <symbol id="eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" style="stroke-dasharray: calc(48.149 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(38.519 - var(--icon-gap) / 2)"/><path d="M12 9.2a2.8 2.8 0 1 1 0 5.6a2.8 2.8 0 1 1 0 -5.6z"/></symbol>
+    <symbol id="eye-off" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" style="stroke-dasharray: calc(48.149 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(38.519 - var(--icon-gap) / 2)"/><path d="M12 9.2a2.8 2.8 0 1 1 0 5.6a2.8 2.8 0 1 1 0 -5.6z"/><path d="M4 4l16 16"/></symbol>
+    <symbol id="info" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M12 11v5.5"/><path d="M12 7.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z" style="stroke-dasharray: calc(58.676 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(26.404 - var(--icon-gap) / 2)"/></symbol>
+    <symbol id="sun" viewBox="0 0 24 24"><path d="M12 7.8a4.2 4.2 0 1 1 0 8.4a4.2 4.2 0 1 1 0 -8.4z" style="stroke-dasharray: calc(26.393 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(23.226 - var(--icon-gap) / 2)"/><path d="M12 2.5v2"/><path d="M12 19.5v2"/><path d="M2.5 12h2"/><path d="M19.5 12h2"/><path d="M5.6 5.6l1.2 1.2"/><path d="M17.2 17.2l1.2 1.2"/><path d="M5.6 18.4l1.2-1.2"/><path d="M17.2 6.8l1.2-1.2"/></symbol>
+    <symbol id="x-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M9.2 9.2l5.6 5.6"/><path d="M14.8 9.2l-5.6 5.6"/></symbol>
+  </svg>
+  <!-- /icons -->
+</body>
+</html>

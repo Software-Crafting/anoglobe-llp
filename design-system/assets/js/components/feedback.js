@@ -152,5 +152,20 @@
     }
   });
 
+  // "Link sent" forms: <div data-resume> with [data-resume-state=form|sent] panels.
+  document.addEventListener("a-valid-submit", (event) => {
+    if (!event.target.matches("[data-resume-form]")) return;
+    const root = event.target.closest("[data-resume]");
+    root.querySelector('[data-resume-state="form"]').hidden = true;
+    const sent = root.querySelector('[data-resume-state="sent"]');
+    sent.hidden = false;
+    sent.querySelector("[tabindex='-1']").focus();
+  });
+
+  document.addEventListener("click", (event) => {
+    if (event.target.closest("[data-resend]")) toast("A new link is on its way", "success");
+    if (event.target.closest("[data-print]")) window.print();
+  });
+
   window.Anoglobe = Object.assign(window.Anoglobe || {}, { toast, showLoading });
 })();

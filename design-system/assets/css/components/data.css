@@ -146,9 +146,13 @@
 
 .a-table__sticky {
   position: sticky;
-  left: 48px;
+  left: 0;
   z-index: 1;
   background: var(--card);
+}
+
+.a-table:has(.a-table__check) .a-table__sticky {
+  left: 48px;
 }
 
 .a-table thead .a-table__sticky {
@@ -563,13 +567,17 @@
   text-align: left;
 }
 
+.a-chart--donut {
+  container-type: inline-size;
+}
+
 .a-chart--donut .a-chart__body {
   display: grid;
   align-items: center;
   gap: var(--space-5);
 }
 
-@media (min-width: 480px) {
+@container (min-width: 440px) {
   .a-chart--donut .a-chart__body {
     grid-template-columns: 180px minmax(0, 1fr);
   }
@@ -764,4 +772,10 @@
   .a-month__date {
     grid-column: 1 / -1;
   }
+}
+
+.a-feed__end {
+  display: grid;
+  justify-items: end;
+  gap: var(--space-1);
 }

@@ -23,7 +23,12 @@ const RULES = [
   { name: "native browser dialog", files: CODE_FILES, regex: /\b(?:alert|confirm|prompt)\(/g },
   { name: "native tooltip title attribute", files: [".html"], regex: /<(?!title\b)[a-z][^>]*\stitle=["']/gi },
   { name: "external sprite reference (blocked on file:// pages, use #name)", files: [".html", ".js"], regex: /sprite\.svg#/g },
-  { name: "inline style (only custom properties allowed)", files: [".html"], regex: /\sstyle=["'](?!\s*--)[^"']*["']/gi },
+  {
+    name: "inline style (only custom properties allowed)",
+    files: [".html"],
+    regex: /\sstyle=["'](?!\s*--)[^"']*["']/gi,
+    skip: (path) => path.startsWith("ui-design/emails/"),
+  },
   {
     name: "hardcoded hex color",
     files: [".html", ".css", ".js", ".svg"],
