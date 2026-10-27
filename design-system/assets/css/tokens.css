@@ -45,7 +45,6 @@
   --amber-200: #fde68a;
   --amber-300: #fcd34d;
   --amber-400: #fbbf24;
-  --amber-600: #d97706;
   --amber-700: #b45309;
   --amber-800: #92400e;
   --amber-950: #451a03;
@@ -63,10 +62,18 @@
   --sky-200: #bae6fd;
   --sky-300: #7dd3fc;
   --sky-400: #38bdf8;
-  --sky-600: #0284c7;
   --sky-700: #0369a1;
   --sky-800: #075985;
   --sky-950: #082f49;
+
+  /* Chart hues, validated as a categorical set with the dataviz palette checks (CVD and contrast) */
+  --orange-600: #ea580c;
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;
+  --pink-500: #ec4899;
+  --pink-600: #db2777;
+  --violet-500: #8b5cf6;
+  --violet-600: #7c3aed;
 }
 
 :root {
@@ -157,12 +164,13 @@
   --sidebar-accent: light-dark(var(--mist-200), var(--mist-800));
   --sidebar-accent-foreground: light-dark(var(--mist-950), var(--mist-50));
 
-  /* Charts: each meets 3:1 against --card */
-  --chart-1: light-dark(var(--teal-600), var(--teal-400));
-  --chart-2: light-dark(var(--mist-500), var(--mist-400));
-  --chart-3: light-dark(var(--sky-600), var(--sky-400));
-  --chart-4: light-dark(var(--amber-600), var(--amber-400));
-  --chart-5: light-dark(var(--red-600), var(--red-400));
+  /* Charts: categorical order teal, orange, blue, pink, violet. Never status hues, never cycled.
+     Passes lightness, chroma, CVD and 3:1 contrast checks on --card in both themes. */
+  --chart-1: light-dark(var(--teal-600), var(--teal-600));
+  --chart-2: light-dark(var(--orange-600), var(--orange-600));
+  --chart-3: light-dark(var(--blue-600), var(--blue-500));
+  --chart-4: light-dark(var(--pink-600), var(--pink-500));
+  --chart-5: light-dark(var(--violet-600), var(--violet-500));
   --chart-grid: light-dark(var(--mist-200), var(--mist-800));
 
   /* Scrim and shadows, tinted with mist-950 */

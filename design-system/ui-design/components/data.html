@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data display | Anoglobe Design System</title>
+  <meta name="description" content="Tables, charts, activity feed and month calendar for the Anoglobe design system.">
+  <!-- shell:head -->
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <script src="../../assets/js/theme.js"></script>
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components/foundations.css">
+  <link rel="stylesheet" href="../../assets/css/components/forms.css">
+  <link rel="stylesheet" href="../../assets/css/components/overlays.css">
+  <link rel="stylesheet" href="../../assets/css/components/data.css">
+  <link rel="stylesheet" href="../../assets/css/components/feedback.css">
+  <link rel="stylesheet" href="../../assets/css/pages.css">
+  <script src="../../assets/js/components/core.js" defer></script>
+  <script src="../../assets/js/components/forms.js" defer></script>
+  <script src="../../assets/js/components/overlays.js" defer></script>
+  <script src="../../assets/js/components/data.js" defer></script>
+  <script src="../../assets/js/components/feedback.js" defer></script>
+  <!-- /shell:head -->
+</head>
+<body>
+  <!-- shell:docs-header -->
+  <a class="a-skip-link" href="#main">Skip to content</a>
+  <header class="a-docs-header">
+    <a class="a-docs-header__brand" href="../../index.html">
+      <img class="a-logo a-logo--light" src="../../assets/img/logo.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+      <img class="a-logo a-logo--dark" src="../../assets/img/logo-reversed.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+      <span class="a-docs-header__label">Design system</span>
+    </a>
+    <button type="button" class="a-btn a-btn--ghost a-btn--icon a-theme-toggle" data-theme-toggle aria-label="Dark theme" data-tooltip="Toggle dark theme">
+      <svg class="a-icon a-theme-toggle__sun" aria-hidden="true"><use href="#sun"></use></svg>
+      <svg class="a-icon a-theme-toggle__moon" aria-hidden="true"><use href="#moon"></use></svg>
+    </button>
+  </header>
+  <div class="a-toast-region" data-icons="check-circle x-circle info alert-triangle close"></div>
+  <!-- /shell:docs-header -->
+  <div class="a-docs">
+    <!-- shell:docs-nav -->
+    <nav class="a-docs-nav" aria-label="Design system" data-scroll-area>
+      <div class="a-docs-nav__group">
+        <p class="a-eyebrow">Foundations</p>
+        <ul class="a-docs-nav__list" role="list">
+          <li><a class="a-docs-nav__link" href="../../ui-design/foundations/colors.html">Colors</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/foundations/icons.html">Icons</a></li>
+        </ul>
+      </div>
+      <div class="a-docs-nav__group">
+        <p class="a-eyebrow">Components</p>
+        <ul class="a-docs-nav__list" role="list">
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/foundations.html">Foundations</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/forms.html">Forms</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/overlays.html">Overlays</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/data.html" aria-current="page">Data display</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- /shell:docs-nav -->
+    <main id="main" class="a-docs-main">
+      <header>
+        <p class="a-eyebrow">Components</p>
+        <h1>Data display</h1>
+        <p class="a-body-lg a-muted">Dense, readable views of registrations, payments and calls for the team who use the admin all day.</p>
+      </header>
+
+      <section class="a-docs-section" aria-labelledby="tables">
+        <h2 id="tables">Table</h2>
+        <p>Sort any column, search, filter by status, select rows for bulk actions, switch density and hide columns. Under 768 pixels rows become cards; on wide screens the header and business column stay in place.</p>
+        <div class="a-example a-example--wide">
+          <h3 class="a-example__title">Registrations</h3>
+          <div class="a-example__preview a-example__preview--stack">
+            <div class="a-table-card">
+              <div class="a-toolbar">
+                <div class="a-toolbar__search"><div class="a-input-group"><svg class="a-icon" aria-hidden="true"><use href="#search"></use></svg><input class="a-input" type="search" placeholder="Search business, contact or ID" aria-label="Search registrations" data-table-search="demo-table"></div></div>
+                <button type="button" class="a-btn a-btn--outline" data-popover-trigger data-align="start" aria-expanded="false" aria-controls="demo-filter"><svg class="a-icon" aria-hidden="true"><use href="#filter"></use></svg>Status</button>
+                <div class="a-popover" id="demo-filter" role="dialog" aria-label="Filter by status" hidden><div class="a-choice-list"><label class="a-check"><input class="a-check__input" type="checkbox" id="f-active" data-table-filter="demo-table" data-key="status" value="active" data-label="Status: Active"><span class="a-check__label">Active</span></label><label class="a-check"><input class="a-check__input" type="checkbox" id="f-pending" data-table-filter="demo-table" data-key="status" value="pending" data-label="Status: Pending documents"><span class="a-check__label">Pending documents</span></label><label class="a-check"><input class="a-check__input" type="checkbox" id="f-failed" data-table-filter="demo-table" data-key="status" value="failed" data-label="Status: Payment failed"><span class="a-check__label">Payment failed</span></label><label class="a-check"><input class="a-check__input" type="checkbox" id="f-review" data-table-filter="demo-table" data-key="status" value="review" data-label="Status: In review"><span class="a-check__label">In review</span></label><label class="a-check"><input class="a-check__input" type="checkbox" id="f-paused" data-table-filter="demo-table" data-key="status" value="paused" data-label="Status: Paused"><span class="a-check__label">Paused</span></label></div></div>
+                <div class="a-toolbar__end">
+                  <div class="a-segmented" role="group" aria-label="Row density" data-toggle-group="single" data-density-for="demo-table"><button type="button" class="a-toggle" data-density="comfortable" aria-pressed="true">Comfortable</button><button type="button" class="a-toggle" data-density="compact" aria-pressed="false">Compact</button></div>
+                  <button type="button" class="a-btn a-btn--outline" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-controls="demo-columns" data-align="end"><svg class="a-icon" aria-hidden="true"><use href="#settings"></use></svg>Columns</button>
+                  <div class="a-menu" id="demo-columns" role="menu" aria-label="Visible columns" hidden>
+                    <button type="button" class="a-menu__item" role="menuitemcheckbox" aria-checked="true" data-column-toggle="demo-table:contact"><span class="a-menu__check"><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg></span>Contact</button>
+                    <button type="button" class="a-menu__item" role="menuitemcheckbox" aria-checked="true" data-column-toggle="demo-table:plan"><span class="a-menu__check"><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg></span>Plan</button>
+                    <button type="button" class="a-menu__item" role="menuitemcheckbox" aria-checked="true" data-column-toggle="demo-table:date"><span class="a-menu__check"><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg></span>Signed up</button>
+                  </div>
+                  <button type="button" class="a-btn a-btn--outline" data-toast-demo="Export started. registrations-2026-10-27.csv will download shortly." data-variant="info"><svg class="a-icon" aria-hidden="true"><use href="#download"></use></svg>Export</button>
+                </div>
+                <div class="a-filter-chips" data-filter-chips="demo-table" data-icons="close"></div>
+              </div>
+              <div class="a-bulk-bar" data-bulk-for="demo-table" hidden>
+                <span data-bulk-count>0 selected</span>
+                <div class="a-bulk-bar__actions"><button type="button" class="a-btn a-btn--outline a-btn--sm" data-bulk-action="Emailed"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg>Email</button><button type="button" class="a-btn a-btn--outline a-btn--sm" data-bulk-action="Exported"><svg class="a-icon" aria-hidden="true"><use href="#download"></use></svg>Export</button><button type="button" class="a-btn a-btn--outline a-btn--sm" data-bulk-action="Archived"><svg class="a-icon" aria-hidden="true"><use href="#trash"></use></svg>Archive</button></div>
+              </div>
+              <div class="a-table-scroll" data-scroll-area tabindex="0" role="region" aria-label="Registrations table">
+                <table class="a-table a-table--stack" id="demo-table" data-table data-page-size="8">
+                  <caption class="a-visually-hidden">Registrations, sortable by column</caption>
+                  <thead><tr>
+                    <th scope="col" class="a-table__check"><input class="a-check__input" type="checkbox" data-select-all aria-label="Select all visible rows"></th>
+                    <th scope="col" class="a-table__sticky"><button type="button" class="a-sort">Business<svg class="a-icon" aria-hidden="true"><use href="#chevron-up"></use></svg></button></th><th scope="col" data-col="contact"><button type="button" class="a-sort">Contact<svg class="a-icon" aria-hidden="true"><use href="#chevron-up"></use></svg></button></th><th scope="col" data-col="plan"><button type="button" class="a-sort">Plan<svg class="a-icon" aria-hidden="true"><use href="#chevron-up"></use></svg></button></th><th scope="col" class="a-table__num" data-type="number"><button type="button" class="a-sort">Amount<svg class="a-icon" aria-hidden="true"><use href="#chevron-up"></use></svg></button></th><th scope="col"><button type="button" class="a-sort">Status<svg class="a-icon" aria-hidden="true"><use href="#chevron-up"></use></svg></button></th><th scope="col" data-col="date"><button type="button" class="a-sort">Signed up<svg class="a-icon" aria-hidden="true"><use href="#chevron-up"></use></svg></button></th>
+                    <th scope="col" class="a-table__actions"><span class="a-visually-hidden">Actions</span></th>
+                  </tr></thead>
+                  <tbody>
+                  <tr data-row data-status="active" data-plan="growth">
+                    <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Harbor Lane Dental, LLC"></td>
+                    <td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">HL</span><div><a href="#tables">Harbor Lane Dental, LLC</a><span class="a-table__sub">AG-10482</span></div></div></td>
+                    <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Maria Robles</span><span class="a-table__sub">m.robles@harborlanedental.com</span></td>
+                    <td data-label="Plan" data-col="plan">Growth<span class="a-table__sub">Monthly</span></td>
+                    <td class="a-table__num" data-label="Amount" data-sort="499">$499.00</td>
+                    <td data-label="Status"><span class="a-status a-status--success">Active</span></td>
+                    <td data-label="Signed up" data-sort="2026-10-21" data-col="date">Oct 21, 2026</td>
+                    <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" aria-label="Actions for Harbor Lane Dental, LLC" data-tooltip="Actions"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button></td>
+                  </tr>
+                  <tr data-row data-status="active" data-plan="scale">
+                    <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Northwind Logistics Inc."></td>
+                    <td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">NI</span><div><a href="#tables">Northwind Logistics Inc.</a><span class="a-table__sub">AG-10481</span></div></div></td>
+                    <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Daniel Okafor</span><span class="a-table__sub">dokafor@northwindlogistics.com</span></td>
+                    <td data-label="Plan" data-col="plan">Scale<span class="a-table__sub">Monthly</span></td>
+                    <td class="a-table__num" data-label="Amount" data-sort="899">$899.00</td>
+                    <td data-label="Status"><span class="a-status a-status--success">Active</span></td>
+                    <td data-label="Signed up" data-sort="2026-10-20" data-col="date">Oct 20, 2026</td>
+                    <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" aria-label="Actions for Northwind Logistics Inc." data-tooltip="Actions"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button></td>
+                  </tr>
+                  <tr data-row data-status="failed" data-plan="starter">
+                    <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Bright Path Tutoring"></td>
+                    <td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">BT</span><div><a href="#tables">Bright Path Tutoring</a><span class="a-table__sub">AG-10480</span></div></div></td>
+                    <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Priya Shah</span><span class="a-table__sub">priya@brightpathtutoring.com</span></td>
+                    <td data-label="Plan" data-col="plan">Starter<span class="a-table__sub">Monthly</span></td>
+                    <td class="a-table__num" data-label="Amount" data-sort="299">$299.00</td>
+                    <td data-label="Status"><span class="a-status a-status--destructive">Payment failed</span></td>
+                    <td data-label="Signed up" data-sort="2026-10-20" data-col="date">Oct 20, 2026</td>
+                    <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" aria-label="Actions for Bright Path Tutoring" data-tooltip="Actions"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button></td>
+                  </tr>
+                  <tr data-row data-status="review" data-plan="growth">
+                    <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Cedar & Pine Studio"></td>
+                    <td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">CS</span><div><a href="#tables">Cedar & Pine Studio</a><span class="a-table__sub">AG-10479</span></div></div></td>
+                    <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Hannah Lee</span><span class="a-table__sub">hello@cedarandpine.studio</span></td>
+                    <td data-label="Plan" data-col="plan">Growth<span class="a-table__sub">Monthly</span></td>
+                    <td class="a-table__num" data-label="Amount" data-sort="499">$499.00</td>
+                    <td data-label="Status"><span class="a-status a-status--info">In review</span></td>
+                    <td data-label="Signed up" data-sort="2026-10-19" data-col="date">Oct 19, 2026</td>
+                    <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" aria-label="Actions for Cedar & Pine Studio" data-tooltip="Actions"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button></td>
+                  </tr>
+                  <tr data-row data-status="active" data-plan="scale">
+                    <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Summit Ridge Roofing Co."></td>
+                    <td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">SC</span><div><a href="#tables">Summit Ridge Roofing Co.</a><span class="a-table__sub">AG-10478</span></div></div></td>
+                    <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Marcus Bell</span><span class="a-table__sub">marcus@summitridgeroofing.com</span></td>
+                    <td data-label="Plan" data-col="plan">Scale<span class="a-table__sub">Monthly</span></td>
+                    <td class="a-table__num" data-label="Amount" data-sort="899">$899.00</td>
+                    <td data-label="Status"><span class="a-status a-status--success">Active</span></td>
+                    <td data-label="Signed up" data-sort="2026-10-18" data-col="date">Oct 18, 2026</td>
+                    <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" aria-label="Actions for Summit Ridge Roofing Co." data-tooltip="Actions"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button></td>
+                  </tr>
+                  <tr data-row data-status="pending" data-plan="starter">
+                    <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Little Fern Bakery"></td>
+                    <td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">LB</span><div><a href="#tables">Little Fern Bakery</a><span class="a-table__sub">AG-10477</span></div></div></td>
+                    <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Sofia Marquez</span><span class="a-table__sub">sofia@littlefernbakery.com</span></td>
+                    <td data-label="Plan" data-col="plan">Starter<span class="a-table__sub">Monthly</span></td>
+                    <td class="a-table__num" data-label="Amount" data-sort="299">$299.00</td>
+                    <td data-label="Status"><span class="a-status a-status--warning">Pending documents</span></td>
+                    <td data-label="Signed up" data-sort="2026-10-18" data-col="date">Oct 18, 2026</td>
+                    <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" aria-label="Actions for Little Fern Bakery" data-tooltip="Actions"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button></td>
+                  </tr>
+                  <tr data-row data-status="active" data-plan="catchup">
+                    <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Atlas Home Health Partners"></td>
+                    <td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">AP</span><div><a href="#tables">Atlas Home Health Partners</a><span class="a-table__sub">AG-10476</span></div></div></td>
+                    <td data-label="Contact" data-col="contact"><span class="a-table__truncate">James Whitfield</span><span class="a-table__sub">jwhitfield@atlashomehealth.com</span></td>
+                    <td data-label="Plan" data-col="plan">Catch-up project<span class="a-table__sub">One-time</span></td>
+                    <td class="a-table__num" data-label="Amount" data-sort="1250">$1,250.00</td>
+                    <td data-label="Status"><span class="a-status a-status--success">Active</span></td>
+                    <td data-label="Signed up" data-sort="2026-10-17" data-col="date">Oct 17, 2026</td>
+                    <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" aria-label="Actions for Atlas Home Health Partners" data-tooltip="Actions"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button></td>
+                  </tr>
+                  <tr data-row data-status="active" data-plan="growth">
+                    <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Bluewater Charters"></td>
+                    <td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">BC</span><div><a href="#tables">Bluewater Charters</a><span class="a-table__sub">AG-10475</span></div></div></td>
+                    <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Ethan Brooks</span><span class="a-table__sub">ethan@bluewatercharters.com</span></td>
+                    <td data-label="Plan" data-col="plan">Growth<span class="a-table__sub">Monthly</span></td>
+                    <td class="a-table__num" data-label="Amount" data-sort="499">$499.00</td>
+                    <td data-label="Status"><span class="a-status a-status--success">Active</span></td>
+                    <td data-label="Signed up" data-sort="2026-10-16" data-col="date">Oct 16, 2026</td>
+                    <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" aria-label="Actions for Bluewater Charters" data-tooltip="Actions"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button></td>
+                  </tr>
+                  <tr data-row data-status="pending" data-plan="growth">
+                    <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Kinfolk Coffee Roasters"></td>
+                    <td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">KR</span><div><a href="#tables">Kinfolk Coffee Roasters</a><span class="a-table__sub">AG-10474</span></div></div></td>
+                    <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Amara Johnson</span><span class="a-table__sub">amara@kinfolkroasters.com</span></td>
+                    <td data-label="Plan" data-col="plan">Growth<span class="a-table__sub">Monthly</span></td>
+                    <td class="a-table__num" data-label="Amount" data-sort="499">$499.00</td>
+                    <td data-label="Status"><span class="a-status a-status--warning">Pending documents</span></td>
+                    <td data-label="Signed up" data-sort="2026-10-15" data-col="date">Oct 15, 2026</td>
+                    <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" aria-label="Actions for Kinfolk Coffee Roasters" data-tooltip="Actions"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button></td>
+                  </tr>
+                  <tr data-row data-status="active" data-plan="scale">
+                    <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Greenleaf Property Management"></td>
+                    <td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">GM</span><div><a href="#tables">Greenleaf Property Management</a><span class="a-table__sub">AG-10473</span></div></div></td>
+                    <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Robert Chen</span><span class="a-table__sub">rchen@greenleafpm.com</span></td>
+                    <td data-label="Plan" data-col="plan">Scale<span class="a-table__sub">Monthly</span></td>
+                    <td class="a-table__num" data-label="Amount" data-sort="899">$899.00</td>
+                    <td data-label="Status"><span class="a-status a-status--success">Active</span></td>
+                    <td data-label="Signed up" data-sort="2026-10-14" data-col="date">Oct 14, 2026</td>
+                    <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" aria-label="Actions for Greenleaf Property Management" data-tooltip="Actions"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button></td>
+                  </tr>
+                  <tr data-row data-status="review" data-plan="cleanup">
+                    <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Pixel Forge Media"></td>
+                    <td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">PM</span><div><a href="#tables">Pixel Forge Media</a><span class="a-table__sub">AG-10472</span></div></div></td>
+                    <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Lena Novak</span><span class="a-table__sub">lena@pixelforge.media</span></td>
+                    <td data-label="Plan" data-col="plan">Books cleanup<span class="a-table__sub">One-time</span></td>
+                    <td class="a-table__num" data-label="Amount" data-sort="950">$950.00</td>
+                    <td data-label="Status"><span class="a-status a-status--info">In review</span></td>
+                    <td data-label="Signed up" data-sort="2026-10-14" data-col="date">Oct 14, 2026</td>
+                    <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" aria-label="Actions for Pixel Forge Media" data-tooltip="Actions"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button></td>
+                  </tr>
+                  <tr data-row data-status="active" data-plan="starter">
+                    <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Oak & Iron Fitness"></td>
+                    <td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">OF</span><div><a href="#tables">Oak & Iron Fitness</a><span class="a-table__sub">AG-10471</span></div></div></td>
+                    <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Tyler Grant</span><span class="a-table__sub">tyler@oakandironfitness.com</span></td>
+                    <td data-label="Plan" data-col="plan">Starter<span class="a-table__sub">Monthly</span></td>
+                    <td class="a-table__num" data-label="Amount" data-sort="299">$299.00</td>
+                    <td data-label="Status"><span class="a-status a-status--success">Active</span></td>
+                    <td data-label="Signed up" data-sort="2026-10-12" data-col="date">Oct 12, 2026</td>
+                    <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" aria-label="Actions for Oak & Iron Fitness" data-tooltip="Actions"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button></td>
+                  </tr>
+                  <tr data-row data-status="active" data-plan="growth">
+                    <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Riverbend Veterinary Clinic"></td>
+                    <td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">RC</span><div><a href="#tables">Riverbend Veterinary Clinic</a><span class="a-table__sub">AG-10470</span></div></div></td>
+                    <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Dr. Alicia Moreno</span><span class="a-table__sub">amoreno@riverbendvet.com</span></td>
+                    <td data-label="Plan" data-col="plan">Growth<span class="a-table__sub">Monthly</span></td>
+                    <td class="a-table__num" data-label="Amount" data-sort="499">$499.00</td>
+                    <td data-label="Status"><span class="a-status a-status--success">Active</span></td>
+                    <td data-label="Signed up" data-sort="2026-10-11" data-col="date">Oct 11, 2026</td>
+                    <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" aria-label="Actions for Riverbend Veterinary Clinic" data-tooltip="Actions"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button></td>
+                  </tr>
+                  <tr data-row data-status="paused" data-plan="growth">
+                    <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Copperline Electric"></td>
+                    <td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">CE</span><div><a href="#tables">Copperline Electric</a><span class="a-table__sub">AG-10469</span></div></div></td>
+                    <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Victor Ramos</span><span class="a-table__sub">victor@copperlineelectric.com</span></td>
+                    <td data-label="Plan" data-col="plan">Growth<span class="a-table__sub">Monthly</span></td>
+                    <td class="a-table__num" data-label="Amount" data-sort="499">$499.00</td>
+                    <td data-label="Status"><span class="a-status">Paused</span></td>
+                    <td data-label="Signed up" data-sort="2026-10-09" data-col="date">Oct 9, 2026</td>
+                    <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" aria-label="Actions for Copperline Electric" data-tooltip="Actions"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button></td>
+                  </tr>
+                  <tr data-row data-status="active" data-plan="starter">
+                    <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Meadowbrook Montessori"></td>
+                    <td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">MM</span><div><a href="#tables">Meadowbrook Montessori</a><span class="a-table__sub">AG-10468</span></div></div></td>
+                    <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Grace Kim</span><span class="a-table__sub">gkim@meadowbrookmontessori.org</span></td>
+                    <td data-label="Plan" data-col="plan">Starter<span class="a-table__sub">Monthly</span></td>
+                    <td class="a-table__num" data-label="Amount" data-sort="299">$299.00</td>
+                    <td data-label="Status"><span class="a-status a-status--success">Active</span></td>
+                    <td data-label="Signed up" data-sort="2026-10-08" data-col="date">Oct 8, 2026</td>
+                    <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" aria-label="Actions for Meadowbrook Montessori" data-tooltip="Actions"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button></td>
+                  </tr>
+                  <tr data-row data-status="active" data-plan="growth">
+                    <td class="a-table__check"><input class="a-check__input" type="checkbox" data-select-row aria-label="Select Ironclad Auto Repair"></td>
+                    <td class="a-table__sticky"><div class="a-table__primary"><span class="a-avatar a-avatar--sm" aria-hidden="true">IR</span><div><a href="#tables">Ironclad Auto Repair</a><span class="a-table__sub">AG-10467</span></div></div></td>
+                    <td data-label="Contact" data-col="contact"><span class="a-table__truncate">Luis Fernandez</span><span class="a-table__sub">luis@ironcladauto.com</span></td>
+                    <td data-label="Plan" data-col="plan">Growth<span class="a-table__sub">Monthly</span></td>
+                    <td class="a-table__num" data-label="Amount" data-sort="499">$499.00</td>
+                    <td data-label="Status"><span class="a-status a-status--success">Active</span></td>
+                    <td data-label="Signed up" data-sort="2026-10-07" data-col="date">Oct 7, 2026</td>
+                    <td class="a-table__actions"><button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" aria-label="Actions for Ironclad Auto Repair" data-tooltip="Actions"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button></td>
+                  </tr>
+                    <tr class="a-table__state" data-empty hidden><td colspan="8"><div class="a-empty"><svg class="a-illus a-illus--64" aria-hidden="true"><use href="#illus-empty-search"></use></svg><p class="a-empty__title">No registrations match</p><p class="a-empty__text">Try a different search or clear the filters.</p></div></td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <nav class="a-pagination a-table-card__foot" aria-label="Table pages" data-pagination-for="demo-table" data-icons="chevron-left chevron-right"></nav>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-1">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-1" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-table-card&quot;&gt;
+  &lt;div class=&quot;a-toolbar&quot;&gt;
+    &lt;div class=&quot;a-toolbar__search&quot;&gt;&lt;div class=&quot;a-input-group&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#search&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;input class=&quot;a-input&quot; type=&quot;search&quot; placeholder=&quot;Search business, contact or ID&quot; aria-label=&quot;Search registrations&quot; data-table-search=&quot;demo-table&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot; data-popover-trigger data-align=&quot;start&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;demo-filter&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#filter&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Status&lt;/button&gt;
+    &lt;div class=&quot;a-popover&quot; id=&quot;demo-filter&quot; role=&quot;dialog&quot; aria-label=&quot;Filter by status&quot; hidden&gt;&lt;div class=&quot;a-choice-list&quot;&gt;&lt;label class=&quot;a-check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; id=&quot;f-active&quot; data-table-filter=&quot;demo-table&quot; data-key=&quot;status&quot; value=&quot;active&quot; data-label=&quot;Status: Active&quot;&gt;&lt;span class=&quot;a-check__label&quot;&gt;Active&lt;/span&gt;&lt;/label&gt;&lt;label class=&quot;a-check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; id=&quot;f-pending&quot; data-table-filter=&quot;demo-table&quot; data-key=&quot;status&quot; value=&quot;pending&quot; data-label=&quot;Status: Pending documents&quot;&gt;&lt;span class=&quot;a-check__label&quot;&gt;Pending documents&lt;/span&gt;&lt;/label&gt;&lt;label class=&quot;a-check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; id=&quot;f-failed&quot; data-table-filter=&quot;demo-table&quot; data-key=&quot;status&quot; value=&quot;failed&quot; data-label=&quot;Status: Payment failed&quot;&gt;&lt;span class=&quot;a-check__label&quot;&gt;Payment failed&lt;/span&gt;&lt;/label&gt;&lt;label class=&quot;a-check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; id=&quot;f-review&quot; data-table-filter=&quot;demo-table&quot; data-key=&quot;status&quot; value=&quot;review&quot; data-label=&quot;Status: In review&quot;&gt;&lt;span class=&quot;a-check__label&quot;&gt;In review&lt;/span&gt;&lt;/label&gt;&lt;label class=&quot;a-check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; id=&quot;f-paused&quot; data-table-filter=&quot;demo-table&quot; data-key=&quot;status&quot; value=&quot;paused&quot; data-label=&quot;Status: Paused&quot;&gt;&lt;span class=&quot;a-check__label&quot;&gt;Paused&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;a-toolbar__end&quot;&gt;
+      &lt;div class=&quot;a-segmented&quot; role=&quot;group&quot; aria-label=&quot;Row density&quot; data-toggle-group=&quot;single&quot; data-density-for=&quot;demo-table&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-toggle&quot; data-density=&quot;comfortable&quot; aria-pressed=&quot;true&quot;&gt;Comfortable&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;a-toggle&quot; data-density=&quot;compact&quot; aria-pressed=&quot;false&quot;&gt;Compact&lt;/button&gt;&lt;/div&gt;
+      &lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot; data-menu-trigger aria-haspopup=&quot;menu&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;demo-columns&quot; data-align=&quot;end&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#settings&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Columns&lt;/button&gt;
+      &lt;div class=&quot;a-menu&quot; id=&quot;demo-columns&quot; role=&quot;menu&quot; aria-label=&quot;Visible columns&quot; hidden&gt;
+        &lt;button type=&quot;button&quot; class=&quot;a-menu__item&quot; role=&quot;menuitemcheckbox&quot; aria-checked=&quot;true&quot; data-column-toggle=&quot;demo-table:contact&quot;&gt;&lt;span class=&quot;a-menu__check&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;Contact&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;a-menu__item&quot; role=&quot;menuitemcheckbox&quot; aria-checked=&quot;true&quot; data-column-toggle=&quot;demo-table:plan&quot;&gt;&lt;span class=&quot;a-menu__check&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;Plan&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;a-menu__item&quot; role=&quot;menuitemcheckbox&quot; aria-checked=&quot;true&quot; data-column-toggle=&quot;demo-table:date&quot;&gt;&lt;span class=&quot;a-menu__check&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;Signed up&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot; data-toast-demo=&quot;Export started. registrations-2026-10-27.csv will download shortly.&quot; data-variant=&quot;info&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#download&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Export&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;a-filter-chips&quot; data-filter-chips=&quot;demo-table&quot; data-icons=&quot;close&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;a-bulk-bar&quot; data-bulk-for=&quot;demo-table&quot; hidden&gt;
+    &lt;span data-bulk-count&gt;0 selected&lt;/span&gt;
+    &lt;div class=&quot;a-bulk-bar__actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline a-btn--sm&quot; data-bulk-action=&quot;Emailed&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#mail&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Email&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline a-btn--sm&quot; data-bulk-action=&quot;Exported&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#download&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Export&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline a-btn--sm&quot; data-bulk-action=&quot;Archived&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#trash&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Archive&lt;/button&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;a-table-scroll&quot; data-scroll-area tabindex=&quot;0&quot; role=&quot;region&quot; aria-label=&quot;Registrations table&quot;&gt;
+    &lt;table class=&quot;a-table a-table--stack&quot; id=&quot;demo-table&quot; data-table data-page-size=&quot;8&quot;&gt;
+      &lt;caption class=&quot;a-visually-hidden&quot;&gt;Registrations, sortable by column&lt;/caption&gt;
+      &lt;thead&gt;&lt;tr&gt;
+        &lt;th scope=&quot;col&quot; class=&quot;a-table__check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; data-select-all aria-label=&quot;Select all visible rows&quot;&gt;&lt;/th&gt;
+        &lt;th scope=&quot;col&quot; class=&quot;a-table__sticky&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-sort&quot;&gt;Business&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#chevron-up&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/th&gt;&lt;th scope=&quot;col&quot; data-col=&quot;contact&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-sort&quot;&gt;Contact&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#chevron-up&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/th&gt;&lt;th scope=&quot;col&quot; data-col=&quot;plan&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-sort&quot;&gt;Plan&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#chevron-up&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/th&gt;&lt;th scope=&quot;col&quot; class=&quot;a-table__num&quot; data-type=&quot;number&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-sort&quot;&gt;Amount&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#chevron-up&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-sort&quot;&gt;Status&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#chevron-up&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/th&gt;&lt;th scope=&quot;col&quot; data-col=&quot;date&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-sort&quot;&gt;Signed up&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#chevron-up&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/th&gt;
+        &lt;th scope=&quot;col&quot; class=&quot;a-table__actions&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;Actions&lt;/span&gt;&lt;/th&gt;
+      &lt;/tr&gt;&lt;/thead&gt;
+      &lt;tbody&gt;
+      &lt;tr data-row data-status=&quot;active&quot; data-plan=&quot;growth&quot;&gt;
+        &lt;td class=&quot;a-table__check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; data-select-row aria-label=&quot;Select Harbor Lane Dental, LLC&quot;&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__sticky&quot;&gt;&lt;div class=&quot;a-table__primary&quot;&gt;&lt;span class=&quot;a-avatar a-avatar--sm&quot; aria-hidden=&quot;true&quot;&gt;HL&lt;/span&gt;&lt;div&gt;&lt;a href=&quot;#tables&quot;&gt;Harbor Lane Dental, LLC&lt;/a&gt;&lt;span class=&quot;a-table__sub&quot;&gt;AG-10482&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Contact&quot; data-col=&quot;contact&quot;&gt;&lt;span class=&quot;a-table__truncate&quot;&gt;Maria Robles&lt;/span&gt;&lt;span class=&quot;a-table__sub&quot;&gt;m.robles@harborlanedental.com&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Plan&quot; data-col=&quot;plan&quot;&gt;Growth&lt;span class=&quot;a-table__sub&quot;&gt;Monthly&lt;/span&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__num&quot; data-label=&quot;Amount&quot; data-sort=&quot;499&quot;&gt;$499.00&lt;/td&gt;
+        &lt;td data-label=&quot;Status&quot;&gt;&lt;span class=&quot;a-status a-status--success&quot;&gt;Active&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Signed up&quot; data-sort=&quot;2026-10-21&quot; data-col=&quot;date&quot;&gt;Oct 21, 2026&lt;/td&gt;
+        &lt;td class=&quot;a-table__actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--icon a-btn--sm&quot; aria-label=&quot;Actions for Harbor Lane Dental, LLC&quot; data-tooltip=&quot;Actions&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#more-horizontal&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr data-row data-status=&quot;active&quot; data-plan=&quot;scale&quot;&gt;
+        &lt;td class=&quot;a-table__check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; data-select-row aria-label=&quot;Select Northwind Logistics Inc.&quot;&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__sticky&quot;&gt;&lt;div class=&quot;a-table__primary&quot;&gt;&lt;span class=&quot;a-avatar a-avatar--sm&quot; aria-hidden=&quot;true&quot;&gt;NI&lt;/span&gt;&lt;div&gt;&lt;a href=&quot;#tables&quot;&gt;Northwind Logistics Inc.&lt;/a&gt;&lt;span class=&quot;a-table__sub&quot;&gt;AG-10481&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Contact&quot; data-col=&quot;contact&quot;&gt;&lt;span class=&quot;a-table__truncate&quot;&gt;Daniel Okafor&lt;/span&gt;&lt;span class=&quot;a-table__sub&quot;&gt;dokafor@northwindlogistics.com&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Plan&quot; data-col=&quot;plan&quot;&gt;Scale&lt;span class=&quot;a-table__sub&quot;&gt;Monthly&lt;/span&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__num&quot; data-label=&quot;Amount&quot; data-sort=&quot;899&quot;&gt;$899.00&lt;/td&gt;
+        &lt;td data-label=&quot;Status&quot;&gt;&lt;span class=&quot;a-status a-status--success&quot;&gt;Active&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Signed up&quot; data-sort=&quot;2026-10-20&quot; data-col=&quot;date&quot;&gt;Oct 20, 2026&lt;/td&gt;
+        &lt;td class=&quot;a-table__actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--icon a-btn--sm&quot; aria-label=&quot;Actions for Northwind Logistics Inc.&quot; data-tooltip=&quot;Actions&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#more-horizontal&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr data-row data-status=&quot;failed&quot; data-plan=&quot;starter&quot;&gt;
+        &lt;td class=&quot;a-table__check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; data-select-row aria-label=&quot;Select Bright Path Tutoring&quot;&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__sticky&quot;&gt;&lt;div class=&quot;a-table__primary&quot;&gt;&lt;span class=&quot;a-avatar a-avatar--sm&quot; aria-hidden=&quot;true&quot;&gt;BT&lt;/span&gt;&lt;div&gt;&lt;a href=&quot;#tables&quot;&gt;Bright Path Tutoring&lt;/a&gt;&lt;span class=&quot;a-table__sub&quot;&gt;AG-10480&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Contact&quot; data-col=&quot;contact&quot;&gt;&lt;span class=&quot;a-table__truncate&quot;&gt;Priya Shah&lt;/span&gt;&lt;span class=&quot;a-table__sub&quot;&gt;priya@brightpathtutoring.com&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Plan&quot; data-col=&quot;plan&quot;&gt;Starter&lt;span class=&quot;a-table__sub&quot;&gt;Monthly&lt;/span&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__num&quot; data-label=&quot;Amount&quot; data-sort=&quot;299&quot;&gt;$299.00&lt;/td&gt;
+        &lt;td data-label=&quot;Status&quot;&gt;&lt;span class=&quot;a-status a-status--destructive&quot;&gt;Payment failed&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Signed up&quot; data-sort=&quot;2026-10-20&quot; data-col=&quot;date&quot;&gt;Oct 20, 2026&lt;/td&gt;
+        &lt;td class=&quot;a-table__actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--icon a-btn--sm&quot; aria-label=&quot;Actions for Bright Path Tutoring&quot; data-tooltip=&quot;Actions&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#more-horizontal&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr data-row data-status=&quot;review&quot; data-plan=&quot;growth&quot;&gt;
+        &lt;td class=&quot;a-table__check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; data-select-row aria-label=&quot;Select Cedar &amp; Pine Studio&quot;&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__sticky&quot;&gt;&lt;div class=&quot;a-table__primary&quot;&gt;&lt;span class=&quot;a-avatar a-avatar--sm&quot; aria-hidden=&quot;true&quot;&gt;CS&lt;/span&gt;&lt;div&gt;&lt;a href=&quot;#tables&quot;&gt;Cedar &amp; Pine Studio&lt;/a&gt;&lt;span class=&quot;a-table__sub&quot;&gt;AG-10479&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Contact&quot; data-col=&quot;contact&quot;&gt;&lt;span class=&quot;a-table__truncate&quot;&gt;Hannah Lee&lt;/span&gt;&lt;span class=&quot;a-table__sub&quot;&gt;hello@cedarandpine.studio&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Plan&quot; data-col=&quot;plan&quot;&gt;Growth&lt;span class=&quot;a-table__sub&quot;&gt;Monthly&lt;/span&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__num&quot; data-label=&quot;Amount&quot; data-sort=&quot;499&quot;&gt;$499.00&lt;/td&gt;
+        &lt;td data-label=&quot;Status&quot;&gt;&lt;span class=&quot;a-status a-status--info&quot;&gt;In review&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Signed up&quot; data-sort=&quot;2026-10-19&quot; data-col=&quot;date&quot;&gt;Oct 19, 2026&lt;/td&gt;
+        &lt;td class=&quot;a-table__actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--icon a-btn--sm&quot; aria-label=&quot;Actions for Cedar &amp; Pine Studio&quot; data-tooltip=&quot;Actions&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#more-horizontal&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr data-row data-status=&quot;active&quot; data-plan=&quot;scale&quot;&gt;
+        &lt;td class=&quot;a-table__check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; data-select-row aria-label=&quot;Select Summit Ridge Roofing Co.&quot;&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__sticky&quot;&gt;&lt;div class=&quot;a-table__primary&quot;&gt;&lt;span class=&quot;a-avatar a-avatar--sm&quot; aria-hidden=&quot;true&quot;&gt;SC&lt;/span&gt;&lt;div&gt;&lt;a href=&quot;#tables&quot;&gt;Summit Ridge Roofing Co.&lt;/a&gt;&lt;span class=&quot;a-table__sub&quot;&gt;AG-10478&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Contact&quot; data-col=&quot;contact&quot;&gt;&lt;span class=&quot;a-table__truncate&quot;&gt;Marcus Bell&lt;/span&gt;&lt;span class=&quot;a-table__sub&quot;&gt;marcus@summitridgeroofing.com&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Plan&quot; data-col=&quot;plan&quot;&gt;Scale&lt;span class=&quot;a-table__sub&quot;&gt;Monthly&lt;/span&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__num&quot; data-label=&quot;Amount&quot; data-sort=&quot;899&quot;&gt;$899.00&lt;/td&gt;
+        &lt;td data-label=&quot;Status&quot;&gt;&lt;span class=&quot;a-status a-status--success&quot;&gt;Active&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Signed up&quot; data-sort=&quot;2026-10-18&quot; data-col=&quot;date&quot;&gt;Oct 18, 2026&lt;/td&gt;
+        &lt;td class=&quot;a-table__actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--icon a-btn--sm&quot; aria-label=&quot;Actions for Summit Ridge Roofing Co.&quot; data-tooltip=&quot;Actions&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#more-horizontal&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr data-row data-status=&quot;pending&quot; data-plan=&quot;starter&quot;&gt;
+        &lt;td class=&quot;a-table__check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; data-select-row aria-label=&quot;Select Little Fern Bakery&quot;&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__sticky&quot;&gt;&lt;div class=&quot;a-table__primary&quot;&gt;&lt;span class=&quot;a-avatar a-avatar--sm&quot; aria-hidden=&quot;true&quot;&gt;LB&lt;/span&gt;&lt;div&gt;&lt;a href=&quot;#tables&quot;&gt;Little Fern Bakery&lt;/a&gt;&lt;span class=&quot;a-table__sub&quot;&gt;AG-10477&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Contact&quot; data-col=&quot;contact&quot;&gt;&lt;span class=&quot;a-table__truncate&quot;&gt;Sofia Marquez&lt;/span&gt;&lt;span class=&quot;a-table__sub&quot;&gt;sofia@littlefernbakery.com&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Plan&quot; data-col=&quot;plan&quot;&gt;Starter&lt;span class=&quot;a-table__sub&quot;&gt;Monthly&lt;/span&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__num&quot; data-label=&quot;Amount&quot; data-sort=&quot;299&quot;&gt;$299.00&lt;/td&gt;
+        &lt;td data-label=&quot;Status&quot;&gt;&lt;span class=&quot;a-status a-status--warning&quot;&gt;Pending documents&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Signed up&quot; data-sort=&quot;2026-10-18&quot; data-col=&quot;date&quot;&gt;Oct 18, 2026&lt;/td&gt;
+        &lt;td class=&quot;a-table__actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--icon a-btn--sm&quot; aria-label=&quot;Actions for Little Fern Bakery&quot; data-tooltip=&quot;Actions&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#more-horizontal&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr data-row data-status=&quot;active&quot; data-plan=&quot;catchup&quot;&gt;
+        &lt;td class=&quot;a-table__check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; data-select-row aria-label=&quot;Select Atlas Home Health Partners&quot;&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__sticky&quot;&gt;&lt;div class=&quot;a-table__primary&quot;&gt;&lt;span class=&quot;a-avatar a-avatar--sm&quot; aria-hidden=&quot;true&quot;&gt;AP&lt;/span&gt;&lt;div&gt;&lt;a href=&quot;#tables&quot;&gt;Atlas Home Health Partners&lt;/a&gt;&lt;span class=&quot;a-table__sub&quot;&gt;AG-10476&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Contact&quot; data-col=&quot;contact&quot;&gt;&lt;span class=&quot;a-table__truncate&quot;&gt;James Whitfield&lt;/span&gt;&lt;span class=&quot;a-table__sub&quot;&gt;jwhitfield@atlashomehealth.com&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Plan&quot; data-col=&quot;plan&quot;&gt;Catch-up project&lt;span class=&quot;a-table__sub&quot;&gt;One-time&lt;/span&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__num&quot; data-label=&quot;Amount&quot; data-sort=&quot;1250&quot;&gt;$1,250.00&lt;/td&gt;
+        &lt;td data-label=&quot;Status&quot;&gt;&lt;span class=&quot;a-status a-status--success&quot;&gt;Active&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Signed up&quot; data-sort=&quot;2026-10-17&quot; data-col=&quot;date&quot;&gt;Oct 17, 2026&lt;/td&gt;
+        &lt;td class=&quot;a-table__actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--icon a-btn--sm&quot; aria-label=&quot;Actions for Atlas Home Health Partners&quot; data-tooltip=&quot;Actions&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#more-horizontal&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr data-row data-status=&quot;active&quot; data-plan=&quot;growth&quot;&gt;
+        &lt;td class=&quot;a-table__check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; data-select-row aria-label=&quot;Select Bluewater Charters&quot;&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__sticky&quot;&gt;&lt;div class=&quot;a-table__primary&quot;&gt;&lt;span class=&quot;a-avatar a-avatar--sm&quot; aria-hidden=&quot;true&quot;&gt;BC&lt;/span&gt;&lt;div&gt;&lt;a href=&quot;#tables&quot;&gt;Bluewater Charters&lt;/a&gt;&lt;span class=&quot;a-table__sub&quot;&gt;AG-10475&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Contact&quot; data-col=&quot;contact&quot;&gt;&lt;span class=&quot;a-table__truncate&quot;&gt;Ethan Brooks&lt;/span&gt;&lt;span class=&quot;a-table__sub&quot;&gt;ethan@bluewatercharters.com&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Plan&quot; data-col=&quot;plan&quot;&gt;Growth&lt;span class=&quot;a-table__sub&quot;&gt;Monthly&lt;/span&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__num&quot; data-label=&quot;Amount&quot; data-sort=&quot;499&quot;&gt;$499.00&lt;/td&gt;
+        &lt;td data-label=&quot;Status&quot;&gt;&lt;span class=&quot;a-status a-status--success&quot;&gt;Active&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Signed up&quot; data-sort=&quot;2026-10-16&quot; data-col=&quot;date&quot;&gt;Oct 16, 2026&lt;/td&gt;
+        &lt;td class=&quot;a-table__actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--icon a-btn--sm&quot; aria-label=&quot;Actions for Bluewater Charters&quot; data-tooltip=&quot;Actions&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#more-horizontal&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr data-row data-status=&quot;pending&quot; data-plan=&quot;growth&quot;&gt;
+        &lt;td class=&quot;a-table__check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; data-select-row aria-label=&quot;Select Kinfolk Coffee Roasters&quot;&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__sticky&quot;&gt;&lt;div class=&quot;a-table__primary&quot;&gt;&lt;span class=&quot;a-avatar a-avatar--sm&quot; aria-hidden=&quot;true&quot;&gt;KR&lt;/span&gt;&lt;div&gt;&lt;a href=&quot;#tables&quot;&gt;Kinfolk Coffee Roasters&lt;/a&gt;&lt;span class=&quot;a-table__sub&quot;&gt;AG-10474&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Contact&quot; data-col=&quot;contact&quot;&gt;&lt;span class=&quot;a-table__truncate&quot;&gt;Amara Johnson&lt;/span&gt;&lt;span class=&quot;a-table__sub&quot;&gt;amara@kinfolkroasters.com&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Plan&quot; data-col=&quot;plan&quot;&gt;Growth&lt;span class=&quot;a-table__sub&quot;&gt;Monthly&lt;/span&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__num&quot; data-label=&quot;Amount&quot; data-sort=&quot;499&quot;&gt;$499.00&lt;/td&gt;
+        &lt;td data-label=&quot;Status&quot;&gt;&lt;span class=&quot;a-status a-status--warning&quot;&gt;Pending documents&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Signed up&quot; data-sort=&quot;2026-10-15&quot; data-col=&quot;date&quot;&gt;Oct 15, 2026&lt;/td&gt;
+        &lt;td class=&quot;a-table__actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--icon a-btn--sm&quot; aria-label=&quot;Actions for Kinfolk Coffee Roasters&quot; data-tooltip=&quot;Actions&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#more-horizontal&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr data-row data-status=&quot;active&quot; data-plan=&quot;scale&quot;&gt;
+        &lt;td class=&quot;a-table__check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; data-select-row aria-label=&quot;Select Greenleaf Property Management&quot;&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__sticky&quot;&gt;&lt;div class=&quot;a-table__primary&quot;&gt;&lt;span class=&quot;a-avatar a-avatar--sm&quot; aria-hidden=&quot;true&quot;&gt;GM&lt;/span&gt;&lt;div&gt;&lt;a href=&quot;#tables&quot;&gt;Greenleaf Property Management&lt;/a&gt;&lt;span class=&quot;a-table__sub&quot;&gt;AG-10473&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Contact&quot; data-col=&quot;contact&quot;&gt;&lt;span class=&quot;a-table__truncate&quot;&gt;Robert Chen&lt;/span&gt;&lt;span class=&quot;a-table__sub&quot;&gt;rchen@greenleafpm.com&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Plan&quot; data-col=&quot;plan&quot;&gt;Scale&lt;span class=&quot;a-table__sub&quot;&gt;Monthly&lt;/span&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__num&quot; data-label=&quot;Amount&quot; data-sort=&quot;899&quot;&gt;$899.00&lt;/td&gt;
+        &lt;td data-label=&quot;Status&quot;&gt;&lt;span class=&quot;a-status a-status--success&quot;&gt;Active&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Signed up&quot; data-sort=&quot;2026-10-14&quot; data-col=&quot;date&quot;&gt;Oct 14, 2026&lt;/td&gt;
+        &lt;td class=&quot;a-table__actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--icon a-btn--sm&quot; aria-label=&quot;Actions for Greenleaf Property Management&quot; data-tooltip=&quot;Actions&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#more-horizontal&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr data-row data-status=&quot;review&quot; data-plan=&quot;cleanup&quot;&gt;
+        &lt;td class=&quot;a-table__check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; data-select-row aria-label=&quot;Select Pixel Forge Media&quot;&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__sticky&quot;&gt;&lt;div class=&quot;a-table__primary&quot;&gt;&lt;span class=&quot;a-avatar a-avatar--sm&quot; aria-hidden=&quot;true&quot;&gt;PM&lt;/span&gt;&lt;div&gt;&lt;a href=&quot;#tables&quot;&gt;Pixel Forge Media&lt;/a&gt;&lt;span class=&quot;a-table__sub&quot;&gt;AG-10472&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Contact&quot; data-col=&quot;contact&quot;&gt;&lt;span class=&quot;a-table__truncate&quot;&gt;Lena Novak&lt;/span&gt;&lt;span class=&quot;a-table__sub&quot;&gt;lena@pixelforge.media&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Plan&quot; data-col=&quot;plan&quot;&gt;Books cleanup&lt;span class=&quot;a-table__sub&quot;&gt;One-time&lt;/span&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__num&quot; data-label=&quot;Amount&quot; data-sort=&quot;950&quot;&gt;$950.00&lt;/td&gt;
+        &lt;td data-label=&quot;Status&quot;&gt;&lt;span class=&quot;a-status a-status--info&quot;&gt;In review&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Signed up&quot; data-sort=&quot;2026-10-14&quot; data-col=&quot;date&quot;&gt;Oct 14, 2026&lt;/td&gt;
+        &lt;td class=&quot;a-table__actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--icon a-btn--sm&quot; aria-label=&quot;Actions for Pixel Forge Media&quot; data-tooltip=&quot;Actions&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#more-horizontal&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr data-row data-status=&quot;active&quot; data-plan=&quot;starter&quot;&gt;
+        &lt;td class=&quot;a-table__check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; data-select-row aria-label=&quot;Select Oak &amp; Iron Fitness&quot;&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__sticky&quot;&gt;&lt;div class=&quot;a-table__primary&quot;&gt;&lt;span class=&quot;a-avatar a-avatar--sm&quot; aria-hidden=&quot;true&quot;&gt;OF&lt;/span&gt;&lt;div&gt;&lt;a href=&quot;#tables&quot;&gt;Oak &amp; Iron Fitness&lt;/a&gt;&lt;span class=&quot;a-table__sub&quot;&gt;AG-10471&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Contact&quot; data-col=&quot;contact&quot;&gt;&lt;span class=&quot;a-table__truncate&quot;&gt;Tyler Grant&lt;/span&gt;&lt;span class=&quot;a-table__sub&quot;&gt;tyler@oakandironfitness.com&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Plan&quot; data-col=&quot;plan&quot;&gt;Starter&lt;span class=&quot;a-table__sub&quot;&gt;Monthly&lt;/span&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__num&quot; data-label=&quot;Amount&quot; data-sort=&quot;299&quot;&gt;$299.00&lt;/td&gt;
+        &lt;td data-label=&quot;Status&quot;&gt;&lt;span class=&quot;a-status a-status--success&quot;&gt;Active&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Signed up&quot; data-sort=&quot;2026-10-12&quot; data-col=&quot;date&quot;&gt;Oct 12, 2026&lt;/td&gt;
+        &lt;td class=&quot;a-table__actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--icon a-btn--sm&quot; aria-label=&quot;Actions for Oak &amp; Iron Fitness&quot; data-tooltip=&quot;Actions&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#more-horizontal&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr data-row data-status=&quot;active&quot; data-plan=&quot;growth&quot;&gt;
+        &lt;td class=&quot;a-table__check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; data-select-row aria-label=&quot;Select Riverbend Veterinary Clinic&quot;&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__sticky&quot;&gt;&lt;div class=&quot;a-table__primary&quot;&gt;&lt;span class=&quot;a-avatar a-avatar--sm&quot; aria-hidden=&quot;true&quot;&gt;RC&lt;/span&gt;&lt;div&gt;&lt;a href=&quot;#tables&quot;&gt;Riverbend Veterinary Clinic&lt;/a&gt;&lt;span class=&quot;a-table__sub&quot;&gt;AG-10470&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Contact&quot; data-col=&quot;contact&quot;&gt;&lt;span class=&quot;a-table__truncate&quot;&gt;Dr. Alicia Moreno&lt;/span&gt;&lt;span class=&quot;a-table__sub&quot;&gt;amoreno@riverbendvet.com&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Plan&quot; data-col=&quot;plan&quot;&gt;Growth&lt;span class=&quot;a-table__sub&quot;&gt;Monthly&lt;/span&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__num&quot; data-label=&quot;Amount&quot; data-sort=&quot;499&quot;&gt;$499.00&lt;/td&gt;
+        &lt;td data-label=&quot;Status&quot;&gt;&lt;span class=&quot;a-status a-status--success&quot;&gt;Active&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Signed up&quot; data-sort=&quot;2026-10-11&quot; data-col=&quot;date&quot;&gt;Oct 11, 2026&lt;/td&gt;
+        &lt;td class=&quot;a-table__actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--icon a-btn--sm&quot; aria-label=&quot;Actions for Riverbend Veterinary Clinic&quot; data-tooltip=&quot;Actions&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#more-horizontal&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr data-row data-status=&quot;paused&quot; data-plan=&quot;growth&quot;&gt;
+        &lt;td class=&quot;a-table__check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; data-select-row aria-label=&quot;Select Copperline Electric&quot;&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__sticky&quot;&gt;&lt;div class=&quot;a-table__primary&quot;&gt;&lt;span class=&quot;a-avatar a-avatar--sm&quot; aria-hidden=&quot;true&quot;&gt;CE&lt;/span&gt;&lt;div&gt;&lt;a href=&quot;#tables&quot;&gt;Copperline Electric&lt;/a&gt;&lt;span class=&quot;a-table__sub&quot;&gt;AG-10469&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Contact&quot; data-col=&quot;contact&quot;&gt;&lt;span class=&quot;a-table__truncate&quot;&gt;Victor Ramos&lt;/span&gt;&lt;span class=&quot;a-table__sub&quot;&gt;victor@copperlineelectric.com&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Plan&quot; data-col=&quot;plan&quot;&gt;Growth&lt;span class=&quot;a-table__sub&quot;&gt;Monthly&lt;/span&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__num&quot; data-label=&quot;Amount&quot; data-sort=&quot;499&quot;&gt;$499.00&lt;/td&gt;
+        &lt;td data-label=&quot;Status&quot;&gt;&lt;span class=&quot;a-status&quot;&gt;Paused&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Signed up&quot; data-sort=&quot;2026-10-09&quot; data-col=&quot;date&quot;&gt;Oct 9, 2026&lt;/td&gt;
+        &lt;td class=&quot;a-table__actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--icon a-btn--sm&quot; aria-label=&quot;Actions for Copperline Electric&quot; data-tooltip=&quot;Actions&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#more-horizontal&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr data-row data-status=&quot;active&quot; data-plan=&quot;starter&quot;&gt;
+        &lt;td class=&quot;a-table__check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; data-select-row aria-label=&quot;Select Meadowbrook Montessori&quot;&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__sticky&quot;&gt;&lt;div class=&quot;a-table__primary&quot;&gt;&lt;span class=&quot;a-avatar a-avatar--sm&quot; aria-hidden=&quot;true&quot;&gt;MM&lt;/span&gt;&lt;div&gt;&lt;a href=&quot;#tables&quot;&gt;Meadowbrook Montessori&lt;/a&gt;&lt;span class=&quot;a-table__sub&quot;&gt;AG-10468&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Contact&quot; data-col=&quot;contact&quot;&gt;&lt;span class=&quot;a-table__truncate&quot;&gt;Grace Kim&lt;/span&gt;&lt;span class=&quot;a-table__sub&quot;&gt;gkim@meadowbrookmontessori.org&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Plan&quot; data-col=&quot;plan&quot;&gt;Starter&lt;span class=&quot;a-table__sub&quot;&gt;Monthly&lt;/span&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__num&quot; data-label=&quot;Amount&quot; data-sort=&quot;299&quot;&gt;$299.00&lt;/td&gt;
+        &lt;td data-label=&quot;Status&quot;&gt;&lt;span class=&quot;a-status a-status--success&quot;&gt;Active&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Signed up&quot; data-sort=&quot;2026-10-08&quot; data-col=&quot;date&quot;&gt;Oct 8, 2026&lt;/td&gt;
+        &lt;td class=&quot;a-table__actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--icon a-btn--sm&quot; aria-label=&quot;Actions for Meadowbrook Montessori&quot; data-tooltip=&quot;Actions&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#more-horizontal&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr data-row data-status=&quot;active&quot; data-plan=&quot;growth&quot;&gt;
+        &lt;td class=&quot;a-table__check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; data-select-row aria-label=&quot;Select Ironclad Auto Repair&quot;&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__sticky&quot;&gt;&lt;div class=&quot;a-table__primary&quot;&gt;&lt;span class=&quot;a-avatar a-avatar--sm&quot; aria-hidden=&quot;true&quot;&gt;IR&lt;/span&gt;&lt;div&gt;&lt;a href=&quot;#tables&quot;&gt;Ironclad Auto Repair&lt;/a&gt;&lt;span class=&quot;a-table__sub&quot;&gt;AG-10467&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Contact&quot; data-col=&quot;contact&quot;&gt;&lt;span class=&quot;a-table__truncate&quot;&gt;Luis Fernandez&lt;/span&gt;&lt;span class=&quot;a-table__sub&quot;&gt;luis@ironcladauto.com&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Plan&quot; data-col=&quot;plan&quot;&gt;Growth&lt;span class=&quot;a-table__sub&quot;&gt;Monthly&lt;/span&gt;&lt;/td&gt;
+        &lt;td class=&quot;a-table__num&quot; data-label=&quot;Amount&quot; data-sort=&quot;499&quot;&gt;$499.00&lt;/td&gt;
+        &lt;td data-label=&quot;Status&quot;&gt;&lt;span class=&quot;a-status a-status--success&quot;&gt;Active&lt;/span&gt;&lt;/td&gt;
+        &lt;td data-label=&quot;Signed up&quot; data-sort=&quot;2026-10-07&quot; data-col=&quot;date&quot;&gt;Oct 7, 2026&lt;/td&gt;
+        &lt;td class=&quot;a-table__actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--icon a-btn--sm&quot; aria-label=&quot;Actions for Ironclad Auto Repair&quot; data-tooltip=&quot;Actions&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#more-horizontal&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+        &lt;tr class=&quot;a-table__state&quot; data-empty hidden&gt;&lt;td colspan=&quot;8&quot;&gt;&lt;div class=&quot;a-empty&quot;&gt;&lt;svg class=&quot;a-illus a-illus--64&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#illus-empty-search&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;p class=&quot;a-empty__title&quot;&gt;No registrations match&lt;/p&gt;&lt;p class=&quot;a-empty__text&quot;&gt;Try a different search or clear the filters.&lt;/p&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+  &lt;nav class=&quot;a-pagination a-table-card__foot&quot; aria-label=&quot;Table pages&quot; data-pagination-for=&quot;demo-table&quot; data-icons=&quot;chevron-left chevron-right&quot;&gt;&lt;/nav&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div class="a-example a-example--wide">
+          <h3 class="a-example__title">Loading and error rows</h3>
+          <div class="a-example__preview a-example__preview--stack">
+            <div class="a-demo-grid">
+              <div class="a-table-card"><div data-scroll-area class="a-table-scroll"><table class="a-table"><thead><tr><th scope="col">Business</th><th scope="col">Plan</th><th scope="col" class="a-table__num">Amount</th><th scope="col">Status</th></tr></thead><tbody><tr aria-hidden="true"><td><span class="a-skeleton"></span></td><td><span class="a-skeleton"></span></td><td><span class="a-skeleton"></span></td><td><span class="a-skeleton"></span></td></tr><tr aria-hidden="true"><td><span class="a-skeleton"></span></td><td><span class="a-skeleton"></span></td><td><span class="a-skeleton"></span></td><td><span class="a-skeleton"></span></td></tr><tr aria-hidden="true"><td><span class="a-skeleton"></span></td><td><span class="a-skeleton"></span></td><td><span class="a-skeleton"></span></td><td><span class="a-skeleton"></span></td></tr></tbody></table></div></div>
+              <div class="a-table-card"><div data-scroll-area class="a-table-scroll"><table class="a-table"><thead><tr><th scope="col">Business</th><th scope="col">Plan</th><th scope="col" class="a-table__num">Amount</th><th scope="col">Status</th></tr></thead><tbody><tr class="a-table__state"><td colspan="4"><div class="a-empty" role="alert"><svg class="a-illus a-illus--64" aria-hidden="true"><use href="#illus-error"></use></svg><p class="a-empty__title">Payments could not load</p><p class="a-empty__text">The payment gateway did not respond. Your data is safe.</p><div class="a-empty__actions"><button type="button" class="a-btn a-btn--outline"><svg class="a-icon" aria-hidden="true"><use href="#reconcile"></use></svg>Try again</button></div></div></td></tr></tbody></table></div></div>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-2">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-2" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-demo-grid&quot;&gt;
+  &lt;div class=&quot;a-table-card&quot;&gt;&lt;div data-scroll-area class=&quot;a-table-scroll&quot;&gt;&lt;table class=&quot;a-table&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th scope=&quot;col&quot;&gt;Business&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Plan&lt;/th&gt;&lt;th scope=&quot;col&quot; class=&quot;a-table__num&quot;&gt;Amount&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Status&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr aria-hidden=&quot;true&quot;&gt;&lt;td&gt;&lt;span class=&quot;a-skeleton&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;a-skeleton&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;a-skeleton&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;a-skeleton&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr aria-hidden=&quot;true&quot;&gt;&lt;td&gt;&lt;span class=&quot;a-skeleton&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;a-skeleton&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;a-skeleton&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;a-skeleton&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr aria-hidden=&quot;true&quot;&gt;&lt;td&gt;&lt;span class=&quot;a-skeleton&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;a-skeleton&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;a-skeleton&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;a-skeleton&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&quot;a-table-card&quot;&gt;&lt;div data-scroll-area class=&quot;a-table-scroll&quot;&gt;&lt;table class=&quot;a-table&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th scope=&quot;col&quot;&gt;Business&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Plan&lt;/th&gt;&lt;th scope=&quot;col&quot; class=&quot;a-table__num&quot;&gt;Amount&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Status&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr class=&quot;a-table__state&quot;&gt;&lt;td colspan=&quot;4&quot;&gt;&lt;div class=&quot;a-empty&quot; role=&quot;alert&quot;&gt;&lt;svg class=&quot;a-illus a-illus--64&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#illus-error&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;p class=&quot;a-empty__title&quot;&gt;Payments could not load&lt;/p&gt;&lt;p class=&quot;a-empty__text&quot;&gt;The payment gateway did not respond. Your data is safe.&lt;/p&gt;&lt;div class=&quot;a-empty__actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#reconcile&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Try again&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="charts">
+        <h2 id="charts">Charts</h2>
+        <p>One chart style: thin lines, rounded bar ends, a recessive grid, a legend for two or more series and a table view for exact values. Hover or use arrow keys to read values.</p>
+        <div class="a-example a-example--wide">
+          <h3 class="a-example__title">Line and bar</h3>
+          <div class="a-example__preview a-example__preview--stack">
+            <div class="a-demo-grid">
+              <figure class="a-chart a-card a-card__content" id="chart-signups" data-chart="line" data-labels='["May","Jun","Jul","Aug","Sep","Oct"]' data-series='[{"name":"Signups","values":[21,26,24,33,41,48]}]'>
+                <div class="a-chart__head"><figcaption><p class="a-chart__title">New signups</p><p class="a-chart__subtitle">Last 6 months</p></figcaption></div>
+                <div class="a-chart__plot"></div>
+              </figure>
+              <figure class="a-chart a-card a-card__content" id="chart-revenue" data-chart="bar" data-format="currency" data-labels='["May","Jun","Jul","Aug","Sep","Oct"]' data-series='[{"name":"Recurring","values":[14200,15100,16300,17800,20600,21940]},{"name":"One-time","values":[3750,2500,5000,3750,6250,4700]}]'>
+                <div class="a-chart__head"><figcaption><p class="a-chart__title">Revenue</p><p class="a-chart__subtitle">Recurring and one-time, USD</p></figcaption></div>
+                <div class="a-chart__plot"></div>
+              </figure>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-3">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-3" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-demo-grid&quot;&gt;
+  &lt;figure class=&quot;a-chart a-card a-card__content&quot; id=&quot;chart-signups&quot; data-chart=&quot;line&quot; data-labels=&#x27;[&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;,&quot;Sep&quot;,&quot;Oct&quot;]&#x27; data-series=&#x27;[{&quot;name&quot;:&quot;Signups&quot;,&quot;values&quot;:[21,26,24,33,41,48]}]&#x27;&gt;
+    &lt;div class=&quot;a-chart__head&quot;&gt;&lt;figcaption&gt;&lt;p class=&quot;a-chart__title&quot;&gt;New signups&lt;/p&gt;&lt;p class=&quot;a-chart__subtitle&quot;&gt;Last 6 months&lt;/p&gt;&lt;/figcaption&gt;&lt;/div&gt;
+    &lt;div class=&quot;a-chart__plot&quot;&gt;&lt;/div&gt;
+  &lt;/figure&gt;
+  &lt;figure class=&quot;a-chart a-card a-card__content&quot; id=&quot;chart-revenue&quot; data-chart=&quot;bar&quot; data-format=&quot;currency&quot; data-labels=&#x27;[&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;,&quot;Sep&quot;,&quot;Oct&quot;]&#x27; data-series=&#x27;[{&quot;name&quot;:&quot;Recurring&quot;,&quot;values&quot;:[14200,15100,16300,17800,20600,21940]},{&quot;name&quot;:&quot;One-time&quot;,&quot;values&quot;:[3750,2500,5000,3750,6250,4700]}]&#x27;&gt;
+    &lt;div class=&quot;a-chart__head&quot;&gt;&lt;figcaption&gt;&lt;p class=&quot;a-chart__title&quot;&gt;Revenue&lt;/p&gt;&lt;p class=&quot;a-chart__subtitle&quot;&gt;Recurring and one-time, USD&lt;/p&gt;&lt;/figcaption&gt;&lt;/div&gt;
+    &lt;div class=&quot;a-chart__plot&quot;&gt;&lt;/div&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div class="a-example a-example--wide">
+          <h3 class="a-example__title">Donut and sparkline</h3>
+          <div class="a-example__preview a-example__preview--stack">
+            <div class="a-demo-grid">
+              <figure class="a-chart a-chart--donut a-card a-card__content" id="chart-calls" data-chart="donut" data-center-label="calls" data-series='[{"name":"Answered","value":86},{"name":"No answer","value":19},{"name":"Queued","value":7}]'>
+                <div class="a-chart__head"><figcaption><p class="a-chart__title">AI call outcomes</p><p class="a-chart__subtitle">October 2026</p></figcaption></div>
+                <div class="a-chart__body"><div class="a-chart__plot"></div></div>
+              </figure>
+              <div class="a-stat"><p class="a-stat__label"><svg class="a-icon" aria-hidden="true"><use href="#recurring-payment"></use></svg>Monthly recurring revenue</p><p class="a-stat__value">$21,940</p><svg class="a-sparkline" data-sparkline="[14200,15100,16300,17800,20600,21940]" aria-hidden="true"></svg><p class="a-stat__meta"><span class="a-badge a-badge--success"><svg class="a-icon" aria-hidden="true"><use href="#trending-up"></use></svg>6.4%</span>vs last month</p></div>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-4">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-4" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-demo-grid&quot;&gt;
+  &lt;figure class=&quot;a-chart a-chart--donut a-card a-card__content&quot; id=&quot;chart-calls&quot; data-chart=&quot;donut&quot; data-center-label=&quot;calls&quot; data-series=&#x27;[{&quot;name&quot;:&quot;Answered&quot;,&quot;value&quot;:86},{&quot;name&quot;:&quot;No answer&quot;,&quot;value&quot;:19},{&quot;name&quot;:&quot;Queued&quot;,&quot;value&quot;:7}]&#x27;&gt;
+    &lt;div class=&quot;a-chart__head&quot;&gt;&lt;figcaption&gt;&lt;p class=&quot;a-chart__title&quot;&gt;AI call outcomes&lt;/p&gt;&lt;p class=&quot;a-chart__subtitle&quot;&gt;October 2026&lt;/p&gt;&lt;/figcaption&gt;&lt;/div&gt;
+    &lt;div class=&quot;a-chart__body&quot;&gt;&lt;div class=&quot;a-chart__plot&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;/figure&gt;
+  &lt;div class=&quot;a-stat&quot;&gt;&lt;p class=&quot;a-stat__label&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#recurring-payment&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Monthly recurring revenue&lt;/p&gt;&lt;p class=&quot;a-stat__value&quot;&gt;$21,940&lt;/p&gt;&lt;svg class=&quot;a-sparkline&quot; data-sparkline=&quot;[14200,15100,16300,17800,20600,21940]&quot; aria-hidden=&quot;true&quot;&gt;&lt;/svg&gt;&lt;p class=&quot;a-stat__meta&quot;&gt;&lt;span class=&quot;a-badge a-badge--success&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#trending-up&quot;&gt;&lt;/use&gt;&lt;/svg&gt;6.4%&lt;/span&gt;vs last month&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="lists">
+        <h2 id="lists">Key-value list and activity feed</h2>
+        <p>Facts about one record, and a running log of what happened.</p>
+        <div class="a-example a-example--wide">
+          <h3 class="a-example__title">Details and activity</h3>
+          <div class="a-example__preview ">
+            <div class="a-demo-grid">
+              <dl class="a-dl">
+                <dt>Legal name</dt><dd>Harbor Lane Dental, LLC</dd>
+                <dt>EIN</dt><dd class="a-mono">&bull;&bull;-&bull;&bull;&bull;4821</dd>
+                <dt>Entity</dt><dd>Single-member LLC</dd>
+                <dt>State</dt><dd>Texas</dd>
+                <dt>Software</dt><dd>QuickBooks Online</dd>
+              </dl>
+              <ul class="a-feed" role="list">
+                <li class="a-feed__item"><span class="a-avatar a-avatar--sm" aria-hidden="true">MR</span><div class="a-feed__text"><p><strong>Maria Robles</strong> uploaded 2 bank statements</p><p class="a-feed__meta">Chase business checking, Aug and Sept 2026</p></div><span class="a-feed__time">10:14 AM</span></li>
+                <li class="a-feed__item"><span class="a-avatar a-avatar--sm a-avatar--neutral" aria-hidden="true">PN</span><div class="a-feed__text"><p><strong>Priya Nair</strong> changed status to Active</p></div><span class="a-feed__time">9:52 AM</span></li>
+                <li class="a-feed__item"><span class="a-avatar a-avatar--sm a-avatar--neutral" aria-hidden="true"><svg class="a-icon a-icon--16" aria-hidden="true"><use href="#bot"></use></svg></span><div class="a-feed__text"><p><strong>AI assistant</strong> completed the welcome call</p><p class="a-feed__meta">4 min 12 s, answered</p></div><span class="a-feed__time">Yesterday</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-5">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-5" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-demo-grid&quot;&gt;
+  &lt;dl class=&quot;a-dl&quot;&gt;
+    &lt;dt&gt;Legal name&lt;/dt&gt;&lt;dd&gt;Harbor Lane Dental, LLC&lt;/dd&gt;
+    &lt;dt&gt;EIN&lt;/dt&gt;&lt;dd class=&quot;a-mono&quot;&gt;&amp;bull;&amp;bull;-&amp;bull;&amp;bull;&amp;bull;4821&lt;/dd&gt;
+    &lt;dt&gt;Entity&lt;/dt&gt;&lt;dd&gt;Single-member LLC&lt;/dd&gt;
+    &lt;dt&gt;State&lt;/dt&gt;&lt;dd&gt;Texas&lt;/dd&gt;
+    &lt;dt&gt;Software&lt;/dt&gt;&lt;dd&gt;QuickBooks Online&lt;/dd&gt;
+  &lt;/dl&gt;
+  &lt;ul class=&quot;a-feed&quot; role=&quot;list&quot;&gt;
+    &lt;li class=&quot;a-feed__item&quot;&gt;&lt;span class=&quot;a-avatar a-avatar--sm&quot; aria-hidden=&quot;true&quot;&gt;MR&lt;/span&gt;&lt;div class=&quot;a-feed__text&quot;&gt;&lt;p&gt;&lt;strong&gt;Maria Robles&lt;/strong&gt; uploaded 2 bank statements&lt;/p&gt;&lt;p class=&quot;a-feed__meta&quot;&gt;Chase business checking, Aug and Sept 2026&lt;/p&gt;&lt;/div&gt;&lt;span class=&quot;a-feed__time&quot;&gt;10:14 AM&lt;/span&gt;&lt;/li&gt;
+    &lt;li class=&quot;a-feed__item&quot;&gt;&lt;span class=&quot;a-avatar a-avatar--sm a-avatar--neutral&quot; aria-hidden=&quot;true&quot;&gt;PN&lt;/span&gt;&lt;div class=&quot;a-feed__text&quot;&gt;&lt;p&gt;&lt;strong&gt;Priya Nair&lt;/strong&gt; changed status to Active&lt;/p&gt;&lt;/div&gt;&lt;span class=&quot;a-feed__time&quot;&gt;9:52 AM&lt;/span&gt;&lt;/li&gt;
+    &lt;li class=&quot;a-feed__item&quot;&gt;&lt;span class=&quot;a-avatar a-avatar--sm a-avatar--neutral&quot; aria-hidden=&quot;true&quot;&gt;&lt;svg class=&quot;a-icon a-icon--16&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#bot&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;&lt;div class=&quot;a-feed__text&quot;&gt;&lt;p&gt;&lt;strong&gt;AI assistant&lt;/strong&gt; completed the welcome call&lt;/p&gt;&lt;p class=&quot;a-feed__meta&quot;&gt;4 min 12 s, answered&lt;/p&gt;&lt;/div&gt;&lt;span class=&quot;a-feed__time&quot;&gt;Yesterday&lt;/span&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="calendar">
+        <h2 id="calendar">Month calendar</h2>
+        <p>Upcoming payments and scheduled calls. On phones events shrink to colored dots.</p>
+        <div class="a-example a-example--wide">
+          <h3 class="a-example__title">October 2026</h3>
+          <div class="a-example__preview a-example__preview--stack">
+            <div class="a-month a-demo-grid">
+              <div class="a-month__head"><p class="a-h4">October 2026</p><div class="a-btn-row"><ul class="a-chart__legend" role="list"><li><span class="a-chart__key a-chart__key--box" style="--key: var(--chart-1)"></span>Payment</li><li><span class="a-chart__key a-chart__key--box" style="--key: var(--chart-3)"></span>AI call</li><li><span class="a-chart__key a-chart__key--box" style="--key: var(--destructive)"></span>Failed</li></ul><div class="a-btn-group"><button type="button" class="a-btn a-btn--outline a-btn--icon a-btn--sm" aria-label="Previous month"><svg class="a-icon" aria-hidden="true"><use href="#chevron-left"></use></svg></button><button type="button" class="a-btn a-btn--outline a-btn--icon a-btn--sm" aria-label="Next month"><svg class="a-icon" aria-hidden="true"><use href="#chevron-right"></use></svg></button></div></div></div>
+              <div class="a-month__grid">
+                <div class="a-month__weekday" aria-hidden="true">Sun</div><div class="a-month__weekday" aria-hidden="true">Mon</div><div class="a-month__weekday" aria-hidden="true">Tue</div><div class="a-month__weekday" aria-hidden="true">Wed</div><div class="a-month__weekday" aria-hidden="true">Thu</div><div class="a-month__weekday" aria-hidden="true">Fri</div><div class="a-month__weekday" aria-hidden="true">Sat</div>
+                <div class="a-month__day is-outside"><span class="a-month__date"><span class="a-visually-hidden">September </span>27</span></div><div class="a-month__day is-outside"><span class="a-month__date"><span class="a-visually-hidden">September </span>28</span></div><div class="a-month__day is-outside"><span class="a-month__date"><span class="a-visually-hidden">September </span>29</span></div><div class="a-month__day is-outside"><span class="a-month__date"><span class="a-visually-hidden">September </span>30</span></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>1</span></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>2</span></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>3</span></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>4</span></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>5</span><a class="a-event a-event--payment" href="#calendar">$499 Harbor Lane</a></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>6</span></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>7</span></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>8</span><a class="a-event a-event--call" href="#calendar">Call: Meadowbrook</a></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>9</span></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>10</span></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>11</span></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>12</span><a class="a-event a-event--payment" href="#calendar">$899 Northwind</a></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>13</span></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>14</span></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>15</span><a class="a-event a-event--failed" href="#calendar">Failed: Bright Path</a><a class="a-event a-event--call" href="#calendar">Call: Kinfolk</a></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>16</span></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>17</span></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>18</span></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>19</span></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>20</span><a class="a-event a-event--payment" href="#calendar">$299 Oak & Iron</a></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>21</span><a class="a-event a-event--payment" href="#calendar">$499 Harbor Lane</a><a class="a-event a-event--call" href="#calendar">Call: Harbor Lane</a></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>22</span></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>23</span></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>24</span></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>25</span></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>26</span></div><div class="a-month__day is-today"><span class="a-month__date"><span class="a-visually-hidden">October </span>27</span><a class="a-event a-event--call" href="#calendar">Call: Little Fern</a></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>28</span></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>29</span></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>30</span><a class="a-event a-event--payment" href="#calendar">$899 Greenleaf</a></div><div class="a-month__day"><span class="a-month__date"><span class="a-visually-hidden">October </span>31</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-6">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-6" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-month a-demo-grid&quot;&gt;
+  &lt;div class=&quot;a-month__head&quot;&gt;&lt;p class=&quot;a-h4&quot;&gt;October 2026&lt;/p&gt;&lt;div class=&quot;a-btn-row&quot;&gt;&lt;ul class=&quot;a-chart__legend&quot; role=&quot;list&quot;&gt;&lt;li&gt;&lt;span class=&quot;a-chart__key a-chart__key--box&quot; style=&quot;--key: var(--chart-1)&quot;&gt;&lt;/span&gt;Payment&lt;/li&gt;&lt;li&gt;&lt;span class=&quot;a-chart__key a-chart__key--box&quot; style=&quot;--key: var(--chart-3)&quot;&gt;&lt;/span&gt;AI call&lt;/li&gt;&lt;li&gt;&lt;span class=&quot;a-chart__key a-chart__key--box&quot; style=&quot;--key: var(--destructive)&quot;&gt;&lt;/span&gt;Failed&lt;/li&gt;&lt;/ul&gt;&lt;div class=&quot;a-btn-group&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline a-btn--icon a-btn--sm&quot; aria-label=&quot;Previous month&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#chevron-left&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline a-btn--icon a-btn--sm&quot; aria-label=&quot;Next month&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#chevron-right&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&quot;a-month__grid&quot;&gt;
+    &lt;div class=&quot;a-month__weekday&quot; aria-hidden=&quot;true&quot;&gt;Sun&lt;/div&gt;&lt;div class=&quot;a-month__weekday&quot; aria-hidden=&quot;true&quot;&gt;Mon&lt;/div&gt;&lt;div class=&quot;a-month__weekday&quot; aria-hidden=&quot;true&quot;&gt;Tue&lt;/div&gt;&lt;div class=&quot;a-month__weekday&quot; aria-hidden=&quot;true&quot;&gt;Wed&lt;/div&gt;&lt;div class=&quot;a-month__weekday&quot; aria-hidden=&quot;true&quot;&gt;Thu&lt;/div&gt;&lt;div class=&quot;a-month__weekday&quot; aria-hidden=&quot;true&quot;&gt;Fri&lt;/div&gt;&lt;div class=&quot;a-month__weekday&quot; aria-hidden=&quot;true&quot;&gt;Sat&lt;/div&gt;
+    &lt;div class=&quot;a-month__day is-outside&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;September &lt;/span&gt;27&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day is-outside&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;September &lt;/span&gt;28&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day is-outside&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;September &lt;/span&gt;29&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day is-outside&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;September &lt;/span&gt;30&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;1&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;2&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;3&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;4&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;5&lt;/span&gt;&lt;a class=&quot;a-event a-event--payment&quot; href=&quot;#calendar&quot;&gt;$499 Harbor Lane&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;6&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;7&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;8&lt;/span&gt;&lt;a class=&quot;a-event a-event--call&quot; href=&quot;#calendar&quot;&gt;Call: Meadowbrook&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;9&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;10&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;11&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;12&lt;/span&gt;&lt;a class=&quot;a-event a-event--payment&quot; href=&quot;#calendar&quot;&gt;$899 Northwind&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;13&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;14&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;15&lt;/span&gt;&lt;a class=&quot;a-event a-event--failed&quot; href=&quot;#calendar&quot;&gt;Failed: Bright Path&lt;/a&gt;&lt;a class=&quot;a-event a-event--call&quot; href=&quot;#calendar&quot;&gt;Call: Kinfolk&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;16&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;17&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;18&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;19&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;20&lt;/span&gt;&lt;a class=&quot;a-event a-event--payment&quot; href=&quot;#calendar&quot;&gt;$299 Oak &amp; Iron&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;21&lt;/span&gt;&lt;a class=&quot;a-event a-event--payment&quot; href=&quot;#calendar&quot;&gt;$499 Harbor Lane&lt;/a&gt;&lt;a class=&quot;a-event a-event--call&quot; href=&quot;#calendar&quot;&gt;Call: Harbor Lane&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;22&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;23&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;24&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;25&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;26&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day is-today&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;27&lt;/span&gt;&lt;a class=&quot;a-event a-event--call&quot; href=&quot;#calendar&quot;&gt;Call: Little Fern&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;28&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;29&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;30&lt;/span&gt;&lt;a class=&quot;a-event a-event--payment&quot; href=&quot;#calendar&quot;&gt;$899 Greenleaf&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;a-month__day&quot;&gt;&lt;span class=&quot;a-month__date&quot;&gt;&lt;span class=&quot;a-visually-hidden&quot;&gt;October &lt;/span&gt;31&lt;/span&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+    </main>
+  </div>
+  <!-- icons -->
+  <svg class="a-sprite" aria-hidden="true" focusable="false">
+    <symbol id="alert-triangle" viewBox="0 0 24 24"><path d="M10.3 4.4a2 2 0 0 1 3.4 0l7.6 13.1a2 2 0 0 1-1.7 3H4.4a2 2 0 0 1-1.7-3z" style="stroke-dasharray: calc(57.868 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.767 - var(--icon-gap) / 2)"/><path d="M12 9.5v4"/><path d="M12 16.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="bot" viewBox="0 0 24 24"><path d="M7 8H17a3 3 0 0 1 3 3V17a3 3 0 0 1 -3 3H7a3 3 0 0 1 -3 -3V11a3 3 0 0 1 3 -3z" style="stroke-dasharray: calc(50.852 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(40.682 - var(--icon-gap) / 2)"/><path d="M12 8V4.5"/><path d="M12 4h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/><path d="M9 13.5v1"/><path d="M15 13.5v1"/><path d="M2 13v2.5" style="display: var(--icon-minor-display, inline)"/><path d="M22 13v2.5" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="check-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M8.2 12.3l2.6 2.6 5-5.2"/></symbol>
+    <symbol id="chevron-left" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+    <symbol id="chevron-right" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+    <symbol id="chevron-up" viewBox="0 0 24 24"><path d="M6 15l6-6 6 6"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></symbol>
+    <symbol id="download" viewBox="0 0 24 24"><path d="M12 4v11"/><path d="M7.5 10.5 12 15l4.5-4.5"/><path d="M4.5 19.5h15"/></symbol>
+    <symbol id="filter" viewBox="0 0 24 24"><path d="M3.5 5h17l-6.5 8v6l-4 2v-8z" style="stroke-dasharray: calc(56.088 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(47.675 - var(--icon-gap) / 2)"/></symbol>
+    <symbol id="illus-empty-search" viewBox="0 0 96 96"><g stroke-width="var(--illus-stroke, 2.5)" stroke-linecap="round" stroke-linejoin="round"><circle style="fill: var(--illus-surface, currentColor); fill-opacity: var(--illus-surface-opacity, .12); stroke: none" cx="42" cy="42" r="22"/><path style="fill: none; stroke: var(--illus-line, currentColor)" d="M42 20a22 22 0 1 1 0 44 22 22 0 1 1 0-44zM58 58l18 18"/><path style="fill: none; stroke: var(--illus-accent, currentColor)" d="M34 42h16"/></g></symbol>
+    <symbol id="illus-error" viewBox="0 0 96 96"><g stroke-width="var(--illus-stroke, 2.5)" stroke-linecap="round" stroke-linejoin="round"><path style="fill: var(--illus-surface, currentColor); fill-opacity: var(--illus-surface-opacity, .12); stroke: none" d="M42.6 18a6.2 6.2 0 0 1 10.8 0l26 45a6.2 6.2 0 0 1-5.4 9.3H22a6.2 6.2 0 0 1-5.4-9.3z"/><path style="fill: none; stroke: var(--illus-line, currentColor)" d="M42.6 18a6.2 6.2 0 0 1 10.8 0l26 45a6.2 6.2 0 0 1-5.4 9.3H22a6.2 6.2 0 0 1-5.4-9.3z"/><path style="fill: none; stroke: var(--illus-accent, currentColor)" d="M48 36v14M48 59h.1"/></g></symbol>
+    <symbol id="info" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M12 11v5.5"/><path d="M12 7.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="mail" viewBox="0 0 24 24"><path d="M5.5 5H18.5a2.5 2.5 0 0 1 2.5 2.5V16.5a2.5 2.5 0 0 1 -2.5 2.5H5.5a2.5 2.5 0 0 1 -2.5 -2.5V7.5a2.5 2.5 0 0 1 2.5 -2.5z" style="stroke-dasharray: calc(59.71 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(47.768 - var(--icon-gap) / 2)"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
+    <symbol id="moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z" style="stroke-dasharray: calc(58.676 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(26.404 - var(--icon-gap) / 2)"/></symbol>
+    <symbol id="more-horizontal" viewBox="0 0 24 24"><path d="M5.5 12h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/><path d="M12 12h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/><path d="M18.5 12h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="reconcile" viewBox="0 0 24 24"><path d="M19.5 9A8 8 0 0 0 5.2 7.2"/><path d="M4.5 15a8 8 0 0 0 14.3 1.8"/><path d="M5 3.5v4h4"/><path d="M19 20.5v-4h-4"/><path d="M9.5 12.2l1.8 1.8 3.2-3.4" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="recurring-payment" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-14 5.3"/><path d="M4 12a8 8 0 0 1 14-5.3"/><path d="M18.5 3v4h-4"/><path d="M5.5 21v-4h4"/><path d="M12 9v6" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="search" viewBox="0 0 24 24"><path d="M10.5 4a6.5 6.5 0 1 1 0 13a6.5 6.5 0 1 1 0 -13z" style="stroke-dasharray: calc(40.846 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(35.945 - var(--icon-gap) / 2)"/><path d="M15.5 15.5 20 20"/></symbol>
+    <symbol id="settings" viewBox="0 0 24 24"><path d="M12 2.8 20 7.4v9.2L12 21.2 4 16.6V7.4z" style="stroke-dasharray: calc(55.313 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(50.888 - var(--icon-gap) / 2)"/><path d="M12 9a3 3 0 1 1 0 6a3 3 0 1 1 0 -6z"/></symbol>
+    <symbol id="sun" viewBox="0 0 24 24"><path d="M12 7.8a4.2 4.2 0 1 1 0 8.4a4.2 4.2 0 1 1 0 -8.4z" style="stroke-dasharray: calc(26.393 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(23.226 - var(--icon-gap) / 2)"/><path d="M12 2.5v2"/><path d="M12 19.5v2"/><path d="M2.5 12h2"/><path d="M19.5 12h2"/><path d="M5.6 5.6l1.2 1.2"/><path d="M17.2 17.2l1.2 1.2"/><path d="M5.6 18.4l1.2-1.2"/><path d="M17.2 6.8l1.2-1.2"/></symbol>
+    <symbol id="trash" viewBox="0 0 24 24"><path d="M6 7h12l-1 12.6a1.5 1.5 0 0 1-1.5 1.4h-7A1.5 1.5 0 0 1 7 19.6z" style="stroke-dasharray: calc(48.799 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(42.943 - var(--icon-gap) / 2)"/><path d="M4 7h16"/><path d="M9.5 7V4.5h5V7"/><path d="M10 11v6" style="display: var(--icon-minor-display, inline)"/><path d="M14 11v6" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="trending-up" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol>
+    <symbol id="x-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M9.2 9.2l5.6 5.6"/><path d="M14.8 9.2l-5.6 5.6"/></symbol>
+  </svg>
+  <!-- /icons -->
+</body>
+</html>
