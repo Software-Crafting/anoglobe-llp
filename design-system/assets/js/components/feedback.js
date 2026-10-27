@@ -167,5 +167,22 @@
     if (event.target.closest("[data-print]")) window.print();
   });
 
+  // Offline banner: shown while the browser reports no connection.
+  function offlineBanner(show) {
+    let banner = document.querySelector("[data-offline-banner]");
+    if (!banner && show) {
+      banner = document.createElement("div");
+      banner.className = "a-banner a-banner--warning";
+      banner.dataset.offlineBanner = "";
+      banner.setAttribute("role", "status");
+      banner.textContent = "You are offline. Changes will save when the connection returns.";
+      document.body.prepend(banner);
+    }
+    if (banner) banner.hidden = !show;
+    if (!show && banner) toast("Back online", "success");
+  }
+  window.addEventListener("offline", () => offlineBanner(true));
+  window.addEventListener("online", () => offlineBanner(false));
+
   window.Anoglobe = Object.assign(window.Anoglobe || {}, { toast, showLoading });
 })();

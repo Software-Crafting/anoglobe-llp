@@ -93,6 +93,8 @@
     const tab = event.target.closest("[role=tab]");
     if (tab) selectTab(tab);
 
+    if (event.target.closest("[data-reload]")) window.location.reload();
+
     const disclosure = event.target.closest("[data-disclosure]");
     if (disclosure) toggleDisclosure(disclosure);
 

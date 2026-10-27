@@ -1385,3 +1385,30 @@
     pointer-events: none;
   }
 }
+
+.a-skeleton--short {
+  width: 45%;
+}
+
+.a-skeleton--value {
+  width: 60%;
+  height: 28px;
+}
+
+.a-skeleton--block {
+  height: 200px;
+  margin-top: var(--space-4);
+}
+
+.a-skeleton--avatar {
+  width: 28px;
+  height: 28px;
+}
+
+.a-skeleton--tiny {
+  width: 40px;
+}
+
+.a-skeleton + .a-skeleton {
+  margin-top: var(--space-2);
+}

@@ -11,6 +11,7 @@ const HEX_ALLOWED = [
   { pattern: /^assets\/css\/tokens\.css$/, reason: "single source of raw color values" },
   { pattern: /^ui-design\/emails\//, reason: "email clients do not support CSS custom properties" },
   { pattern: /^assets\/img\/.*\.svg$/, reason: "logo files are used as images and cannot read page tokens" },
+  { pattern: /^assets\/css\/base\.css$/, reason: "print styles force black on white regardless of theme" },
   { pattern: /\.md$/, reason: "documentation may quote values" },
 ];
 
