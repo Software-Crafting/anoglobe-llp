@@ -147,8 +147,7 @@ console.log(`Icons built: ${icons.length} icons, ${ILLUSTRATIONS.length} illustr
 
 // Gallery: rewrite the generated region of the icons foundations page.
 const GALLERY = join(ROOT, "ui-design/foundations/icons.html");
-const SPRITE = "../../assets/icons/sprite.svg";
-const use = (id, className = "a-icon") => `<svg class="${className}" aria-hidden="true"><use href="${SPRITE}#${id}"></use></svg>`;
+const use = (id, className = "a-icon") => `<svg class="${className}" aria-hidden="true"><use href="#${id}"></use></svg>`;
 const slug = (text) => text.toLowerCase().replace(/[^a-z]+/g, "-");
 const SAMPLE = ["invoice", "credit-card", "phone-call", "reconcile", "calendar", "shield-check", "bank", "bell"];
 

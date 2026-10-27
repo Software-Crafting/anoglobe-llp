@@ -6,6 +6,7 @@ import { createServer } from "node:http";
 import { createReadStream, existsSync, mkdirSync, statSync } from "node:fs";
 import { createRequire } from "node:module";
 import { extname, join, normalize } from "node:path";
+import { pathToFileURL } from "node:url";
 import { chromium } from "playwright-core";
 import { ROOT, walk, rel } from "./lib/files.mjs";
 
@@ -110,6 +111,16 @@ for (const path of pages) {
       await context.close();
     }
   }
+  // The prototype must also work opened straight from disk (file://), where browsers block
+  // cross-file requests such as external SVG sprites and fetch().
+  const fileContext = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+  const filePage = await fileContext.newPage();
+  filePage.on("console", (message) => message.type() === "error" && findings.add(`file:// console error: ${message.text().slice(0, 160)}`));
+  filePage.on("pageerror", (error) => findings.add(`file:// page error: ${error.message}`));
+  await filePage.goto(pathToFileURL(join(ROOT, path)).href, { waitUntil: "load" });
+  await filePage.waitForTimeout(300);
+  await fileContext.close();
+
   if (findings.size) {
     failures++;
     console.error(`FAIL ${path}\n  ${[...findings].join("\n  ")}`);

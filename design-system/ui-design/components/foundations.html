@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Foundation components | Anoglobe Design System</title>
+  <meta name="description" content="Buttons, badges, avatars, cards, alerts, tabs, steps and other foundation components of the Anoglobe design system.">
+  <!-- shell:head -->
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <script src="../../assets/js/theme.js"></script>
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components/foundations.css">
+  <link rel="stylesheet" href="../../assets/css/pages.css">
+  <script src="../../assets/js/components/core.js" defer></script>
+  <!-- /shell:head -->
+</head>
+<body>
+  <!-- shell:docs-header -->
+  <a class="a-skip-link" href="#main">Skip to content</a>
+  <header class="a-docs-header">
+    <a class="a-docs-header__brand" href="../../index.html">
+      <img class="a-logo a-logo--light" src="../../assets/img/logo.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+      <img class="a-logo a-logo--dark" src="../../assets/img/logo-reversed.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+      <span class="a-docs-header__label">Design system</span>
+    </a>
+    <button type="button" class="a-btn a-btn--ghost a-btn--icon a-theme-toggle" data-theme-toggle aria-label="Dark theme" data-tooltip="Toggle dark theme">
+      <svg class="a-icon a-theme-toggle__sun" aria-hidden="true"><use href="#sun"></use></svg>
+      <svg class="a-icon a-theme-toggle__moon" aria-hidden="true"><use href="#moon"></use></svg>
+    </button>
+  </header>
+  <!-- /shell:docs-header -->
+  <div class="a-docs">
+    <!-- shell:docs-nav -->
+    <nav class="a-docs-nav" aria-label="Design system">
+      <div class="a-docs-nav__group">
+        <p class="a-eyebrow">Foundations</p>
+        <ul class="a-docs-nav__list" role="list">
+          <li><a class="a-docs-nav__link" href="../../ui-design/foundations/colors.html">Colors</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/foundations/icons.html">Icons</a></li>
+        </ul>
+      </div>
+      <div class="a-docs-nav__group">
+        <p class="a-eyebrow">Components</p>
+        <ul class="a-docs-nav__list" role="list">
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/foundations.html" aria-current="page">Foundations</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- /shell:docs-nav -->
+    <main id="main" class="a-docs-main">
+      <header>
+        <p class="a-eyebrow">Components</p>
+        <h1>Foundations</h1>
+        <p class="a-body-lg a-muted">The small, shared pieces every page is built from. Each example is live: try it with a mouse, then with the keyboard alone.</p>
+      </header>
+
+      <section class="a-docs-section" aria-labelledby="buttons">
+        <h2 id="buttons">Buttons</h2>
+        <p>Primary is for the one main action on a view. Secondary and outline for supporting actions, ghost for toolbars, destructive only for actions that delete or charge.</p>
+        <div class="a-example">
+          <h3 class="a-example__title">Variants</h3>
+          <div class="a-example__preview ">
+            <button type="button" class="a-btn a-btn--primary">Continue</button>
+            <button type="button" class="a-btn a-btn--secondary">Save draft</button>
+            <button type="button" class="a-btn a-btn--outline">Export CSV</button>
+            <button type="button" class="a-btn a-btn--ghost">Cancel</button>
+            <button type="button" class="a-btn a-btn--destructive">Refund payment</button>
+            <button type="button" class="a-btn a-btn--accent">Start onboarding</button>
+            <button type="button" class="a-btn a-btn--link">View receipt</button>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-1">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-1" tabindex="0" hidden><code>&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--primary&quot;&gt;Continue&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--secondary&quot;&gt;Save draft&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot;&gt;Export CSV&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost&quot;&gt;Cancel&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--destructive&quot;&gt;Refund payment&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--accent&quot;&gt;Start onboarding&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--link&quot;&gt;View receipt&lt;/button&gt;</code></pre>
+        </div>
+        <div class="a-example">
+          <h3 class="a-example__title">Sizes and icons</h3>
+          <div class="a-example__preview ">
+            <button type="button" class="a-btn a-btn--primary a-btn--sm"><svg class="a-icon" aria-hidden="true"><use href="#plus"></use></svg>Add client</button>
+            <button type="button" class="a-btn a-btn--primary"><svg class="a-icon" aria-hidden="true"><use href="#download"></use></svg>Download receipt</button>
+            <button type="button" class="a-btn a-btn--primary a-btn--lg">Get started<svg class="a-icon" aria-hidden="true"><use href="#arrow-right"></use></svg></button>
+            <button type="button" class="a-btn a-btn--outline a-btn--icon" aria-label="Edit"><svg class="a-icon" aria-hidden="true"><use href="#edit"></use></svg></button>
+            <button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm" aria-label="More actions"><svg class="a-icon" aria-hidden="true"><use href="#more-horizontal"></use></svg></button>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-2">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-2" tabindex="0" hidden><code>&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--primary a-btn--sm&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#plus&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Add client&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--primary&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#download&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Download receipt&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--primary a-btn--lg&quot;&gt;Get started&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#arrow-right&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline a-btn--icon&quot; aria-label=&quot;Edit&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#edit&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--icon a-btn--sm&quot; aria-label=&quot;More actions&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#more-horizontal&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;</code></pre>
+        </div>
+        <div class="a-example">
+          <h3 class="a-example__title">States</h3>
+          <p class="a-example__note">Loading buttons keep their width and label, add a spinner and set aria-busy.</p>
+          <div class="a-example__preview ">
+            <button type="button" class="a-btn a-btn--primary" disabled>Disabled</button>
+            <button type="button" class="a-btn a-btn--primary" aria-busy="true"><span class="a-spinner" aria-hidden="true"></span>Processing payment</button>
+            <button type="button" class="a-btn a-btn--outline" aria-disabled="true">Not available</button>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-3">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-3" tabindex="0" hidden><code>&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--primary&quot; disabled&gt;Disabled&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--primary&quot; aria-busy=&quot;true&quot;&gt;&lt;span class=&quot;a-spinner&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;Processing payment&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot; aria-disabled=&quot;true&quot;&gt;Not available&lt;/button&gt;</code></pre>
+        </div>
+        <div class="a-example">
+          <h3 class="a-example__title">Button group</h3>
+          <div class="a-example__preview ">
+            <div class="a-btn-group" role="group" aria-label="Date range">
+              <button type="button" class="a-btn a-btn--outline">7 days</button>
+              <button type="button" class="a-btn a-btn--outline">30 days</button>
+              <button type="button" class="a-btn a-btn--outline">Quarter</button>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-4">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-4" tabindex="0" hidden><code>&lt;div class=&quot;a-btn-group&quot; role=&quot;group&quot; aria-label=&quot;Date range&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot;&gt;7 days&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot;&gt;30 days&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot;&gt;Quarter&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="badges">
+        <h2 id="badges">Badges and status</h2>
+        <p>Badges label things. Status pills always pair color with a word, so state never depends on color alone.</p>
+        <div class="a-example">
+          <h3 class="a-example__title">Badges</h3>
+          <div class="a-example__preview ">
+            <span class="a-badge">Draft</span>
+            <span class="a-badge a-badge--neutral">One-time</span>
+            <span class="a-badge a-badge--accent"><svg class="a-icon" aria-hidden="true"><use href="#recurring-payment"></use></svg>Monthly</span>
+            <span class="a-badge a-badge--solid">New</span>
+            <span class="a-badge a-badge--success"><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg>Paid</span>
+            <span class="a-badge a-badge--warning"><svg class="a-icon" aria-hidden="true"><use href="#clock"></use></svg>Due soon</span>
+            <span class="a-badge a-badge--destructive"><svg class="a-icon" aria-hidden="true"><use href="#x-circle"></use></svg>Declined</span>
+            <span class="a-badge a-badge--info"><svg class="a-icon" aria-hidden="true"><use href="#info"></use></svg>In review</span>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-5">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-5" tabindex="0" hidden><code>&lt;span class=&quot;a-badge&quot;&gt;Draft&lt;/span&gt;
+&lt;span class=&quot;a-badge a-badge--neutral&quot;&gt;One-time&lt;/span&gt;
+&lt;span class=&quot;a-badge a-badge--accent&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#recurring-payment&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Monthly&lt;/span&gt;
+&lt;span class=&quot;a-badge a-badge--solid&quot;&gt;New&lt;/span&gt;
+&lt;span class=&quot;a-badge a-badge--success&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Paid&lt;/span&gt;
+&lt;span class=&quot;a-badge a-badge--warning&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#clock&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Due soon&lt;/span&gt;
+&lt;span class=&quot;a-badge a-badge--destructive&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#x-circle&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Declined&lt;/span&gt;
+&lt;span class=&quot;a-badge a-badge--info&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#info&quot;&gt;&lt;/use&gt;&lt;/svg&gt;In review&lt;/span&gt;</code></pre>
+        </div>
+        <div class="a-example">
+          <h3 class="a-example__title">Status pills</h3>
+          <div class="a-example__preview ">
+            <span class="a-status a-status--success">Active</span>
+            <span class="a-status a-status--warning">Pending documents</span>
+            <span class="a-status a-status--destructive">Payment failed</span>
+            <span class="a-status a-status--info">Call scheduled</span>
+            <span class="a-status">Paused</span>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-6">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-6" tabindex="0" hidden><code>&lt;span class=&quot;a-status a-status--success&quot;&gt;Active&lt;/span&gt;
+&lt;span class=&quot;a-status a-status--warning&quot;&gt;Pending documents&lt;/span&gt;
+&lt;span class=&quot;a-status a-status--destructive&quot;&gt;Payment failed&lt;/span&gt;
+&lt;span class=&quot;a-status a-status--info&quot;&gt;Call scheduled&lt;/span&gt;
+&lt;span class=&quot;a-status&quot;&gt;Paused&lt;/span&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="avatars">
+        <h2 id="avatars">Avatars</h2>
+        <p>Initials on a tinted circle. Sample data never uses photos of real people.</p>
+        <div class="a-example">
+          <h3 class="a-example__title">Sizes and group</h3>
+          <div class="a-example__preview ">
+            <span class="a-avatar a-avatar--sm" aria-hidden="true">MR</span>
+            <span class="a-avatar" aria-hidden="true">JW</span>
+            <span class="a-avatar a-avatar--lg" aria-hidden="true">DO</span>
+            <span class="a-avatar a-avatar--neutral" aria-hidden="true">HL</span>
+            <div class="a-avatar-group" aria-label="4 team members" role="img">
+              <span class="a-avatar a-avatar--sm">PN</span>
+              <span class="a-avatar a-avatar--sm a-avatar--neutral">SK</span>
+              <span class="a-avatar a-avatar--sm">AL</span>
+              <span class="a-avatar a-avatar--sm a-avatar--neutral">+1</span>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-7">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-7" tabindex="0" hidden><code>&lt;span class=&quot;a-avatar a-avatar--sm&quot; aria-hidden=&quot;true&quot;&gt;MR&lt;/span&gt;
+&lt;span class=&quot;a-avatar&quot; aria-hidden=&quot;true&quot;&gt;JW&lt;/span&gt;
+&lt;span class=&quot;a-avatar a-avatar--lg&quot; aria-hidden=&quot;true&quot;&gt;DO&lt;/span&gt;
+&lt;span class=&quot;a-avatar a-avatar--neutral&quot; aria-hidden=&quot;true&quot;&gt;HL&lt;/span&gt;
+&lt;div class=&quot;a-avatar-group&quot; aria-label=&quot;4 team members&quot; role=&quot;img&quot;&gt;
+  &lt;span class=&quot;a-avatar a-avatar--sm&quot;&gt;PN&lt;/span&gt;
+  &lt;span class=&quot;a-avatar a-avatar--sm a-avatar--neutral&quot;&gt;SK&lt;/span&gt;
+  &lt;span class=&quot;a-avatar a-avatar--sm&quot;&gt;AL&lt;/span&gt;
+  &lt;span class=&quot;a-avatar a-avatar--sm a-avatar--neutral&quot;&gt;+1&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="utility">
+        <h2 id="utility">Separator, keyboard key, skeleton, spinner</h2>
+        <p>Small building blocks used inside other components.</p>
+        <div class="a-example">
+          <h3 class="a-example__title">Utilities</h3>
+          <div class="a-example__preview ">
+            <p class="a-small">Press <kbd class="a-kbd">Ctrl K</kbd> to search</p>
+            <hr class="a-separator a-demo-narrow">
+            <span class="a-spinner" role="status" aria-label="Loading"></span>
+            <span class="a-spinner a-spinner--lg" role="status" aria-label="Loading"></span>
+            <div class="a-demo-narrow" aria-hidden="true">
+              <span class="a-skeleton"></span>
+              <span class="a-skeleton a-skeleton--short"></span>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-8">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-8" tabindex="0" hidden><code>&lt;p class=&quot;a-small&quot;&gt;Press &lt;kbd class=&quot;a-kbd&quot;&gt;Ctrl K&lt;/kbd&gt; to search&lt;/p&gt;
+&lt;hr class=&quot;a-separator a-demo-narrow&quot;&gt;
+&lt;span class=&quot;a-spinner&quot; role=&quot;status&quot; aria-label=&quot;Loading&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;a-spinner a-spinner--lg&quot; role=&quot;status&quot; aria-label=&quot;Loading&quot;&gt;&lt;/span&gt;
+&lt;div class=&quot;a-demo-narrow&quot; aria-hidden=&quot;true&quot;&gt;
+  &lt;span class=&quot;a-skeleton&quot;&gt;&lt;/span&gt;
+  &lt;span class=&quot;a-skeleton a-skeleton--short&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="progress">
+        <h2 id="progress">Progress</h2>
+        <p>Determinate progress for uploads and onboarding completion.</p>
+        <div class="a-example">
+          <h3 class="a-example__title">Progress bar</h3>
+          <div class="a-example__preview ">
+            <div class="a-demo-narrow">
+              <div class="a-progress-label"><span id="progress-label">Bank statements, March 2026.pdf</span><span class="a-tabular">64%</span></div>
+              <div class="a-progress" role="progressbar" aria-labelledby="progress-label" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100" style="--value: 64%"><span class="a-progress__bar"></span></div>
+            </div>
+            <div class="a-demo-narrow">
+              <div class="a-progress-label"><span id="progress-done">Upload complete</span><span class="a-tabular">100%</span></div>
+              <div class="a-progress a-progress--success" role="progressbar" aria-labelledby="progress-done" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="--value: 100%"><span class="a-progress__bar"></span></div>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-9">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-9" tabindex="0" hidden><code>&lt;div class=&quot;a-demo-narrow&quot;&gt;
+  &lt;div class=&quot;a-progress-label&quot;&gt;&lt;span id=&quot;progress-label&quot;&gt;Bank statements, March 2026.pdf&lt;/span&gt;&lt;span class=&quot;a-tabular&quot;&gt;64%&lt;/span&gt;&lt;/div&gt;
+  &lt;div class=&quot;a-progress&quot; role=&quot;progressbar&quot; aria-labelledby=&quot;progress-label&quot; aria-valuenow=&quot;64&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;--value: 64%&quot;&gt;&lt;span class=&quot;a-progress__bar&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;a-demo-narrow&quot;&gt;
+  &lt;div class=&quot;a-progress-label&quot;&gt;&lt;span id=&quot;progress-done&quot;&gt;Upload complete&lt;/span&gt;&lt;span class=&quot;a-tabular&quot;&gt;100%&lt;/span&gt;&lt;/div&gt;
+  &lt;div class=&quot;a-progress a-progress--success&quot; role=&quot;progressbar&quot; aria-labelledby=&quot;progress-done&quot; aria-valuenow=&quot;100&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;--value: 100%&quot;&gt;&lt;span class=&quot;a-progress__bar&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="tags">
+        <h2 id="tags">Tags</h2>
+        <p>Removable chips for filters and multi-select values.</p>
+        <div class="a-example">
+          <h3 class="a-example__title">Removable tags</h3>
+          <div class="a-example__preview ">
+            <ul class="a-tag-list" role="list" aria-label="Active filters">
+              <li class="a-tag" data-dismissible="Status: Active">Status: Active<button type="button" class="a-tag__remove" data-dismiss aria-label="Remove Status: Active"><svg class="a-icon" aria-hidden="true"><use href="#close"></use></svg></button></li>
+              <li class="a-tag" data-dismissible="Plan: Growth">Plan: Growth<button type="button" class="a-tag__remove" data-dismiss aria-label="Remove Plan: Growth"><svg class="a-icon" aria-hidden="true"><use href="#close"></use></svg></button></li>
+              <li class="a-tag">QuickBooks Online</li>
+            </ul>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-10">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-10" tabindex="0" hidden><code>&lt;ul class=&quot;a-tag-list&quot; role=&quot;list&quot; aria-label=&quot;Active filters&quot;&gt;
+  &lt;li class=&quot;a-tag&quot; data-dismissible=&quot;Status: Active&quot;&gt;Status: Active&lt;button type=&quot;button&quot; class=&quot;a-tag__remove&quot; data-dismiss aria-label=&quot;Remove Status: Active&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#close&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/li&gt;
+  &lt;li class=&quot;a-tag&quot; data-dismissible=&quot;Plan: Growth&quot;&gt;Plan: Growth&lt;button type=&quot;button&quot; class=&quot;a-tag__remove&quot; data-dismiss aria-label=&quot;Remove Plan: Growth&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#close&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/li&gt;
+  &lt;li class=&quot;a-tag&quot;&gt;QuickBooks Online&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="cards">
+        <h2 id="cards">Cards</h2>
+        <p>Bordered surfaces with an optional header and footer. Interactive cards are whole links.</p>
+        <div class="a-example a-example--wide">
+          <h3 class="a-example__title">Card anatomy</h3>
+          <div class="a-example__preview ">
+            <div class="a-demo-grid">
+              <article class="a-card">
+                <div class="a-card__header">
+                  <div>
+                    <h3 class="a-card__title">Growth plan</h3>
+                    <p class="a-card__description">Monthly bookkeeping up to 300 transactions</p>
+                  </div>
+                  <span class="a-badge a-badge--accent">Popular</span>
+                </div>
+                <div class="a-card__content"><p class="a-stat__value">$499<span class="a-small a-muted"> per month</span></p></div>
+                <div class="a-card__footer"><button type="button" class="a-btn a-btn--primary">Choose plan</button></div>
+              </article>
+              <a class="a-card a-card--interactive" href="#cards">
+                <div class="a-card__content">
+                  <svg class="a-icon a-icon--32" aria-hidden="true"><use href="#reconcile-duo"></use></svg>
+                  <h3 class="a-card__title">Bank reconciliation</h3>
+                  <p class="a-card__description">Every account matched to statements each month.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-11">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-11" tabindex="0" hidden><code>&lt;div class=&quot;a-demo-grid&quot;&gt;
+  &lt;article class=&quot;a-card&quot;&gt;
+    &lt;div class=&quot;a-card__header&quot;&gt;
+      &lt;div&gt;
+        &lt;h3 class=&quot;a-card__title&quot;&gt;Growth plan&lt;/h3&gt;
+        &lt;p class=&quot;a-card__description&quot;&gt;Monthly bookkeeping up to 300 transactions&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;span class=&quot;a-badge a-badge--accent&quot;&gt;Popular&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;a-card__content&quot;&gt;&lt;p class=&quot;a-stat__value&quot;&gt;$499&lt;span class=&quot;a-small a-muted&quot;&gt; per month&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;
+    &lt;div class=&quot;a-card__footer&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--primary&quot;&gt;Choose plan&lt;/button&gt;&lt;/div&gt;
+  &lt;/article&gt;
+  &lt;a class=&quot;a-card a-card--interactive&quot; href=&quot;#cards&quot;&gt;
+    &lt;div class=&quot;a-card__content&quot;&gt;
+      &lt;svg class=&quot;a-icon a-icon--32&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#reconcile-duo&quot;&gt;&lt;/use&gt;&lt;/svg&gt;
+      &lt;h3 class=&quot;a-card__title&quot;&gt;Bank reconciliation&lt;/h3&gt;
+      &lt;p class=&quot;a-card__description&quot;&gt;Every account matched to statements each month.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="alerts">
+        <h2 id="alerts">Alerts and banners</h2>
+        <p>Alerts explain state inside a page. Banners span the full width for system-wide notices.</p>
+        <div class="a-example a-example--wide">
+          <h3 class="a-example__title">Alerts</h3>
+          <div class="a-example__preview a-example__preview--stack">
+            <div class="a-demo-grid">
+              <div class="a-alert a-alert--info" role="status"><svg class="a-icon" aria-hidden="true"><use href="#info"></use></svg><p class="a-alert__title">Your call is scheduled</p><p class="a-alert__body">Our onboarding assistant will call you at (415) 555-0132 within 15 minutes.</p></div>
+              <div class="a-alert a-alert--success" role="status"><svg class="a-icon" aria-hidden="true"><use href="#check-circle"></use></svg><p class="a-alert__title">Payment received</p><p class="a-alert__body">$499.00 charged to Visa ending 4242.</p></div>
+              <div class="a-alert a-alert--warning" role="status"><svg class="a-icon" aria-hidden="true"><use href="#alert-triangle"></use></svg><p class="a-alert__title">Documents missing</p><p class="a-alert__body">Upload your last two bank statements so we can start reconciling.</p></div>
+              <div class="a-alert a-alert--destructive" role="alert"><svg class="a-icon" aria-hidden="true"><use href="#x-circle"></use></svg><p class="a-alert__title">Card declined</p><p class="a-alert__body">Your bank declined the charge. Try another card or contact your bank.</p><div class="a-alert__actions"><button type="button" class="a-btn a-btn--outline a-btn--sm">Try another card</button></div></div>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-12">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-12" tabindex="0" hidden><code>&lt;div class=&quot;a-demo-grid&quot;&gt;
+  &lt;div class=&quot;a-alert a-alert--info&quot; role=&quot;status&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#info&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;p class=&quot;a-alert__title&quot;&gt;Your call is scheduled&lt;/p&gt;&lt;p class=&quot;a-alert__body&quot;&gt;Our onboarding assistant will call you at (415) 555-0132 within 15 minutes.&lt;/p&gt;&lt;/div&gt;
+  &lt;div class=&quot;a-alert a-alert--success&quot; role=&quot;status&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check-circle&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;p class=&quot;a-alert__title&quot;&gt;Payment received&lt;/p&gt;&lt;p class=&quot;a-alert__body&quot;&gt;$499.00 charged to Visa ending 4242.&lt;/p&gt;&lt;/div&gt;
+  &lt;div class=&quot;a-alert a-alert--warning&quot; role=&quot;status&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#alert-triangle&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;p class=&quot;a-alert__title&quot;&gt;Documents missing&lt;/p&gt;&lt;p class=&quot;a-alert__body&quot;&gt;Upload your last two bank statements so we can start reconciling.&lt;/p&gt;&lt;/div&gt;
+  &lt;div class=&quot;a-alert a-alert--destructive&quot; role=&quot;alert&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#x-circle&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;p class=&quot;a-alert__title&quot;&gt;Card declined&lt;/p&gt;&lt;p class=&quot;a-alert__body&quot;&gt;Your bank declined the charge. Try another card or contact your bank.&lt;/p&gt;&lt;div class=&quot;a-alert__actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline a-btn--sm&quot;&gt;Try another card&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div class="a-example">
+          <h3 class="a-example__title">Banner</h3>
+          <div class="a-example__preview a-example__preview--stack">
+            <div class="a-banner" data-dismissible="Notice">
+              <span>Tax season is close. Get your books ready before April 15, 2027.</span>
+              <a href="#alerts">See catch-up plans</a>
+              <button type="button" class="a-btn a-btn--ghost a-btn--icon a-btn--sm a-banner__dismiss" data-dismiss aria-label="Dismiss notice"><svg class="a-icon" aria-hidden="true"><use href="#close"></use></svg></button>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-13">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-13" tabindex="0" hidden><code>&lt;div class=&quot;a-banner&quot; data-dismissible=&quot;Notice&quot;&gt;
+  &lt;span&gt;Tax season is close. Get your books ready before April 15, 2027.&lt;/span&gt;
+  &lt;a href=&quot;#alerts&quot;&gt;See catch-up plans&lt;/a&gt;
+  &lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--icon a-btn--sm a-banner__dismiss&quot; data-dismiss aria-label=&quot;Dismiss notice&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#close&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="empty">
+        <h2 id="empty">Empty state</h2>
+        <p>Explains why a view is empty and offers the next step.</p>
+        <div class="a-example">
+          <h3 class="a-example__title">Empty list</h3>
+          <div class="a-example__preview ">
+            <div class="a-empty a-demo-narrow">
+              <svg class="a-illus" aria-hidden="true"><use href="#illus-empty-inbox"></use></svg>
+              <p class="a-empty__title">No registrations yet</p>
+              <p class="a-empty__text">New signups appear here as soon as a client finishes the first onboarding step.</p>
+              <div class="a-empty__actions"><button type="button" class="a-btn a-btn--outline">Copy signup link</button></div>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-14">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-14" tabindex="0" hidden><code>&lt;div class=&quot;a-empty a-demo-narrow&quot;&gt;
+  &lt;svg class=&quot;a-illus&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#illus-empty-inbox&quot;&gt;&lt;/use&gt;&lt;/svg&gt;
+  &lt;p class=&quot;a-empty__title&quot;&gt;No registrations yet&lt;/p&gt;
+  &lt;p class=&quot;a-empty__text&quot;&gt;New signups appear here as soon as a client finishes the first onboarding step.&lt;/p&gt;
+  &lt;div class=&quot;a-empty__actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot;&gt;Copy signup link&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="stats">
+        <h2 id="stats">Stat tiles</h2>
+        <p>Key numbers with a label, a value and a trend that is described in words.</p>
+        <div class="a-example a-example--wide">
+          <h3 class="a-example__title">KPI row</h3>
+          <div class="a-example__preview ">
+            <div class="a-stat-grid a-demo-grid">
+              <div class="a-stat"><p class="a-stat__label"><svg class="a-icon" aria-hidden="true"><use href="#users"></use></svg>New signups</p><p class="a-stat__value">48</p><p class="a-stat__meta"><span class="a-badge a-badge--success"><svg class="a-icon" aria-hidden="true"><use href="#trending-up"></use></svg>12%</span>vs last month</p></div>
+              <div class="a-stat"><p class="a-stat__label"><svg class="a-icon" aria-hidden="true"><use href="#recurring-payment"></use></svg>Monthly recurring revenue</p><p class="a-stat__value">$21,940</p><p class="a-stat__meta"><span class="a-badge a-badge--success"><svg class="a-icon" aria-hidden="true"><use href="#trending-up"></use></svg>6.4%</span>vs last month</p></div>
+              <div class="a-stat"><p class="a-stat__label"><svg class="a-icon" aria-hidden="true"><use href="#x-circle"></use></svg>Failed payments</p><p class="a-stat__value">3</p><p class="a-stat__meta"><span class="a-badge a-badge--destructive"><svg class="a-icon" aria-hidden="true"><use href="#trending-up"></use></svg>2 more</span>vs last month</p></div>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-15">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-15" tabindex="0" hidden><code>&lt;div class=&quot;a-stat-grid a-demo-grid&quot;&gt;
+  &lt;div class=&quot;a-stat&quot;&gt;&lt;p class=&quot;a-stat__label&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#users&quot;&gt;&lt;/use&gt;&lt;/svg&gt;New signups&lt;/p&gt;&lt;p class=&quot;a-stat__value&quot;&gt;48&lt;/p&gt;&lt;p class=&quot;a-stat__meta&quot;&gt;&lt;span class=&quot;a-badge a-badge--success&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#trending-up&quot;&gt;&lt;/use&gt;&lt;/svg&gt;12%&lt;/span&gt;vs last month&lt;/p&gt;&lt;/div&gt;
+  &lt;div class=&quot;a-stat&quot;&gt;&lt;p class=&quot;a-stat__label&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#recurring-payment&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Monthly recurring revenue&lt;/p&gt;&lt;p class=&quot;a-stat__value&quot;&gt;$21,940&lt;/p&gt;&lt;p class=&quot;a-stat__meta&quot;&gt;&lt;span class=&quot;a-badge a-badge--success&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#trending-up&quot;&gt;&lt;/use&gt;&lt;/svg&gt;6.4%&lt;/span&gt;vs last month&lt;/p&gt;&lt;/div&gt;
+  &lt;div class=&quot;a-stat&quot;&gt;&lt;p class=&quot;a-stat__label&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#x-circle&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Failed payments&lt;/p&gt;&lt;p class=&quot;a-stat__value&quot;&gt;3&lt;/p&gt;&lt;p class=&quot;a-stat__meta&quot;&gt;&lt;span class=&quot;a-badge a-badge--destructive&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#trending-up&quot;&gt;&lt;/use&gt;&lt;/svg&gt;2 more&lt;/span&gt;vs last month&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="accordion">
+        <h2 id="accordion">Accordion</h2>
+        <p>Expandable sections. Each trigger is a real button inside a heading.</p>
+        <div class="a-example">
+          <h3 class="a-example__title">FAQ</h3>
+          <div class="a-example__preview ">
+            <div class="a-accordion a-demo-narrow">
+              <div class="a-accordion__item">
+                <h3 class="a-accordion__heading"><button type="button" class="a-accordion__trigger" data-disclosure aria-expanded="true" aria-controls="faq-1">Which accounting software do you work with?<svg class="a-icon" aria-hidden="true"><use href="#chevron-down"></use></svg></button></h3>
+                <div class="a-accordion__panel" id="faq-1">We work in QuickBooks Online and Xero. If you use something else, we can migrate your books during onboarding.</div>
+              </div>
+              <div class="a-accordion__item">
+                <h3 class="a-accordion__heading"><button type="button" class="a-accordion__trigger" data-disclosure aria-expanded="false" aria-controls="faq-2">Can I cancel my monthly plan?<svg class="a-icon" aria-hidden="true"><use href="#chevron-down"></use></svg></button></h3>
+                <div class="a-accordion__panel" id="faq-2" hidden>Yes. Monthly plans can be cancelled any time before the next billing date.</div>
+              </div>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-16">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-16" tabindex="0" hidden><code>&lt;div class=&quot;a-accordion a-demo-narrow&quot;&gt;
+  &lt;div class=&quot;a-accordion__item&quot;&gt;
+    &lt;h3 class=&quot;a-accordion__heading&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-accordion__trigger&quot; data-disclosure aria-expanded=&quot;true&quot; aria-controls=&quot;faq-1&quot;&gt;Which accounting software do you work with?&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#chevron-down&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/h3&gt;
+    &lt;div class=&quot;a-accordion__panel&quot; id=&quot;faq-1&quot;&gt;We work in QuickBooks Online and Xero. If you use something else, we can migrate your books during onboarding.&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;a-accordion__item&quot;&gt;
+    &lt;h3 class=&quot;a-accordion__heading&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-accordion__trigger&quot; data-disclosure aria-expanded=&quot;false&quot; aria-controls=&quot;faq-2&quot;&gt;Can I cancel my monthly plan?&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#chevron-down&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/h3&gt;
+    &lt;div class=&quot;a-accordion__panel&quot; id=&quot;faq-2&quot; hidden&gt;Yes. Monthly plans can be cancelled any time before the next billing date.&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="tabs">
+        <h2 id="tabs">Tabs</h2>
+        <p>Line tabs switch page sections. Pill tabs switch views of the same data. Arrow keys move between tabs.</p>
+        <div class="a-example">
+          <h3 class="a-example__title">Line tabs</h3>
+          <div class="a-example__preview a-example__preview--stack">
+            <div class="a-tabs a-demo-grid" data-tabs>
+              <div role="tablist" class="a-tabs__list" aria-label="Client record">
+                <button type="button" role="tab" class="a-tabs__tab" id="tab-overview" aria-controls="panel-overview" aria-selected="true"><svg class="a-icon" aria-hidden="true"><use href="#user"></use></svg>Overview</button>
+                <button type="button" role="tab" class="a-tabs__tab" id="tab-payments" aria-controls="panel-payments" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#credit-card"></use></svg>Payments</button>
+                <button type="button" role="tab" class="a-tabs__tab" id="tab-calls" aria-controls="panel-calls" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>Calls</button>
+              </div>
+              <div role="tabpanel" class="a-tabs__panel" id="panel-overview" aria-labelledby="tab-overview" tabindex="0">Harbor Lane Dental, LLC. Growth plan since March 2026.</div>
+              <div role="tabpanel" class="a-tabs__panel" id="panel-payments" aria-labelledby="tab-payments" tabindex="0" hidden>8 payments, all successful.</div>
+              <div role="tabpanel" class="a-tabs__panel" id="panel-calls" aria-labelledby="tab-calls" tabindex="0" hidden>2 calls, last answered on October 21, 2026.</div>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-17">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-17" tabindex="0" hidden><code>&lt;div class=&quot;a-tabs a-demo-grid&quot; data-tabs&gt;
+  &lt;div role=&quot;tablist&quot; class=&quot;a-tabs__list&quot; aria-label=&quot;Client record&quot;&gt;
+    &lt;button type=&quot;button&quot; role=&quot;tab&quot; class=&quot;a-tabs__tab&quot; id=&quot;tab-overview&quot; aria-controls=&quot;panel-overview&quot; aria-selected=&quot;true&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#user&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Overview&lt;/button&gt;
+    &lt;button type=&quot;button&quot; role=&quot;tab&quot; class=&quot;a-tabs__tab&quot; id=&quot;tab-payments&quot; aria-controls=&quot;panel-payments&quot; aria-selected=&quot;false&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#credit-card&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Payments&lt;/button&gt;
+    &lt;button type=&quot;button&quot; role=&quot;tab&quot; class=&quot;a-tabs__tab&quot; id=&quot;tab-calls&quot; aria-controls=&quot;panel-calls&quot; aria-selected=&quot;false&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#phone-call&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Calls&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div role=&quot;tabpanel&quot; class=&quot;a-tabs__panel&quot; id=&quot;panel-overview&quot; aria-labelledby=&quot;tab-overview&quot; tabindex=&quot;0&quot;&gt;Harbor Lane Dental, LLC. Growth plan since March 2026.&lt;/div&gt;
+  &lt;div role=&quot;tabpanel&quot; class=&quot;a-tabs__panel&quot; id=&quot;panel-payments&quot; aria-labelledby=&quot;tab-payments&quot; tabindex=&quot;0&quot; hidden&gt;8 payments, all successful.&lt;/div&gt;
+  &lt;div role=&quot;tabpanel&quot; class=&quot;a-tabs__panel&quot; id=&quot;panel-calls&quot; aria-labelledby=&quot;tab-calls&quot; tabindex=&quot;0&quot; hidden&gt;2 calls, last answered on October 21, 2026.&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div class="a-example">
+          <h3 class="a-example__title">Pill tabs</h3>
+          <div class="a-example__preview a-example__preview--stack">
+            <div class="a-tabs a-tabs--pill" data-tabs>
+              <div role="tablist" class="a-tabs__list" aria-label="Billing type">
+                <button type="button" role="tab" class="a-tabs__tab" id="tab-monthly" aria-controls="panel-monthly" aria-selected="true">Monthly</button>
+                <button type="button" role="tab" class="a-tabs__tab" id="tab-onetime" aria-controls="panel-onetime" aria-selected="false">One-time project</button>
+              </div>
+              <div role="tabpanel" class="a-tabs__panel" id="panel-monthly" aria-labelledby="tab-monthly" tabindex="0">Billed every month on your start date.</div>
+              <div role="tabpanel" class="a-tabs__panel" id="panel-onetime" aria-labelledby="tab-onetime" tabindex="0" hidden>One charge when the project is confirmed.</div>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-18">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-18" tabindex="0" hidden><code>&lt;div class=&quot;a-tabs a-tabs--pill&quot; data-tabs&gt;
+  &lt;div role=&quot;tablist&quot; class=&quot;a-tabs__list&quot; aria-label=&quot;Billing type&quot;&gt;
+    &lt;button type=&quot;button&quot; role=&quot;tab&quot; class=&quot;a-tabs__tab&quot; id=&quot;tab-monthly&quot; aria-controls=&quot;panel-monthly&quot; aria-selected=&quot;true&quot;&gt;Monthly&lt;/button&gt;
+    &lt;button type=&quot;button&quot; role=&quot;tab&quot; class=&quot;a-tabs__tab&quot; id=&quot;tab-onetime&quot; aria-controls=&quot;panel-onetime&quot; aria-selected=&quot;false&quot;&gt;One-time project&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div role=&quot;tabpanel&quot; class=&quot;a-tabs__panel&quot; id=&quot;panel-monthly&quot; aria-labelledby=&quot;tab-monthly&quot; tabindex=&quot;0&quot;&gt;Billed every month on your start date.&lt;/div&gt;
+  &lt;div role=&quot;tabpanel&quot; class=&quot;a-tabs__panel&quot; id=&quot;panel-onetime&quot; aria-labelledby=&quot;tab-onetime&quot; tabindex=&quot;0&quot; hidden&gt;One charge when the project is confirmed.&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="navigation">
+        <h2 id="navigation">Breadcrumb and pagination</h2>
+        <p>Breadcrumbs show where a page sits in the admin. Pagination splits long tables.</p>
+        <div class="a-example">
+          <h3 class="a-example__title">Breadcrumb</h3>
+          <div class="a-example__preview ">
+            <nav class="a-breadcrumb" aria-label="Breadcrumb">
+              <ol>
+                <li><a href="#navigation">Dashboard</a></li>
+                <li><a href="#navigation">Registrations</a></li>
+                <li><span aria-current="page">Harbor Lane Dental</span></li>
+              </ol>
+            </nav>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-19">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-19" tabindex="0" hidden><code>&lt;nav class=&quot;a-breadcrumb&quot; aria-label=&quot;Breadcrumb&quot;&gt;
+  &lt;ol&gt;
+    &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;Dashboard&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#navigation&quot;&gt;Registrations&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span aria-current=&quot;page&quot;&gt;Harbor Lane Dental&lt;/span&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+        <div class="a-example">
+          <h3 class="a-example__title">Pagination</h3>
+          <div class="a-example__preview ">
+            <nav class="a-pagination a-demo-grid" aria-label="Pagination">
+              <p class="a-small a-muted">Showing 1 to 10 of 128</p>
+              <ul class="a-pagination__list" role="list">
+                <li><a class="a-pagination__link" href="#navigation" aria-label="Previous page"><svg class="a-icon" aria-hidden="true"><use href="#chevron-left"></use></svg></a></li>
+                <li><a class="a-pagination__link" href="#navigation" aria-current="page">1</a></li>
+                <li><a class="a-pagination__link" href="#navigation">2</a></li>
+                <li><a class="a-pagination__link" href="#navigation">3</a></li>
+                <li><span class="a-pagination__ellipsis" aria-hidden="true">...</span></li>
+                <li><a class="a-pagination__link" href="#navigation">13</a></li>
+                <li><a class="a-pagination__link" href="#navigation" aria-label="Next page"><svg class="a-icon" aria-hidden="true"><use href="#chevron-right"></use></svg></a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-20">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-20" tabindex="0" hidden><code>&lt;nav class=&quot;a-pagination a-demo-grid&quot; aria-label=&quot;Pagination&quot;&gt;
+  &lt;p class=&quot;a-small a-muted&quot;&gt;Showing 1 to 10 of 128&lt;/p&gt;
+  &lt;ul class=&quot;a-pagination__list&quot; role=&quot;list&quot;&gt;
+    &lt;li&gt;&lt;a class=&quot;a-pagination__link&quot; href=&quot;#navigation&quot; aria-label=&quot;Previous page&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#chevron-left&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&quot;a-pagination__link&quot; href=&quot;#navigation&quot; aria-current=&quot;page&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&quot;a-pagination__link&quot; href=&quot;#navigation&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&quot;a-pagination__link&quot; href=&quot;#navigation&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span class=&quot;a-pagination__ellipsis&quot; aria-hidden=&quot;true&quot;&gt;...&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&quot;a-pagination__link&quot; href=&quot;#navigation&quot;&gt;13&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&quot;a-pagination__link&quot; href=&quot;#navigation&quot; aria-label=&quot;Next page&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#chevron-right&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="steps">
+        <h2 id="steps">Steps and timeline</h2>
+        <p>Steps show progress through onboarding. On phones only the current step label shows. Timelines list events in order.</p>
+        <div class="a-example">
+          <h3 class="a-example__title">Horizontal steps</h3>
+          <div class="a-example__preview a-example__preview--stack">
+            <ol class="a-steps a-demo-grid" aria-label="Onboarding progress">
+              <li class="a-steps__item is-complete"><span class="a-steps__bar"></span><span class="a-steps__label"><span class="a-steps__text">Account<span class="a-visually-hidden">, complete</span></span></span></li>
+              <li class="a-steps__item is-complete"><span class="a-steps__bar"></span><span class="a-steps__label"><span class="a-steps__text">Business<span class="a-visually-hidden">, complete</span></span></span></li>
+              <li class="a-steps__item" aria-current="step"><span class="a-steps__bar"></span><span class="a-steps__label"><span class="a-steps__text">Services</span></span></li>
+              <li class="a-steps__item"><span class="a-steps__bar"></span><span class="a-steps__label"><span class="a-steps__text">Documents</span></span></li>
+              <li class="a-steps__item"><span class="a-steps__bar"></span><span class="a-steps__label"><span class="a-steps__text">Plan</span></span></li>
+            </ol>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-21">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-21" tabindex="0" hidden><code>&lt;ol class=&quot;a-steps a-demo-grid&quot; aria-label=&quot;Onboarding progress&quot;&gt;
+  &lt;li class=&quot;a-steps__item is-complete&quot;&gt;&lt;span class=&quot;a-steps__bar&quot;&gt;&lt;/span&gt;&lt;span class=&quot;a-steps__label&quot;&gt;&lt;span class=&quot;a-steps__text&quot;&gt;Account&lt;span class=&quot;a-visually-hidden&quot;&gt;, complete&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;a-steps__item is-complete&quot;&gt;&lt;span class=&quot;a-steps__bar&quot;&gt;&lt;/span&gt;&lt;span class=&quot;a-steps__label&quot;&gt;&lt;span class=&quot;a-steps__text&quot;&gt;Business&lt;span class=&quot;a-visually-hidden&quot;&gt;, complete&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;a-steps__item&quot; aria-current=&quot;step&quot;&gt;&lt;span class=&quot;a-steps__bar&quot;&gt;&lt;/span&gt;&lt;span class=&quot;a-steps__label&quot;&gt;&lt;span class=&quot;a-steps__text&quot;&gt;Services&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;a-steps__item&quot;&gt;&lt;span class=&quot;a-steps__bar&quot;&gt;&lt;/span&gt;&lt;span class=&quot;a-steps__label&quot;&gt;&lt;span class=&quot;a-steps__text&quot;&gt;Documents&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;a-steps__item&quot;&gt;&lt;span class=&quot;a-steps__bar&quot;&gt;&lt;/span&gt;&lt;span class=&quot;a-steps__label&quot;&gt;&lt;span class=&quot;a-steps__text&quot;&gt;Plan&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        </div>
+        <div class="a-example">
+          <h3 class="a-example__title">Vertical steps</h3>
+          <div class="a-example__preview ">
+            <ol class="a-steps a-steps--vertical" aria-label="Setup">
+              <li class="a-steps__item is-complete"><span class="a-steps__label"><span class="a-steps__text">Create account<span class="a-visually-hidden">, complete</span></span></span></li>
+              <li class="a-steps__item" aria-current="step"><span class="a-steps__label"><span class="a-steps__text">Connect bank feeds</span></span></li>
+              <li class="a-steps__item"><span class="a-steps__label"><span class="a-steps__text">First monthly close</span></span></li>
+            </ol>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-22">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-22" tabindex="0" hidden><code>&lt;ol class=&quot;a-steps a-steps--vertical&quot; aria-label=&quot;Setup&quot;&gt;
+  &lt;li class=&quot;a-steps__item is-complete&quot;&gt;&lt;span class=&quot;a-steps__label&quot;&gt;&lt;span class=&quot;a-steps__text&quot;&gt;Create account&lt;span class=&quot;a-visually-hidden&quot;&gt;, complete&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;a-steps__item&quot; aria-current=&quot;step&quot;&gt;&lt;span class=&quot;a-steps__label&quot;&gt;&lt;span class=&quot;a-steps__text&quot;&gt;Connect bank feeds&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;a-steps__item&quot;&gt;&lt;span class=&quot;a-steps__label&quot;&gt;&lt;span class=&quot;a-steps__text&quot;&gt;First monthly close&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        </div>
+        <div class="a-example">
+          <h3 class="a-example__title">Timeline</h3>
+          <div class="a-example__preview ">
+            <ol class="a-timeline a-demo-narrow">
+              <li class="a-timeline__item"><span class="a-timeline__marker a-timeline__marker--success"><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg></span><div><p class="a-timeline__title">Payment received</p><p class="a-timeline__meta">Oct 21, 2026, 10:42 AM</p><p class="a-timeline__body">$499.00, Growth plan, first month.</p></div></li>
+              <li class="a-timeline__item"><span class="a-timeline__marker a-timeline__marker--accent"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg></span><div><p class="a-timeline__title">Confirmation email sent</p><p class="a-timeline__meta">Oct 21, 2026, 10:42 AM</p></div></li>
+              <li class="a-timeline__item"><span class="a-timeline__marker"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg></span><div><p class="a-timeline__title">Welcome call answered</p><p class="a-timeline__meta">Oct 21, 2026, 10:58 AM, 4 min 12 s</p></div></li>
+            </ol>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-23">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-23" tabindex="0" hidden><code>&lt;ol class=&quot;a-timeline a-demo-narrow&quot;&gt;
+  &lt;li class=&quot;a-timeline__item&quot;&gt;&lt;span class=&quot;a-timeline__marker a-timeline__marker--success&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;&lt;div&gt;&lt;p class=&quot;a-timeline__title&quot;&gt;Payment received&lt;/p&gt;&lt;p class=&quot;a-timeline__meta&quot;&gt;Oct 21, 2026, 10:42 AM&lt;/p&gt;&lt;p class=&quot;a-timeline__body&quot;&gt;$499.00, Growth plan, first month.&lt;/p&gt;&lt;/div&gt;&lt;/li&gt;
+  &lt;li class=&quot;a-timeline__item&quot;&gt;&lt;span class=&quot;a-timeline__marker a-timeline__marker--accent&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#mail&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;&lt;div&gt;&lt;p class=&quot;a-timeline__title&quot;&gt;Confirmation email sent&lt;/p&gt;&lt;p class=&quot;a-timeline__meta&quot;&gt;Oct 21, 2026, 10:42 AM&lt;/p&gt;&lt;/div&gt;&lt;/li&gt;
+  &lt;li class=&quot;a-timeline__item&quot;&gt;&lt;span class=&quot;a-timeline__marker&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#phone-call&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;&lt;div&gt;&lt;p class=&quot;a-timeline__title&quot;&gt;Welcome call answered&lt;/p&gt;&lt;p class=&quot;a-timeline__meta&quot;&gt;Oct 21, 2026, 10:58 AM, 4 min 12 s&lt;/p&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        </div>
+      </section>
+    </main>
+  </div>
+  <!-- icons -->
+  <svg class="a-sprite" aria-hidden="true" focusable="false">
+    <symbol id="alert-triangle" viewBox="0 0 24 24"><path d="M10.3 4.4a2 2 0 0 1 3.4 0l7.6 13.1a2 2 0 0 1-1.7 3H4.4a2 2 0 0 1-1.7-3z" style="stroke-dasharray: calc(57.868 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.767 - var(--icon-gap) / 2)"/><path d="M12 9.5v4"/><path d="M12 16.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="check-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M8.2 12.3l2.6 2.6 5-5.2"/></symbol>
+    <symbol id="chevron-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="chevron-left" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+    <symbol id="chevron-right" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+    <symbol id="clock" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M12 7.5V12l3 2"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></symbol>
+    <symbol id="credit-card" viewBox="0 0 24 24"><path d="M5 5H19a2.5 2.5 0 0 1 2.5 2.5V16.5a2.5 2.5 0 0 1 -2.5 2.5H5a2.5 2.5 0 0 1 -2.5 -2.5V7.5a2.5 2.5 0 0 1 2.5 -2.5z" style="stroke-dasharray: calc(61.71 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.368 - var(--icon-gap) / 2)"/><path d="M2.5 10h19"/><path d="M6 15h3.5"/></symbol>
+    <symbol id="download" viewBox="0 0 24 24"><path d="M12 4v11"/><path d="M7.5 10.5 12 15l4.5-4.5"/><path d="M4.5 19.5h15"/></symbol>
+    <symbol id="edit" viewBox="0 0 24 24"><path d="M15.2 4.3a2 2 0 0 1 2.8 0l1.7 1.7a2 2 0 0 1 0 2.8L9 19.5l-4.5 1 1-4.5z" style="stroke-dasharray: calc(48.158 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(33.71 - var(--icon-gap) / 2)"/><path d="M13.5 6l4.5 4.5"/></symbol>
+    <symbol id="illus-empty-inbox" viewBox="0 0 96 96"><g stroke-width="var(--illus-stroke, 2.5)" stroke-linecap="round" stroke-linejoin="round"><path style="fill: var(--illus-surface, currentColor); fill-opacity: var(--illus-surface-opacity, .12); stroke: none" d="M14 52h68v22a6 6 0 0 1-6 6H20a6 6 0 0 1-6-6z"/><path style="fill: none; stroke: var(--illus-line, currentColor)" d="M14 52 24 24a4 4 0 0 1 3.8-2.8h40.4A4 4 0 0 1 72 24l10 28v22a6 6 0 0 1-6 6H20a6 6 0 0 1-6-6z"/><path style="fill: none; stroke: var(--illus-line, currentColor)" d="M14 52h18l4 8h24l4-8h18"/><path style="fill: none; stroke: var(--illus-accent, currentColor)" d="M40 36h16M44 43h8"/></g></symbol>
+    <symbol id="info" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M12 11v5.5"/><path d="M12 7.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="mail" viewBox="0 0 24 24"><path d="M5.5 5H18.5a2.5 2.5 0 0 1 2.5 2.5V16.5a2.5 2.5 0 0 1 -2.5 2.5H5.5a2.5 2.5 0 0 1 -2.5 -2.5V7.5a2.5 2.5 0 0 1 2.5 -2.5z" style="stroke-dasharray: calc(59.71 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(47.768 - var(--icon-gap) / 2)"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
+    <symbol id="moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z" style="stroke-dasharray: calc(58.676 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(26.404 - var(--icon-gap) / 2)"/></symbol>
+    <symbol id="more-horizontal" viewBox="0 0 24 24"><path d="M5.5 12h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/><path d="M12 12h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/><path d="M18.5 12h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="phone-call" viewBox="0 0 24 24"><path d="M5.2 3.5h2.9l1.5 4-2 1.3a10.5 10.5 0 0 0 7.6 7.6l1.3-2 4 1.5v2.9a1.6 1.6 0 0 1-1.7 1.6A16.6 16.6 0 0 1 3.6 5.2a1.6 1.6 0 0 1 1.6-1.7z" style="stroke-dasharray: calc(59.014 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(22.425 - var(--icon-gap) / 2)"/><path d="M14.5 3.5a6 6 0 0 1 6 6"/><path d="M14.5 7a2.5 2.5 0 0 1 2.5 2.5"/></symbol>
+    <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="M5 12h14"/></symbol>
+    <symbol id="reconcile-duo" viewBox="0 0 24 24"><path d="M19.5 9A8 8 0 0 0 5.2 7.2"/><path d="M4.5 15a8 8 0 0 0 14.3 1.8"/><path d="M5 3.5v4h4"/><path d="M19 20.5v-4h-4"/><path d="M9.5 12.2l1.8 1.8 3.2-3.4" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="recurring-payment" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-14 5.3"/><path d="M4 12a8 8 0 0 1 14-5.3"/><path d="M18.5 3v4h-4"/><path d="M5.5 21v-4h4"/><path d="M12 9v6" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="sun" viewBox="0 0 24 24"><path d="M12 7.8a4.2 4.2 0 1 1 0 8.4a4.2 4.2 0 1 1 0 -8.4z" style="stroke-dasharray: calc(26.393 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(23.226 - var(--icon-gap) / 2)"/><path d="M12 2.5v2"/><path d="M12 19.5v2"/><path d="M2.5 12h2"/><path d="M19.5 12h2"/><path d="M5.6 5.6l1.2 1.2"/><path d="M17.2 17.2l1.2 1.2"/><path d="M5.6 18.4l1.2-1.2"/><path d="M17.2 6.8l1.2-1.2"/></symbol>
+    <symbol id="trending-up" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol>
+    <symbol id="user" viewBox="0 0 24 24"><path d="M12 4a4 4 0 1 1 0 8a4 4 0 1 1 0 -8z" style="stroke-dasharray: calc(25.136 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(22.12 - var(--icon-gap) / 2)"/><path d="M4.5 20.5c.8-3.8 3.8-6 7.5-6s6.7 2.2 7.5 6"/></symbol>
+    <symbol id="users" viewBox="0 0 24 24"><path d="M9 5a3.5 3.5 0 1 1 0 7a3.5 3.5 0 1 1 0 -7z" style="stroke-dasharray: calc(21.994 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(19.355 - var(--icon-gap) / 2)"/><path d="M2.5 19.5c.7-3.3 3.3-5.2 6.5-5.2s5.8 1.9 6.5 5.2"/><path d="M15.5 5.2a3.5 3.5 0 0 1 0 6.6"/><path d="M17.5 14.6c2 .7 3.4 2.4 4 4.9"/></symbol>
+    <symbol id="x-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M9.2 9.2l5.6 5.6"/><path d="M14.8 9.2l-5.6 5.6"/></symbol>
+  </svg>
+  <!-- /icons -->
+</body>
+</html>

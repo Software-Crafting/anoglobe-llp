@@ -95,7 +95,7 @@ const builtGroups = (groups, exists) =>
 
 const current = (href, path) => (href === path ? ' aria-current="page"' : "");
 const icon = (root, name, extra = "") =>
-  `<svg class="a-icon${extra}" aria-hidden="true"><use href="${root}assets/icons/sprite.svg#${name}"></use></svg>`;
+  `<svg class="a-icon${extra}" aria-hidden="true"><use href="#${name}"></use></svg>`;
 
 const logo = (root) => `<img class="a-logo a-logo--light" src="${root}assets/img/logo.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
       <img class="a-logo a-logo--dark" src="${root}assets/img/logo-reversed.svg" width="223" height="28" alt="Anoglobe Bookkeeping">`;
@@ -124,7 +124,7 @@ ${COMPONENT_JS.map((name) => `  <script src="${root}assets/js/components/${name}
       ${logo(root)}
       <span class="a-docs-header__label">Design system</span>
     </a>
-    <button type="button" class="a-theme-text-toggle" data-theme-toggle>Dark theme</button>
+    ${themeToggle(root)}
   </header>
   `,
 

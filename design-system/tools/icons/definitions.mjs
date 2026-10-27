@@ -57,7 +57,7 @@ export const GROUPS = {
     { name: "calendar", shape: rect(3.5, 5, 17, 15.5, 2.5), notch: 0.2, details: ["M3.5 10h17", "M8 3v4", "M16 3v4", minor("M8 14h.01"), minor("M12 14h.01")] },
     { name: "clock", shape: RING, notch: 0.12, details: ["M12 7.5V12l3 2"] },
     { name: "globe", shape: RING, notch: 0.12, details: ["M3 12h18", minor("M12 3c2.4 2.5 3.6 5.5 3.6 9s-1.2 6.5-3.6 9"), "M12 3c-2.4 2.5-3.6 5.5-3.6 9s1.2 6.5 3.6 9"] },
-    { name: "sun", shape: circle(12, 12, 4.2), notch: 0.12, details: ["M12 2.5v2", "M12 19.5v2", "M2.5 12h2", "M19.5 12h2", minor("M5.3 5.3l1.4 1.4"), minor("M17.3 17.3l1.4 1.4"), minor("M5.3 18.7l1.4-1.4"), minor("M17.3 6.7l1.4-1.4")] },
+    { name: "sun", shape: circle(12, 12, 4.2), notch: 0.12, details: ["M12 2.5v2", "M12 19.5v2", "M2.5 12h2", "M19.5 12h2", "M5.6 5.6l1.2 1.2", "M17.2 17.2l1.2 1.2", "M5.6 18.4l1.2-1.2", "M17.2 6.8l1.2-1.2"] },
     { name: "moon", shape: "M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z", notch: 0.55 },
     { name: "logout", details: ["M9.5 20H6.5A1.5 1.5 0 0 1 5 18.5v-13A1.5 1.5 0 0 1 6.5 4h3", "M15 8l4 4-4 4", "M19 12h-9"] },
     { name: "user", shape: circle(12, 8, 4), notch: 0.12, details: ["M4.5 20.5c.8-3.8 3.8-6 7.5-6s6.7 2.2 7.5 6"] },

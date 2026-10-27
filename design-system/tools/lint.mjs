@@ -22,6 +22,7 @@ const RULES = [
   { name: "native date or time input", files: CODE_FILES, regex: /type=["'](?:date|time|datetime-local|month|week)["']/gi },
   { name: "native browser dialog", files: CODE_FILES, regex: /\b(?:alert|confirm|prompt)\(/g },
   { name: "native tooltip title attribute", files: [".html"], regex: /<(?!title\b)[a-z][^>]*\stitle=["']/gi },
+  { name: "external sprite reference (blocked on file:// pages, use #name)", files: [".html", ".js"], regex: /sprite\.svg#/g },
   { name: "inline style (only custom properties allowed)", files: [".html"], regex: /\sstyle=["'](?!\s*--)[^"']*["']/gi },
   {
     name: "hardcoded hex color",
@@ -37,7 +38,9 @@ const findings = [];
 const files = walk(undefined, COPY_FILES);
 for (const file of files) {
   const path = rel(file);
-  const text = readFileSync(file, "utf8");
+  // The inline icon sprite is generated from assets/icons/sprite.svg by sync-shells.mjs; skip it,
+  // keeping line numbers intact.
+  const text = readFileSync(file, "utf8").replace(/<!-- icons -->[\s\S]*?<!-- \/icons -->/, (region) => region.replace(/[^\n]/g, ""));
   for (const rule of RULES) {
     if (!rule.files.some((ext) => path.endsWith(ext))) continue;
     for (const match of text.matchAll(rule.regex)) {
