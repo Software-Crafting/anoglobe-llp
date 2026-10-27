@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Anoglobe Design System</title>
-  <meta name="description" content="Design system and UI prototype for Anoglobe Bookkeeping: tokens, components, icons and every page of the site, onboarding flow and admin panel.">
+  <title>Anoglobe Design System | Anoglobe Design System</title>
+  <meta name="description" content="Design system and clickable prototype for Anoglobe Bookkeeping: website, onboarding and payment flow, admin panel, emails, tokens, icons and components.">
   <!-- shell:head -->
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <script src="assets/js/theme.js"></script>
@@ -59,6 +59,7 @@
           <li><a class="a-docs-nav__link" href="ui-design/foundations/grid.html">Grid</a></li>
           <li><a class="a-docs-nav__link" href="ui-design/foundations/icons.html">Icons</a></li>
           <li><a class="a-docs-nav__link" href="ui-design/foundations/logo.html">Logo</a></li>
+          <li><a class="a-docs-nav__link" href="ui-design/foundations/imagery.html">Imagery</a></li>
         </ul>
       </div>
       <div class="a-docs-nav__group">
@@ -73,43 +74,76 @@
           <li><a class="a-docs-nav__link" href="ui-design/components/feedback.html">Feedback</a></li>
         </ul>
       </div>
+      <div class="a-docs-nav__group">
+        <p class="a-eyebrow">Pages</p>
+        <ul class="a-docs-nav__list" role="list">
+          <li><a class="a-docs-nav__link" href="ui-design/index.html">All pages</a></li>
+        </ul>
+      </div>
     </nav>
     <!-- /shell:docs-nav -->
     <main id="main" class="a-docs-main">
       <header>
-        <p class="a-eyebrow">Version 0.1, in progress</p>
+        <p class="a-eyebrow">Version 1.0, October 2026</p>
         <h1>Anoglobe Design System</h1>
-        <p class="a-body-lg a-muted">The design system and clickable prototype for Anoglobe Bookkeeping: the public website, the client onboarding and payment flow, and the admin panel. Built in plain HTML, CSS and JavaScript, in light and dark themes.</p>
+        <p class="a-body-lg a-muted">The design system and clickable prototype for Anoglobe Bookkeeping: the public website, the client onboarding and payment flow, the admin panel and the automated emails. Plain HTML, CSS and JavaScript, in light and dark themes.</p>
       </header>
 
-      <section class="a-docs-section" aria-labelledby="foundations">
-        <h2 id="foundations">Foundations</h2>
-        <p>Tokens and rules that every component and page is built from.</p>
-        <div class="a-link-grid">
-          <a class="a-link-card" href="ui-design/foundations/colors.html">
-            <span class="a-link-card__title">Colors</span>
-            <span class="a-link-card__text">Mist scale, teal accent, status colors and semantic tokens.</span>
-          </a>
-        </div>
+      <section class="a-docs-section" aria-labelledby="start-here">
+        <h2 id="start-here">Start here</h2>
+        <p>The fastest way through the prototype.</p>
+        <div class="a-link-grid"><a class="a-link-card" href="ui-design/site/index.html"><span class="a-link-card__title">Website home</span><span class="a-link-card__text">What a visitor sees first</span></a><a class="a-link-card" href="ui-design/onboarding/flow.html"><span class="a-link-card__title">Onboarding flow</span><span class="a-link-card__text">Signup and payment, one page</span></a><a class="a-link-card" href="ui-design/admin/dashboard.html"><span class="a-link-card__title">Admin dashboard</span><span class="a-link-card__text">What the Anoglobe team uses</span></a><a class="a-link-card" href="ui-design/index.html"><span class="a-link-card__title">All pages</span><span class="a-link-card__text">Sitemap of everything</span></a></div>
       </section>
-
-      <section class="a-docs-section" aria-labelledby="project">
-        <h2 id="project">Project documents</h2>
-        <p>Scope, open content questions and quality reports.</p>
-        <div class="a-link-grid">
-          <a class="a-link-card" href="PROJECT-BRIEF.md">
-            <span class="a-link-card__title">Project brief</span>
-            <span class="a-link-card__text">Contract scope, exclusions and decisions.</span>
-          </a>
-          <a class="a-link-card" href="CONTENT-TODO.md">
-            <span class="a-link-card__title">Content to do</span>
-            <span class="a-link-card__text">Placeholders that Anoglobe needs to supply.</span>
-          </a>
-          <a class="a-link-card" href="contrast-report.md">
-            <span class="a-link-card__title">Contrast report</span>
-            <span class="a-link-card__text">Every token pair checked in both themes.</span>
-          </a>
-        </div>
+      <section class="a-docs-section" aria-labelledby="project-documents">
+        <h2 id="project-documents">Project documents</h2>
+        <p>Scope, open content and quality reports.</p>
+        <div class="a-link-grid"><a class="a-link-card" href="PROJECT-BRIEF.md"><span class="a-link-card__title">Project brief</span><span class="a-link-card__text">Scope, exclusions, decisions</span></a><a class="a-link-card" href="CONTENT-TODO.md"><span class="a-link-card__title">Content to do</span><span class="a-link-card__text">Sample content to replace</span></a><a class="a-link-card" href="contrast-report.md"><span class="a-link-card__title">Contrast report</span><span class="a-link-card__text">Every token pair, both themes</span></a><a class="a-link-card" href="README.md"><span class="a-link-card__title">README</span><span class="a-link-card__text">Structure and how to extend</span></a><a class="a-link-card" href="TASKS.md"><span class="a-link-card__title">Module list</span><span class="a-link-card__text">Build log, one task per module</span></a></div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="principles">
+        <h2 id="principles">Principles</h2>
+        <p>What every screen follows.</p>
+        <ul class="a-rules">
+          <li>Calm and precise. Mist neutrals, one teal accent, borders before shadows.</li>
+          <li>Our own controls. No native selects, date pickers, checkboxes or browser dialogs anywhere.</li>
+          <li>Accessible by default. WCAG AA contrast, visible focus, landmarks, full keyboard support, reduced motion.</li>
+          <li>Works anywhere. Plain HTML, CSS and JavaScript, opens straight from disk, light and dark themes.</li>
+          <li>Plain US business English. No dashes, no emojis, no invented facts.</li>
+        </ul>
+      </section>
+      <section class="a-docs-section" aria-labelledby="site-pages">
+        <h2 id="site-pages">Public website</h2>
+        <p>Home and Services are the contracted pages; the rest are showcase.</p>
+        <div class="a-link-grid"><a class="a-link-card" href="ui-design/site/index.html"><span class="a-link-card__title">Home</span><span class="a-link-card__text">ui-design/site/index.html</span><span class="a-badge a-badge--success">P1</span></a><a class="a-link-card" href="ui-design/site/services.html"><span class="a-link-card__title">Services</span><span class="a-link-card__text">ui-design/site/services.html</span><span class="a-badge a-badge--success">P1</span></a><a class="a-link-card" href="ui-design/site/contact.html"><span class="a-link-card__title">Contact</span><span class="a-link-card__text">ui-design/site/contact.html</span><span class="a-badge a-badge--warning">Showcase</span></a><a class="a-link-card" href="ui-design/site/pricing.html"><span class="a-link-card__title">Pricing</span><span class="a-link-card__text">ui-design/site/pricing.html</span><span class="a-badge a-badge--warning">Showcase</span></a><a class="a-link-card" href="ui-design/site/about.html"><span class="a-link-card__title">About</span><span class="a-link-card__text">ui-design/site/about.html</span><span class="a-badge a-badge--warning">Showcase</span></a><a class="a-link-card" href="ui-design/site/privacy.html"><span class="a-link-card__title">Privacy policy</span><span class="a-link-card__text">ui-design/site/privacy.html</span><span class="a-badge a-badge--warning">Showcase</span></a><a class="a-link-card" href="ui-design/site/terms.html"><span class="a-link-card__title">Terms of service</span><span class="a-link-card__text">ui-design/site/terms.html</span><span class="a-badge a-badge--warning">Showcase</span></a></div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="onboarding-pages">
+        <h2 id="onboarding-pages">Onboarding and payment</h2>
+        <p>One page per step, plus the full wizard on one page.</p>
+        <div class="a-link-grid"><a class="a-link-card" href="ui-design/onboarding/flow.html"><span class="a-link-card__title">Full flow (single page wizard)</span><span class="a-link-card__text">ui-design/onboarding/flow.html</span><span class="a-badge a-badge--success">P1</span></a><a class="a-link-card" href="ui-design/onboarding/step-1-account.html"><span class="a-link-card__title">1. Account</span><span class="a-link-card__text">ui-design/onboarding/step-1-account.html</span><span class="a-badge a-badge--success">P1</span></a><a class="a-link-card" href="ui-design/onboarding/step-2-business.html"><span class="a-link-card__title">2. Business</span><span class="a-link-card__text">ui-design/onboarding/step-2-business.html</span><span class="a-badge a-badge--success">P1</span></a><a class="a-link-card" href="ui-design/onboarding/step-3-services.html"><span class="a-link-card__title">3. Services</span><span class="a-link-card__text">ui-design/onboarding/step-3-services.html</span><span class="a-badge a-badge--success">P1</span></a><a class="a-link-card" href="ui-design/onboarding/step-4-documents.html"><span class="a-link-card__title">4. Documents</span><span class="a-link-card__text">ui-design/onboarding/step-4-documents.html</span><span class="a-badge a-badge--warning">Scope to confirm</span></a><a class="a-link-card" href="ui-design/onboarding/step-5-plan.html"><span class="a-link-card__title">5. Plan</span><span class="a-link-card__text">ui-design/onboarding/step-5-plan.html</span><span class="a-badge a-badge--success">P1</span></a><a class="a-link-card" href="ui-design/onboarding/step-7-review.html"><span class="a-link-card__title">6. Review</span><span class="a-link-card__text">ui-design/onboarding/step-7-review.html</span><span class="a-badge a-badge--success">P1</span></a><a class="a-link-card" href="ui-design/onboarding/step-6-payment.html"><span class="a-link-card__title">7. Payment</span><span class="a-link-card__text">ui-design/onboarding/step-6-payment.html</span><span class="a-badge a-badge--success">P1</span></a><a class="a-link-card" href="ui-design/onboarding/success.html"><span class="a-link-card__title">Success and receipt</span><span class="a-link-card__text">ui-design/onboarding/success.html</span><span class="a-badge a-badge--success">P1</span></a><a class="a-link-card" href="ui-design/onboarding/payment-failed.html"><span class="a-link-card__title">Payment failed</span><span class="a-link-card__text">ui-design/onboarding/payment-failed.html</span><span class="a-badge a-badge--success">P1</span></a><a class="a-link-card" href="ui-design/onboarding/resume.html"><span class="a-link-card__title">Save and continue later</span><span class="a-link-card__text">ui-design/onboarding/resume.html</span><span class="a-badge a-badge--warning">Showcase</span></a></div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="emails-pages">
+        <h2 id="emails-pages">Emails</h2>
+        <p>600px, table based, inline styles.</p>
+        <div class="a-link-grid"><a class="a-link-card" href="ui-design/emails/signup-confirmation.html"><span class="a-link-card__title">Signup confirmation</span><span class="a-link-card__text">ui-design/emails/signup-confirmation.html</span><span class="a-badge a-badge--success">P1</span></a><a class="a-link-card" href="ui-design/emails/payment-confirmation.html"><span class="a-link-card__title">Payment confirmation</span><span class="a-link-card__text">ui-design/emails/payment-confirmation.html</span><span class="a-badge a-badge--success">P1</span></a><a class="a-link-card" href="ui-design/emails/team-notification.html"><span class="a-link-card__title">Team notification</span><span class="a-link-card__text">ui-design/emails/team-notification.html</span><span class="a-badge a-badge--success">P1</span></a><a class="a-link-card" href="ui-design/emails/payment-failed.html"><span class="a-link-card__title">Payment failed</span><span class="a-link-card__text">ui-design/emails/payment-failed.html</span><span class="a-badge a-badge--warning">Showcase</span></a><a class="a-link-card" href="ui-design/emails/call-scheduled.html"><span class="a-link-card__title">Call scheduled</span><span class="a-link-card__text">ui-design/emails/call-scheduled.html</span><span class="a-badge a-badge--warning">Showcase</span></a></div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="admin-pages">
+        <h2 id="admin-pages">Admin panel</h2>
+        <p>Viewing registrations, payments and call status is contracted; the rest are showcase.</p>
+        <div class="a-link-grid"><a class="a-link-card" href="ui-design/admin/login.html"><span class="a-link-card__title">Sign in</span><span class="a-link-card__text">ui-design/admin/login.html</span><span class="a-badge a-badge--success">P1</span></a><a class="a-link-card" href="ui-design/admin/forgot-password.html"><span class="a-link-card__title">Reset password</span><span class="a-link-card__text">ui-design/admin/forgot-password.html</span><span class="a-badge a-badge--info">P2</span></a><a class="a-link-card" href="ui-design/admin/dashboard.html"><span class="a-link-card__title">Dashboard</span><span class="a-link-card__text">ui-design/admin/dashboard.html</span><span class="a-badge a-badge--success">P1</span></a><a class="a-link-card" href="ui-design/admin/registrations.html"><span class="a-link-card__title">Registrations</span><span class="a-link-card__text">ui-design/admin/registrations.html</span><span class="a-badge a-badge--success">P1</span></a><a class="a-link-card" href="ui-design/admin/registration-detail.html"><span class="a-link-card__title">Registration detail</span><span class="a-link-card__text">ui-design/admin/registration-detail.html</span><span class="a-badge a-badge--success">P1</span></a><a class="a-link-card" href="ui-design/admin/payments.html"><span class="a-link-card__title">Payments</span><span class="a-link-card__text">ui-design/admin/payments.html</span><span class="a-badge a-badge--success">P1</span></a><a class="a-link-card" href="ui-design/admin/payment-detail.html"><span class="a-link-card__title">Payment detail</span><span class="a-link-card__text">ui-design/admin/payment-detail.html</span><span class="a-badge a-badge--success">P1</span></a><a class="a-link-card" href="ui-design/admin/ai-calls.html"><span class="a-link-card__title">AI calls</span><span class="a-link-card__text">ui-design/admin/ai-calls.html</span><span class="a-badge a-badge--success">P1</span></a><a class="a-link-card" href="ui-design/admin/settings.html"><span class="a-link-card__title">Settings</span><span class="a-link-card__text">ui-design/admin/settings.html</span><span class="a-badge a-badge--info">P2</span></a><a class="a-link-card" href="ui-design/admin/subscriptions.html"><span class="a-link-card__title">Subscriptions</span><span class="a-link-card__text">ui-design/admin/subscriptions.html</span><span class="a-badge a-badge--warning">Showcase</span></a><a class="a-link-card" href="ui-design/admin/emails.html"><span class="a-link-card__title">Emails</span><span class="a-link-card__text">ui-design/admin/emails.html</span><span class="a-badge a-badge--warning">Showcase</span></a><a class="a-link-card" href="ui-design/admin/documents.html"><span class="a-link-card__title">Documents</span><span class="a-link-card__text">ui-design/admin/documents.html</span><span class="a-badge a-badge--warning">Showcase</span></a><a class="a-link-card" href="ui-design/admin/team.html"><span class="a-link-card__title">Team</span><span class="a-link-card__text">ui-design/admin/team.html</span><span class="a-badge a-badge--warning">Showcase</span></a><a class="a-link-card" href="ui-design/admin/audit-log.html"><span class="a-link-card__title">Audit log</span><span class="a-link-card__text">ui-design/admin/audit-log.html</span><span class="a-badge a-badge--warning">Showcase</span></a><a class="a-link-card" href="ui-design/admin/profile.html"><span class="a-link-card__title">Profile</span><span class="a-link-card__text">ui-design/admin/profile.html</span><span class="a-badge a-badge--warning">Showcase</span></a></div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="states-pages">
+        <h2 id="states-pages">States</h2>
+        <p>Errors, empty lists, loading and offline.</p>
+        <div class="a-link-grid"><a class="a-link-card" href="ui-design/states/404.html"><span class="a-link-card__title">404 not found</span><span class="a-link-card__text">ui-design/states/404.html</span></a><a class="a-link-card" href="ui-design/states/500.html"><span class="a-link-card__title">500 server error</span><span class="a-link-card__text">ui-design/states/500.html</span></a><a class="a-link-card" href="ui-design/states/maintenance.html"><span class="a-link-card__title">Maintenance</span><span class="a-link-card__text">ui-design/states/maintenance.html</span></a><a class="a-link-card" href="ui-design/states/session-expired.html"><span class="a-link-card__title">Session expired</span><span class="a-link-card__text">ui-design/states/session-expired.html</span></a><a class="a-link-card" href="ui-design/states/permission-denied.html"><span class="a-link-card__title">Permission denied</span><span class="a-link-card__text">ui-design/states/permission-denied.html</span></a><a class="a-link-card" href="ui-design/states/empty-states.html"><span class="a-link-card__title">Empty states</span><span class="a-link-card__text">ui-design/states/empty-states.html</span></a><a class="a-link-card" href="ui-design/states/loading.html"><span class="a-link-card__title">Loading and offline</span><span class="a-link-card__text">ui-design/states/loading.html</span></a></div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="foundations-pages">
+        <h2 id="foundations-pages">Foundations</h2>
+        <p>Tokens and rules.</p>
+        <div class="a-link-grid"><a class="a-link-card" href="ui-design/foundations/colors.html"><span class="a-link-card__title">Colors</span><span class="a-link-card__text">ui-design/foundations/colors.html</span></a><a class="a-link-card" href="ui-design/foundations/typography.html"><span class="a-link-card__title">Typography</span><span class="a-link-card__text">ui-design/foundations/typography.html</span></a><a class="a-link-card" href="ui-design/foundations/spacing.html"><span class="a-link-card__title">Spacing and radius</span><span class="a-link-card__text">ui-design/foundations/spacing.html</span></a><a class="a-link-card" href="ui-design/foundations/elevation.html"><span class="a-link-card__title">Elevation</span><span class="a-link-card__text">ui-design/foundations/elevation.html</span></a><a class="a-link-card" href="ui-design/foundations/motion.html"><span class="a-link-card__title">Motion</span><span class="a-link-card__text">ui-design/foundations/motion.html</span></a><a class="a-link-card" href="ui-design/foundations/grid.html"><span class="a-link-card__title">Grid</span><span class="a-link-card__text">ui-design/foundations/grid.html</span></a><a class="a-link-card" href="ui-design/foundations/icons.html"><span class="a-link-card__title">Icons</span><span class="a-link-card__text">ui-design/foundations/icons.html</span></a><a class="a-link-card" href="ui-design/foundations/logo.html"><span class="a-link-card__title">Logo</span><span class="a-link-card__text">ui-design/foundations/logo.html</span></a><a class="a-link-card" href="ui-design/foundations/imagery.html"><span class="a-link-card__title">Imagery</span><span class="a-link-card__text">ui-design/foundations/imagery.html</span></a></div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="components-pages">
+        <h2 id="components-pages">Components</h2>
+        <p>Live, keyboard tested showcases.</p>
+        <div class="a-link-grid"><a class="a-link-card" href="ui-design/components/foundations.html"><span class="a-link-card__title">Foundations</span><span class="a-link-card__text">ui-design/components/foundations.html</span></a><a class="a-link-card" href="ui-design/components/forms.html"><span class="a-link-card__title">Form controls</span><span class="a-link-card__text">ui-design/components/forms.html</span></a><a class="a-link-card" href="ui-design/components/overlays.html"><span class="a-link-card__title">Overlays</span><span class="a-link-card__text">ui-design/components/overlays.html</span></a><a class="a-link-card" href="ui-design/components/data.html"><span class="a-link-card__title">Data display</span><span class="a-link-card__text">ui-design/components/data.html</span></a><a class="a-link-card" href="ui-design/components/payment.html"><span class="a-link-card__title">Payment</span><span class="a-link-card__text">ui-design/components/payment.html</span></a><a class="a-link-card" href="ui-design/components/admin-shell.html"><span class="a-link-card__title">Admin shell</span><span class="a-link-card__text">ui-design/components/admin-shell.html</span></a><a class="a-link-card" href="ui-design/components/feedback.html"><span class="a-link-card__title">Feedback</span><span class="a-link-card__text">ui-design/components/feedback.html</span></a></div>
       </section>
     </main>
   </div>
