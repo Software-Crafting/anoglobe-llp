@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grid | Anoglobe Design System</title>
+  <meta name="description" content="Grid, breakpoints and page shells of the Anoglobe design system.">
+  <!-- shell:head -->
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <script src="../../assets/js/theme.js"></script>
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components/foundations.css">
+  <link rel="stylesheet" href="../../assets/css/components/forms.css">
+  <link rel="stylesheet" href="../../assets/css/components/overlays.css">
+  <link rel="stylesheet" href="../../assets/css/components/data.css">
+  <link rel="stylesheet" href="../../assets/css/components/payment.css">
+  <link rel="stylesheet" href="../../assets/css/components/admin.css">
+  <link rel="stylesheet" href="../../assets/css/components/feedback.css">
+  <link rel="stylesheet" href="../../assets/css/pages.css">
+  <script src="../../assets/js/components/core.js" defer></script>
+  <script src="../../assets/js/components/forms.js" defer></script>
+  <script src="../../assets/js/components/overlays.js" defer></script>
+  <script src="../../assets/js/components/data.js" defer></script>
+  <script src="../../assets/js/components/payment.js" defer></script>
+  <script src="../../assets/js/components/admin.js" defer></script>
+  <script src="../../assets/js/components/feedback.js" defer></script>
+  <!-- /shell:head -->
+</head>
+<body>
+  <!-- shell:docs-header -->
+  <a class="a-skip-link" href="#main">Skip to content</a>
+  <header class="a-docs-header">
+    <a class="a-docs-header__brand" href="../../index.html">
+      <img class="a-logo a-logo--light" src="../../assets/img/logo.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+      <img class="a-logo a-logo--dark" src="../../assets/img/logo-reversed.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+      <span class="a-docs-header__label">Design system</span>
+    </a>
+    <button type="button" class="a-btn a-btn--ghost a-btn--icon a-theme-toggle" data-theme-toggle aria-label="Dark theme" data-tooltip="Toggle dark theme">
+      <svg class="a-icon a-theme-toggle__sun" aria-hidden="true"><use href="#sun"></use></svg>
+      <svg class="a-icon a-theme-toggle__moon" aria-hidden="true"><use href="#moon"></use></svg>
+    </button>
+  </header>
+  <div class="a-toast-region" data-icons="check-circle x-circle info alert-triangle close"></div>
+  <!-- /shell:docs-header -->
+  <div class="a-docs">
+    <!-- shell:docs-nav -->
+    <nav class="a-docs-nav" aria-label="Design system" data-scroll-area>
+      <div class="a-docs-nav__group">
+        <p class="a-eyebrow">Foundations</p>
+        <ul class="a-docs-nav__list" role="list">
+          <li><a class="a-docs-nav__link" href="../../ui-design/foundations/colors.html">Colors</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/foundations/typography.html">Typography</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/foundations/spacing.html">Spacing and radius</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/foundations/elevation.html">Elevation</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/foundations/motion.html">Motion</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/foundations/grid.html" aria-current="page">Grid</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/foundations/icons.html">Icons</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/foundations/logo.html">Logo</a></li>
+        </ul>
+      </div>
+      <div class="a-docs-nav__group">
+        <p class="a-eyebrow">Components</p>
+        <ul class="a-docs-nav__list" role="list">
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/foundations.html">Foundations</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/forms.html">Forms</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/overlays.html">Overlays</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/data.html">Data display</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/payment.html">Payment</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/admin-shell.html">Admin shell</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- /shell:docs-nav -->
+    <main id="main" class="a-docs-main">
+      <header>
+        <p class="a-eyebrow">Foundations</p>
+        <h1>Grid and breakpoints</h1>
+        <p class="a-body-lg a-muted">One responsive grid and three shells.</p>
+      </header>
+
+      <section class="a-docs-section" aria-labelledby="columns">
+        <h2 id="columns">Grid</h2>
+        <p>Four columns on phones, eight on tablets, twelve from 1024 pixels. Resize the window to see it change.</p>
+        <div class="a-example">
+          <h3 class="a-example__title">Columns</h3>
+          <div class="a-example__preview a-example__preview--stack">
+            <div class="a-grid-demo a-demo-grid" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          </div>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="breakpoints">
+        <h2 id="breakpoints">Breakpoints</h2>
+        <p>Mobile first, min-width media queries. Every page is checked at 375, 768, 1024 and 1440 pixels.</p>
+        <div class="a-card"><div class="a-card__content"><dl class="a-dl"><dt><code>480px</code></dt><dd>Large phones</dd><dt><code>640px</code></dt><dd>Gutter grows to 24px, two column forms</dd><dt><code>768px</code></dt><dd>Tables become full tables, tablet layouts</dd><dt><code>1024px</code></dt><dd>Admin sidebar docks, onboarding summary panel</dd><dt><code>1280px</code></dt><dd>Wide desktop</dd><dt><code>1536px</code></dt><dd>Extra wide</dd></dl></div></div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="shells">
+        <h2 id="shells">Page shells</h2>
+        <p>Three shells, each repeated in its pages and kept in sync by tools/sync-shells.mjs.</p>
+        <div class="a-card"><div class="a-card__content"><dl class="a-dl"><dt>Site</dt><dd>1200px container, 12 column grid, 24px gutters (16px under 640)</dd><dt>Onboarding</dt><dd>720px form column with a summary panel from 1024px, stacked on phones</dd><dt>Admin</dt><dd>264px sidebar, 72px rail when collapsed, drawer under 1024px, 56px top bar, content up to 1440px</dd></dl></div></div>
+      </section>
+    </main>
+  </div>
+  <!-- icons -->
+  <svg class="a-sprite" aria-hidden="true" focusable="false">
+    <symbol id="alert-triangle" viewBox="0 0 24 24"><path d="M10.3 4.4a2 2 0 0 1 3.4 0l7.6 13.1a2 2 0 0 1-1.7 3H4.4a2 2 0 0 1-1.7-3z" style="stroke-dasharray: calc(57.868 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.767 - var(--icon-gap) / 2)"/><path d="M12 9.5v4"/><path d="M12 16.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="check-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M8.2 12.3l2.6 2.6 5-5.2"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></symbol>
+    <symbol id="info" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M12 11v5.5"/><path d="M12 7.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z" style="stroke-dasharray: calc(58.676 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(26.404 - var(--icon-gap) / 2)"/></symbol>
+    <symbol id="sun" viewBox="0 0 24 24"><path d="M12 7.8a4.2 4.2 0 1 1 0 8.4a4.2 4.2 0 1 1 0 -8.4z" style="stroke-dasharray: calc(26.393 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(23.226 - var(--icon-gap) / 2)"/><path d="M12 2.5v2"/><path d="M12 19.5v2"/><path d="M2.5 12h2"/><path d="M19.5 12h2"/><path d="M5.6 5.6l1.2 1.2"/><path d="M17.2 17.2l1.2 1.2"/><path d="M5.6 18.4l1.2-1.2"/><path d="M17.2 6.8l1.2-1.2"/></symbol>
+    <symbol id="x-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M9.2 9.2l5.6 5.6"/><path d="M14.8 9.2l-5.6 5.6"/></symbol>
+  </svg>
+  <!-- /icons -->
+</body>
+</html>

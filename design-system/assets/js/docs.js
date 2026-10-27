@@ -51,3 +51,9 @@
   window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", fill);
   new MutationObserver(fill).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
 })();
+
+// Motion foundations: play the duration demos.
+document.addEventListener("click", (event) => {
+  if (!event.target.closest("[data-motion-play]")) return;
+  for (const demo of document.querySelectorAll("[data-motion-demo]")) demo.classList.toggle("is-on");
+});
