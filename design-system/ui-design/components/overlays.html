@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Overlays | Anoglobe Design System</title>
+  <meta name="description" content="Tooltip, hover card, popover, menus, command palette, dialogs and sheets for the Anoglobe design system.">
+  <!-- shell:head -->
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <script src="../../assets/js/theme.js"></script>
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components/foundations.css">
+  <link rel="stylesheet" href="../../assets/css/components/forms.css">
+  <link rel="stylesheet" href="../../assets/css/components/overlays.css">
+  <link rel="stylesheet" href="../../assets/css/pages.css">
+  <script src="../../assets/js/components/core.js" defer></script>
+  <script src="../../assets/js/components/forms.js" defer></script>
+  <script src="../../assets/js/components/overlays.js" defer></script>
+  <!-- /shell:head -->
+</head>
+<body>
+  <!-- shell:docs-header -->
+  <a class="a-skip-link" href="#main">Skip to content</a>
+  <header class="a-docs-header">
+    <a class="a-docs-header__brand" href="../../index.html">
+      <img class="a-logo a-logo--light" src="../../assets/img/logo.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+      <img class="a-logo a-logo--dark" src="../../assets/img/logo-reversed.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+      <span class="a-docs-header__label">Design system</span>
+    </a>
+    <button type="button" class="a-btn a-btn--ghost a-btn--icon a-theme-toggle" data-theme-toggle aria-label="Dark theme" data-tooltip="Toggle dark theme">
+      <svg class="a-icon a-theme-toggle__sun" aria-hidden="true"><use href="#sun"></use></svg>
+      <svg class="a-icon a-theme-toggle__moon" aria-hidden="true"><use href="#moon"></use></svg>
+    </button>
+  </header>
+  <!-- /shell:docs-header -->
+  <div class="a-docs">
+    <!-- shell:docs-nav -->
+    <nav class="a-docs-nav" aria-label="Design system" data-scroll-area>
+      <div class="a-docs-nav__group">
+        <p class="a-eyebrow">Foundations</p>
+        <ul class="a-docs-nav__list" role="list">
+          <li><a class="a-docs-nav__link" href="../../ui-design/foundations/colors.html">Colors</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/foundations/icons.html">Icons</a></li>
+        </ul>
+      </div>
+      <div class="a-docs-nav__group">
+        <p class="a-eyebrow">Components</p>
+        <ul class="a-docs-nav__list" role="list">
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/foundations.html">Foundations</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/forms.html">Forms</a></li>
+          <li><a class="a-docs-nav__link" href="../../ui-design/components/overlays.html" aria-current="page">Overlays</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- /shell:docs-nav -->
+    <main id="main" class="a-docs-main">
+      <header>
+        <p class="a-eyebrow">Components</p>
+        <h1>Overlays</h1>
+        <p class="a-body-lg a-muted">Layers that sit above the page. All of them are our own: no native title tooltips, no browser dialogs.</p>
+      </header>
+
+      <section class="a-docs-section" aria-labelledby="tooltip">
+        <h2 id="tooltip">Tooltip and hover card</h2>
+        <p>Tooltips name icon-only controls and show on hover or keyboard focus. Hover cards preview a record without leaving the page.</p>
+        <div class="a-example">
+          <h3 class="a-example__title">Tooltip</h3>
+          <div class="a-example__preview ">
+            <button type="button" class="a-btn a-btn--outline a-btn--icon" aria-label="Download receipt" data-tooltip="Download receipt"><svg class="a-icon" aria-hidden="true"><use href="#download"></use></svg></button>
+            <button type="button" class="a-btn a-btn--outline a-btn--icon" aria-label="Copy payment ID" data-tooltip="Copy payment ID" data-tooltip-side="bottom"><svg class="a-icon" aria-hidden="true"><use href="#copy"></use></svg></button>
+            <button type="button" class="a-btn a-btn--outline a-btn--icon" aria-label="Retry call" data-tooltip="Retry call" data-tooltip-side="right"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg></button>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-1">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-1" tabindex="0" data-scroll-area hidden><code>&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline a-btn--icon&quot; aria-label=&quot;Download receipt&quot; data-tooltip=&quot;Download receipt&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#download&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline a-btn--icon&quot; aria-label=&quot;Copy payment ID&quot; data-tooltip=&quot;Copy payment ID&quot; data-tooltip-side=&quot;bottom&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#copy&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline a-btn--icon&quot; aria-label=&quot;Retry call&quot; data-tooltip=&quot;Retry call&quot; data-tooltip-side=&quot;right&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#phone-call&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;</code></pre>
+        </div>
+        <div class="a-example">
+          <h3 class="a-example__title">Hover card</h3>
+          <div class="a-example__preview ">
+            <p class="a-small">Registered by <a href="#tooltip" data-hovercard="hc-1">Harbor Lane Dental, LLC</a> on Oct 21, 2026.</p>
+            <div class="a-hovercard" id="hc-1" hidden>
+              <div class="a-hovercard__head"><span class="a-avatar" aria-hidden="true">HL</span><div><p class="a-hovercard__title">Harbor Lane Dental, LLC</p><p class="a-hovercard__meta">Dental practice, Austin, TX</p></div></div>
+              <dl class="a-dl"><dt>Plan</dt><dd>Growth, $499 per month</dd><dt>Contact</dt><dd>Maria Robles</dd><dt>Status</dt><dd><span class="a-status a-status--success">Active</span></dd></dl>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-2">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-2" tabindex="0" data-scroll-area hidden><code>&lt;p class=&quot;a-small&quot;&gt;Registered by &lt;a href=&quot;#tooltip&quot; data-hovercard=&quot;hc-1&quot;&gt;Harbor Lane Dental, LLC&lt;/a&gt; on Oct 21, 2026.&lt;/p&gt;
+&lt;div class=&quot;a-hovercard&quot; id=&quot;hc-1&quot; hidden&gt;
+  &lt;div class=&quot;a-hovercard__head&quot;&gt;&lt;span class=&quot;a-avatar&quot; aria-hidden=&quot;true&quot;&gt;HL&lt;/span&gt;&lt;div&gt;&lt;p class=&quot;a-hovercard__title&quot;&gt;Harbor Lane Dental, LLC&lt;/p&gt;&lt;p class=&quot;a-hovercard__meta&quot;&gt;Dental practice, Austin, TX&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;dl class=&quot;a-dl&quot;&gt;&lt;dt&gt;Plan&lt;/dt&gt;&lt;dd&gt;Growth, $499 per month&lt;/dd&gt;&lt;dt&gt;Contact&lt;/dt&gt;&lt;dd&gt;Maria Robles&lt;/dd&gt;&lt;dt&gt;Status&lt;/dt&gt;&lt;dd&gt;&lt;span class=&quot;a-status a-status--success&quot;&gt;Active&lt;/span&gt;&lt;/dd&gt;&lt;/dl&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="popover">
+        <h2 id="popover">Popover</h2>
+        <p>A small panel tied to a button, for quick filters or settings. Focus moves in when it opens and Escape returns it.</p>
+        <div class="a-example">
+          <h3 class="a-example__title">Filter popover</h3>
+          <div class="a-example__preview ">
+            <button type="button" class="a-btn a-btn--outline" data-popover-trigger data-align="start" aria-expanded="false" aria-controls="pop-filter"><svg class="a-icon" aria-hidden="true"><use href="#filter"></use></svg>Filters</button>
+            <div class="a-popover" id="pop-filter" role="dialog" aria-label="Filters" hidden>
+              <div class="a-popover__header"><p class="a-h4">Filter registrations</p></div>
+              <div class="a-choice-list">
+                <label class="a-check"><input class="a-check__input" type="checkbox" id="pf-active" name="pf-active" checked><span class="a-check__label">Active</span></label>
+                <label class="a-check"><input class="a-check__input" type="checkbox" id="pf-pending" name="pf-pending"><span class="a-check__label">Pending documents</span></label>
+                <label class="a-check"><input class="a-check__input" type="checkbox" id="pf-failed" name="pf-failed"><span class="a-check__label">Payment failed</span></label>
+              </div>
+              <div class="a-popover__footer"><button type="button" class="a-btn a-btn--ghost a-btn--sm">Reset</button><button type="button" class="a-btn a-btn--primary a-btn--sm" data-popover-trigger aria-controls="pop-filter" aria-expanded="true">Apply</button></div>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-3">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-3" tabindex="0" data-scroll-area hidden><code>&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot; data-popover-trigger data-align=&quot;start&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;pop-filter&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#filter&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Filters&lt;/button&gt;
+&lt;div class=&quot;a-popover&quot; id=&quot;pop-filter&quot; role=&quot;dialog&quot; aria-label=&quot;Filters&quot; hidden&gt;
+  &lt;div class=&quot;a-popover__header&quot;&gt;&lt;p class=&quot;a-h4&quot;&gt;Filter registrations&lt;/p&gt;&lt;/div&gt;
+  &lt;div class=&quot;a-choice-list&quot;&gt;
+    &lt;label class=&quot;a-check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; id=&quot;pf-active&quot; name=&quot;pf-active&quot; checked&gt;&lt;span class=&quot;a-check__label&quot;&gt;Active&lt;/span&gt;&lt;/label&gt;
+    &lt;label class=&quot;a-check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; id=&quot;pf-pending&quot; name=&quot;pf-pending&quot;&gt;&lt;span class=&quot;a-check__label&quot;&gt;Pending documents&lt;/span&gt;&lt;/label&gt;
+    &lt;label class=&quot;a-check&quot;&gt;&lt;input class=&quot;a-check__input&quot; type=&quot;checkbox&quot; id=&quot;pf-failed&quot; name=&quot;pf-failed&quot;&gt;&lt;span class=&quot;a-check__label&quot;&gt;Payment failed&lt;/span&gt;&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;a-popover__footer&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--sm&quot;&gt;Reset&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--primary a-btn--sm&quot; data-popover-trigger aria-controls=&quot;pop-filter&quot; aria-expanded=&quot;true&quot;&gt;Apply&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="menus">
+        <h2 id="menus">Dropdown and context menu</h2>
+        <p>Arrow keys move, Right opens a submenu, Left closes it, typing a letter jumps to an item.</p>
+        <div class="a-example">
+          <h3 class="a-example__title">Dropdown with submenu, checkbox and radio items</h3>
+          <div class="a-example__preview ">
+            <button type="button" class="a-btn a-btn--outline" data-menu-trigger aria-haspopup="menu" aria-expanded="false" aria-controls="menu-row">Row actions<svg class="a-icon" aria-hidden="true"><use href="#chevron-down"></use></svg></button>
+            <div class="a-menu" id="menu-row" role="menu" aria-label="Row actions" hidden>
+              <button type="button" class="a-menu__item" role="menuitem" data-toast="Opening registration"><svg class="a-icon" aria-hidden="true"><use href="#eye"></use></svg>View details<span class="a-menu__shortcut">V</span></button>
+              <button type="button" class="a-menu__item" role="menuitem" data-toast="Receipt emailed to client"><svg class="a-icon" aria-hidden="true"><use href="#mail"></use></svg>Resend receipt<span class="a-menu__shortcut">R</span></button>
+              <button type="button" class="a-menu__item" role="menuitem" aria-haspopup="menu" aria-expanded="false" aria-controls="menu-status"><svg class="a-icon" aria-hidden="true"><use href="#check-circle"></use></svg>Set status<svg class="a-icon a-menu__chevron" aria-hidden="true"><use href="#chevron-right"></use></svg></button>
+              <div class="a-menu__separator" role="separator"></div>
+              <p class="a-menu__label" aria-hidden="true">Columns</p>
+              <div role="group" aria-label="Columns">
+                <button type="button" class="a-menu__item" role="menuitemcheckbox" aria-checked="true"><span class="a-menu__check"><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg></span>Plan</button>
+                <button type="button" class="a-menu__item" role="menuitemcheckbox" aria-checked="false"><span class="a-menu__check"><svg class="a-icon" aria-hidden="true"><use href="#check"></use></svg></span>Call status</button>
+              </div>
+              <div class="a-menu__separator" role="separator"></div>
+              <button type="button" class="a-menu__item a-menu__item--destructive" role="menuitem" data-toast="Registration archived"><svg class="a-icon" aria-hidden="true"><use href="#trash"></use></svg>Archive</button>
+            </div>
+            <div class="a-menu" id="menu-status" role="menu" aria-label="Set status" hidden>
+              <div role="group" aria-label="Status">
+                <button type="button" class="a-menu__item" role="menuitemradio" aria-checked="true"><span class="a-menu__check a-menu__check--radio"></span>Active</button>
+                <button type="button" class="a-menu__item" role="menuitemradio" aria-checked="false"><span class="a-menu__check a-menu__check--radio"></span>Pending documents</button>
+                <button type="button" class="a-menu__item" role="menuitemradio" aria-checked="false"><span class="a-menu__check a-menu__check--radio"></span>Paused</button>
+              </div>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-4">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-4" tabindex="0" data-scroll-area hidden><code>&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot; data-menu-trigger aria-haspopup=&quot;menu&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;menu-row&quot;&gt;Row actions&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#chevron-down&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;
+&lt;div class=&quot;a-menu&quot; id=&quot;menu-row&quot; role=&quot;menu&quot; aria-label=&quot;Row actions&quot; hidden&gt;
+  &lt;button type=&quot;button&quot; class=&quot;a-menu__item&quot; role=&quot;menuitem&quot; data-toast=&quot;Opening registration&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#eye&quot;&gt;&lt;/use&gt;&lt;/svg&gt;View details&lt;span class=&quot;a-menu__shortcut&quot;&gt;V&lt;/span&gt;&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;a-menu__item&quot; role=&quot;menuitem&quot; data-toast=&quot;Receipt emailed to client&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#mail&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Resend receipt&lt;span class=&quot;a-menu__shortcut&quot;&gt;R&lt;/span&gt;&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;a-menu__item&quot; role=&quot;menuitem&quot; aria-haspopup=&quot;menu&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;menu-status&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check-circle&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Set status&lt;svg class=&quot;a-icon a-menu__chevron&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#chevron-right&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;
+  &lt;div class=&quot;a-menu__separator&quot; role=&quot;separator&quot;&gt;&lt;/div&gt;
+  &lt;p class=&quot;a-menu__label&quot; aria-hidden=&quot;true&quot;&gt;Columns&lt;/p&gt;
+  &lt;div role=&quot;group&quot; aria-label=&quot;Columns&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;a-menu__item&quot; role=&quot;menuitemcheckbox&quot; aria-checked=&quot;true&quot;&gt;&lt;span class=&quot;a-menu__check&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;Plan&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;a-menu__item&quot; role=&quot;menuitemcheckbox&quot; aria-checked=&quot;false&quot;&gt;&lt;span class=&quot;a-menu__check&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#check&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;Call status&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;a-menu__separator&quot; role=&quot;separator&quot;&gt;&lt;/div&gt;
+  &lt;button type=&quot;button&quot; class=&quot;a-menu__item a-menu__item--destructive&quot; role=&quot;menuitem&quot; data-toast=&quot;Registration archived&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#trash&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Archive&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;a-menu&quot; id=&quot;menu-status&quot; role=&quot;menu&quot; aria-label=&quot;Set status&quot; hidden&gt;
+  &lt;div role=&quot;group&quot; aria-label=&quot;Status&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;a-menu__item&quot; role=&quot;menuitemradio&quot; aria-checked=&quot;true&quot;&gt;&lt;span class=&quot;a-menu__check a-menu__check--radio&quot;&gt;&lt;/span&gt;Active&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;a-menu__item&quot; role=&quot;menuitemradio&quot; aria-checked=&quot;false&quot;&gt;&lt;span class=&quot;a-menu__check a-menu__check--radio&quot;&gt;&lt;/span&gt;Pending documents&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;a-menu__item&quot; role=&quot;menuitemradio&quot; aria-checked=&quot;false&quot;&gt;&lt;span class=&quot;a-menu__check a-menu__check--radio&quot;&gt;&lt;/span&gt;Paused&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div class="a-example">
+          <h3 class="a-example__title">Context menu</h3>
+          <div class="a-example__preview a-example__preview--stack">
+            <div class="a-context-area a-demo-grid" data-context-menu="menu-context" tabindex="0" aria-label="Document Bank statement September 2026. Right click or press Shift F10 for actions.">Right click here, or focus and press Shift + F10</div>
+            <div class="a-menu" id="menu-context" role="menu" aria-label="Document actions" hidden>
+              <button type="button" class="a-menu__item" role="menuitem" data-toast="Preview opened"><svg class="a-icon" aria-hidden="true"><use href="#eye"></use></svg>Preview</button>
+              <button type="button" class="a-menu__item" role="menuitem" data-toast="Download started"><svg class="a-icon" aria-hidden="true"><use href="#download"></use></svg>Download</button>
+              <button type="button" class="a-menu__item" role="menuitem" data-toast="Link copied"><svg class="a-icon" aria-hidden="true"><use href="#link"></use></svg>Copy link</button>
+              <div class="a-menu__separator" role="separator"></div>
+              <button type="button" class="a-menu__item a-menu__item--destructive" role="menuitem" data-toast="Document deleted"><svg class="a-icon" aria-hidden="true"><use href="#trash"></use></svg>Delete</button>
+            </div>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-5">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-5" tabindex="0" data-scroll-area hidden><code>&lt;div class=&quot;a-context-area a-demo-grid&quot; data-context-menu=&quot;menu-context&quot; tabindex=&quot;0&quot; aria-label=&quot;Document Bank statement September 2026. Right click or press Shift F10 for actions.&quot;&gt;Right click here, or focus and press Shift + F10&lt;/div&gt;
+&lt;div class=&quot;a-menu&quot; id=&quot;menu-context&quot; role=&quot;menu&quot; aria-label=&quot;Document actions&quot; hidden&gt;
+  &lt;button type=&quot;button&quot; class=&quot;a-menu__item&quot; role=&quot;menuitem&quot; data-toast=&quot;Preview opened&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#eye&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Preview&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;a-menu__item&quot; role=&quot;menuitem&quot; data-toast=&quot;Download started&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#download&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Download&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;a-menu__item&quot; role=&quot;menuitem&quot; data-toast=&quot;Link copied&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#link&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Copy link&lt;/button&gt;
+  &lt;div class=&quot;a-menu__separator&quot; role=&quot;separator&quot;&gt;&lt;/div&gt;
+  &lt;button type=&quot;button&quot; class=&quot;a-menu__item a-menu__item--destructive&quot; role=&quot;menuitem&quot; data-toast=&quot;Document deleted&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#trash&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Delete&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="command">
+        <h2 id="command">Command palette</h2>
+        <p>Press Ctrl K (Cmd K on Mac) anywhere in the admin to jump to a page, a client or an action.</p>
+        <div class="a-example">
+          <h3 class="a-example__title">Open the palette</h3>
+          <p class="a-example__note">The palette is a modal combobox: type to filter, arrows to move, Enter to open.</p>
+          <div class="a-example__preview ">
+            <button type="button" class="a-btn a-btn--outline" data-command-open><svg class="a-icon" aria-hidden="true"><use href="#search"></use></svg>Search<kbd class="a-kbd">Ctrl K</kbd></button>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-6">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-6" tabindex="0" data-scroll-area hidden><code>&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot; data-command-open&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#search&quot;&gt;&lt;/use&gt;&lt;/svg&gt;Search&lt;kbd class=&quot;a-kbd&quot;&gt;Ctrl K&lt;/kbd&gt;&lt;/button&gt;</code></pre>
+        </div>
+      </section>
+      <section class="a-docs-section" aria-labelledby="dialogs">
+        <h2 id="dialogs">Dialog, alert dialog, sheets</h2>
+        <p>Dialogs trap focus, close with Escape or the backdrop, and return focus to the button that opened them. On phones they rise from the bottom.</p>
+        <div class="a-example">
+          <h3 class="a-example__title">Dialog types</h3>
+          <div class="a-example__preview ">
+            <button type="button" class="a-btn a-btn--outline" data-dialog-open="dlg-note">Add note</button>
+            <button type="button" class="a-btn a-btn--destructive" data-dialog-open="dlg-refund">Refund payment</button>
+            <button type="button" class="a-btn a-btn--outline" data-dialog-open="sheet-right">Open detail sheet</button>
+            <button type="button" class="a-btn a-btn--outline" data-dialog-open="sheet-bottom">Open bottom sheet</button>
+            <dialog class="a-dialog" id="dlg-note" aria-labelledby="dlg-note-title" aria-describedby="dlg-note-desc">
+              <div class="a-dialog__header"><div><h2 class="a-dialog__title" id="dlg-note-title">Add internal note</h2><p class="a-dialog__description" id="dlg-note-desc">Visible to the Anoglobe team only.</p></div><button type="button" class="a-btn a-btn--ghost a-btn--icon a-dialog__close" data-dialog-close aria-label="Close"><svg class="a-icon" aria-hidden="true"><use href="#close"></use></svg></button></div>
+              <div class="a-dialog__body"><div class="a-field"><label class="a-label" for="note-text">Note</label><textarea class="a-textarea" id="note-text" placeholder="Client asked to move the welcome call to Thursday afternoon."></textarea></div></div>
+              <div class="a-dialog__footer"><button type="button" class="a-btn a-btn--ghost" data-dialog-close>Cancel</button><button type="button" class="a-btn a-btn--primary" data-dialog-close data-toast="Note saved">Save note</button></div>
+            </dialog>
+            <dialog class="a-dialog" id="dlg-refund" role="alertdialog" aria-labelledby="dlg-refund-title" aria-describedby="dlg-refund-desc" data-dismissable="false">
+              <div class="a-dialog__header"><div><span class="a-alert-dialog__icon"><svg class="a-icon" aria-hidden="true"><use href="#alert-triangle"></use></svg></span><h2 class="a-dialog__title" id="dlg-refund-title">Refund $499.00 to Harbor Lane Dental?</h2><p class="a-dialog__description" id="dlg-refund-desc">The full amount returns to Visa ending 4242 in 5 to 10 business days. This cannot be undone.</p></div></div>
+              <div class="a-dialog__footer"><button type="button" class="a-btn a-btn--ghost" data-dialog-close autofocus>Keep payment</button><button type="button" class="a-btn a-btn--destructive" data-dialog-close data-toast="Refund of $499.00 issued" data-toast-variant="success">Refund $499.00</button></div>
+            </dialog>
+            <dialog class="a-dialog a-sheet a-sheet--right" id="sheet-right" aria-labelledby="sheet-right-title">
+              <div class="a-dialog__header"><div><h2 class="a-dialog__title" id="sheet-right-title">Call transcript summary</h2><p class="a-dialog__description">Oct 21, 2026, 10:58 AM, 4 min 12 s</p></div><button type="button" class="a-btn a-btn--ghost a-btn--icon a-dialog__close" data-dialog-close aria-label="Close"><svg class="a-icon" aria-hidden="true"><use href="#close"></use></svg></button></div>
+              <div class="a-dialog__body"><dl class="a-dl"><dt>Client</dt><dd>Harbor Lane Dental, LLC</dd><dt>Outcome</dt><dd><span class="a-status a-status--success">Answered</span></dd><dt>Summary</dt><dd>Confirmed QuickBooks Online access, prefers Thursday check-ins, will upload two missing statements this week.</dd></dl></div>
+              <div class="a-dialog__footer"><button type="button" class="a-btn a-btn--primary" data-dialog-close>Done</button></div>
+            </dialog>
+            <dialog class="a-dialog a-sheet a-sheet--bottom" id="sheet-bottom" aria-labelledby="sheet-bottom-title">
+              <div class="a-dialog__header"><h2 class="a-dialog__title" id="sheet-bottom-title">Order summary</h2><button type="button" class="a-btn a-btn--ghost a-btn--icon a-dialog__close" data-dialog-close aria-label="Close"><svg class="a-icon" aria-hidden="true"><use href="#close"></use></svg></button></div>
+              <div class="a-dialog__body"><dl class="a-dl"><dt>Growth plan</dt><dd>$499.00 per month</dd><dt>Due today</dt><dd><strong>$499.00</strong></dd></dl></div>
+            </dialog>
+          </div>
+          <div class="a-example__bar">
+            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-7">Show code</button>
+          </div>
+          <pre class="a-code a-example__code" id="code-7" tabindex="0" data-scroll-area hidden><code>&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot; data-dialog-open=&quot;dlg-note&quot;&gt;Add note&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--destructive&quot; data-dialog-open=&quot;dlg-refund&quot;&gt;Refund payment&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot; data-dialog-open=&quot;sheet-right&quot;&gt;Open detail sheet&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline&quot; data-dialog-open=&quot;sheet-bottom&quot;&gt;Open bottom sheet&lt;/button&gt;
+&lt;dialog class=&quot;a-dialog&quot; id=&quot;dlg-note&quot; aria-labelledby=&quot;dlg-note-title&quot; aria-describedby=&quot;dlg-note-desc&quot;&gt;
+  &lt;div class=&quot;a-dialog__header&quot;&gt;&lt;div&gt;&lt;h2 class=&quot;a-dialog__title&quot; id=&quot;dlg-note-title&quot;&gt;Add internal note&lt;/h2&gt;&lt;p class=&quot;a-dialog__description&quot; id=&quot;dlg-note-desc&quot;&gt;Visible to the Anoglobe team only.&lt;/p&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--icon a-dialog__close&quot; data-dialog-close aria-label=&quot;Close&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#close&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/div&gt;
+  &lt;div class=&quot;a-dialog__body&quot;&gt;&lt;div class=&quot;a-field&quot;&gt;&lt;label class=&quot;a-label&quot; for=&quot;note-text&quot;&gt;Note&lt;/label&gt;&lt;textarea class=&quot;a-textarea&quot; id=&quot;note-text&quot; placeholder=&quot;Client asked to move the welcome call to Thursday afternoon.&quot;&gt;&lt;/textarea&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&quot;a-dialog__footer&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost&quot; data-dialog-close&gt;Cancel&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--primary&quot; data-dialog-close data-toast=&quot;Note saved&quot;&gt;Save note&lt;/button&gt;&lt;/div&gt;
+&lt;/dialog&gt;
+&lt;dialog class=&quot;a-dialog&quot; id=&quot;dlg-refund&quot; role=&quot;alertdialog&quot; aria-labelledby=&quot;dlg-refund-title&quot; aria-describedby=&quot;dlg-refund-desc&quot; data-dismissable=&quot;false&quot;&gt;
+  &lt;div class=&quot;a-dialog__header&quot;&gt;&lt;div&gt;&lt;span class=&quot;a-alert-dialog__icon&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#alert-triangle&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;&lt;h2 class=&quot;a-dialog__title&quot; id=&quot;dlg-refund-title&quot;&gt;Refund $499.00 to Harbor Lane Dental?&lt;/h2&gt;&lt;p class=&quot;a-dialog__description&quot; id=&quot;dlg-refund-desc&quot;&gt;The full amount returns to Visa ending 4242 in 5 to 10 business days. This cannot be undone.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&quot;a-dialog__footer&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost&quot; data-dialog-close autofocus&gt;Keep payment&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--destructive&quot; data-dialog-close data-toast=&quot;Refund of $499.00 issued&quot; data-toast-variant=&quot;success&quot;&gt;Refund $499.00&lt;/button&gt;&lt;/div&gt;
+&lt;/dialog&gt;
+&lt;dialog class=&quot;a-dialog a-sheet a-sheet--right&quot; id=&quot;sheet-right&quot; aria-labelledby=&quot;sheet-right-title&quot;&gt;
+  &lt;div class=&quot;a-dialog__header&quot;&gt;&lt;div&gt;&lt;h2 class=&quot;a-dialog__title&quot; id=&quot;sheet-right-title&quot;&gt;Call transcript summary&lt;/h2&gt;&lt;p class=&quot;a-dialog__description&quot;&gt;Oct 21, 2026, 10:58 AM, 4 min 12 s&lt;/p&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--icon a-dialog__close&quot; data-dialog-close aria-label=&quot;Close&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#close&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/div&gt;
+  &lt;div class=&quot;a-dialog__body&quot;&gt;&lt;dl class=&quot;a-dl&quot;&gt;&lt;dt&gt;Client&lt;/dt&gt;&lt;dd&gt;Harbor Lane Dental, LLC&lt;/dd&gt;&lt;dt&gt;Outcome&lt;/dt&gt;&lt;dd&gt;&lt;span class=&quot;a-status a-status--success&quot;&gt;Answered&lt;/span&gt;&lt;/dd&gt;&lt;dt&gt;Summary&lt;/dt&gt;&lt;dd&gt;Confirmed QuickBooks Online access, prefers Thursday check-ins, will upload two missing statements this week.&lt;/dd&gt;&lt;/dl&gt;&lt;/div&gt;
+  &lt;div class=&quot;a-dialog__footer&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--primary&quot; data-dialog-close&gt;Done&lt;/button&gt;&lt;/div&gt;
+&lt;/dialog&gt;
+&lt;dialog class=&quot;a-dialog a-sheet a-sheet--bottom&quot; id=&quot;sheet-bottom&quot; aria-labelledby=&quot;sheet-bottom-title&quot;&gt;
+  &lt;div class=&quot;a-dialog__header&quot;&gt;&lt;h2 class=&quot;a-dialog__title&quot; id=&quot;sheet-bottom-title&quot;&gt;Order summary&lt;/h2&gt;&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--icon a-dialog__close&quot; data-dialog-close aria-label=&quot;Close&quot;&gt;&lt;svg class=&quot;a-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#close&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/div&gt;
+  &lt;div class=&quot;a-dialog__body&quot;&gt;&lt;dl class=&quot;a-dl&quot;&gt;&lt;dt&gt;Growth plan&lt;/dt&gt;&lt;dd&gt;$499.00 per month&lt;/dd&gt;&lt;dt&gt;Due today&lt;/dt&gt;&lt;dd&gt;&lt;strong&gt;$499.00&lt;/strong&gt;&lt;/dd&gt;&lt;/dl&gt;&lt;/div&gt;
+&lt;/dialog&gt;</code></pre>
+        </div>
+      </section>
+    </main>
+  <dialog class="a-dialog a-command" id="command-palette" aria-label="Command palette">
+    <div class="a-command__search"><svg class="a-icon" aria-hidden="true"><use href="#search"></use></svg><input class="a-command__input" type="text" role="combobox" aria-expanded="true" aria-controls="command-list" aria-autocomplete="list" aria-label="Search pages, clients and actions" placeholder="Search pages, clients and actions" autocomplete="off"></div>
+    <ul class="a-listbox" data-scroll-area role="listbox" id="command-list" aria-label="Results"><li role="presentation"><p class="a-listbox__group-label" id="cmd-g0">Go to</p><ul role="group" class="a-listbox__group" aria-labelledby="cmd-g0"><li role="option" class="a-option" id="cmd-dash" data-href="../../ui-design/admin/dashboard.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#home"></use></svg>Dashboard</li><li role="option" class="a-option" id="cmd-reg" data-href="../../ui-design/admin/registrations.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#users"></use></svg>Registrations</li><li role="option" class="a-option" id="cmd-pay" data-href="../../ui-design/admin/payments.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#credit-card"></use></svg>Payments</li><li role="option" class="a-option" id="cmd-calls" data-href="../../ui-design/admin/ai-calls.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#phone-call"></use></svg>AI calls</li><li role="option" class="a-option" id="cmd-settings" data-href="../../ui-design/admin/settings.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#settings"></use></svg>Settings</li></ul></li><li role="presentation"><p class="a-listbox__group-label" id="cmd-g1">Clients</p><ul role="group" class="a-listbox__group" aria-labelledby="cmd-g1"><li role="option" class="a-option" id="cmd-c1" data-href="../../ui-design/admin/registration-detail.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#building"></use></svg>Harbor Lane Dental, LLC<span class="a-option__meta">Growth</span></li><li role="option" class="a-option" id="cmd-c2" data-href="../../ui-design/admin/registration-detail.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#building"></use></svg>Northwind Logistics Inc.<span class="a-option__meta">Scale</span></li><li role="option" class="a-option" id="cmd-c3" data-href="../../ui-design/admin/registration-detail.html" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#building"></use></svg>Bright Path Tutoring<span class="a-option__meta">Payment failed</span></li></ul></li><li role="presentation"><p class="a-listbox__group-label" id="cmd-g2">Actions</p><ul role="group" class="a-listbox__group" aria-labelledby="cmd-g2"><li role="option" class="a-option" id="cmd-export" data-toast="Export started. Your CSV will download shortly." aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#download"></use></svg>Export registrations as CSV</li><li role="option" class="a-option" id="cmd-link" data-toast="Signup link copied" aria-selected="false"><svg class="a-icon" aria-hidden="true"><use href="#link"></use></svg>Copy signup link</li></ul></li><li class="a-listbox__empty" role="presentation" hidden>No results. Try a client name or page.</li></ul>
+    <div class="a-command__footer"><span><kbd class="a-kbd">Up</kbd> <kbd class="a-kbd">Down</kbd> to move</span><span><kbd class="a-kbd">Enter</kbd> to open</span><span><kbd class="a-kbd">Esc</kbd> to close</span></div>
+  </dialog>
+  </div>
+  <!-- icons -->
+  <svg class="a-sprite" aria-hidden="true" focusable="false">
+    <symbol id="alert-triangle" viewBox="0 0 24 24"><path d="M10.3 4.4a2 2 0 0 1 3.4 0l7.6 13.1a2 2 0 0 1-1.7 3H4.4a2 2 0 0 1-1.7-3z" style="stroke-dasharray: calc(57.868 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.767 - var(--icon-gap) / 2)"/><path d="M12 9.5v4"/><path d="M12 16.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+    <symbol id="building" viewBox="0 0 24 24"><path d="M4.5 21V4.5A1.5 1.5 0 0 1 6 3h7.5A1.5 1.5 0 0 1 15 4.5V21z" style="stroke-dasharray: calc(55.713 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(38.999 - var(--icon-gap) / 2)"/><path d="M15 9h3a1.5 1.5 0 0 1 1.5 1.5V21"/><path d="M3 21h18"/><path d="M8 7.5h3.5"/><path d="M8 11h3.5"/><path d="M8 14.5h3.5" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="check-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M8.2 12.3l2.6 2.6 5-5.2"/></symbol>
+    <symbol id="chevron-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="chevron-right" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></symbol>
+    <symbol id="copy" viewBox="0 0 24 24"><path d="M10.5 8.5H18.5a2 2 0 0 1 2 2V18.5a2 2 0 0 1 -2 2H10.5a2 2 0 0 1 -2 -2V10.5a2 2 0 0 1 2 -2z" style="stroke-dasharray: calc(44.568 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(36.546 - var(--icon-gap) / 2)"/><path d="M15.5 5.5V5a1.5 1.5 0 0 0-1.5-1.5H5A1.5 1.5 0 0 0 3.5 5v9A1.5 1.5 0 0 0 5 15.5h.5"/></symbol>
+    <symbol id="credit-card" viewBox="0 0 24 24"><path d="M5 5H19a2.5 2.5 0 0 1 2.5 2.5V16.5a2.5 2.5 0 0 1 -2.5 2.5H5a2.5 2.5 0 0 1 -2.5 -2.5V7.5a2.5 2.5 0 0 1 2.5 -2.5z" style="stroke-dasharray: calc(61.71 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.368 - var(--icon-gap) / 2)"/><path d="M2.5 10h19"/><path d="M6 15h3.5"/></symbol>
+    <symbol id="download" viewBox="0 0 24 24"><path d="M12 4v11"/><path d="M7.5 10.5 12 15l4.5-4.5"/><path d="M4.5 19.5h15"/></symbol>
+    <symbol id="eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" style="stroke-dasharray: calc(48.149 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(38.519 - var(--icon-gap) / 2)"/><path d="M12 9.2a2.8 2.8 0 1 1 0 5.6a2.8 2.8 0 1 1 0 -5.6z"/></symbol>
+    <symbol id="filter" viewBox="0 0 24 24"><path d="M3.5 5h17l-6.5 8v6l-4 2v-8z" style="stroke-dasharray: calc(56.088 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(47.675 - var(--icon-gap) / 2)"/></symbol>
+    <symbol id="home" viewBox="0 0 24 24"><path d="M4 10.2 12 3.8l8 6.4v9.3a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19.7z" style="stroke-dasharray: calc(56.816 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(44.316 - var(--icon-gap) / 2)"/><path d="M10 21.2v-5.7h4v5.7"/></symbol>
+    <symbol id="link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+    <symbol id="mail" viewBox="0 0 24 24"><path d="M5.5 5H18.5a2.5 2.5 0 0 1 2.5 2.5V16.5a2.5 2.5 0 0 1 -2.5 2.5H5.5a2.5 2.5 0 0 1 -2.5 -2.5V7.5a2.5 2.5 0 0 1 2.5 -2.5z" style="stroke-dasharray: calc(59.71 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(47.768 - var(--icon-gap) / 2)"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
+    <symbol id="moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z" style="stroke-dasharray: calc(58.676 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(26.404 - var(--icon-gap) / 2)"/></symbol>
+    <symbol id="phone-call" viewBox="0 0 24 24"><path d="M5.2 3.5h2.9l1.5 4-2 1.3a10.5 10.5 0 0 0 7.6 7.6l1.3-2 4 1.5v2.9a1.6 1.6 0 0 1-1.7 1.6A16.6 16.6 0 0 1 3.6 5.2a1.6 1.6 0 0 1 1.6-1.7z" style="stroke-dasharray: calc(59.014 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(22.425 - var(--icon-gap) / 2)"/><path d="M14.5 3.5a6 6 0 0 1 6 6"/><path d="M14.5 7a2.5 2.5 0 0 1 2.5 2.5"/></symbol>
+    <symbol id="search" viewBox="0 0 24 24"><path d="M10.5 4a6.5 6.5 0 1 1 0 13a6.5 6.5 0 1 1 0 -13z" style="stroke-dasharray: calc(40.846 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(35.945 - var(--icon-gap) / 2)"/><path d="M15.5 15.5 20 20"/></symbol>
+    <symbol id="settings" viewBox="0 0 24 24"><path d="M12 2.8 20 7.4v9.2L12 21.2 4 16.6V7.4z" style="stroke-dasharray: calc(55.313 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(50.888 - var(--icon-gap) / 2)"/><path d="M12 9a3 3 0 1 1 0 6a3 3 0 1 1 0 -6z"/></symbol>
+    <symbol id="sun" viewBox="0 0 24 24"><path d="M12 7.8a4.2 4.2 0 1 1 0 8.4a4.2 4.2 0 1 1 0 -8.4z" style="stroke-dasharray: calc(26.393 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(23.226 - var(--icon-gap) / 2)"/><path d="M12 2.5v2"/><path d="M12 19.5v2"/><path d="M2.5 12h2"/><path d="M19.5 12h2"/><path d="M5.6 5.6l1.2 1.2"/><path d="M17.2 17.2l1.2 1.2"/><path d="M5.6 18.4l1.2-1.2"/><path d="M17.2 6.8l1.2-1.2"/></symbol>
+    <symbol id="trash" viewBox="0 0 24 24"><path d="M6 7h12l-1 12.6a1.5 1.5 0 0 1-1.5 1.4h-7A1.5 1.5 0 0 1 7 19.6z" style="stroke-dasharray: calc(48.799 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(42.943 - var(--icon-gap) / 2)"/><path d="M4 7h16"/><path d="M9.5 7V4.5h5V7"/><path d="M10 11v6" style="display: var(--icon-minor-display, inline)"/><path d="M14 11v6" style="display: var(--icon-minor-display, inline)"/></symbol>
+    <symbol id="users" viewBox="0 0 24 24"><path d="M9 5a3.5 3.5 0 1 1 0 7a3.5 3.5 0 1 1 0 -7z" style="stroke-dasharray: calc(21.994 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(19.355 - var(--icon-gap) / 2)"/><path d="M2.5 19.5c.7-3.3 3.3-5.2 6.5-5.2s5.8 1.9 6.5 5.2"/><path d="M15.5 5.2a3.5 3.5 0 0 1 0 6.6"/><path d="M17.5 14.6c2 .7 3.4 2.4 4 4.9"/></symbol>
+  </svg>
+  <!-- /icons -->
+</body>
+</html>
