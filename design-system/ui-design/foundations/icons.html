@@ -98,7 +98,7 @@
           <li>Sizes: <code>a-icon--16</code>, <code>a-icon--20</code>, default 24, <code>a-icon--32</code>, <code>a-icon--48</code>.</li>
           <li>Icons inherit <code>currentColor</code>. Decorative icons get <code>aria-hidden="true"</code>; icon-only buttons need an <code>aria-label</code>.</li>
           <li>Each page carries the symbols it uses in a hidden sprite at the end of <code>&lt;body&gt;</code>, written by <code>tools/sync-shells.mjs</code>. This keeps icons working when a page is opened straight from disk, where browsers block external sprites. Icons created by scripts list their names in <code>data-icons</code>.</li>
-          <li>Standalone files live in <code>assets/icons/svg/</code> as <code>name.variant.size.svg</code>. Rules for adding icons are in <a href="../../assets/icons/ICON-GUIDE.md">ICON-GUIDE.md</a>.</li>
+          <li>Standalone files live in <code>assets/icons/svg/</code> as <code>name.variant.size.svg</code>. New icons are added in <code>tools/icons/definitions.mjs</code> and built with <code>node tools/build-icons.mjs</code>.</li>
         </ul>
       </section>
 

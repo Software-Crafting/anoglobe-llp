@@ -23,6 +23,7 @@ const RULES = [
   { name: "native date or time input", files: CODE_FILES, regex: /type=["'](?:date|time|datetime-local|month|week)["']/gi },
   { name: "native browser dialog", files: CODE_FILES, regex: /\b(?:alert|confirm|prompt)\(/g },
   { name: "native tooltip title attribute", files: [".html"], regex: /<(?!title\b)[a-z][^>]*\stitle=["']/gi },
+  { name: "link to a Markdown file (Markdown stays out of the repository)", files: [".html"], regex: /\s(?:href|src)=["'][^"']*\.md(?:#[^"']*)?["']/gi },
   { name: "external sprite reference (blocked on file:// pages, use #name)", files: [".html", ".js"], regex: /sprite\.svg#/g },
   {
     name: "inline style (only custom properties allowed)",
