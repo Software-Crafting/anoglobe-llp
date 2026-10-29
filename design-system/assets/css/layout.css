@@ -745,12 +745,6 @@
   text-align: center;
 }
 
-.a-auth__theme {
-  position: fixed;
-  top: var(--space-4);
-  right: var(--space-4);
-}
-
 /* Admin content grids */
 .a-admin-grid {
   display: grid;

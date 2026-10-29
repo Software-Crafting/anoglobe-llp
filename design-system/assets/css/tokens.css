@@ -1,8 +1,8 @@
 /* Anoglobe design tokens.
    Raw scales are shadcn colors (ui.shadcn.com/colors, fetched 27 October 2026). They are the only hex
    values in the system. Components use semantic tokens only, never raw scale steps.
-   Themes: each semantic token is light-dark(light, dark). The OS preference applies by default through
-   color-scheme; data-theme on <html> (or any element) forces one theme. */
+   Themes: pages are light only. Each semantic token is light-dark(light, dark); the dark values serve
+   regions forced dark with data-theme="dark" (site footers, closing bands, theme previews in the docs). */
 
 :root {
   /* Mist: neutral base */
@@ -78,10 +78,10 @@
 }
 
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
 }
 
-/* data-theme works on <html> for the whole page, or on any element to preview one theme inside the other */
+/* data-theme on any element renders that region in one theme */
 [data-theme="light"] {
   color-scheme: light;
 }

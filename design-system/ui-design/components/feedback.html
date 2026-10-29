@@ -7,7 +7,6 @@
   <meta name="description" content="Toasts, loading overlays, optimistic updates, copy to clipboard and animated state icons for the Anoglobe design system.">
   <!-- shell:head -->
   <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
-  <script src="../../assets/js/theme.js"></script>
   <link rel="stylesheet" href="../../assets/css/tokens.css">
   <link rel="stylesheet" href="../../assets/css/base.css">
   <link rel="stylesheet" href="../../assets/css/layout.css">
@@ -38,10 +37,6 @@
       <img class="a-logo a-logo--dark" src="../../assets/img/logo-reversed.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
       <span class="a-docs-header__label">Design system</span>
     </a>
-    <button type="button" class="a-btn a-btn--ghost a-btn--icon a-theme-toggle" data-theme-toggle aria-label="Dark theme" data-tooltip="Toggle dark theme">
-      <svg class="a-icon a-theme-toggle__sun" aria-hidden="true"><use href="#sun"></use></svg>
-      <svg class="a-icon a-theme-toggle__moon" aria-hidden="true"><use href="#moon"></use></svg>
-    </button>
   </header>
   <div class="a-toast-region" data-icons="check-circle x-circle info alert-triangle close"></div>
   <!-- /shell:docs-header -->
@@ -195,20 +190,6 @@
 &lt;div class=&quot;a-demo-tile&quot;&gt;&lt;span class=&quot;a-progress-ring-wrap&quot;&gt;&lt;svg class=&quot;a-progress-ring&quot; viewBox=&quot;0 0 48 48&quot; id=&quot;ring-demo&quot; role=&quot;progressbar&quot; aria-label=&quot;Upload progress&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; aria-valuenow=&quot;0&quot;&gt;&lt;circle class=&quot;a-progress-ring__track&quot; cx=&quot;24&quot; cy=&quot;24&quot; r=&quot;20&quot; pathLength=&quot;100&quot;&gt;&lt;/circle&gt;&lt;circle class=&quot;a-progress-ring__bar&quot; cx=&quot;24&quot; cy=&quot;24&quot; r=&quot;20&quot; pathLength=&quot;100&quot;&gt;&lt;/circle&gt;&lt;/svg&gt;&lt;span class=&quot;a-progress-ring-wrap__label&quot;&gt;0%&lt;/span&gt;&lt;/span&gt;Upload progress&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--ghost a-btn--sm&quot; data-progress-demo=&quot;ring-demo&quot;&gt;Start&lt;/button&gt;&lt;/div&gt;</code></pre>
         </div>
       </section>
-      <section class="a-docs-section" aria-labelledby="theme">
-        <h2 id="theme">Theme toggle</h2>
-        <p>Switches between light and dark and remembers the choice. Until a choice is made, the system setting applies.</p>
-        <div class="a-example">
-          <h3 class="a-example__title">Toggle</h3>
-          <div class="a-example__preview ">
-            <button type="button" class="a-btn a-btn--outline a-btn--icon a-theme-toggle" data-theme-toggle aria-label="Dark theme"><svg class="a-icon a-theme-toggle__sun" aria-hidden="true"><use href="#sun"></use></svg><svg class="a-icon a-theme-toggle__moon" aria-hidden="true"><use href="#moon"></use></svg></button>
-          </div>
-          <div class="a-example__bar">
-            <button type="button" class="a-btn a-btn--ghost a-btn--sm" data-disclosure aria-expanded="false" aria-controls="code-6">Show code</button>
-          </div>
-          <pre class="a-code a-example__code" id="code-6" tabindex="0" data-scroll-area hidden><code>&lt;button type=&quot;button&quot; class=&quot;a-btn a-btn--outline a-btn--icon a-theme-toggle&quot; data-theme-toggle aria-label=&quot;Dark theme&quot;&gt;&lt;svg class=&quot;a-icon a-theme-toggle__sun&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#sun&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;svg class=&quot;a-icon a-theme-toggle__moon&quot; aria-hidden=&quot;true&quot;&gt;&lt;use href=&quot;#moon&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;</code></pre>
-        </div>
-      </section>
     </main>
   </div>
   <!-- icons -->
@@ -224,11 +205,9 @@
     <symbol id="eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" style="stroke-dasharray: calc(48.149 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(38.519 - var(--icon-gap) / 2)"/><path d="M12 9.2a2.8 2.8 0 1 1 0 5.6a2.8 2.8 0 1 1 0 -5.6z"/></symbol>
     <symbol id="eye-off" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" style="stroke-dasharray: calc(48.149 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(38.519 - var(--icon-gap) / 2)"/><path d="M12 9.2a2.8 2.8 0 1 1 0 5.6a2.8 2.8 0 1 1 0 -5.6z"/><path d="M4 4l16 16"/></symbol>
     <symbol id="info" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M12 11v5.5"/><path d="M12 7.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
-    <symbol id="moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z" style="stroke-dasharray: calc(58.676 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(26.404 - var(--icon-gap) / 2)"/></symbol>
     <symbol id="phone-call" viewBox="0 0 24 24"><path d="M5.2 3.5h2.9l1.5 4-2 1.3a10.5 10.5 0 0 0 7.6 7.6l1.3-2 4 1.5v2.9a1.6 1.6 0 0 1-1.7 1.6A16.6 16.6 0 0 1 3.6 5.2a1.6 1.6 0 0 1 1.6-1.7z" style="stroke-dasharray: calc(59.014 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(22.425 - var(--icon-gap) / 2)"/><path d="M14.5 3.5a6 6 0 0 1 6 6"/><path d="M14.5 7a2.5 2.5 0 0 1 2.5 2.5"/></symbol>
     <symbol id="reconcile" viewBox="0 0 24 24"><path d="M19.5 9A8 8 0 0 0 5.2 7.2"/><path d="M4.5 15a8 8 0 0 0 14.3 1.8"/><path d="M5 3.5v4h4"/><path d="M19 20.5v-4h-4"/><path d="M9.5 12.2l1.8 1.8 3.2-3.4" style="display: var(--icon-minor-display, inline)"/></symbol>
     <symbol id="recurring-payment" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-14 5.3"/><path d="M4 12a8 8 0 0 1 14-5.3"/><path d="M18.5 3v4h-4"/><path d="M5.5 21v-4h4"/><path d="M12 9v6" style="display: var(--icon-minor-display, inline)"/></symbol>
-    <symbol id="sun" viewBox="0 0 24 24"><path d="M12 7.8a4.2 4.2 0 1 1 0 8.4a4.2 4.2 0 1 1 0 -8.4z" style="stroke-dasharray: calc(26.393 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(23.226 - var(--icon-gap) / 2)"/><path d="M12 2.5v2"/><path d="M12 19.5v2"/><path d="M2.5 12h2"/><path d="M19.5 12h2"/><path d="M5.6 5.6l1.2 1.2"/><path d="M17.2 17.2l1.2 1.2"/><path d="M5.6 18.4l1.2-1.2"/><path d="M17.2 6.8l1.2-1.2"/></symbol>
     <symbol id="x-circle" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 1 0 18a9 9 0 1 1 0 -18z" style="stroke-dasharray: calc(56.569 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.781 - var(--icon-gap) / 2)"/><path d="M9.2 9.2l5.6 5.6"/><path d="M14.8 9.2l-5.6 5.6"/></symbol>
   </svg>
   <!-- /icons -->

@@ -48,7 +48,6 @@
   }
 
   document.addEventListener("DOMContentLoaded", fill);
-  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", fill);
   new MutationObserver(fill).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
 })();
 

@@ -100,15 +100,9 @@ const icon = (root, name, extra = "") =>
 const logo = (root) => `<img class="a-logo a-logo--light" src="${root}assets/img/logo.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
       <img class="a-logo a-logo--dark" src="${root}assets/img/logo-reversed.svg" width="223" height="28" alt="Anoglobe Bookkeeping">`;
 
-const themeToggle = (root) => `<button type="button" class="a-btn a-btn--ghost a-btn--icon a-theme-toggle" data-theme-toggle aria-label="Dark theme" data-tooltip="Toggle dark theme">
-      ${icon(root, "sun", " a-theme-toggle__sun")}
-      ${icon(root, "moon", " a-theme-toggle__moon")}
-    </button>`;
-
 export const SHELLS = {
   head: ({ root }) => `
   <link rel="icon" href="${root}assets/img/favicon.svg" type="image/svg+xml">
-  <script src="${root}assets/js/theme.js"></script>
   <link rel="stylesheet" href="${root}assets/css/tokens.css">
   <link rel="stylesheet" href="${root}assets/css/base.css">
   <link rel="stylesheet" href="${root}assets/css/layout.css">
@@ -124,7 +118,6 @@ ${COMPONENT_JS.map((name) => `  <script src="${root}assets/js/components/${name}
       ${logo(root)}
       <span class="a-docs-header__label">Design system</span>
     </a>
-    ${themeToggle(root)}
   </header>
   <div class="a-toast-region" data-icons="check-circle x-circle info alert-triangle close"></div>
   `,
@@ -159,7 +152,6 @@ ${SITE_NAV.map(([name, href]) => `          <li><a class="a-site-nav__link" href
         </div>
       </nav>
       <div class="a-site-header__tools">
-        ${themeToggle(root)}
         <button type="button" class="a-btn a-btn--ghost a-btn--icon a-site-header__menu" aria-controls="site-nav" aria-expanded="false" aria-label="Menu" data-site-menu data-icons="close">
           ${icon(root, "menu")}
         </button>
@@ -221,7 +213,6 @@ ${SITE_NAV.map(([name, href]) => `          <li><a class="a-site-nav__link" href
     <div class="a-onb-header__tools">
       <span class="a-badge a-badge--success a-onb-header__secure">${icon(root, "lock")}Secure signup</span>
       <a class="a-btn a-btn--ghost a-btn--sm" href="${root}ui-design/site/contact.html">${icon(root, "help-circle")}<span class="a-onb-header__help-text">Help</span></a>
-      ${themeToggle(root)}
     </div>
   </header>
   <div class="a-toast-region" data-icons="check-circle x-circle info alert-triangle close"></div>
@@ -279,7 +270,6 @@ ${items
         <kbd class="a-kbd">Ctrl K</kbd>
       </button>
       <div class="a-admin-topbar__tools">
-        ${themeToggle(root)}
         <div class="a-popover-anchor">
           <button type="button" class="a-btn a-btn--ghost a-btn--icon a-notify-btn" aria-label="Notifications, 3 unread" aria-haspopup="dialog" aria-expanded="false" aria-controls="notifications" data-popover-trigger>
             ${icon(root, "bell")}<span class="a-notify-btn__dot"></span>

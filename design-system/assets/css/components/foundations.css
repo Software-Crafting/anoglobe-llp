@@ -82,16 +82,6 @@
   display: block;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .a-logo--light {
-    display: none;
-  }
-
-  :root:not([data-theme="light"]) .a-logo--dark {
-    display: block;
-  }
-}
-
 /* Copy to clipboard */
 .a-copy {
   display: inline-flex;
@@ -308,16 +298,6 @@
   .a-btn--icon.a-btn--sm {
     width: var(--control-height);
   }
-}
-
-/* Theme toggle: shows the theme you switch to */
-.a-theme-toggle[aria-pressed="false"] .a-theme-toggle__sun,
-.a-theme-toggle[aria-pressed="true"] .a-theme-toggle__moon {
-  display: none;
-}
-
-.a-theme-toggle:not([aria-pressed]) .a-theme-toggle__sun {
-  display: none;
 }
 
 /* Spinner: a ring with the signature notch, rotating */

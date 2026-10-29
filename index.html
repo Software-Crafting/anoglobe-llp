@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anoglobe Bookkeeping | Website designs for review</title>
+  <meta name="description" content="Four home page designs for Anoglobe Bookkeeping, with the same client content, for review side by side.">
+  <link rel="icon" href="design-system/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="design-system/assets/css/tokens.css">
+  <link rel="stylesheet" href="design-system/assets/css/base.css">
+  <link rel="stylesheet" href="design-system/assets/css/components/foundations.css">
+  <link rel="stylesheet" href="design-system/assets/css/pages.css">
+  <style>
+    .review-page {
+      display: grid;
+      gap: var(--space-10);
+      width: min(100% - 2 * var(--gutter), 960px);
+      margin-inline: auto;
+      padding-block: var(--space-12) var(--space-16);
+    }
+
+    .review-page header {
+      display: grid;
+      gap: var(--space-4);
+    }
+
+    .review-page .a-link-grid {
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 640px) {
+      .review-page .a-link-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .review-page .a-link-card {
+      align-content: start;
+      padding: var(--space-6);
+    }
+
+    .review-page .a-link-card__title {
+      font-size: var(--text-h4);
+    }
+  </style>
+</head>
+<body>
+  <main class="review-page" id="main">
+    <header>
+      <img class="a-logo" src="design-system/assets/img/logo.svg" width="223" height="28" alt="Anoglobe Bookkeeping">
+      <h1>Website designs for review</h1>
+      <p class="a-body-lg a-muted">Four home page designs with the same content. Open each one and tell us which direction you prefer.</p>
+    </header>
+
+    <section aria-labelledby="versions-title">
+      <h2 id="versions-title" class="a-visually-hidden">Home page versions</h2>
+      <div class="a-link-grid">
+        <a class="a-link-card" href="design-system/ui-design/site/index.html"><span class="a-link-card__title">Version 1, original</span><span class="a-link-card__text">Our first design, with the full site header, navigation and footer.</span></a>
+        <a class="a-link-card" href="design-system/ui-design/site/v2/index.html"><span class="a-link-card__title">Version 2, reference layout</span><span class="a-link-card__text">Reason tiles, a sticky reasons bar, tinted sections and badge cards.</span></a>
+        <a class="a-link-card" href="design-system/ui-design/site/v2/index_v2.html"><span class="a-link-card__title">Version 2, polished</span><span class="a-link-card__text">Larger type, smooth scroll animations, moving review rows and a price count-up.</span></a>
+        <a class="a-link-card" href="design-system/ui-design/site/v2/index_v3.html"><span class="a-link-card__title">Version 3, interactive</span><span class="a-link-card__text">Larger type, a review carousel, report tabs and numbered reasons.</span></a>
+      </div>
+    </section>
+
+    <p class="a-small a-muted">Looking for everything else? The <a href="design-system/index.html">design system</a> has the onboarding flow, admin panel, emails and components.</p>
+  </main>
+</body>
+</html>

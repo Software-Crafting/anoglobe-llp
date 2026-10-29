@@ -12,7 +12,7 @@ import { ROOT, walk, rel } from "./lib/files.mjs";
 
 const WIDTHS = [375, 768, 1024, 1440];
 const SCREENSHOT_WIDTHS = [375, 1440];
-const THEMES = ["light", "dark"];
+const THEMES = ["light"];
 const AXE_TAGS = ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa", "best-practice"];
 const MIME = {
   ".html": "text/html", ".css": "text/css", ".js": "text/javascript", ".svg": "image/svg+xml",
