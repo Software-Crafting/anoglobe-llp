@@ -1,0 +1,534 @@
+/* Enhanced versions of public site v2: index_v2.html (.v2--polished) and index_v3.html (.v2--bold).
+   Loads after site-v2.css. Adds Work Sans, scroll reveals, hover motion, a reading progress bar, and per
+   version: a review marquee and price count-up (polished), a review carousel and report tabs (bold).
+   Every animation is gated on html[data-motion] (set by site-v2-plus.js only when motion is allowed). */
+
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/WorkSansVariable.woff2") format("woff2");
+}
+
+.v2-plus {
+  --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+  --ease-spring: cubic-bezier(0.34, 1.4, 0.64, 1);
+  --reveal-step: 70ms;
+}
+
+.v2-plus :is(h1, h2, h3) {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Scale: matches the reference site at 1440 (19px body copy, 62px section titles, 64px buttons, wider page) */
+.v2-plus {
+  --v2-wide: 1400px;
+  font-size: 1.1875rem;
+  line-height: 1.7;
+}
+
+.v2-plus h1 {
+  font-size: clamp(2.5rem, 1.7rem + 2.8vw, 3.75rem);
+}
+
+.v2-plus h2 {
+  font-size: clamp(2.25rem, 1.5rem + 2.6vw, 3.875rem);
+}
+
+.v2-plus .v2-lead {
+  font-size: 1.3125rem;
+}
+
+.v2-plus .a-btn {
+  font-weight: 700;
+}
+
+.v2-plus .a-btn--lg {
+  height: 64px;
+  padding: 0 var(--space-8);
+  font-size: 1.1875rem;
+}
+
+.v2-plus .v2-header .a-logo {
+  height: 40px;
+}
+
+.v2-plus .v2-tile {
+  grid-template-columns: 44px minmax(0, 1fr);
+  padding: var(--space-5) var(--space-6);
+}
+
+.v2-plus .v2-tile strong {
+  font-size: 1.125rem;
+}
+
+.v2-plus .v2-tile span span {
+  font-size: 1rem;
+}
+
+.v2-plus .v2-tile .a-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.v2-plus .v2-nav__title {
+  font-size: 1.375rem;
+}
+
+.v2-plus .v2-nav a {
+  min-width: 140px;
+  padding: var(--space-3) var(--space-4);
+  font-size: 0.9375rem;
+}
+
+.v2-plus .v2-nav .a-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.v2-plus .v2-review {
+  font-size: 1.0625rem;
+}
+
+.v2-plus .v2-report__card h3 {
+  font-size: clamp(1.75rem, 1.4rem + 1vw, 2.25rem);
+}
+
+.v2-plus .v2-software li {
+  font-size: 1.375rem;
+}
+
+.v2-plus .v2-card {
+  gap: var(--space-5);
+}
+
+/* The count-up figure keeps the big price size; its width is fixed so the layout does not shift */
+.v2-plus .v2-price__amount .v2-price__figure {
+  display: inline-block;
+  min-width: 3.1ch;
+  margin: 0;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  text-align: left;
+}
+
+.v2-plus .v2-report-tabs .a-tabs__tab {
+  min-height: 48px;
+  padding: 0 var(--space-5);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Scroll reveals: [data-reveal] (up by default, or left, right, zoom). --reveal-index staggers siblings. */
+[data-motion] [data-reveal] {
+  transition:
+    opacity 700ms var(--ease-out),
+    translate 700ms var(--ease-out),
+    scale 700ms var(--ease-out);
+  transition-delay: calc(var(--reveal-index, 0) * var(--reveal-step));
+}
+
+[data-motion] [data-reveal]:not(.is-revealed) {
+  opacity: 0;
+  translate: 0 32px;
+}
+
+[data-motion] [data-reveal="left"]:not(.is-revealed) {
+  translate: -56px 0;
+}
+
+[data-motion] [data-reveal="right"]:not(.is-revealed) {
+  translate: 56px 0;
+}
+
+[data-motion] [data-reveal="zoom"]:not(.is-revealed) {
+  translate: 0 16px;
+  scale: 0.94;
+}
+
+/* Section badges drop in after their card */
+[data-motion] [data-reveal] .v2-badge {
+  transition: translate 600ms var(--ease-spring) 250ms;
+}
+
+[data-motion] [data-reveal]:not(.is-revealed) .v2-badge {
+  translate: 0 -100%;
+}
+
+.v2-card--center .v2-badge {
+  translate: -50% 0;
+}
+
+[data-motion] [data-reveal]:not(.is-revealed) .v2-card--center .v2-badge,
+[data-motion] .v2-card--center[data-reveal]:not(.is-revealed) .v2-badge {
+  translate: -50% -100%;
+}
+
+/* Hover motion for cards, tiles and buttons (pointer devices only) */
+@media (hover: hover) {
+  [data-motion] :is(.v2-card, .v2-report__card, .v2-review, .v2-software li, .v2-tile, .v2-slide__card) {
+    transition:
+      translate var(--duration-standard) var(--ease-out),
+      box-shadow var(--duration-standard) var(--ease-out),
+      opacity 700ms var(--ease-out),
+      scale 700ms var(--ease-out);
+  }
+
+  [data-motion] :is(.v2-report__card, .v2-review, .v2-software li, a.v2-tile):hover {
+    translate: 0 -4px;
+    box-shadow: var(--shadow-lg);
+  }
+
+  [data-motion] .a-btn .a-icon {
+    transition: translate var(--duration-standard) var(--ease-out);
+  }
+
+  [data-motion] .a-btn:hover > .a-icon:last-child {
+    translate: 3px 0;
+  }
+
+  [data-motion] .v2-video:hover .v2-video__play {
+    animation: v2-pulse 1.2s var(--ease-out) infinite;
+  }
+}
+
+@keyframes v2-pulse {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 45%, transparent);
+  }
+
+  100% {
+    box-shadow: 0 0 0 18px color-mix(in srgb, var(--accent) 0%, transparent);
+  }
+}
+
+[data-motion] .v2-nav a {
+  transition:
+    background-color var(--duration-standard) var(--ease-out),
+    color var(--duration-standard) var(--ease-out);
+}
+
+/* Reading progress along the bottom edge of the reasons bar (scroll-driven, no script) */
+.v2-progress {
+  display: none;
+}
+
+@supports (animation-timeline: scroll()) {
+  [data-motion] .v2-progress {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    height: 3px;
+    background: var(--accent);
+    transform-origin: left;
+    animation: v2-progress linear both;
+    animation-timeline: scroll(root);
+  }
+}
+
+@keyframes v2-progress {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Lead band ribbons sway gently */
+[data-motion] .v2-lead-band::before,
+[data-motion] .v2-lead-band::after {
+  transform-origin: top center;
+  animation: v2-sway 6s ease-in-out infinite alternate;
+}
+
+[data-motion] .v2-lead-band::after {
+  animation-duration: 7.5s;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes v2-sway {
+  from {
+    rotate: -2deg;
+  }
+
+  to {
+    rotate: 2deg;
+  }
+}
+
+/* Hero portrait settles in */
+[data-motion] .v2-portrait::before {
+  animation: v2-rise 900ms var(--ease-out) both;
+}
+
+@keyframes v2-rise {
+  from {
+    clip-path: polygon(0 100%, 50% 100%, 100% 100%, 100% 100%, 0 100%);
+  }
+}
+
+/* ---------- Polished (index_v2.html) ---------- */
+
+/* Reviews: two rows that drift in opposite directions; a toggle pauses them. Clones are aria-hidden. */
+.v2-marquee {
+  display: grid;
+  gap: var(--space-4);
+  margin-top: var(--space-10);
+}
+
+.v2-marquee__row {
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+}
+
+.v2-marquee__track {
+  display: flex;
+  gap: var(--space-4);
+  width: max-content;
+}
+
+.v2-marquee .v2-review {
+  width: min(340px, 80vw);
+  margin: 0;
+}
+
+[data-motion] .v2-marquee__track {
+  animation: v2-marquee 60s linear infinite;
+}
+
+[data-motion] .v2-marquee__row:nth-child(2) .v2-marquee__track {
+  animation-direction: reverse;
+  animation-duration: 70s;
+}
+
+.v2-marquee:is(:hover, :focus-within) .v2-marquee__track,
+.v2-marquee.is-paused .v2-marquee__track {
+  animation-play-state: paused;
+}
+
+@keyframes v2-marquee {
+  to {
+    translate: calc(-50% - var(--space-2)) 0;
+  }
+}
+
+/* Without motion the rows wrap and the clones go away */
+html:not([data-motion]) .v2-marquee__row {
+  mask-image: none;
+}
+
+html:not([data-motion]) .v2-marquee__track {
+  flex-wrap: wrap;
+  justify-content: center;
+  width: auto;
+}
+
+html:not([data-motion]) .v2-marquee [data-clone],
+html:not([data-motion]) .v2-marquee__toggle {
+  display: none;
+}
+
+.v2-marquee__toggle {
+  justify-self: center;
+}
+
+.v2-rating-head {
+  display: grid;
+  gap: var(--space-8);
+}
+
+@media (min-width: 1024px) {
+  .v2-rating-head {
+    grid-template-columns: 5fr 7fr;
+    align-items: center;
+  }
+}
+
+/* ---------- Bold (index_v3.html) ---------- */
+
+/* Hero headline: the name gets an underline that draws in */
+.v2-mark-word {
+  background: linear-gradient(var(--band-teal-edge), var(--band-teal-edge)) no-repeat 0 88% / 100% 0.28em;
+}
+
+[data-motion] .v2-mark-word {
+  animation: v2-underline 900ms var(--ease-out) 300ms both;
+}
+
+@keyframes v2-underline {
+  from {
+    background-size: 0 0.28em;
+  }
+}
+
+.v2-plus.v2--bold .v2-tile {
+  grid-template-columns: auto 44px minmax(0, 1fr);
+}
+
+.v2-tile__number {
+  color: var(--accent);
+  font-size: var(--text-h3);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Review carousel: native scroll snap, buttons move one slide, dots show the position */
+.v2-carousel {
+  display: grid;
+  gap: var(--space-5);
+  margin-top: var(--space-10);
+}
+
+.v2-carousel__track {
+  display: grid;
+  grid-auto-columns: min(420px, 86%);
+  grid-auto-flow: column;
+  gap: var(--space-4);
+  overflow-x: auto;
+  padding: var(--space-2) var(--space-1) var(--space-4);
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--space-1);
+  scrollbar-width: none;
+}
+
+.v2-carousel__track::-webkit-scrollbar {
+  display: none;
+}
+
+.v2-slide {
+  scroll-snap-align: start;
+}
+
+.v2-slide__card {
+  display: grid;
+  align-content: space-between;
+  gap: var(--space-5);
+  height: 100%;
+  padding: var(--space-8);
+  border: 2px solid var(--edge);
+  border-radius: 25px;
+  background: var(--card);
+}
+
+.v2-slide__card blockquote {
+  margin: 0;
+  color: var(--site-ink);
+  font-size: var(--text-h4);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.v2-slide__card blockquote::before {
+  content: "\201C";
+  display: block;
+  height: 2.25rem;
+  color: var(--accent);
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.v2-slide__person {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.v2-slide__avatar {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: var(--accent);
+  color: var(--accent-foreground);
+  font-weight: 600;
+}
+
+.v2-slide__person strong {
+  display: block;
+  color: var(--site-ink);
+}
+
+.v2-carousel__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.v2-carousel__dots {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.v2-carousel__dot {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+}
+
+.v2-carousel__dot::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: auto;
+  border-radius: var(--radius-full);
+  background: var(--input);
+  transition: width var(--duration-standard) var(--ease-out);
+}
+
+.v2-carousel__dot[aria-current="true"]::before {
+  width: 22px;
+  background: var(--accent);
+}
+
+/* Reports as tabs: pill tabs over an image and card that fade in together */
+.v2-report-tabs {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-8);
+  margin-top: var(--space-12);
+}
+
+.v2-report-tabs .a-tabs__list {
+  background: var(--card);
+  box-shadow: var(--shadow-sm);
+}
+
+.v2-report-tabs .a-tabs__tab[aria-selected="true"] {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.v2-report-tabs [role="tabpanel"] {
+  width: 100%;
+}
+
+[data-motion] .v2-report-tabs [role="tabpanel"]:not([hidden]) {
+  animation: v2-fade-in 500ms var(--ease-out);
+}
+
+@keyframes v2-fade-in {
+  from {
+    opacity: 0;
+    translate: 0 12px;
+  }
+}
+
+.v2-step {
+  color: var(--accent);
+  font-size: var(--text-small);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}

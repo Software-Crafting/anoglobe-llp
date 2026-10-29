@@ -30,23 +30,35 @@
   });
 })();
 
-// Legal pages: highlight the table of contents entry for the section in view.
+// Legal pages and the v2 reasons bar: highlight the [data-toc] link for the last section whose top has
+// scrolled above ACTIVE_LINE (just below the sticky bars, which land anchors within it), or the last link
+// once the page cannot scroll further. Keeps that link visible when the row scrolls sideways.
+const ACTIVE_LINE = 140;
 document.addEventListener("DOMContentLoaded", () => {
   const toc = document.querySelector("[data-toc]");
   if (!toc) return;
-  const links = new Map([...toc.querySelectorAll("a")].map((link) => [link.hash.slice(1), link]));
-  const observer = new IntersectionObserver(
-    (entries) => {
-      for (const entry of entries) {
-        if (!entry.isIntersecting) continue;
-        for (const link of links.values()) link.removeAttribute("aria-current");
-        links.get(entry.target.id)?.setAttribute("aria-current", "true");
-      }
-    },
-    { rootMargin: "-80px 0px -70% 0px" },
-  );
-  for (const id of links.keys()) {
-    const heading = document.getElementById(id);
-    if (heading) observer.observe(heading);
+  const targets = [...toc.querySelectorAll("a")]
+    .map((link) => ({ link, section: document.getElementById(link.hash.slice(1)) }))
+    .filter(({ section }) => section);
+  let current = null;
+  let frame = 0;
+
+  function update() {
+    frame = 0;
+    const atEnd = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+    const passed = targets.filter(({ section }) => section.getBoundingClientRect().top <= ACTIVE_LINE);
+    const active = (atEnd && passed.length ? targets.at(-1) : passed.at(-1))?.link ?? null;
+    if (active === current) return;
+    current?.removeAttribute("aria-current");
+    current = active;
+    if (!active) return;
+    active.setAttribute("aria-current", "true");
+    const row = active.closest("ul, ol");
+    if (row.scrollWidth > row.clientWidth) {
+      row.scrollTo({ left: active.offsetLeft - (row.clientWidth - active.offsetWidth) / 2, behavior: "smooth" });
+    }
   }
+
+  window.addEventListener("scroll", () => { frame ||= requestAnimationFrame(update); }, { passive: true });
+  update();
 });

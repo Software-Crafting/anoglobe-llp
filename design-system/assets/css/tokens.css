@@ -45,6 +45,7 @@
   --amber-200: #fde68a;
   --amber-300: #fcd34d;
   --amber-400: #fbbf24;
+  --amber-600: #d97706;
   --amber-700: #b45309;
   --amber-800: #92400e;
   --amber-950: #451a03;
@@ -156,6 +157,26 @@
   --info-fg: light-dark(var(--sky-800), var(--sky-300));
   --info-icon: light-dark(var(--sky-700), var(--sky-400));
 
+  /* Public site: heading ink, hero reason tiles, folder tabs and edges of site cards.
+     Every section sits on --background in both themes. --site-deep is the footer and closing band;
+     those regions are forced dark with data-theme. */
+  --site-ink: light-dark(var(--teal-900), var(--teal-100));
+  --site-tile: light-dark(var(--teal-50), var(--mist-900));
+  --site-tab: light-dark(var(--teal-200), var(--teal-800));
+  --site-star: light-dark(var(--amber-600), var(--amber-400));
+  --site-deep: var(--teal-900);
+
+  /* Public site v2 (ui-design/site/v2): tinted section bands with a matching edge for card borders and
+     section badges. Bands tint the light theme only; dark uses the page background. */
+  --band-cream: light-dark(var(--amber-50), var(--mist-950));
+  --band-sky: light-dark(var(--sky-50), var(--mist-950));
+  --band-teal: light-dark(var(--teal-50), var(--mist-950));
+  --band-mint: light-dark(var(--green-50), var(--mist-950));
+  --band-cream-edge: light-dark(var(--amber-200), var(--teal-800));
+  --band-sky-edge: light-dark(var(--sky-200), var(--teal-800));
+  --band-teal-edge: light-dark(var(--teal-200), var(--teal-800));
+  --band-mint-edge: light-dark(var(--green-200), var(--teal-800));
+
   /* Admin sidebar */
   --sidebar: light-dark(var(--mist-100), var(--mist-900));
   --sidebar-foreground: light-dark(var(--mist-900), var(--mist-100));
@@ -228,6 +249,7 @@
   --weight-medium: 500;
   --weight-semibold: 600;
   --weight-bold: 650;
+  --weight-heavy: 800;
   --tracking-tight: -0.02em;
   --measure: 68ch;
 

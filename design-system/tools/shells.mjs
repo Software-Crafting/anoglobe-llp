@@ -170,7 +170,7 @@ ${SITE_NAV.map(([name, href]) => `          <li><a class="a-site-nav__link" href
   `,
 
   "site-footer": ({ root }) => `
-  <footer class="a-site-footer">
+  <footer class="a-site-footer" data-theme="dark">
     <div class="a-container a-site-footer__grid">
       <div class="a-site-footer__brand">
         ${logo(root)}

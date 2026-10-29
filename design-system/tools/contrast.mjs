@@ -54,6 +54,30 @@ const PAIRS = [
   ["chart-3", "card", UI],
   ["chart-4", "card", UI],
   ["chart-5", "card", UI],
+  ["site-ink", "background", TEXT],
+  ["site-ink", "card", TEXT],
+  ["site-ink", "site-tab", TEXT],
+  ["site-star", "card", UI],
+  ["site-ink", "site-tile", TEXT],
+  ["muted-foreground", "site-tile", TEXT],
+  ["site-ink", "band-cream", TEXT],
+  ["muted-foreground", "band-cream", TEXT],
+  ["site-ink", "band-cream-edge", TEXT],
+  ["site-ink", "band-sky", TEXT],
+  ["muted-foreground", "band-sky", TEXT],
+  ["site-ink", "band-sky-edge", TEXT],
+  ["site-ink", "band-teal", TEXT],
+  ["muted-foreground", "band-teal", TEXT],
+  ["site-ink", "band-teal-edge", TEXT],
+  ["site-ink", "band-mint", TEXT],
+  ["muted-foreground", "band-mint", TEXT],
+  ["site-ink", "band-mint-edge", TEXT],
+  // Forced dark regions (site footer and closing band) only ever resolve the dark values
+  ["foreground", "site-deep", TEXT, ["dark"]],
+  ["muted-foreground", "site-deep", TEXT, ["dark"]],
+  ["link", "site-deep", TEXT, ["dark"]],
+  ["link-hover", "site-deep", TEXT, ["dark"]],
+  ["accent", "site-deep", UI, ["dark"]],
 ];
 
 const css = readFileSync(join(ROOT, "assets/css/tokens.css"), "utf8").replace(/\/\*[\s\S]*?\*\//g, "");
@@ -84,8 +108,9 @@ function ratio(a, b) {
 
 const rows = [];
 let failures = 0;
-for (const [fg, bg, required] of PAIRS) {
+for (const [fg, bg, required, themes = ["light", "dark"]] of PAIRS) {
   const cells = ["light", "dark"].map((theme) => {
+    if (!themes.includes(theme)) return "not used";
     const value = ratio(resolve(declarations.get(fg), theme), resolve(declarations.get(bg), theme));
     if (value < required) failures++;
     return `${value.toFixed(2)} ${value >= required ? "pass" : "FAIL"}`;

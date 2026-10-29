@@ -2,3 +2,5 @@ node_modules/
 design-system/screenshots/
 .venv/
 design-system/**/*.md
+figma-export/
+inspiration/

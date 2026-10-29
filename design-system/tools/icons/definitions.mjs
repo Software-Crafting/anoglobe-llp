@@ -28,6 +28,8 @@ export const GROUPS = {
     { name: "settings", shape: "M12 2.8 20 7.4v9.2L12 21.2 4 16.6V7.4z", notch: 0.08, details: [circle(12, 12, 3)] },
     { name: "filter", shape: "M3.5 5h17l-6.5 8v6l-4 2v-8z", notch: 0.15 },
     { name: "sort", details: ["M7 4v16", "M3.5 16.5 7 20l3.5-3.5", "M17 20V4", "M13.5 7.5 17 4l3.5 3.5"] },
+    { name: "star", shape: "M12 3.1L14.41 9.28L21.04 9.66L15.9 13.87L17.58 20.29L12 16.7L6.42 20.29L8.1 13.87L2.96 9.66L9.59 9.28z", notch: 0.95 },
+    { name: "play", shape: "M8 5.2v13.6a.8.8 0 0 0 1.2.7l10.6-6.8a.8.8 0 0 0 0-1.4L9.2 4.5a.8.8 0 0 0-1.2.7z", notch: 0.5 },
     { name: "more-horizontal", details: [dot(5.5, 12), dot(12, 12), dot(18.5, 12)] },
     { name: "more-vertical", details: [dot(12, 5.5), dot(12, 12), dot(12, 18.5)] },
     { name: "chevron-up", details: ["M6 15l6-6 6 6"] },
