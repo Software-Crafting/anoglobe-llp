@@ -4,3 +4,7 @@ design-system/screenshots/
 design-system/**/*.md
 figma-export/
 inspiration/
+web/.next/
+web/.env*
+web/next-env.d.ts
+web/data/

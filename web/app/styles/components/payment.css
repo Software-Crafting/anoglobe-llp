@@ -1,0 +1,330 @@
+/* Payment components (plan/05). UI only: the card element mirrors a gateway-hosted field so the real
+   iframe can replace it without layout changes. Card data is never stored by Anoglobe. */
+
+/* Card element: number, expiry and CVC in one bordered group */
+.a-card-element {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 84px 64px;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-md);
+  background: var(--card);
+  transition: border-color var(--duration-micro) var(--ease-out);
+}
+
+.a-card-element:hover {
+  border-color: var(--input-hover);
+}
+
+.a-card-element:focus-within {
+  border-color: var(--ring);
+  outline: var(--ring-width) solid var(--ring);
+}
+
+.a-card-element:has([aria-invalid="true"]) {
+  border-color: var(--destructive);
+}
+
+.a-card-element__number {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.a-card-element .a-input {
+  height: var(--control-height);
+  padding: 0 var(--space-2);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  font-variant-numeric: tabular-nums;
+}
+
+.a-card-element .a-input:focus-visible {
+  outline: none;
+}
+
+.a-card-element .a-input[aria-invalid="true"] {
+  color: var(--destructive-fg);
+}
+
+.a-card-element > .a-input {
+  border-left: 1px solid var(--border);
+}
+
+.a-card-brand {
+  --icon-stroke: 1.8;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: var(--space-1);
+  margin-left: var(--space-3);
+  color: var(--muted-foreground);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.a-card-brand .a-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.a-card-brand[data-brand]:not([data-brand=""]) {
+  min-width: 44px;
+  padding: 2px 6px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  color: var(--foreground);
+}
+
+.a-card-brand[data-brand]:not([data-brand=""]) .a-icon {
+  display: none;
+}
+
+@media (max-width: 479px) {
+  .a-card-element {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .a-card-element__number {
+    grid-column: 1 / -1;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .a-card-element > .a-input:nth-of-type(1) {
+    border-left: 0;
+  }
+}
+
+.a-gateway-note {
+  --icon-stroke: 2.25;
+  --icon-notch: 3;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--muted-foreground);
+  font-size: var(--text-small);
+}
+
+.a-gateway-note .a-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--success-icon);
+}
+
+.a-test-mode {
+  padding: var(--space-3);
+  border: 1px dashed var(--warning-border);
+  border-radius: var(--radius-md);
+  background: var(--warning-bg);
+  color: var(--warning-fg);
+  font-size: var(--text-xs);
+}
+
+.a-test-mode code {
+  font-weight: var(--weight-semibold);
+  white-space: nowrap;
+}
+
+/* Secure badge */
+.a-secure-badge {
+  --icon-stroke: 2.25;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--card);
+  color: var(--muted-foreground);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+}
+
+.a-secure-badge .a-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--success-icon);
+}
+
+.a-secure-badge strong {
+  color: var(--foreground);
+}
+
+/* Price summary */
+.a-summary {
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  background: var(--card);
+}
+
+.a-summary__title {
+  font-size: var(--text-h4);
+  font-weight: var(--weight-semibold);
+}
+
+.a-summary__lines {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  font-size: var(--text-small);
+}
+
+.a-summary__line {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.a-summary__line dt {
+  color: var(--muted-foreground);
+}
+
+.a-summary__line dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.a-summary__line--discount dd {
+  color: var(--success-fg);
+}
+
+.a-summary__total {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border);
+}
+
+.a-summary__total dt {
+  font-weight: var(--weight-semibold);
+}
+
+.a-summary__total dd {
+  margin: 0;
+  font-size: var(--text-h3);
+  font-weight: var(--weight-semibold);
+  font-variant-numeric: tabular-nums;
+}
+
+.a-summary__note {
+  color: var(--muted-foreground);
+  font-size: var(--text-xs);
+}
+
+/* Plan cards: choice cards with a price and feature list */
+.a-plan-price {
+  grid-column: 1 / -1;
+  margin-top: var(--space-2);
+  font-size: var(--text-h3);
+  font-weight: var(--weight-semibold);
+  font-variant-numeric: tabular-nums;
+}
+
+.a-plan-price span {
+  color: var(--muted-foreground);
+  font-size: var(--text-small);
+  font-weight: var(--weight-regular);
+}
+
+.a-plan-features {
+  --icon-stroke: 2.25;
+  display: grid;
+  grid-column: 1 / -1;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  padding: 0;
+  list-style: none;
+  font-size: var(--text-small);
+}
+
+.a-plan-features li {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.a-plan-features .a-icon {
+  width: 16px;
+  height: 16px;
+  margin-top: 3px;
+  color: var(--accent);
+}
+
+.a-choice-card .a-badge {
+  justify-self: start;
+}
+
+/* Billing authorization */
+.a-legal {
+  max-height: 168px;
+  padding: var(--space-4);
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--muted);
+  color: var(--muted-foreground);
+  font-size: var(--text-small);
+}
+
+.a-legal > * + * {
+  margin-top: var(--space-2);
+}
+
+.a-legal__flag {
+  display: inline-block;
+  margin-bottom: var(--space-1);
+}
+
+/* Payment result */
+.a-result {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-3);
+  padding: var(--space-8) var(--space-4);
+  text-align: center;
+}
+
+.a-result__title {
+  font-size: var(--text-h3);
+  font-weight: var(--weight-semibold);
+}
+
+.a-result__text {
+  max-width: 48ch;
+  color: var(--muted-foreground);
+}
+
+.a-result .a-anim-check {
+  width: 64px;
+  height: 64px;
+  color: var(--success-icon);
+  stroke-width: 1.5;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.a-processing {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-3);
+  padding: var(--space-10) var(--space-4);
+  text-align: center;
+}
+
+.a-processing__text {
+  color: var(--muted-foreground);
+  font-size: var(--text-small);
+}
+
+.a-card-field {
+  display: grid;
+  gap: var(--space-2);
+}

@@ -1,0 +1,37 @@
+/* Live app additions on top of the design system: onboarding, admin and state pages. Add responsive fixes here. */
+
+/* A 16px input stops iOS zooming in on focus */
+@media (max-width: 1023px), (pointer: coarse) {
+  .a-input,
+  .a-textarea,
+  .a-select__trigger {
+    min-height: 44px;
+    font-size: 1rem;
+  }
+}
+
+/* Stacked table rows on phones: the name cell lines up left instead of landing in the value column */
+@media (max-width: 767px) {
+  .a-table--stack .a-table__sticky {
+    display: block;
+  }
+}
+
+/* The demo-data notice needs air above the breadcrumb */
+.a-admin__content > .a-alert {
+  margin-bottom: var(--space-5);
+}
+
+.a-fieldset > legend {
+  margin-bottom: var(--space-2);
+}
+
+.a-fieldset > legend + .a-hint {
+  margin-top: calc(var(--space-2) * -1);
+}
+
+/* Dropdowns and calendars inside a dialog hang over its edge instead of being clipped */
+.a-dialog--select,
+.a-dialog--select .a-dialog__body {
+  overflow: visible;
+}

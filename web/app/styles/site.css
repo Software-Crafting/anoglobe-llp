@@ -1,0 +1,296 @@
+/* Live site additions on top of the template's stylesheets: phone and tablet fixes, legal and 404 pages. */
+
+/* Scroll reveals slide in from the sides; clip keeps them from widening the page without breaking the sticky bar */
+main {
+  overflow-x: clip;
+}
+
+/* Off-screen spam trap in the lead form */
+.v2-hp {
+  position: absolute;
+  left: -9999px;
+}
+
+/* Legal pages */
+.v2-legal {
+  padding-block: var(--space-8) var(--space-20);
+}
+
+.v2-legal .a-page-intro {
+  margin-bottom: var(--space-10);
+  padding-block: 0 var(--space-10);
+}
+
+.v2-legal .a-prose {
+  max-width: 72ch;
+}
+
+/* 404 */
+.v2-notfound {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-5);
+  padding-block: var(--space-20);
+  text-align: center;
+}
+
+/* Long button labels wrap instead of pushing the page wider (320px phones) */
+.v2-plus .a-btn--lg {
+  max-width: 100%;
+  height: auto;
+  min-height: 64px;
+  white-space: normal;
+}
+
+/* Legal pages: columns may shrink, long email addresses may break */
+.a-legal-layout {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (min-width: 1024px) {
+  .a-legal-layout {
+    grid-template-columns: 240px minmax(0, 1fr);
+  }
+}
+
+.a-prose {
+  overflow-wrap: anywhere;
+}
+
+/* Touch screens and small windows: comfortable tap targets; 16px inputs stop iOS zooming in on focus */
+@media (max-width: 1023px), (pointer: coarse) {
+  .a-input {
+    height: 48px;
+    font-size: 1rem;
+  }
+
+  .v2-marquee__toggle {
+    min-height: 44px;
+  }
+
+  .v2-footer a {
+    display: inline-block;
+    padding-block: var(--space-3);
+  }
+}
+
+/* Sticky reasons bar: one slim row of chips wherever the full bar would eat the screen */
+@media (max-width: 1023px), (max-height: 600px) {
+  .v2-nav {
+    padding-block: var(--space-2);
+  }
+
+  .v2-nav__title {
+    display: none;
+  }
+
+  .v2-nav ul {
+    gap: var(--space-2);
+    justify-content: flex-start;
+    padding-bottom: 0;
+    scrollbar-width: none;
+  }
+
+  .v2-nav ul::-webkit-scrollbar {
+    display: none;
+  }
+
+  .v2-plus .v2-nav a {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-width: 0;
+    min-height: 44px;
+    padding: var(--space-2) var(--space-3);
+    font-size: 0.875rem;
+  }
+
+  .v2-plus .v2-nav .a-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .v2-band,
+  .v2-lead-band {
+    scroll-margin-top: 64px;
+  }
+}
+
+/* Phones */
+@media (max-width: 639px) {
+  .v2-plus {
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+
+  .v2-plus .v2-lead {
+    font-size: 1.1875rem;
+  }
+
+  .v2-header {
+    gap: var(--space-3);
+    padding-block: var(--space-4);
+  }
+
+  .v2-plus .v2-header .a-logo {
+    height: 28px;
+  }
+
+  .v2-header__actions,
+  .v2-header__actions .a-btn {
+    width: 100%;
+  }
+
+  .v2-plus .a-btn--lg {
+    min-height: 52px;
+    padding: var(--space-3) var(--space-5);
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .v2-hero {
+    gap: var(--space-8);
+    padding-block: var(--space-2) var(--space-10);
+  }
+
+  .v2-plus .v2-tile {
+    grid-template-columns: 36px minmax(0, 1fr);
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .v2-plus .v2-tile .a-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .v2-plus .v2-tile strong {
+    font-size: 1.0625rem;
+  }
+
+  .v2-plus .v2-tile span span {
+    font-size: 0.9375rem;
+  }
+
+  .v2-portrait {
+    padding-inline: var(--space-8);
+  }
+
+  .v2-portrait figcaption {
+    right: var(--space-5);
+    left: var(--space-5);
+  }
+
+  .v2-band,
+  .v2-lead-band {
+    padding-block: var(--space-12);
+  }
+
+  .v2-reports {
+    gap: var(--space-10);
+    margin-top: var(--space-10);
+  }
+
+  .v2-report__card {
+    padding: var(--space-6);
+  }
+
+  .v2-two {
+    gap: var(--space-8);
+  }
+
+  .v2-videos {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .v2-videos .v2-video {
+    aspect-ratio: 16 / 9;
+  }
+
+  .v2-price {
+    gap: var(--space-5);
+  }
+
+  .v2-team figcaption {
+    max-width: 100%;
+    padding: var(--space-2) var(--space-8);
+    font-size: 1rem;
+  }
+
+  .v2-mark {
+    width: min(100%, 200px);
+  }
+
+  .v2-mark .a-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .v2-lead-band::before,
+  .v2-lead-band::after {
+    width: 40px;
+    height: 90px;
+  }
+
+  .v2-lead-box {
+    padding-block: var(--space-8);
+  }
+
+  .v2-lead-box form .a-btn {
+    width: 100%;
+  }
+}
+
+/* Smallest phones: the longest word in a heading has to fit inside its card */
+@media (max-width: 374px) {
+  .v2-plus h1 {
+    font-size: 2rem;
+  }
+
+  .v2-plus h2 {
+    font-size: 1.875rem;
+  }
+
+  .v2-card,
+  .v2-report__card {
+    padding-inline: var(--space-5);
+  }
+}
+
+/* Tablets and landscape phones: logo and actions stay on one row */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .v2-header {
+    padding-block: var(--space-4);
+  }
+
+  .v2-plus .v2-header .a-logo {
+    height: 32px;
+  }
+
+  .v2-plus .v2-header .a-btn--lg {
+    min-height: 52px;
+    padding: var(--space-3) var(--space-4);
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .v2-header__actions .v2-btn-outline {
+    display: none;
+  }
+}
+
+/* The page's big h2 size must not reach the dialog title */
+.v2-plus .a-dialog__title {
+  font-size: var(--text-h4);
+}
+
+/* A 16:9 box grows wider than its column when the label wraps; hold the column to the page width */
+.v2-how {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+/* The browser's default dialog max-width keeps the phone bottom sheet short of the right edge */
+.a-dialog {
+  max-width: 100%;
+}
