@@ -1,6 +1,6 @@
 # Anoglobe Bookkeeping: project context
 
-**Last updated: 2026-11-05**
+**Last updated: 2026-11-10**
 
 Read this before changing anything. **After every change, update this file: the date above, whichever section changed, and one line in the change log at the bottom.**
 
@@ -162,5 +162,7 @@ web/
 
 Newest first. One line per change.
 
+- 2026-11-10: Catch-up dialog: second option renamed from "I Already Have QuickBooks" to "I Already Have a Bookkeeping File" at the owner's request (the client's Website Dev PDF still says QuickBooks).
+- 2026-11-10: Home: "US Based" is now the 8th hero tile and sticky bar tab, linking to a new `#us-based` section. Report and review images replaced with the client's new ones as WebP (Better Reporting report 2 is now four charts in a grid, `.v2-shots`). Old PNG/JPG removed. Added `globe` icon to the site sprite.
 - 2026-11-05: Added onboarding, admin panel, state pages and emails. Added context.md.
 - 2026-11-04: Built the public site from `index_v2.html` in Next.js with Postgres. Responsive fixes for phone and tablet.

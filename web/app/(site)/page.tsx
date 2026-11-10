@@ -10,6 +10,7 @@ const REASONS = [
   { id: "people", icon: "users", title: "Real Humans", text: "Personal service, not software" },
   { id: "software", icon: "ledger-book", title: "Use QB, Xero and Wave", text: "Software you already use" },
   { id: "focus", icon: "calculator", title: "Just Bookkeeping", text: "Focused on bookkeeping excellence" },
+  { id: "us-based", icon: "globe", title: "US Based", text: "Bookkeeping for US businesses" },
 ];
 
 const REVIEW_ROWS = [
@@ -29,25 +30,24 @@ const REVIEW_ROWS = [
 
 const REPORTS = [
   {
-    image: "/assets/img/site/insight-statements.png",
-    height: 764,
-    alt: "Sample insight statements for January: income, expenses, profit, margin, bank balances, forecast, equity and liabilities, each in one plain sentence.",
+    images: [{ src: "/assets/img/site/insight-statements.webp", width: 1280, height: 954, alt: "Sample financial highlights for March: revenue, expenses, profit, margin, cash balance, forecast, equity and liabilities, each in one plain sentence with its page number." }],
     title: "CFO-Level Insights",
     lead: "See the bigger picture at a glance.",
     text: "Get a clear snapshot of your business’s financial performance, without the cost of hiring a full-time CFO.",
   },
   {
-    image: "/assets/img/site/visual-reports.png",
-    height: 955,
-    alt: "Sample charts: yearly income forecast, monthly bank balances with cash in and out, quarterly profit and monthly income against the average.",
+    images: [
+      { src: "/assets/img/site/report-income-forecast.webp", width: 737, height: 484, alt: "Sample chart: forecast income for the year against actual income, month by month." },
+      { src: "/assets/img/site/report-bank-balance.webp", width: 730, height: 484, alt: "Sample chart: monthly cash in, cash out and bank account balance." },
+      { src: "/assets/img/site/report-quarterly-profit.webp", width: 741, height: 440, alt: "Sample chart: quarterly profit compared with the year before." },
+      { src: "/assets/img/site/report-monthly-income.webp", width: 733, height: 448, alt: "Sample chart: this month's income against the monthly average." },
+    ],
     title: "Visual Reports That Make Sense",
     lead: "Know where your money goes.",
     text: "Understand your profits, expenses, cash flow, margins, and financial trends through easy-to-follow visuals.",
   },
   {
-    image: "/assets/img/site/tax-statements.png",
-    height: 689,
-    alt: "Sample profit and loss statements: a yearly comparison and a 12 month comparison.",
+    images: [{ src: "/assets/img/site/tax-statements.webp", width: 1529, height: 1029, alt: "Sample profit and loss statements: a yearly comparison and a 12 month comparison." }],
     title: "Financial Statements for Tax Time",
     lead: "Stay organized and prepared.",
     text: "Get the essential financial statements your accountant needs to help with tax preparation.",
@@ -73,7 +73,7 @@ export default function HomePage() {
       <section className="v2-wrap v2-hero" aria-labelledby="hero-title">
         <div>
           <h1 id="hero-title" data-reveal="">7 Reasons to Choose Anoglobe</h1>
-          <ul className="v2-tiles" role="list" aria-label="Seven reasons to choose Anoglobe">
+          <ul className="v2-tiles" role="list" aria-label="Reasons to choose Anoglobe">
             {REASONS.map(({ id, icon, title, text }, index) => (
               <li data-reveal="" style={revealIndex(index)} key={id}>
                 <a className="v2-tile" href={`#${id}`}>
@@ -82,12 +82,6 @@ export default function HomePage() {
                 </a>
               </li>
             ))}
-            <li data-reveal="" style={revealIndex(7)}>
-              <div className="v2-tile v2-tile--plain">
-                <Icon name="globe-duo" />
-                <span><strong>US based</strong><span>Bookkeeping for US businesses</span></span>
-              </div>
-            </li>
           </ul>
         </div>
         <figure className="v2-portrait" data-reveal="right" style={revealIndex(2)}>
@@ -96,7 +90,7 @@ export default function HomePage() {
         </figure>
       </section>
 
-      <nav className="v2-nav" aria-label="Seven reasons" data-toc="">
+      <nav className="v2-nav" aria-label="Reasons to choose Anoglobe" data-toc="">
         <div className="v2-wrap">
           <p className="v2-nav__title">7 Reasons to Choose Anoglobe</p>
           <ul role="list">
@@ -153,9 +147,13 @@ export default function HomePage() {
             <p>You shouldn’t need an accounting background to understand your numbers. Our reports turn your financial data into clear insights, helping you see how your business is doing and where it may need attention.</p>
           </div>
           <div className="v2-reports">
-            {REPORTS.map(({ image, height, alt, title, lead, text }, index) => (
+            {REPORTS.map(({ images, title, lead, text }, index) => (
               <div className="v2-report" key={title}>
-                <Image className="v2-shot" src={image} width={1024} height={height} alt={alt} sizes="(min-width: 1024px) 58vw, 100vw" data-reveal={index % 2 ? "right" : "left"} />
+                <div className={images.length > 1 ? "v2-shots" : undefined} data-reveal={index % 2 ? "right" : "left"}>
+                  {images.map((image) => (
+                    <Image className="v2-shot" {...image} key={image.src} sizes={images.length > 1 ? "(min-width: 640px) 29vw, 100vw" : "(min-width: 1024px) 58vw, 100vw"} />
+                  ))}
+                </div>
                 <div className="v2-report__card" data-reveal={index % 2 ? "left" : "right"}>
                   <p className="v2-step">Report {index + 1} of 3</p>
                   <h3>{title}</h3>
@@ -170,7 +168,7 @@ export default function HomePage() {
 
       <section className="v2-band v2-band--sky" id="review" aria-labelledby="review-title">
         <div className="v2-wrap v2-two">
-          <Image className="v2-shot" src="/assets/img/site/review-checklist.jpg" width={1264} height={1082} alt="Sample review sheet: a spreadsheet of categorized transactions next to a review checklist for income, meals, personal, new vendors and uncategorized items." sizes="(min-width: 1024px) 50vw, 100vw" data-reveal="left" />
+          <Image className="v2-shot" src="/assets/img/site/review-checklist.webp" width={1254} height={1254} alt="Sample review sheet: a spreadsheet of categorized transactions next to a review checklist for income, meals, travel, new vendors and uncategorized items." sizes="(min-width: 1024px) 50vw, 100vw" data-reveal="left" />
           <div className="v2-card" data-reveal="right">
             <span className="v2-badge" aria-hidden="true"><Icon name="file-text" /></span>
             <h2 id="review-title">Easy Bookkeeping Review</h2>
@@ -219,7 +217,7 @@ export default function HomePage() {
               <p className="a-small a-muted">{CATCHUP_DISCOUNT}</p>
             </article>
             <article className="v2-catchup__option">
-              <h3>I Already Have QuickBooks</h3>
+              <h3>I Already Have a Bookkeeping File</h3>
               <p>Already have a bookkeeping file? We’ll review your existing records, identify what needs attention, and bring your books up to date.</p>
               <p className="v2-catchup__price">{CATCHUP_PRICE}</p>
               <p className="a-small a-muted">{CATCHUP_DISCOUNT}</p>
@@ -278,6 +276,17 @@ export default function HomePage() {
             <p>Already have a CPA? Great! We’ll help keep your books in order so your accountant can focus on tax and advisory work.</p>
           </div>
           <div className="v2-mark" aria-hidden="true" data-reveal="zoom"><Icon name="calculator-duo" /></div>
+        </div>
+      </section>
+
+      <section className="v2-band v2-band--mint" id="us-based" aria-labelledby="us-based-title">
+        <div className="v2-wrap">
+          <div className="v2-card v2-card--center" data-reveal="zoom">
+            <span className="v2-badge" aria-hidden="true"><Icon name="globe" /></span>
+            <h2 id="us-based-title">US Based</h2>
+            <p>Proudly US-based, we help small businesses across the United States manage their finances with reliable, affordable, and professional bookkeeping services.</p>
+            <p className="v2-lead">Our goal is to make bookkeeping simpler, so you can focus on running your business.</p>
+          </div>
         </div>
       </section>
 
