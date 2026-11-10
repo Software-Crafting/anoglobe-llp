@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ContactPrompt } from "@/components/contact";
 import { LeadForm } from "@/components/lead-form";
 import { Icon, PhotoPlaceholder, revealIndex, Stars, VideoPlaceholder } from "@/components/ui";
 
@@ -200,6 +201,7 @@ export default function HomePage() {
               <button type="button" className="a-btn a-btn--primary a-btn--lg" data-dialog-open="catchup-dialog">Explore Catch-Up Pricing</button>
             </div>
           </div>
+          <ContactPrompt title="Questions about pricing?" text="Talk it through with a real person before you decide." />
         </div>
         <dialog className="a-dialog" id="catchup-dialog" aria-labelledby="catchup-title" aria-describedby="catchup-desc">
           <div className="a-dialog__header">
@@ -247,6 +249,7 @@ export default function HomePage() {
               <figcaption>The Anoglobe Team</figcaption>
             </figure>
           </div>
+          <ContactPrompt title="Want to talk to our team?" text="Call, book a time, or send us a message." />
         </div>
       </section>
 

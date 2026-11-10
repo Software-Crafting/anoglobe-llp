@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { ContactWidget } from "@/components/contact";
 import { SiteBehaviour } from "@/components/site-behaviour";
 import { SPRITE } from "@/components/sprite";
 import { Icon } from "@/components/ui";
@@ -56,6 +57,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </ul>
           </div>
         </footer>
+        <ContactWidget />
         <svg className="a-sprite" aria-hidden="true" focusable="false" dangerouslySetInnerHTML={{ __html: SPRITE }} />
         <SiteBehaviour />
       </body>

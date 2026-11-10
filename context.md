@@ -64,6 +64,7 @@ Demo data: `npm run demo:seed` and `npm run demo:clear`. The admin shows a warni
 | AI calls | Choice of provider and API key | Calls are queued and listed, never placed. Hook is `queueCall()` in `lib/events.ts`. Call status and summaries will arrive from the provider. |
 | Live emails | SMTP details, verified sending domain | Saved with status "Not sent". |
 | Client content | Founder names, founder and team photos, 4 videos | Placeholders on the home page. |
+| Contact button | Phone number, calling hours, Calendly link | Marked placeholders in the "Talk to Us" panel. Fill `PHONE`, `HOURS`, `BOOKING_URL` at the top of `components/contact.tsx`. |
 | Legal text | Review by Anoglobe's lawyer | Privacy, terms and billing authorization are marked as sample. They mention a pricing page, plans and Stripe, so they need rewriting for the final setup. |
 
 **Decided, ask the owner before reversing:**
@@ -162,6 +163,8 @@ web/
 
 Newest first. One line per change.
 
+- 2026-11-10: Contact panel opens with the design system's spring (`--ease-spring`, 480ms) and closes with a short ease-in; tokens added in `site.css`, off under reduced motion. Ported the design system tooltip (`data-ds-tooltip`, in `site-behaviour.tsx`) to label the round phone button below 640px.
+- 2026-11-10: Site: floating "Talk to Us" button (call, book a call, send a message) on every site page, using the native `popover`; hidden while the lead form is on screen. "Talk to Us" prompts after Pricing and Real Humans open the same panel. Chosen over an automatic pop-up.
 - 2026-11-10: Catch-up dialog: second option renamed from "I Already Have QuickBooks" to "I Already Have a Bookkeeping File" at the owner's request (the client's Website Dev PDF still says QuickBooks).
 - 2026-11-10: Home: "US Based" is now the 8th hero tile and sticky bar tab, linking to a new `#us-based` section. Report and review images replaced with the client's new ones as WebP (Better Reporting report 2 is now four charts in a grid, `.v2-shots`). Old PNG/JPG removed. Added `globe` icon to the site sprite.
 - 2026-11-05: Added onboarding, admin panel, state pages and emails. Added context.md.
