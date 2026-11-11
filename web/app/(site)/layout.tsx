@@ -53,7 +53,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <ul role="list">
               <li><Link href="/privacy">Privacy</Link></li>
               <li><Link href="/terms">Terms</Link></li>
-              <li><a href="#main">Back to top</a></li>
+              <li><button type="button" className="ds-back-to-top" data-ds-back-to-top="" aria-label="Back to top"><Icon name="arrow-up" /></button></li>
             </ul>
           </div>
         </footer>

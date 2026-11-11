@@ -201,11 +201,10 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <dialog className="a-dialog" id="catchup-dialog" aria-labelledby="catchup-title" aria-describedby="catchup-desc">
+        <dialog className="a-dialog" id="catchup-dialog" aria-labelledby="catchup-title">
           <div className="a-dialog__header">
             <div>
               <h2 className="a-dialog__title" id="catchup-title">Catch-up pricing</h2>
-              <p className="a-dialog__description" id="catchup-desc">Choose the option that matches where your books are today.</p>
             </div>
             <button type="button" className="a-btn a-btn--ghost a-btn--icon a-dialog__close" data-dialog-close="" aria-label="Close"><Icon name="close" /></button>
           </div>

@@ -291,22 +291,51 @@ main {
   max-width: 100%;
 }
 
-/* Better reporting: several charts for one report sit in a grid */
-.v2-shots {
-  display: grid;
-  align-items: start;
-  gap: var(--space-4);
+/* Easy Bookkeeping Review: text before the image until the two sit side by side */
+@media (max-width: 1023px) {
+  #review .v2-two > .v2-card {
+    order: -1;
+  }
 }
 
-@media (min-width: 640px) {
-  .v2-shots {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+/* Better reporting: several charts for one report. Phones: an overlapping, staggered collage. Wider: a 2 by 2 grid. */
+.v2-shots {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: start;
 }
 
 .v2-shots .v2-shot {
   height: auto;
   border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+}
+
+/* Each chart spans two rows and the next starts one row lower, so every chart overlaps the one before by half */
+.v2-shots .v2-shot:nth-child(odd) {
+  grid-column: 1 / 8;
+}
+
+.v2-shots .v2-shot:nth-child(even) {
+  grid-column: 6 / 13;
+}
+
+.v2-shots .v2-shot:nth-child(1) { grid-row: 1 / 3; }
+.v2-shots .v2-shot:nth-child(2) { grid-row: 2 / 4; }
+.v2-shots .v2-shot:nth-child(3) { grid-row: 3 / 5; }
+.v2-shots .v2-shot:nth-child(4) { grid-row: 4 / 6; }
+
+@media (min-width: 640px) {
+  .v2-shots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-4);
+  }
+
+  .v2-shots .v2-shot:nth-child(n) {
+    grid-column: auto;
+    grid-row: auto;
+    box-shadow: none;
+  }
 }
 
 /* Floating Call Us and Book a Call buttons (components/contact.tsx) */
@@ -365,6 +394,36 @@ main {
   .v2-fabs {
     flex-direction: row;
   }
+}
+
+/* Back to top from the design system (components/back-to-top, mini secondary FAB look), on this project's tokens.
+   It lives at the end of the footer links rather than floating. */
+.v2-footer ul {
+  align-items: center;
+}
+
+.ds-back-to-top {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--foreground);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--duration-spring) var(--ease-spring), background var(--duration-fast);
+}
+
+.ds-back-to-top:hover {
+  background: var(--muted);
+}
+
+.ds-back-to-top:active {
+  transform: scale(0.92);
+  transition-duration: var(--duration-fast);
 }
 
 /* Motion tokens from the design system (tokens/tokens.css): springs enter, short ease-in exits */

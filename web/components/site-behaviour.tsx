@@ -98,7 +98,7 @@ function initContact() {
   return () => observer.disconnect();
 }
 
-// Opens the contact form once the reader scrolls to Real Humans, or past it, so Pricing reads without interruption.
+// Opens the contact form once Real Humans reaches the top (where the sticky bar marks it), or later, so Pricing reads without interruption.
 // ponytail: once per page load, so a full reload shows it again. Use sessionStorage if that annoys real visitors.
 const POPUP_DELAY_MS = 600;
 let popupShown = false;
@@ -108,20 +108,24 @@ function initContactPopup() {
   const trigger = document.getElementById("people");
   if (!dialog || !trigger || popupShown) return () => {};
 
+  const reached = () => trigger.getBoundingClientRect().top <= ACTIVE_LINE;
   let timer = 0;
+  let lastY = scrollY;
   const onScroll = () => {
-    if (timer || trigger.getBoundingClientRect().top > innerHeight / 2) return;
+    // Only on the way down: scrolling back up, or Back to top, passes Real Humans too.
+    const down = scrollY > lastY;
+    lastY = scrollY;
+    if (timer || !down || !reached()) return;
     timer = window.setTimeout(() => {
       timer = 0;
-      // Another dialog is open or the page's own form is on screen: try again on the next scroll.
-      if (document.querySelector("dialog[open], [data-contact][data-hidden]")) return;
+      // Scrolled back up meanwhile, another dialog is open or the page's own form is on screen: try again later.
+      if (!reached() || document.querySelector("dialog[open], [data-contact][data-hidden]")) return;
       popupShown = true;
       window.removeEventListener("scroll", onScroll);
       if (!document.querySelector(".v2-lead-sent")) dialog.showModal();
     }, POPUP_DELAY_MS);
   };
   window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
   return () => {
     window.removeEventListener("scroll", onScroll);
     clearTimeout(timer);
@@ -131,6 +135,16 @@ function initContactPopup() {
 function onClick(event: MouseEvent) {
   const target = event.target as HTMLElement;
 
+  // Back to top: scroll up, then move focus to main so keyboard users start again from there.
+  if (target.closest("[data-ds-back-to-top]")) {
+    window.scrollTo({ top: 0, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+    const main = document.querySelector("main");
+    if (main) {
+      main.tabIndex = -1;
+      main.focus({ preventScroll: true });
+    }
+    return;
+  }
 
   const opener = target.closest<HTMLElement>("[data-dialog-open]");
   if (opener) return (document.getElementById(opener.dataset.dialogOpen!) as HTMLDialogElement).showModal();

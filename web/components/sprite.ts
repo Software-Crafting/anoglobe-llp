@@ -1,6 +1,7 @@
 // Icon symbols from the design system, inlined once per page so CSS variables reach them.
 export const SPRITE = `
 <symbol id="alert-triangle" viewBox="0 0 24 24"><path d="M10.3 4.4a2 2 0 0 1 3.4 0l7.6 13.1a2 2 0 0 1-1.7 3H4.4a2 2 0 0 1-1.7-3z" style="stroke-dasharray: calc(57.868 - var(--icon-gap)) var(--icon-gap); stroke-dashoffset: calc(49.767 - var(--icon-gap) / 2)"/><path d="M12 9.5v4"/><path d="M12 16.8h.01" style="stroke-width: calc(var(--icon-stroke) * 1.6)"/></symbol>
+<symbol id="arrow-up" viewBox="0 0 24 24"><g transform="rotate(-90 12 12)"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></g></symbol>
 <symbol id="arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></symbol>
 <symbol id="bar-chart" viewBox="0 0 24 24"><path d="M3.5 20.5h17"/><path d="M6.5 17v-5"/><path d="M11 17V7"/><path d="M15.5 17v-8"/><path d="M19.5 17v-3"/></symbol>
 <symbol id="bar-chart-duo" viewBox="0 0 24 24"><path d="M3.5 20.5h17"/><path d="M6.5 17v-5"/><path d="M11 17V7"/><path d="M15.5 17v-8"/><path d="M19.5 17v-3"/></symbol>
