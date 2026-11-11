@@ -163,7 +163,8 @@ web/
 
 Newest first. One line per change.
 
-- 2026-11-11: Site: replaced the "Talk to Us" bubble, its panel, tooltip and section prompts with two floating buttons (Call Us, Book a Call) as the client asked, plus a lead form popup that opens once per page load on scrolling to Pricing. `LeadForm` takes `idPrefix`; its submit button is full width in the popup and the page's form. The buttons hide while the lead form or footer is on screen.
+- 2026-11-11: Hero and sticky bar read "8 Reasons". Lead form label "Email" instead of "Business Email". Contact popup now opens at Real Humans, not Pricing.
+- 2026-11-11: Site: replaced the "Talk to Us" bubble, its panel, tooltip and section prompts with two floating buttons (Call Us, Book a Call) as the client asked, plus a lead form popup that opens once per page load on scrolling to Real Humans. `LeadForm` takes `idPrefix`; its submit button is full width in the popup and the page's form. The buttons hide while the lead form or footer is on screen.
 - 2026-11-10: Contact panel opens with the design system's spring (`--ease-spring`, 480ms) and closes with a short ease-in; tokens added in `site.css`, off under reduced motion. Ported the design system tooltip (`data-ds-tooltip`, in `site-behaviour.tsx`) to label the round phone button below 640px.
 - 2026-11-10: Site: floating "Talk to Us" button (call, book a call, send a message) on every site page, using the native `popover`; hidden while the lead form is on screen. "Talk to Us" prompts after Pricing and Real Humans open the same panel. Chosen over an automatic pop-up.
 - 2026-11-10: Catch-up dialog: second option renamed from "I Already Have QuickBooks" to "I Already Have a Bookkeeping File" at the owner's request (the client's Website Dev PDF still says QuickBooks).

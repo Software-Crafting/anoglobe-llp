@@ -98,19 +98,19 @@ function initContact() {
   return () => observer.disconnect();
 }
 
-// Opens the contact form once the reader scrolls to Pricing, or past it.
+// Opens the contact form once the reader scrolls to Real Humans, or past it, so Pricing reads without interruption.
 // ponytail: once per page load, so a full reload shows it again. Use sessionStorage if that annoys real visitors.
 const POPUP_DELAY_MS = 600;
 let popupShown = false;
 
 function initContactPopup() {
   const dialog = document.getElementById("contact-dialog") as HTMLDialogElement | null;
-  const pricing = document.getElementById("pricing");
-  if (!dialog || !pricing || popupShown) return () => {};
+  const trigger = document.getElementById("people");
+  if (!dialog || !trigger || popupShown) return () => {};
 
   let timer = 0;
   const onScroll = () => {
-    if (timer || pricing.getBoundingClientRect().top > innerHeight / 2) return;
+    if (timer || trigger.getBoundingClientRect().top > innerHeight / 2) return;
     timer = window.setTimeout(() => {
       timer = 0;
       // Another dialog is open or the page's own form is on screen: try again on the next scroll.

@@ -72,7 +72,7 @@ export default function HomePage() {
     <main id="main">
       <section className="v2-wrap v2-hero" aria-labelledby="hero-title">
         <div>
-          <h1 id="hero-title" data-reveal="">7 Reasons to Choose Anoglobe</h1>
+          <h1 id="hero-title" data-reveal="">8 Reasons to Choose Anoglobe</h1>
           <ul className="v2-tiles" role="list" aria-label="Reasons to choose Anoglobe">
             {REASONS.map(({ id, icon, title, text }, index) => (
               <li data-reveal="" style={revealIndex(index)} key={id}>
@@ -92,7 +92,7 @@ export default function HomePage() {
 
       <nav className="v2-nav" aria-label="Reasons to choose Anoglobe" data-toc="">
         <div className="v2-wrap">
-          <p className="v2-nav__title">7 Reasons to Choose Anoglobe</p>
+          <p className="v2-nav__title">8 Reasons to Choose Anoglobe</p>
           <ul role="list">
             {REASONS.map(({ id, icon, title }) => (
               <li key={id}><a href={`#${id}`}><Icon name={icon} />{title}</a></li>

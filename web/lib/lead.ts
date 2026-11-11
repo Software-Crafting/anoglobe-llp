@@ -28,7 +28,7 @@ export function validateLead(input: unknown): { lead: Lead; errors: null } | { l
   else if (firstName.length > 100) errors["lead-first-name"] = "Use 100 characters or fewer";
   if (!lastName) errors["lead-last-name"] = "Enter your last name";
   else if (lastName.length > 100) errors["lead-last-name"] = "Use 100 characters or fewer";
-  if (!email) errors["lead-email"] = "Enter your business email";
+  if (!email) errors["lead-email"] = "Enter your email";
   else if (email.length > 254 || !EMAIL.test(email)) errors["lead-email"] = "Enter an email like name@company.com";
   if (!phone) errors["lead-phone"] = "Enter your phone number";
   else if (!PHONE.test(phone)) errors["lead-phone"] = "Enter a phone number like (415) 555-0132";

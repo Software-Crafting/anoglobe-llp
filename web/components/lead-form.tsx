@@ -7,7 +7,7 @@ import { Icon } from "./ui";
 const FIELDS: { name: LeadField; label: string; type: string; autoComplete: string; placeholder?: string }[] = [
   { name: "lead-first-name", label: "First Name", type: "text", autoComplete: "given-name" },
   { name: "lead-last-name", label: "Last Name", type: "text", autoComplete: "family-name" },
-  { name: "lead-email", label: "Business Email", type: "email", autoComplete: "email" },
+  { name: "lead-email", label: "Email", type: "email", autoComplete: "email" },
   { name: "lead-phone", label: "Phone Number", type: "tel", autoComplete: "tel-national", placeholder: "(415) 555-0132" },
 ];
 
