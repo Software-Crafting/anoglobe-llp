@@ -163,6 +163,8 @@ web/
 
 Newest first. One line per change.
 
+- 2026-11-11: Video placeholders: play button at the true centre of the box, label under it, triangle no longer nudged right.
+- 2026-11-11: Sticky reasons bar marks a section once its top passes 40% of the screen height, not the bar itself, so the tab matches what is on screen.
 - 2026-11-11: Catch-up dialog: description removed, title only. Report 2 charts overlap as a staggered collage on phones (2 by 2 grid from 640px). Back to top button from the design system replaces the footer's text link. Easy Bookkeeping Review shows text before the image below 1024px. Contact popup opens only while scrolling down, once Real Humans reaches the top.
 - 2026-11-11: Hero and sticky bar read "8 Reasons". Lead form label "Email" instead of "Business Email". Contact popup now opens at Real Humans, not Pricing.
 - 2026-11-11: Site: replaced the "Talk to Us" bubble, its panel, tooltip and section prompts with two floating buttons (Call Us, Book a Call) as the client asked, plus a lead form popup that opens once per page load when Real Humans reaches the top. `LeadForm` takes `idPrefix`; its submit button is full width in the popup and the page's form. The buttons hide while the lead form or footer is on screen.

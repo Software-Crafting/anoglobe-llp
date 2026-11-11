@@ -5,7 +5,9 @@ import { useEffect } from "react";
 
 // Page motion and small interactions from the template, driven by data attributes so pages stay server-rendered.
 // Motion only runs when html[data-motion] is set (see layout.tsx); otherwise the page is static and fully visible.
-const ACTIVE_LINE = 140;
+const ACTIVE_LINE = 140; // Just under the sticky reasons bar.
+// A section's tab lights up once its top passes this share of the screen height, so the tab follows what fills the screen.
+const TOC_LINE = 0.4;
 
 function onVisible(elements: Iterable<Element>, threshold: number, callback: (element: HTMLElement) => void) {
   const observer = new IntersectionObserver(
@@ -59,7 +61,7 @@ function initToc() {
   const update = () => {
     frame = 0;
     const atEnd = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
-    const passed = targets.filter(({ section }) => section!.getBoundingClientRect().top <= ACTIVE_LINE);
+    const passed = targets.filter(({ section }) => section!.getBoundingClientRect().top <= innerHeight * TOC_LINE);
     const active = (atEnd && passed.length ? targets.at(-1) : passed.at(-1))?.link ?? null;
     if (active === current) return;
     current?.removeAttribute("aria-current");
@@ -98,7 +100,7 @@ function initContact() {
   return () => observer.disconnect();
 }
 
-// Opens the contact form once Real Humans reaches the top (where the sticky bar marks it), or later, so Pricing reads without interruption.
+// Opens the contact form once Real Humans reaches the sticky bar, or later, so Pricing reads without interruption.
 // ponytail: once per page load, so a full reload shows it again. Use sessionStorage if that annoys real visitors.
 const POPUP_DELAY_MS = 600;
 let popupShown = false;
