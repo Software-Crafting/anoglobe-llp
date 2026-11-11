@@ -82,111 +82,55 @@ function initToc() {
   };
 }
 
-// Hides the floating contact button while the lead form is on screen, so the two do not compete.
+// Hides the floating contact buttons while the lead form or footer is on screen, so they neither compete nor cover links.
 function initContact() {
   const widget = document.querySelector<HTMLElement>("[data-contact]");
-  const form = document.getElementById("get-started");
-  if (!widget || !form) return () => widget?.removeAttribute("data-hidden");
-  const observer = new IntersectionObserver(([entry]) => widget.toggleAttribute("data-hidden", entry.isIntersecting));
-  observer.observe(form);
+  if (!widget) return () => {};
+  const onScreen = new Set<Element>();
+  const observer = new IntersectionObserver((entries) => {
+    for (const { target, isIntersecting } of entries) {
+      if (isIntersecting) onScreen.add(target);
+      else onScreen.delete(target);
+    }
+    widget.toggleAttribute("data-hidden", onScreen.size > 0);
+  });
+  document.querySelectorAll("#get-started, .v2-footer").forEach((element) => observer.observe(element));
   return () => observer.disconnect();
 }
 
-// Tooltip ported from the design system (components/tooltip/tooltip.js): data-ds-tooltip="Text", optional
-// data-ds-tooltip-side (top, right, bottom, left) and data-ds-tooltip-when (media query, e.g. only while a label is hidden).
-// Shows after a short delay on hover, at once on keyboard focus; hides on leave, blur, press or Esc. Touch never shows it.
-function initTooltip() {
-  const DELAY_MS = 500;
-  const GAP = 8;
-  const tip = document.createElement("div");
-  tip.className = "ds-tooltip";
-  tip.id = "ds-tooltip";
-  tip.setAttribute("role", "tooltip");
-  tip.setAttribute("popover", "manual");
-  document.body.append(tip);
-  let current: HTMLElement | null = null;
+// Opens the contact form once the reader scrolls to Pricing, or past it.
+// ponytail: once per page load, so a full reload shows it again. Use sessionStorage if that annoys real visitors.
+const POPUP_DELAY_MS = 600;
+let popupShown = false;
+
+function initContactPopup() {
+  const dialog = document.getElementById("contact-dialog") as HTMLDialogElement | null;
+  const pricing = document.getElementById("pricing");
+  if (!dialog || !pricing || popupShown) return () => {};
+
   let timer = 0;
-  let warmUntil = 0;
-
-  const place = (trigger: HTMLElement) => {
-    const r = trigger.getBoundingClientRect();
-    const { offsetWidth: width, offsetHeight: height } = tip; // offset size ignores the entry scale
-    const side = trigger.dataset.dsTooltipSide || "top";
-    let x = r.left + (r.width - width) / 2;
-    let y = r.top - height - GAP;
-    if (side === "bottom") y = r.bottom + GAP;
-    if (side === "left" || side === "right") {
-      x = side === "left" ? r.left - width - GAP : r.right + GAP;
-      y = r.top + (r.height - height) / 2;
-    }
-    tip.style.left = `${Math.max(GAP, Math.min(x, innerWidth - width - GAP))}px`;
-    tip.style.top = `${Math.max(GAP, Math.min(y, innerHeight - height - GAP))}px`;
-    tip.dataset.side = side;
+  const onScroll = () => {
+    if (timer || pricing.getBoundingClientRect().top > innerHeight / 2) return;
+    timer = window.setTimeout(() => {
+      timer = 0;
+      // Another dialog is open or the page's own form is on screen: try again on the next scroll.
+      if (document.querySelector("dialog[open], [data-contact][data-hidden]")) return;
+      popupShown = true;
+      window.removeEventListener("scroll", onScroll);
+      if (!document.querySelector(".v2-lead-sent")) dialog.showModal();
+    }, POPUP_DELAY_MS);
   };
-  const panelOpen = (trigger: HTMLElement) => {
-    const id = trigger.getAttribute("popovertarget");
-    return trigger.getAttribute("aria-expanded") === "true" || !!(id && document.getElementById(id)?.matches(":popover-open"));
-  };
-  const show = (trigger: HTMLElement) => {
-    clearTimeout(timer);
-    const when = trigger.dataset.dsTooltipWhen;
-    if (!trigger.isConnected || panelOpen(trigger) || (when && !matchMedia(when).matches)) return;
-    current = trigger;
-    tip.textContent = trigger.dataset.dsTooltip!;
-    if (!tip.matches(":popover-open")) tip.showPopover();
-    place(trigger);
-    const name = trigger.getAttribute("aria-label") ?? trigger.textContent?.trim();
-    if (name !== trigger.dataset.dsTooltip) trigger.setAttribute("aria-describedby", tip.id);
-  };
-  const hide = () => {
-    clearTimeout(timer);
-    if (current?.getAttribute("aria-describedby") === tip.id) current.removeAttribute("aria-describedby");
-    if (current) warmUntil = Date.now() + 300;
-    current = null;
-    if (tip.matches(":popover-open")) tip.hidePopover();
-  };
-  const triggerOf = (event: Event) => (event.target as Element).closest?.<HTMLElement>("[data-ds-tooltip]") ?? null;
-
-  const onOver = (event: PointerEvent) => {
-    if (event.pointerType === "touch") return;
-    const trigger = triggerOf(event);
-    if (!trigger || trigger === current) return;
-    clearTimeout(timer);
-    timer = window.setTimeout(() => show(trigger), Date.now() < warmUntil ? 0 : DELAY_MS);
-  };
-  const onOut = (event: PointerEvent) => {
-    const trigger = triggerOf(event);
-    if (trigger && !trigger.contains(event.relatedTarget as Node)) hide();
-  };
-  const onFocusIn = (event: FocusEvent) => {
-    const trigger = triggerOf(event);
-    if (!trigger || !trigger.matches(":focus-visible")) return;
-    clearTimeout(timer);
-    timer = window.setTimeout(() => { if (document.activeElement === trigger) show(trigger); }, 0);
-  };
-  const onFocusOut = (event: FocusEvent) => { if (triggerOf(event)) hide(); };
-  const onKey = (event: KeyboardEvent) => { if (event.key === "Escape" && current) hide(); };
-  // Another popover opening (the contact panel) takes over
-  const onToggle = (event: Event) => { if (event.target !== tip && (event as ToggleEvent).newState === "open" && current) hide(); };
-  const listeners: [string, EventListener, boolean?][] = [
-    ["pointerover", onOver as EventListener], ["pointerout", onOut as EventListener], ["focusin", onFocusIn as EventListener],
-    ["focusout", onFocusOut as EventListener], ["keydown", onKey as EventListener], ["pointerdown", hide], ["scroll", hide],
-    ["toggle", onToggle, true],
-  ];
-  for (const [type, fn, capture] of listeners) document.addEventListener(type, fn, capture);
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
   return () => {
-    for (const [type, fn, capture] of listeners) document.removeEventListener(type, fn, capture);
+    window.removeEventListener("scroll", onScroll);
     clearTimeout(timer);
-    tip.remove();
   };
 }
 
 function onClick(event: MouseEvent) {
   const target = event.target as HTMLElement;
 
-  // A link inside a popover (contact panel) closes it, since the page may only scroll.
-  const popoverLink = target.closest("[popover] a");
-  if (popoverLink) popoverLink.closest<HTMLElement>("[popover]")!.hidePopover();
 
   const opener = target.closest<HTMLElement>("[data-dialog-open]");
   if (opener) return (document.getElementById(opener.dataset.dialogOpen!) as HTMLDialogElement).showModal();
@@ -211,20 +155,18 @@ export function SiteBehaviour() {
     const stopMotion = initMotion();
     const stopToc = initToc();
     const stopContact = initContact();
+    const stopPopup = initContactPopup();
     return () => {
       stopMotion();
       stopToc();
       stopContact();
+      stopPopup();
     };
   }, [pathname]);
 
   useEffect(() => {
     document.addEventListener("click", onClick);
-    const stopTooltip = initTooltip();
-    return () => {
-      document.removeEventListener("click", onClick);
-      stopTooltip();
-    };
+    return () => document.removeEventListener("click", onClick);
   }, []);
 
   return null;

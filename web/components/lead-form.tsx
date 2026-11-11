@@ -11,7 +11,7 @@ const FIELDS: { name: LeadField; label: string; type: string; autoComplete: stri
   { name: "lead-phone", label: "Phone Number", type: "tel", autoComplete: "tel-national", placeholder: "(415) 555-0132" },
 ];
 
-export function LeadForm() {
+export function LeadForm({ idPrefix = "" }: { idPrefix?: string }) {
   const [errors, setErrors] = useState<LeadErrors>({});
   const [status, setStatus] = useState<"idle" | "sending" | "failed" | "sent">("idle");
   const sentHeading = useRef<HTMLHeadingElement>(null);
@@ -78,12 +78,12 @@ export function LeadForm() {
     <form className="a-form-grid a-form-grid--2" onSubmit={onSubmit} onInput={onInput} noValidate>
       {FIELDS.map(({ name, label, type, autoComplete, placeholder }) => (
         <div className="a-field" key={name}>
-          <label className="a-label" htmlFor={name}>
+          <label className="a-label" htmlFor={`${idPrefix}${name}`}>
             <span>{label}<span className="a-label__required" aria-hidden="true">*</span></span>
           </label>
           <input
             className="a-input"
-            id={name}
+            id={`${idPrefix}${name}`}
             name={name}
             type={type}
             autoComplete={autoComplete}
@@ -91,9 +91,9 @@ export function LeadForm() {
             inputMode={type === "tel" ? "tel" : undefined}
             required
             aria-invalid={errors[name] ? true : undefined}
-            aria-describedby={`${name}-error`}
+            aria-describedby={`${idPrefix}${name}-error`}
           />
-          <p className="a-error" id={`${name}-error`}>
+          <p className="a-error" id={`${idPrefix}${name}-error`}>
             {errors[name] && <><Icon name="alert-triangle" /><span>{errors[name]}</span></>}
           </p>
         </div>
