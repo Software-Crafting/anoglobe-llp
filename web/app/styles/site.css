@@ -298,6 +298,13 @@ main {
   }
 }
 
+/* Pricing small print was 14px grey beside 17 to 19px text; the client asked for it to be easy to read */
+.v2-plus .v2-price .a-check-list span,
+.v2-plus .v2-catchup__option .a-small {
+  font-size: var(--text-body-lg);
+  color: var(--foreground);
+}
+
 /* Better reporting: several charts for one report. Phones: an overlapping, staggered collage. Wider: a 2 by 2 grid. */
 .v2-shots {
   display: grid;
@@ -541,5 +548,22 @@ main {
     top: calc(50% + 28px + var(--space-2));
     font-size: 0.8125rem;
     line-height: 1.3;
+  }
+}
+
+/* Touch screens keep :hover on whatever was last tapped, so a tapped tab or tile stayed outlined after scrolling away.
+   Hover looks only on devices that really hover, like the card motion in site-v2-plus.css. */
+@media (hover: none) {
+  .v2-nav a:hover,
+  a.v2-tile:hover {
+    box-shadow: none;
+  }
+
+  .v2-btn-outline:hover {
+    background: transparent;
+  }
+
+  .ds-back-to-top:hover {
+    background: var(--card);
   }
 }

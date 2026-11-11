@@ -185,7 +185,9 @@ export default function HomePage() {
           <div className="v2-card v2-card--center" data-reveal="zoom">
             <span className="v2-badge" aria-hidden="true"><Icon name="dollar-circle" /></span>
             <h2 id="pricing-title">Simple Pricing. No Surprises.</h2>
-            <p>Great bookkeeping shouldn’t cost a fortune. We keep our pricing straightforward, so you know exactly what you’re paying.</p>
+            <p className="v2-lead">Don’t let our pricing surprise you. We’re a top-quality bookkeeping service!</p>
+            <p>We’ve developed smarter ways of working, and we pass those savings directly on to you through one simple, affordable monthly fee.</p>
+            <p>Great bookkeeping, great value. Everyone’s happy!</p>
             <div className="v2-price">
               <p className="v2-price__amount"><span className="v2-price__figure" data-count-to="270" data-count-prefix="$">$270</span><span>per month</span></p>
               <ul className="a-check-list" role="list">

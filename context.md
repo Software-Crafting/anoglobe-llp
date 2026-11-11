@@ -163,6 +163,8 @@ web/
 
 Newest first. One line per change.
 
+- 2026-11-11: Touch screens: reason tabs, hero tiles, How It Works button and back to top no longer keep their hover look after a tap.
+- 2026-11-11: Pricing: client's text ("Don't let our pricing surprise you...") replaces the intro under the heading. Emoji left out, per the design rules. Pricing checklist and catch-up "18.5% discount" lines raised from 14px grey to body size in the text colour.
 - 2026-11-11: Video placeholders: play button at the true centre of the box, label under it, triangle no longer nudged right.
 - 2026-11-11: Sticky reasons bar marks a section once its top passes 40% of the screen height, not the bar itself, so the tab matches what is on screen.
 - 2026-11-11: Catch-up dialog: description removed, title only. Report 2 charts overlap as a staggered collage on phones (2 by 2 grid from 640px). Back to top button from the design system replaces the footer's text link. Easy Bookkeeping Review shows text before the image below 1024px. Contact popup opens only while scrolling down, once Real Humans reaches the top.
